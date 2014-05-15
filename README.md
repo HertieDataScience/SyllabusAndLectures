@@ -1,6 +1,6 @@
 # Introduction to Collaborative Social Science Data Analysis (2014)
 
-**15 May 2014 Draft**
+***15 May 2014 Draft***
 
 ### Instructor: Christopher Gandrud
 
