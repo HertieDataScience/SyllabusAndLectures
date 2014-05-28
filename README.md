@@ -1,6 +1,6 @@
 # Introduction to Collaborative Social Science Data Analysis (2014)
 
-***15 May 2014 Draft***
+***28 May 2014 Draft***
 
 ### Instructor: Christopher Gandrud
 
@@ -99,7 +99,7 @@ In this week I will give a general overview of the course objectives and key con
 
 #### Readings:
 
-- Lazer, David, et al. 2009. ''[Computational Social Science](http://www.sciencemag.org/content/323/5915/721.summary)''. *Science*.  323(5915): 721-723.
+- Lazer, David, et al. 2009. ''[Computational Social Science](http://www.sciencemag.org/content/323/5915/721.summary)''. *Science*.  323(5915): 721-723. ([Open access version](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2745217/))
 
 - Donoho, Donald. 2010. [''An Invitation to Reproducible Computational Research''](http://biostatistics.oxfordjournals.org/content/11/3/385.short). *Biostatistics*. 11(3): 385-388.
 
