@@ -1,6 +1,6 @@
 # Introduction to Collaborative Social Science Data Analysis (2014)
 
-***28 May 2014 Draft***
+***11 June 2014 Draft***
 
 ### Instructor: Christopher Gandrud
 
@@ -188,6 +188,8 @@ In this week we will also consider the benefits and challenges of government inc
 #### Readings
 
 - Ch. 6-7: RRRR
+
+- Wickham, Hadley. ["Tidy Data"](http://vita.had.co.nz/papers/tidy-data.pdf)
 
 - Janssen, Marijn, and Yannis Charalabidis, and Anneke Zulderwijk. 2012. [''Benefits, Adoption Barriers and Myths of Open Data and Open Government''](http://www.tandfonline.com/doi/abs/10.1080/10580530.2012.716740). *Information Systems Management*. 29(4): 258-268.
 
