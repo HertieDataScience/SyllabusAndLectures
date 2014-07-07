@@ -1,6 +1,6 @@
 # Introduction to Collaborative Social Science Data Analysis (2014)
 
-***11 June 2014 Draft***
+**Version: *11 June 2014 Draft***
 
 ### Instructor: Christopher Gandrud
 
@@ -99,17 +99,17 @@ In this week I will give a general overview of the course objectives and key con
 
 #### Readings:
 
-- Lazer, David, et al. 2009. ''[Computational Social Science](http://www.sciencemag.org/content/323/5915/721.summary)''. *Science*.  323(5915): 721-723. ([Open access version](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2745217/))
+- [Ch.2](https://github.com/christophergandrud/RepResR-RStudio/raw/gh-pages/other/ReproducibleResearch_Chapter2.pdf): RRRR.
 
-- Donoho, Donald. 2010. [''An Invitation to Reproducible Computational Research''](http://biostatistics.oxfordjournals.org/content/11/3/385.short). *Biostatistics*. 11(3): 385-388.
+- Lazer, David, et al. 2009. ''[Computational Social Science](http://www.sciencemag.org/content/323/5915/721.summary)''. *Science*.  323(5915): 721-723. ([Open access version](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2745217/))
 
 - Peng, Roger D. 2011. [''Reproducible Research in Computer Science''](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3383002/pdf/nihms382015.pdf). *Science*. 334(6060): 1226-1227.
 
-- Herndon, Thomas, Michael Ash, and Robert Pollin. Forthcoming. [''Does High Public Debt Consistently Stifle Economic Growth? A critique of Reinhart and Rogoff''](http://cje.oxfordjournals.org/content/early/2013/12/17/cje.bet075.short). *The Cambridge Journal of Economics*.
-
-- [Ch. 2](https://github.com/christophergandrud/RepResR-RStudio/raw/gh-pages/other/ReproducibleResearch_Chapter2.pdf): RRRR.
-
 *Reading Extras:*
+
+- Donoho, Donald. 2010. [''An Invitation to Reproducible Computational Research''](http://biostatistics.oxfordjournals.org/content/11/3/385.short). *Biostatistics*. 11(3): 385-388.
+
+- Herndon, Thomas, Michael Ash, and Robert Pollin. Forthcoming. [''Does High Public Debt Consistently Stifle Economic Growth? A critique of Reinhart and Rogoff''](http://cje.oxfordjournals.org/content/early/2013/12/17/cje.bet075.short). *The Cambridge Journal of Economics*.
 
 - Lazer, David. Ryan Kennedy, Gary King, and Alessandro Vespignani. 2014. ''[The Parable of Google Flu: Traps in Big Data Analysis](http://www.sciencemag.org/content/343/6176/1203.summary)''. *Science*. 343(6176): 1203-1205.
 
@@ -125,19 +125,19 @@ We will learn how file systems work, as well as how to organize, version control
 
 - Wilson, Greg. 2014. [''Why Do Scientists Want to Learn About Code Review?''](http://mozillascience.org/why-do-scientists-want-to-learn-about-code-review/). Mozilla Science Lab.
 
+*Reading Extras:*
+
 - Stewart, James. 2014. [''How the GDS uses git and github''](https://gdstechnology.blog.gov.uk/2014/01/27/how-we-use-github/). *United Kingdom Government Data Service*.
 
 - Use the nice [interactive introduction to Git from the Code School](http://try.github.io/levels/1/challenges/1).
 
 - [Making Your Code Citable](https://guides.github.com/activities/citable-code/). 2014. GitHub Guides.
 
-*Reading Extras:*
+- King, Gary. 2007. "[An Introduction to the Dataverse Network as an Infrastructure for Data Sharing](http://gking.harvard.edu/files/gking/files/dvn.pdf)". *Sociological Methods and Research*. 36(2):173-199.
 
 If you additionally want to get really good at command line file management (pretty much what the command line is best at) a great book to use is:
 
 - Shotts Jr., William E. 2012. ''The Linux Command Line: A complete introduction''. No Starch Press, San Fransisco.
-
-- King, Gary. 2007. "[An Introduction to the Dataverse Network as an Infrastructure for Data Sharing](http://gking.harvard.edu/files/gking/files/dvn.pdf)". *Sociological Methods and Research*. 36(2):173-199.
 
 ### Week 3: Statistical Programming: Introduction to the R Programming Language
 
