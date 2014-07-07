@@ -205,7 +205,7 @@ In this week we will also consider the benefits and challenges of government inc
 
 - [rOpenGov](http://ropengov.github.io/projects/)
 
-- [psData](https://github.com/rOpenGov/guidelines-docs/blob/master/psData-guidelines/README.md) (Note: underdevelopment, but should be ready by Fall 2014)
+- [psData](https://github.com/rOpenGov/guidelines-docs/blob/master/psData-guidelines/README.md)
 
 ### Week 7: Automatic Data Gathering via Web Scraping
 
