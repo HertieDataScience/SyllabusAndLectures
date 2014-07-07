@@ -80,9 +80,9 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 
 - Attendance/active participation: 20%
 
-- 4 short projects: 40%
+- 3 short projects: 30% (Due Weeks 3, 6, 9)
 
-- Final project: 40%
+- Final project: 50% (Due Week 12)
 
 **Note:** All assignments must be completed in teams and submitted as Git repositories. All assignments, including the version history must be completely reproducible from the repository files.
 
