@@ -30,7 +30,7 @@ The course is divided into five parts:
 
 - [Part II: Markup languages and literate programming](#partiimarkuplanguagesandliterateprogramming)
 
-- [Part III: Data gathering and transformation](#partiiidatagatheringtransformation)
+- [Part III: Data gathering, transformation, & analysis](#partiiidatagatheringtransformationananalysis)
 
 - [Part IV: Communicating results from statistical analyses](#partivcommunicatingresultsfromstatisticalanalyses)
 
@@ -82,7 +82,7 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 
 - 3 short projects: 30% (Due Weeks 3, 6, 9)
 
-- Final project: 50% (Due Week 12)
+- Final project: 50% (Presentation/Website: Week 12, Paper: Exam Week)
 
 **Note:** All assignments must be completed in teams and submitted as Git repositories. All assignments, including the version history must be completely reproducible from the repository files.
 
@@ -139,15 +139,17 @@ If you additionally want to get really good at command line file management (pre
 
 - Shotts Jr., William E. 2012. ''The Linux Command Line: A complete introduction''. No Starch Press, San Fransisco.
 
-### Week 3: Statistical Programming: Introduction to the R Programming Language
+### Week 3: Introduction to the R Programming Language
 
-We will learn the basics of the R statistical programming language, as well as simple data handling tools and how to estimate statistical models.
+We will learn the basics of the R statistical programming language for data handling and simple descriptive statistics, as well as general computer science problem solving skills.
 
 #### Readings:
 
 - p: 27-44: RRRR.
 
-- Ch. 7: Crawley, Micheal J. *Statistics: An Introduction Using R*.
+- Ch. 2-4: Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. John Wiley and Sons Ltd., Chichester.
+
+- Ch. 1: Spraul, V. Anton. 2012. *Think like a Programmer*. San Francisco: No Starch Press.
 
 **Style Guides**: it generally doesn't matter what style guide you use for your code, but it is good to agree on a style with your team and stick to it. Otherwise it will take longer to figure out what your teammates are doing. If your teammates have difficulty understanding your code, other researchers will be even less able to figure out what you did. Two widely used style guides are:
 
@@ -177,7 +179,7 @@ We will expand our understanding of markup languages and literate programming by
 
 - Ch. 11: RRRR.
 
-## Part III: Data gathering & transformation
+## Part III: Data gathering, transformation, & analysis
 
 ### Week 6: Automatic Data Gathering via Curl, API Packages + Cleaning
 
@@ -221,9 +223,19 @@ A considerable amount of social science data is not stored in traditional data t
 
 - Sanchez, Gaston. [Handling and Processing Strings in R](http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf).
 
+
+### Week 8: Statistical modelling with R
+
+We will learn how to fit and evaluate a variety of statistical models using the R language, including simple linear models as well as logistical regression models for categorical dependent data.
+
+#### Readings:
+
+- Ch. 7-8: Crawley, Michael J. 2005. Statistics: An Introduction Using R. John Wiley and Sons Ltd., Chichester.
+
+
 ## Part IV: Communicating results from statistical analyses
 
-### Week 8: Automatic Table Generation and Visualisation (1): Static Visualisation
+### Week 9: Automatic Table Generation and Visualisation (1): Static Visualisation
 
 We will first learn how to automatically generate summary and results tables for multiple markup languages using [texreg](http://diffuseprior.wordpress.com/2013/01/20/texreg-a-package-for-beautiful-and-easily-customizable-latex-regression-tables-from-r/).
 
@@ -246,7 +258,7 @@ We will then learn static descriptive and inferential data visualisation best pr
 - Donahue, Rafe M. J. 2011. [Fundamental Statistical Concepts in Presenting Data: Principles for Constructing Better Graphics](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf). Version 2.11.
 
 
-### Week 9: Visualisation (2): Dynamic Visualisation
+### Week 10: Visualisation (2): Dynamic Visualisation
 
 The transition of publishing from static mediums such as print journals and books to internet based platforms has greatly expanded the tools data scientists have to dynamically communicate results. In particular, a number of tools frequently powered by [JavaScript](http://www.w3schools.com/js/DEFAULT.asp) make interactive presentations possible. There are a number of R based tools that allow you create use these technologies within Markdown/HTML presentation documents.
 
@@ -264,10 +276,8 @@ The transition of publishing from static mediums such as print journals and book
 
 ## Part V: Collaborative research project
 
-For the remainder of the course we will bring together all of the tools we have learned to conduct an original collaborative and reproducible research project. You will present the results from the project in multiple mediums including as a paper, a presentation to the class, and a website. The project should ideally be the starting point of your thesis.
+We will bring together all of the tools we have learned to conduct an original collaborative and reproducible research project. You will present the results from the project in multiple mediums including as a paper, a presentation to the class, and a website. The project should ideally be the starting point of your thesis.
 
-### Week 10: Gather & Clean Data + Statistical Analysis
-
-### Week 11: Compose Reproducible Research Documents
+### Week 11: Prepare collaborative research project
 
 ### Week 12: Present Results
