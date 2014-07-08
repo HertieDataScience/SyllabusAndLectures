@@ -1,4 +1,4 @@
-[<img src="https://raw.githubusercontent.com/FGCH/amc-site/gh-pages/img/logo.png" align="right" height="70"/>](http://www.hertie-school.org/)
+[<img src="https://raw.githubusercontent.com/FGCH/amc-site/gh-pages/img/logo.png" align="right" height="100"/>](http://www.hertie-school.org/)
 
 # Introduction to Collaborative Social Science Data Analysis
 
@@ -247,7 +247,7 @@ We will learn how to fit and evaluate a variety of statistical models using the 
 
 ## Part IV: Communicating results from statistical analyses
 
-### Week 9: Automatic Table Generation and Visualisation (1): Static Visualisation
+### Week 9: Automatic Table Generation and Static Visualisation
 
 We will first learn how to automatically generate summary and results tables for multiple markup languages using [texreg](http://diffuseprior.wordpress.com/2013/01/20/texreg-a-package-for-beautiful-and-easily-customizable-latex-regression-tables-from-r/).
 
@@ -270,7 +270,7 @@ We will then learn static descriptive and inferential data visualisation best pr
 - Donahue, Rafe M. J. 2011. [Fundamental Statistical Concepts in Presenting Data: Principles for Constructing Better Graphics](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf). Version 2.11.
 
 
-### Week 10: Visualisation (2): Dynamic Visualisation
+### Week 10: Dynamic Visualisation
 
 The transition of publishing from static mediums such as print journals and books to internet based platforms has greatly expanded the tools data scientists have to dynamically communicate results. In particular, a number of tools frequently powered by [JavaScript](http://www.w3schools.com/js/DEFAULT.asp) make interactive presentations possible. There are a number of R based tools that allow you create use these technologies within Markdown/HTML presentation documents.
 
