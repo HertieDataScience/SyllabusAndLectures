@@ -4,9 +4,11 @@
 
 ### Fall 2014
 
-**Version: *12 June 2014 Draft***
+**Version: *8 July 2014***
 
 ### Instructor: Christopher Gandrud
+
+- Office: 1.42
 
 - Email: <a href="mailto:gandrud@hertie-school.org">gandrud@hertie-school.org</a>
 
@@ -82,11 +84,13 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 
 #### Assessment:
 
-- Attendance/active participation: 20%
-
-- 3 short projects: 30% (Due Weeks 3, 6, 9)
-
-- Final project: 50% (Presentation/Website: Week 12, Paper: Exam Week)
+| Name                    | Percent of Final Mark | Due              |
+| ----------------------- | --------------------- | ---------------- |
+| Pair Assignment 1       | 10%                   | Week 3           |
+| Pair Assignment 2       | 10%                   | Week 6           |
+| Pair Assignment 3       | 10%                   | Week 9           |
+| Collaborative Research Project | 50%            | Presentation: Week 12, Paper/Website: Final Exam Week |
+| Attendance/active Participation | 20%           | -                |
 
 **Note:** All assignments must be completed in teams and submitted as Git repositories. All assignments, including the version history must be completely reproducible from the repository files.
 
@@ -97,9 +101,9 @@ The design of this course is heavily influenced by [Karl Broman's Reproducible R
 
 ## Part I: Motivation and getting started
 
-### Week 1: Introduction to the Course & Planning your Project
+### Week 1: Introduction to the Course
 
-In this week I will give a general overview of the course objectives and key concepts. We will also jump right in by making sure that you are able to install and load all of the necessary software required for the course.
+In this week I will give a general overview of the course objectives and key concepts. We will also make sure that you are able to install and load all of the necessary software required for the course.
 
 #### Readings:
 
@@ -119,9 +123,7 @@ In this week I will give a general overview of the course objectives and key con
 
 ### Week 2: Files, File Structures, Version Control, & Collaboration
 
-Fundamentally, your research is a collection of files (preferably text files). Organising, manipulating, and storing files is at the heart of research practice. Well organised and stored files are crucial for enabling collaboration and making your research reproducible.
-
-We will learn how file systems work, as well as how to organize, version control, and store research files to enable collaboration and reproducibility.
+Fundamentally, your research is a collection of files (preferably text files). Organising, manipulating, and storing files is at the heart of research practice. Well organised and stored files are crucial for enabling collaboration and making your research reproducible. We will learn how file systems work, as well as how to organize, version control, and store research files to enable collaboration and reproducibility.
 
 #### Readings:
 
@@ -195,15 +197,13 @@ We will expand our understanding of markup languages and literate programming by
 
 ### Week 6: Automatic Data Gathering via Curl, API Packages + Cleaning
 
-Most social science data sets are now available for download online. This week we will learn how to programmatically access this data and clean it so that it can be used for statistical analysis.
-
-In this week we will also consider the benefits and challenges of government increasing the openness and accessibility of their data.
+Most social science data sets are now available for download online. This week we will learn how to programmatically access this data and clean it so that it can be used for statistical analysis. We will also consider the benefits and challenges of government increasing the openness and accessibility of their data.
 
 #### Readings
 
 - Ch. 6-7: RRRR
 
-- Wickham, Hadley. ["Tidy Data"](http://vita.had.co.nz/papers/tidy-data.pdf)
+- Wickham, Hadley. 2014. ["Tidy Data"](http://vita.had.co.nz/papers/tidy-data.pdf).
 
 - Janssen, Marijn, and Yannis Charalabidis, and Anneke Zulderwijk. 2012. [''Benefits, Adoption Barriers and Myths of Open Data and Open Government''](http://www.tandfonline.com/doi/abs/10.1080/10580530.2012.716740). *Information Systems Management*. 29(4): 258-268.
 
@@ -227,18 +227,18 @@ A considerable amount of social science data is not stored in traditional data t
 
 #### Readings
 
-- A key tool for scraping websites (and dealing with text in general) is [Regular Expressions](http://en.wikipedia.org/wiki/Regular_expression). You can think of these as patterns of text to search for. To prepare for class read the helpful [regular expressions overview by Greg Bacon](http://stackoverflow.com/a/2759417) and practice using them with the [RegexOne](http://regexone.com/) website.
-
 - Barberá, Pablo. 2013. "[NYU Politics Data Lab Workshop: Scraping Twitter and Web Data Using R](http://www.nyu.edu/projects/politicsdatalab/workshops/twitter.pdf)".
+
+- A key tool for scraping websites (and dealing with text in general) is [Regular Expressions](http://en.wikipedia.org/wiki/Regular_expression). You can think of these as patterns of text to search for. To prepare for class read the helpful [regular expressions overview by Greg Bacon](http://stackoverflow.com/a/2759417) and practice using them with the [RegexOne](http://regexone.com/) website.
 
 *Reading Extras:*
 
 - Sanchez, Gaston. [Handling and Processing Strings in R](http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf).
 
 
-### Week 8: Statistical modelling with R
+### Week 8: Statistical Modelling with R
 
-We will learn how to fit and evaluate a variety of statistical models using the R language, including simple linear models as well as logistical regression models for categorical dependent data.
+We will learn how to fit and evaluate a variety of statistical models using the R language, including simple linear models and logistic regression models for categorical dependent data.
 
 #### Readings:
 
@@ -249,9 +249,7 @@ We will learn how to fit and evaluate a variety of statistical models using the 
 
 ### Week 9: Automatic Table Generation and Static Visualisation
 
-We will first learn how to automatically generate summary and results tables for multiple markup languages using [texreg](http://diffuseprior.wordpress.com/2013/01/20/texreg-a-package-for-beautiful-and-easily-customizable-latex-regression-tables-from-r/).
-
-We will then learn static descriptive and inferential data visualisation best practices including avoiding introducing optical illusions that distort data presentations and accommodating readers with visual impairments. We will also cover specific R packages for creating static visualisations, primarily [ggplot2](http://docs.ggplot2.org/current/) and [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)/[rmaps](http://rmaps.github.io/) for mapping.
+We will first learn how to automatically generate summary and results tables for multiple markup languages using  [texreg](http://diffuseprior.wordpress.com/2013/01/20/texreg-a-package-for-beautiful-and-easily-customizable-latex-regression-tables-from-r/). We will then learn static descriptive and inferential data visualisation best practices including avoiding introducing optical illusions that distort data presentations and accommodating readers with visual impairments. We will also cover specific R packages for creating static visualisations, primarily [ggplot2](http://docs.ggplot2.org/current/) and [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) for mapping.
 
 #### Readings
 
@@ -272,7 +270,7 @@ We will then learn static descriptive and inferential data visualisation best pr
 
 ### Week 10: Dynamic Visualisation
 
-The transition of publishing from static mediums such as print journals and books to internet based platforms has greatly expanded the tools data scientists have to dynamically communicate results. In particular, a number of tools frequently powered by [JavaScript](http://www.w3schools.com/js/DEFAULT.asp) make interactive presentations possible. There are a number of R based tools that allow you create use these technologies within Markdown/HTML presentation documents.
+The transition of publishing from static mediums such as print journals and books to internet based platforms has greatly expanded the tools data scientists have to dynamically communicate results. In particular, a number of tools frequently powered by [JavaScript](http://www.w3schools.com/js/DEFAULT.asp) make interactive presentations possible. There are a number of R based tools that allow you to use these technologies within Markdown/HTML presentation documents.
 
 - [Shiny Server](http://shiny.rstudio.com/)
 
@@ -284,12 +282,12 @@ The transition of publishing from static mediums such as print journals and book
 
 - [d3.js](http://d3js.org/)
 
-- Sigal, Mathew. 2011. [Make it Pretty: An Introduction to Graphical Post-Processing with Adobe Illustrator](http://www.psych.yorku.ca/quantmethods/BrownBag/Sigal-2011-Post-Processing-Handouts.pdf). Presentation to York University Department of Psychology Quantitative Methods Brownbag.
+- Sigal, Mathew. 2011. [Make it Pretty: An Graphical Post-Processing with Adobe Illustrator](http://www.psych.yorku.ca/quantmethods/BrownBag/Sigal-2011-Post-Processing-Handouts.pdf). Presentation to York University Department of Psychology Quantitative Methods Brownbag.
 
 ## Part V: Collaborative research project
 
-We will bring together all of the tools we have learned to conduct an original collaborative and reproducible research project. You will present the results from the project in multiple mediums including as a paper, a presentation to the class, and a website. The project should ideally be the starting point of your thesis.
+## Week 11: Prepare collaborative research project
 
-### Week 11: Prepare collaborative research project
+We will bring together all of the tools we have learned to conduct an original collaborative and reproducible research project. You will present the results from the project in multiple mediums including as a paper, a presentation to the class, and a website. The project should ideally be the starting point of your thesis. Week 11 is an opportunity for you to work on your project and ask questions/get immediate feedback from the instructor/classmates.
 
-### Week 12: Present Results
+## Week 12: Present Results
