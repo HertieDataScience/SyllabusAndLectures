@@ -169,13 +169,19 @@ This week we will focus on learning one of the simpler markup languages--[Markdo
 
 - Ch. 13: RRRR.
 
+- RStudio. 2014. [RMarkdown--Dynamic Documents for R](http://rmarkdown.rstudio.com/).
+
+*Reading Extras*
+
 - Alex Reinhart. Forthcoming. [*Statistics Done Wrong: The Woefully Complete Guide*](http://www.refsmmat.com/statistics/index.html).
 
 ### Week 5: Introduction to Markup Languages and Literate Programming (2)
 
-We will expand our understanding of markup languages and literate programming by venturing into two more advanced languages: HTML and LaTeX.
+We will expand our understanding of markup languages and literate programming by venturing into two more advanced languages: HTML and pandoc/LaTeX/BibTex.
 
 #### Readings
+
+- RStudio. 2014. [Pandoc Markdown](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html).
 
 - Ch. 11: RRRR.
 
@@ -195,9 +201,9 @@ In this week we will also consider the benefits and challenges of government inc
 
 - Janssen, Marijn, and Yannis Charalabidis, and Anneke Zulderwijk. 2012. [''Benefits, Adoption Barriers and Myths of Open Data and Open Government''](http://www.tandfonline.com/doi/abs/10.1080/10580530.2012.716740). *Information Systems Management*. 29(4): 258-268.
 
-- Leeper, Thomas J. 2014. ''[Archiving Reproducible Research with R and Dataverse](http://journal.r-project.org/archive/accepted/leeper.pdf)''. *The R Journal*.
+**Extras**
 
-**Resources**
+- Leeper, Thomas J. 2014. ''[Archiving Reproducible Research with R and Dataverse](http://journal.r-project.org/archive/accepted/leeper.pdf)''. *The R Journal*.
 
 - The [World Bank's Development Indicators](http://data.worldbank.org/data-catalog/world-development-indicators), accessible through R with [WDI](https://github.com/vincentarelbundock/WDI).
 
