@@ -1,6 +1,10 @@
-# Introduction to Collaborative Social Science Data Analysis (2014)
+[<img src="https://raw.githubusercontent.com/FGCH/amc-site/gh-pages/img/logo.png" align="right" height="70"/>](http://www.hertie-school.org/)
 
-**Version: *11 June 2014 Draft***
+# Introduction to Collaborative Social Science Data Analysis
+
+### Fall 2014
+
+**Version: *12 June 2014 Draft***
 
 ### Instructor: Christopher Gandrud
 
@@ -170,6 +174,8 @@ This week we will focus on learning one of the simpler markup languages--[Markdo
 - Ch. 13: RRRR.
 
 - RStudio. 2014. [RMarkdown--Dynamic Documents for R](http://rmarkdown.rstudio.com/).
+
+- RStudio. 2014. [Presentations with ioslides](http://rmarkdown.rstudio.com/ioslides_presentation_format.html).
 
 *Reading Extras*
 
