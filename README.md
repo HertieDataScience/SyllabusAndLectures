@@ -286,8 +286,8 @@ The transition of publishing from static mediums such as print journals and book
 
 ## Part V: Collaborative research project
 
-## Week 11: Prepare collaborative research project
+### Week 11: Prepare collaborative research project
 
 We will bring together all of the tools we have learned to conduct an original collaborative and reproducible research project. You will present the results from the project in multiple mediums including as a paper, a presentation to the class, and a website. The project should ideally be the starting point of your thesis. Week 11 is an opportunity for you to work on your project and ask questions/get immediate feedback from the instructor/classmates.
 
-## Week 12: Present Results
+### Week 12: Present Results
