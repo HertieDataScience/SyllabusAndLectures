@@ -24,9 +24,9 @@ The objective of this course is to **learn how to collaboratively and reproducib
 
 The course will involve learning the fundamentals of widely used computer languages. The statistical language [R](http://en.wikipedia.org/wiki/R_(programming_language)) will allow us to gather and analyse our data. The [Markdown](http://daringfireball.net/projects/markdown/)/[HTML](http://en.wikipedia.org/wiki/HTML) and [LaTeX](http://en.wikipedia.org/wiki/LaTeX) markup languages will allow us to present our results to a variety of audiences. We will use [Git](http://git-scm.com/)/[GitHub](https://github.com/) to version control and store all of our files. This will enable collaboration and full reproducibility.
 
-The focus of this course is **active in class participation and collaboration** on **realistic projects** using the concepts and tools introduced in lectures and scholarly articles. All assignments and projects will be completed in teams. I encourage you to use [pair programming](http://en.wikipedia.org/wiki/Pair_programming) whenever possible.
+The focus of this course is **active in class participation and collaboration** on **realistic projects** using the concepts and tools introduced in lectures and scholarly articles. All assignments and projects will be completed in teams. I encourage you to use [pair programming](http://en.wikipedia.org/wiki/Pair_programming) and even collaborate across teams.
 
-Note that alongside learning the details of how to use specific tools of collaborative and reproducible social science data analysis we will emphasise their **general properties** and how they fit together into a highly collaborative and reproducible research workflow. Languages and technologies come and go, so it is important to understand the fundamental principles underlying them so that you can adapt to new technologies and understand previous researchers' work.
+Alongside learning the details of how to use specific tools of collaborative and reproducible social science data analysis we will emphasise their **general properties** and how they fit together into a highly collaborative and reproducible research workflow. Languages and technologies come and go, so it is important to understand the fundamental principles underlying them so that you can adapt to new technologies and understand previous researchers' work.
 
 ### Course Outline
 
@@ -92,11 +92,31 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 | Collaborative Research Project | 50%            | Presentation: Week 12, Paper/Website: Final Exam Week |
 | Attendance/active Participation | 20%           | -                |
 
-**Note:** All assignments must be completed in teams and submitted as Git repositories. All assignments, including the version history must be completely reproducible from the repository files.
+1. The **first pair assignment** is designed to develop your understanding of file structures, version control, and basic R data structures and transformations. Each pair will create a new public GitHub repository. The  repository should be fully documented, including with a README.md file. The repository will include R source code files that access at least two core R data sets, perform basic transformations on the data, and illustrate the distribution of the data using a variety of descriptive statistics. At least one file must dynamically link to another in a substantively meaningful way.  **Deadline Week 3, 10% of final grade**.
 
-#### Acknowledgements
+2. The **second pair assignment** is a proposal for your Collaborative Research Project. It is an opportunity for you to layout your research paper question and methodology, basic literature review (properly cited using BibTeX), and identify data sources that you can access to help answer your question. You will also demonstrate your understanding of literate programming technologies  **Deadline Week 6, 2,000 words maximum, 10% of final grade**.
 
-The design of this course is heavily influenced by [Karl Broman's Reproducible Research Course](http://kbroman.github.io/Tools4RR/) at U. Wisconsin, Madison, [Stat 157 held at University of California, Berkeley](https://github.com/stat157/fall-2013), and an [applied data science course](http://christophergandrud.github.io/Introduction_to_Statistics_and_Data_Analysis_Yonsei/) I taught at Yonsei University. Also, it is based on the work I did for [Reproducible Research with R and RStudio](http://christophergandrud.github.io/RepResR-RStudio/), which was greatly improved by a number of reviewers mentioned in the preface.
+3. In the **third pair assignment** you will gather web based data from at least two sources, merge the data sets,  conduct basic inferential statistics on the data to address a relevant research question and briefly describe the results including with dynamically generated tables and figures. Students are encouraged to access data and perform statistical analyses with an eye to answering questions relevant for their Collaborative Research Project. **Deadline Week 9, the write up should be 1,500 words maximum and use literate programming, 10% of final grade**.
+
+4. For the **Collaborative Research Project** you will pose an interesting social science question and attempt to answer it using standard academic practices including original data collection and statistical analysis. The project should be considered a ‘dry run’ for your thesis. The project has **three presentation outputs** designed to present your research to multiple audiences.  The first is a oral presentation (**10 minute maximum**) given in **Week 12**. The second is a standard academic paper (**6,000 words maximum**) that is fully reproducible and dynamically generated. The third is a website designed to present key aspects of your research in an engaging way to a general audience. The **paper and website are due in the Final Exam Week**.
+
+All of the assignments for the course will be completed in pairs. All assignments must be developed using Git and submitted on GitHub. All assignments, including the version history must be completely reproducible from the repository files. In general a single mark for the pair will be given. However, as all assignments are developed using Git, your contributor statistics will be taken into consideration. Major discrepancies between team members will result in scores reflecting individual’s contributions.
+
+Assignments are due by **midnight on Friday**. When you have completed the assignment, email me the GitHub tag URL for the final version of your assignment.
+
+**Examination Requirement**: There is no individual final exam.
+
+**Students Attendance/Participation**: Students are expected to be present and prepared for every class session. Active participation during lectures and seminar discussions is essential. Participation involves both ‘traditional participation’ in terms of engaging in class discussions as well as pair programming and actively contributing to both your team’s projects and other team’s projects via Git pull requests. You are even encouraged to make pull requests to the main course material if you find an error or think of an improvement. As such, your GitHub contributor statistics will be used to partially evaluate your participation.
+
+If unavoidable circumstances arise which prevent attendance or preparation, the instructor should be advised by email with as much advance notice as possible. Please note that students cannot miss more than two sessions. For further information please consult the examination rules §4.
+
+**Late assignments** will be given a grade reduction as follows:
+
+For assignments turned in up to 24h after deadline: grade based on 80% (max. result).
+
+For assignments turned in up to one week late: grade based on 66% (max. result).
+For assignments turned in more than one week late: 0%.
+
 
 
 ## Part I: Motivation and getting started
