@@ -28,20 +28,6 @@ The focus of this course is **active in class participation and collaboration** 
 
 Alongside learning the details of how to use specific tools of collaborative and reproducible social science data analysis we will emphasise their **general properties** and how they fit together into a highly collaborative and reproducible research workflow. Languages and technologies come and go, so it is important to understand the fundamental principles underlying them so that you can adapt to new technologies and understand previous researchers' work.
 
-### Course Outline
-
-The course is divided into five parts:
-
-- [Part I: Motivation and getting started](#partimotivationandgettingstarted)
-
-- [Part II: Markup languages and literate programming](#partiimarkuplanguagesandliterateprogramming)
-
-- [Part III: Data gathering, transformation, & analysis](#partiiidatagatheringtransformationananalysis)
-
-- [Part IV: Communicating results from statistical analyses](#partivcommunicatingresultsfromstatisticalanalyses)
-
-- [Part V:  Collaborative research project](#partvcollaborativeresearchproject)
-
 ### Prerequisites
 
 The course assumes that you have a good basic understanding of descriptive and introductory inferential statistics (e.g. data types, ways of describing distributions, significance testing, linear models, and so on). **Knowledge of particular software or computer programming is not assumed**.
@@ -112,10 +98,10 @@ If unavoidable circumstances arise which prevent attendance or preparation, the 
 
 **Late assignments** will be given a grade reduction as follows:
 
-For assignments turned in up to 24h after deadline: grade based on 80% (max. result).
+- For assignments turned in up to 24h after deadline: grade based on 80% (max. result).
 
-For assignments turned in up to one week late: grade based on 66% (max. result).
-For assignments turned in more than one week late: 0%.
+- For assignments turned in up to one week late: grade based on 66% (max. result).
+- For assignments turned in more than one week late: 0%.
 
 
 
