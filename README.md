@@ -1,6 +1,6 @@
 [<img src="https://raw.githubusercontent.com/FGCH/amc-site/gh-pages/img/logo.png" align="right" height="100"/>](http://www.hertie-school.org/)
 
-# Introduction to Collaborative Social Science Data Analysis
+# MPP-E1180: Introduction to Collaborative Social Science Data Analysis
 
 ### Fall 2014
 
@@ -90,19 +90,13 @@ All of the assignments for the course will be completed in pairs. All assignment
 
 Assignments are due by **midnight on Friday**. When you have completed the assignment, email me the GitHub tag URL for the final version of your assignment.
 
-**Examination Requirement**: There is no individual final exam.
+**Examination Requirement**: Weighted average grade of all course assignment must be 50% or higher on numerical scale.
 
 **Students Attendance/Participation**: Students are expected to be present and prepared for every class session. Active participation during lectures and seminar discussions is essential. Participation involves both ‘traditional participation’ in terms of engaging in class discussions as well as pair programming and actively contributing to both your team’s projects and other team’s projects via Git pull requests. You are even encouraged to make pull requests to the main course material if you find an error or think of an improvement. As such, your GitHub contributor statistics will be used to partially evaluate your participation.
 
 If unavoidable circumstances arise which prevent attendance or preparation, the instructor should be advised by email with as much advance notice as possible. Please note that students cannot miss more than two sessions. For further information please consult the examination rules §4.
 
-**Late assignments** will be given a grade reduction as follows:
-
-- For assignments turned in up to 24h after deadline: grade based on 80% (max. result).
-
-- For assignments turned in up to one week late: grade based on 66% (max. result).
-- For assignments turned in more than one week late: 0%.
-
+**Late assignments**: For each day the assignment is turned in late, the grade will be reduced by 10% (e.g. 2 days after the deadline would result in 20% grade deduction).
 
 
 ## Part I: Motivation and getting started
