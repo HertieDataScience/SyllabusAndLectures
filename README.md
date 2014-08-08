@@ -4,7 +4,7 @@
 
 ### Fall 2014
 
-**Version: *21 July 2014***
+**Version: *8 August 2014***
 
 ### Instructor: Christopher Gandrud
 
@@ -42,7 +42,7 @@ The course assumes that you have a good basic understanding of descriptive and i
 
 A good reference text to have by your side when doing statistics with R is:
 
-> Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. John Wiley and Sons Ltd., Chichester.
+> Crawley, Michael J. 2005. *[Statistics: An Introduction Using R](http://www.hertie-school.org/campus/library/find-resources/ebooks/)*. John Wiley and Sons Ltd., Chichester.
 
 A great free resource for more advanced R programming is is Hadley Wickam's aptly named [Advanced R Programming](http://adv-r.had.co.nz/). This has a lot of useful resources especially for package development.
 
