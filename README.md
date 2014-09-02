@@ -1,4 +1,4 @@
-[<img src="https://raw.githubusercontent.com/FGCH/amc-site/gh-pages/img/logo.png" align="right" height="100"/>](http://www.hertie-school.org/)
+[<img src="HertieLogoBasic.png" align="right" height="100"/>](http://www.hertie-school.org/)
 
 # MPP-E1180: Introduction to Collaborative Social Science Data Analysis
 

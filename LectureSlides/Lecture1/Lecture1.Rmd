@@ -3,9 +3,10 @@ title: 'MPP-E1180 Lecture 1: Introduction to the Course'
 author: "Christopher Gandrud"
 date: "11 September 2014"
 output:
-  beamer_presentation: default
   ioslides_presentation:
+    logo: https://raw.githubusercontent.com/FGCH/amc-site/gh-pages/img/logo.png
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
+  beamer_presentation: default
 ---
 
 ## Objectives for the week
@@ -37,6 +38,16 @@ Official Office Hours:
 - Wednesday 15:00-17:00
 
 ## Objectives for the course
+
+**Collaboratively** and **reproducibly**
+
+- Gather/clean social data
+
+- Analyse it
+
+- Present results (in a variety of mediums)
+
+## Why?
 
 
 ## Prerequisites
@@ -72,12 +83,16 @@ Official Office Hours:
     
 ## <i class="fa fa-certificate"></i> Assessment (details)
 
+- All assigments must be completed in **pairs**.
+
+- All assignments must be **reproducible**.
+
 - **Due**: Midnight on Friday of the week it is due.
 
 - <i class="fa fa-upload"></i> All assignments must be submitted electronically 
 on GitHub.
 
-- All assigments must be completed in **pairs**
+- <i class="fa fa-exclamation-triangle"></i> Late assignments: -10% every day that the assignment is late.
 
 - More details will be given on the specific pair assigments/research project in 
 future classes.
