@@ -47,8 +47,17 @@ Official Office Hours:
 
 - Present results (in a variety of mediums)
 
-## Why?
+<br>
+<br>
 
+<i class="fa fa-exclamation"></i> Learn how to actually **do** data analysis 
+using **best practices** <i class="fa fa-exclamation"></i>
+
+## <i class="fa fa-question-circle"></i> Why Collaborative?
+
+- Research is collaborative (even if you don't know it).
+
+    + Work with 
 
 ## Prerequisites
 
@@ -81,29 +90,75 @@ Official Office Hours:
     
 - <i class="fa fa-exclamation-triangle"></i> No traditional midterm or final exam
     
-## <i class="fa fa-certificate"></i> Assessment (details)
+## <i class="fa fa-certificate"></i> Assessment Details (1)
+
+- <i class="fa fa-upload"></i> All assignments must be developed and submitted 
+electronically on <i class="fa fa-github"></i> GitHub.
+
+- <i class="fa fa-exclamation-triangle"></i> Late assignments: -10% every day that 
+the assignment is late.
 
 - All assigments must be completed in **pairs**.
+
+    + Each pair member receives the same score
+    
+    + Exception: very large discrepancy in 
+    [contributor statistics](https://help.github.com/articles/about-repository-graphs)
+    
+## <i class="fa fa-certificate"></i> Assessment Details (2)
 
 - All assignments must be **reproducible**.
 
 - **Due**: Midnight on Friday of the week it is due.
-
-- <i class="fa fa-upload"></i> All assignments must be submitted electronically 
-on GitHub.
-
-- <i class="fa fa-exclamation-triangle"></i> Late assignments: -10% every day that the assignment is late.
 
 - More details will be given on the specific pair assigments/research project in 
 future classes.
 
 ## <i class="fa fa-certificate"></i> Assessment (attendance, participation)
 
-- 
+- Usual Hertie Rules for attendance (examination rules §4)
 
-## Course Outline
+- Participation:
 
+    + **Traditional Participation**, e.g. engaging in class discussions, doing readings
 
+    + **Non-Traditional Participation**: [pair programming](http://en.wikipedia.org/wiki/Pair_programming) 
+    in seminars, [pull request](https://help.github.com/articles/using-pull-requests) 
+    to the course repository (syllabus/lecture slides), other groups' projects
+
+## Course Outline (1)
+
+**Part I: Motivation and Getting Started**
+
+- Introduction to the Course
+
+- Files, Files Structures, Version Control, and Collaboartion
+
+- Introduction to the R Programming Language
+
+**Part II Markup Languages and Literate Programming**
+
+- Introduction to Markup Languages and Literate Programming (1)
+
+- Introduction to Markup Languages and Literate Programming (2)
+
+## Course Outline (2)
+
+**Part III: Data Gathering, Trasformations, and Analysis**
+
+- Automatic Data Gathering via Curl, API Packages + Cleaning
+
+- Automatic Data Gathering via Web Scraping
+
+- Statistical Modelling with R
+
+**Part IV: Communicating Results from Statistical Analyses**
+
+- Automatic Table Generation and Static Visualisation
+
+- Dynamic Visualisation
+
+**Part V: Collaborative Research Project**
 
 ## Syllabus
 
@@ -113,18 +168,12 @@ future classes.
 
     + Course **difficulty** is **monotonically decreasing** from the original 
     (11 September) baseline.
-    
-- Make a [pull request](https://help.github.com/articles/using-pull-requests) if 
-you notice any errors or have suggestions.
-    
+        
 ## Lecture Slides
 
 <https://github.com/christophergandrud/Hertie_Collab_Data_Science/tree/master/LectureSlides>
 
 - Accessible as both HTML (recommended) or PDF.
-
-- Make a [pull request](https://help.github.com/articles/using-pull-requests) if 
-you notice any errors or have suggestions.
     
 ## <i class="fa fa-list-ol"></i> Seminar to-do
 
