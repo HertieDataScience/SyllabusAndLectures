@@ -10,19 +10,25 @@ output:
 
 ## Objectives for the week
 
-- Introduce the course goals, plan, and expectations
+- Introduce the course goals, plan, and expectations/assessment
+
+- Introduce Collaborative & Reproducible Data Analysis 
 
 - Set up computational research environment
 
-## About Me
-
-**Christopher Gandrud** 
+## Christopher Gandrud
 
 Contact:
 
-- <a href="mailto:gandrud@hertie-school.org"><i class="fa fa-envelope"></i> gandrud@hertie-school.org</a>
+- Public 
 
-- <a href="https://twitter.com/ChrisGandrud"><i class="fa fa-twitter"></i> @ChrisGandrud</a>
+    + <a href="https://github.com/christophergandrud/Hertie_Collab_Data_Science/issues"><i class="fa fa-exclamation-circle"></i> Hertie_Collab_Data_Science/issues</a>
+
+    + <a href="https://twitter.com/ChrisGandrud"><i class="fa fa-twitter"></i> @ChrisGandrud</a>
+    
+- Private
+
+    + <a href="mailto:gandrud@hertie-school.org"><i class="fa fa-envelope"></i> gandrud@hertie-school.org</a>
 
 Official Office Hours: 
 
@@ -30,29 +36,127 @@ Official Office Hours:
 
 - Wednesday 15:00-17:00
 
-Or stop by anytime I'm around.
-
 ## Objectives for the course
+
+
+## Prerequisites
+
+- **Introductory-level statistics**
+    
+    + Basic descriptive statistics (e.g. data types, ways of describing distributions)
+    
+    + Basic inferential statistics: (significance testing, linear regression)
+    
+    + Exposure to statistics software (e.g. SPSS, STATA)
+
+- Knowledge of particular software or computer programming is **not expected**
+
+- <i class="fa fa-exclamation-triangle"></i> **Patience**
+
+## <i class="fa fa-certificate"></i> Assessment
+
+
+- 3 Pair Assignments (Weeks 3, 6, 9)
+
+    + 10% each
+
+- Collaborative Research Project (Presentation: Week 12, Website/Paper: Exam Week)
+
+    + 50%
+    
+- Attendance & Active Participation
+
+    + 20%
+    
+- <i class="fa fa-exclamation-triangle"></i> No traditional midterm or final exam
+    
+## <i class="fa fa-certificate"></i> Assessment (details)
+
+- **Due**: Midnight on Friday of the week it is due.
+
+- <i class="fa fa-upload"></i> All assignments must be submitted electronically 
+on GitHub.
+
+- All assigments must be completed in **pairs**
+
+- More details will be given on the specific pair assigments/research project in 
+future classes.
+
+## <i class="fa fa-certificate"></i> Assessment (attendance, participation)
+
+- 
+
+## Course Outline
+
 
 
 ## Syllabus
 
-> <https://github.com/christophergandrud/Hertie_Collab_Data_Science> 
+<https://github.com/christophergandrud/Hertie_Collab_Data_Science> 
 
 - The syllabus will be **updated**. **Check regularly**.
 
-    + Course **difficulty** is **monotonically decreasing** from the original (11 September) baseline.
+    + Course **difficulty** is **monotonically decreasing** from the original 
+    (11 September) baseline.
     
-- Feel free to make a [pull request](https://help.github.com/articles/using-pull-requests) if you notice any errors or have changes to suggest.
+- Make a [pull request](https://help.github.com/articles/using-pull-requests) if 
+you notice any errors or have suggestions.
     
 ## Lecture Slides
 
 <https://github.com/christophergandrud/Hertie_Collab_Data_Science/tree/master/LectureSlides>
 
+- Accessible as both HTML (recommended) or PDF.
 
+- Make a [pull request](https://help.github.com/articles/using-pull-requests) if 
+you notice any errors or have suggestions.
     
-## Seminar to-do
+## <i class="fa fa-list-ol"></i> Seminar to-do
 
 - Objective: setup software
 
-- **Highly recommend using your own laptop**
+- **Highly recommend**: use your own laptop
+
+## <i class="fa fa-globe"></i> Modern Web browser
+
+- Make sure you have a modern web browser, e.g.:
+
+    + <i class="fa fa-google"></i> Chrome
+
+## <i class="fa fa-github"></i> GitHub
+
+- <i class="fa fa-user"></i> Set up (free) GitHub account: <https://github.com/join>
+
+- <i class="fa fa-download"></i> Install GitHub application: 
+
+    + Mac: <https://mac.github.com/>
+        
+    + Windows: <https://windows.github.com/>
+
+## <i class="fa fa-code"></i> Statistics software
+
+- <i class="fa fa-download"></i> **Install** software (all software is free):
+
+    + R: <http://cran.rstudio.com/>
+    
+    + RStudio (dev build): <http://www.rstudio.org/download/daily/desktop/>
+    
+- <i class="fa fa-terminal"></i> Make sure that you can install R packages:
+
+```{r, eval=FALSE}
+install.packages('ggplot2')
+```
+
+## <i class="fa fa-font"></i> LaTeX
+
+- <i class="fa fa-download"></i> Install a LaTeX distribution
+
+    + Mac: <https://tug.org/mactex/>
+    
+    + Windows: <http://miktex.org/download>
+
+- <i class="fa fa-exclamation-triangle"></i> This is a large download, so maybe do it in your spare time.
+
+## Post-Installation
+
+Play around with the softwared (especially RStudio)
