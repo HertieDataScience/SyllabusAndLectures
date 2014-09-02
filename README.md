@@ -4,7 +4,7 @@
 
 ### Fall 2014
 
-**Version: *8 August 2014***
+**Version: *2 September 2014***
 
 ### Instructor: Christopher Gandrud
 
@@ -92,7 +92,7 @@ Assignments are due by **midnight on Friday**. When you have completed the assig
 
 **Examination Requirement**: Weighted average grade of all course assignment must be 50% or higher on numerical scale.
 
-**Students Attendance/Participation**: Students are expected to be present and prepared for every class session. Active participation during lectures and seminar discussions is essential. Participation involves both ‘traditional participation’ in terms of engaging in class discussions as well as pair programming and actively contributing to both your team’s projects and other team’s projects via Git pull requests. You are even encouraged to make pull requests to the main course material if you find an error or think of an improvement. As such, your GitHub contributor statistics will be used to partially evaluate your participation.
+**Students Attendance/Participation**: Students are expected to be present and prepared for every class session. Active participation during lectures and seminar discussions is essential. Participation involves both 'traditional participation' in terms of engaging in class discussions, It also involves non-traditional participation such as pair programming and actively contributing to both your team’s projects and other team’s projects via Git pull requests. You are even encouraged to make pull requests to the main course material if you find an error or think of an improvement. As such, your GitHub contributor statistics will be used to partially evaluate your participation.
 
 If unavoidable circumstances arise which prevent attendance or preparation, the instructor should be advised by email with as much advance notice as possible. Please note that students cannot miss more than two sessions. For further information please consult the examination rules §4.
 
