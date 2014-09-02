@@ -1,25 +1,53 @@
 ---
-title: 'Lecture 1: Introduction to the Course'
+title: 'MPP-E1180 Lecture 1: Introduction to the Course'
 author: "Christopher Gandrud"
 date: "11 September 2014"
 output: 
-    revealjs_presentation:
-        theme: solarized
-        transition: none
+    ioslides_presentation:
+        css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
 ---
 
-## Goals for the course
+## Objectives for the week
 
-## Goals for the week
+- Introduce the course goals, plan, and expectations
 
-## Syllabus and Lecture Slides
+- Set up computational research environment
 
-<br>
+## About Me
 
-<https://github.com/christophergandrud/Hertie_Collab_Data_Science> 
+**Christopher Gandrud** 
 
-<br>
+Contact:
 
-- The syllabus will be updated. **Check regularly**.
+- <a href="mailto:gandrud@hertie-school.org"><i class="fa fa-envelope"></i> gandrud@hertie-school.org</a>
+
+- <a href="https://twitter.com/ChrisGandrud"><i class="fa fa-twitter"></i> @ChrisGandrud</a>
+
+Official Office Hours: 
+
+- Room: 1.52 
+
+- Wednesday 15:00-17:00
+
+Or stop by anytime I'm around.
+
+## Objectives for the course
+
+
+## Syllabus
+
+> <https://github.com/christophergandrud/Hertie_Collab_Data_Science> 
+
+- The syllabus will be **updated**. **Check regularly**.
 
     + Course **difficulty** is **monotonically decreasing** from the original (11 September) baseline.
+    
+- Feel free to make a [pull request](https://help.github.com/articles/using-pull-requests) if you notice any errors or have changes to suggest.
+    
+## Lecture Slides
+    
+## Seminar to-do
+
+- Objective: setup software
+
+- **Highly recommend using your own laptop**
