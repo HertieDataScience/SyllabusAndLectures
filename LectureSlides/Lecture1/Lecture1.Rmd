@@ -4,6 +4,7 @@ author: "Christopher Gandrud"
 date: "11 September 2014"
 output: 
     revealjs_presentation:
+        theme: solarized
         transition: none
 ---
 
@@ -11,3 +12,14 @@ output:
 
 ## Goals for the week
 
+## Syllabus and Lecture Slides
+
+<br>
+
+<https://github.com/christophergandrud/Hertie_Collab_Data_Science> 
+
+<br>
+
+- The syllabus will be updated. **Check regularly**.
+
+    + Course **difficulty** is **monotonically decreasing** from the original (11 September) baseline.
