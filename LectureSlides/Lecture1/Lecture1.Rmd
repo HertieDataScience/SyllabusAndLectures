@@ -1,0 +1,13 @@
+---
+title: 'Lecture 1: Introduction to the Course'
+author: "Christopher Gandrud"
+date: "11 September 2014"
+output: 
+    revealjs_presentation:
+        transition: none
+---
+
+## Goals for the course
+
+## Goals for the week
+
