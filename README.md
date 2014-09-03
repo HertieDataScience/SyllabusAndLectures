@@ -107,15 +107,15 @@ In this week I will give a general overview of the course objectives and key con
 
 #### Readings:
 
-- [Ch.2](https://github.com/christophergandrud/RepResR-RStudio/raw/gh-pages/other/ReproducibleResearch_Chapter2.pdf): RRRR.
+- Ch.1-[2](https://github.com/christophergandrud/RepResR-RStudio/raw/gh-pages/other/ReproducibleResearch_Chapter2.pdf): RRRR.
+
+- Peng, Roger D. 2011. [''Reproducible Research in Computational Science''](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3383002/pdf/nihms382015.pdf). *Science*. 334(6060): 1226-1227.
+
+*Reading Extras:*
 
 - Lazer, David, et al. 2009. ''[Computational Social Science](http://www.sciencemag.org/content/323/5915/721.summary)''. *Science*.  323(5915): 721-723. ([Open access version](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2745217/))
 
 - Stodden, Victoria and Miguez, Sheila 2014. ''[Best Practices for Computational Science: Software Infrastructure and Environments for Reproducible and Extensible Research](http://dx.doi.org/10.5334/jors.ay)''. *Journal of Open Research Software* 2(1):e21.
-
-*Reading Extras:*
-
-- Peng, Roger D. 2011. [''Reproducible Research in Computer Science''](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3383002/pdf/nihms382015.pdf). *Science*. 334(6060): 1226-1227.
 
 - Donoho, Donald. 2010. [''An Invitation to Reproducible Computational Research''](http://biostatistics.oxfordjournals.org/content/11/3/385.short). *Biostatistics*. 11(3): 385-388.
 

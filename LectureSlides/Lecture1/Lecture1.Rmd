@@ -9,14 +9,6 @@ output:
   beamer_presentation: default
 ---
 
-## Objectives for the week
-
-- Introduce the course goals, plan, and expectations/assessment
-
-- Introduce Collaborative & Reproducible Data Analysis 
-
-- Set up computational research environment
-
 ## Christopher Gandrud
 
 Contact:
@@ -37,7 +29,15 @@ Official Office Hours:
 
 - Wednesday 15:00-17:00
 
-## Objectives for the course
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
+
+- Introduce the course goals, plan, and expectations/assessment
+
+- Introduce Collaborative & Reproducible Data Analysis 
+
+- Set up computational research environment
+
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the course
 
 **Collaboratively** and **reproducibly**
 
@@ -53,13 +53,157 @@ Official Office Hours:
 <i class="fa fa-exclamation"></i> Learn how to actually **do** data analysis 
 using **best practices** <i class="fa fa-exclamation"></i>
 
+## <i class="fa fa-compass"></i> Motivation: Academic
+
+- Skills needed to do **original quantitative research** for your **thesis**.
+
+    + The final project will be a **trial version** of your thesis.
+
+- State-of-the-art tools needed for **future high-level academic research**.
+
+    + Take advantage of new data sources.
+    
+    + Avoid effort duplication.
+    
+    + Make your research reproducible. 
+    
+    + Present your results in multiple forums.
+
+## <i class="fa fa-compass"></i> Motivation: Government
+
+- Government agencies are increasingly adopting the technologies and methods
+of open data science.
+
+[<img src="img/GithubGovUse.png" align="center" height="400"/>](https://github.com/blog/1874-government-opens-up-10k-active-government-users-on-github)
+
+## <i class="fa fa-compass"></i> Motivation: Government
+
+- Public data is being made increasingly **accessible**.
+
+    + e.g. [World Bank Development Indicators](http://data.worldbank.org/data-catalog/world-development-indicators),
+    [GovData Germany](https://www.govdata.de/neues), [data.gov.uk](http://data.gov.uk/), 
+    [New York City](https://nycopendata.socrata.com/),
+    [data.gov](https://www.data.gov/open-gov/)
+    
+- Governments rely on data analysis for evidence based decision-making. 
+
+    + Tools of open data analysis enable better use of data **within** and **between**
+    government actors.
+    
+    + Governments can take advantage of analyses done by **third parties**.
+
+## <i class="fa fa-compass"></i> Motivation: Government
+
+- They are also **sharing** and **collaboratively** developing code; **reducing 
+development costs** and **improving applications**.
+
+- Version control to **increase engagement with the legislative process**.
+
+    + San Francisco laws are now [<i class="fa fa-code-fork"></i>](https://help.github.com/articles/fork-a-repo) 
+    [forkable](https://github.com/SFMOCI/openlaw).
+    
+## <i class="fa fa-compass"></i> Motivation: Business
+
+- Data analysis and R programming skills in particular are **highly valued** in 
+businesses such as finance and management.
+
+![R salaries](img/RSalaries.png)
+
+Source: [Revolution Analytics](http://blog.revolutionanalytics.com/2014/02/r-salary-surveys.html)
+
 ## <i class="fa fa-question-circle"></i> Why Collaborative?
 
 - Research is collaborative (even if you don't know it).
 
-    + Work with 
+- Need tools and shared best practices to enable effective collaboration between
+**explicit research partners**.
 
-## Prerequisites
+- Need tools and shared best practices to enable collaboration between researchers
+who are **not explicitly** working together often in **unexpected ways**.
+
+    + **Avoids effort duplication**
+    
+    + Enables **cumulative knowledge development**
+
+- Tools for collaboration tend to enhance **reproducibility**.
+
+## <i class="fa fa-question-circle"></i> What is reproducibility?
+
+- **Really reproducible** research (Peng 2011, 1226):
+
+> <i class="fa fa-quote-left"></i> the data and code used to make a finding are
+available and they are sufficient for an independent researcher to recreate the finding.
+<i class="fa fa-quote-right"></i>
+
+- In practice reproduciblity is enhanced by **literate programming** where the data,
+analysis, and presentation of the results are 'weaved' or 'knitted' together.
+
+    + Make available the research, **not just the advertising** for the findings (e.g. 
+    papers, book).
+
+## <i class="fa fa-question-circle"></i> Reproducibility vs. Replication?
+
+**Reproducibility**: an independent study makes the same findings using the
+**same data** and **code** as the original researchers.
+
+**Replicability**: an independent study makes the same conclusions as the original
+using **other data, code, and even methods**, 
+i.e. independent verification.
+
+<i class="fa fa-exclamation-triangle"></i> [''A study can be reproducible and still
+be wrong.''](http://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/)
+
+## <i class="fa fa-question-circle"></i> Why reproducibility?
+
+- **Replication** is the ''**ultimate standard**'' for judging scientific claims (Peng 2011).
+
+- Reproducibility
+
+    + **Enhances replication** (other researchers can understand how an analysis
+    was actually done)
+
+    + Is a **minimum standard** for judging scientific claims when replication is
+    not possible.
+
+## <i class="fa fa-question-circle"></i> Why reproducibility?
+
+- Reproducibility helps **avoid effort duplication**: 
+
+- Others don't need to waste time:
+
+    + Gathering data that has already been gathered.
+    
+    + Discovering procedures that have already been discovered.
+    
+- This enables **effort duplication**.
+
+## <i class="fa fa-question-circle"></i> Why reproducibility?
+
+- Reproducibility also makes it possible to **find and correct errors**.
+
+    + Recent example: translation errors in the 
+    [World Values Survey](http://www.washingtonpost.com/blogs/monkey-cage/wp/2014/09/02/world-values-lost-in-translation/).
+
+- Data errors can cause spurious findings that ultimately **waste researchers time**,
+because they try to explain 'wrong' findings.
+
+## <i class="fa fa-sitemap"></i> Reproducible Workflow
+
+[<img src="img/Workflow.png" alt="Reproducible Work Flow" height=450 width=700 />](img/Workflow.png)
+
+## <i class="fa fa-bookmark-o"></i> Practical Tips for Reproducible Research
+
+- Document Everything!
+
+- Everything is a (text) file.
+
+- All files should be human readable.
+
+- Explicitly tie your files together.
+
+- Have a plan to organise, store, and make your files available.
+
+## <i class="fa fa-check"></i> Course Prerequisites
 
 - **Introductory-level statistics**
     
@@ -72,6 +216,40 @@ using **best practices** <i class="fa fa-exclamation"></i>
 - Knowledge of particular software or computer programming is **not expected**
 
 - <i class="fa fa-exclamation-triangle"></i> **Patience**
+
+## <i class="fa fa-list"></i> Course Outline (1)
+
+**Part I: Motivation and Getting Started**
+
+- Introduction to the Course
+
+- Files, Files Structures, Version Control, and Collaboration
+
+- Introduction to the R Programming Language
+
+**Part II Markup Languages and Literate Programming**
+
+- Introduction to Markup Languages and Literate Programming (1)
+
+- Introduction to Markup Languages and Literate Programming (2)
+
+## <i class="fa fa-list"></i> Course Outline (2)
+
+**Part III: Data Gathering, Trasformations, and Analysis**
+
+- Automatic Data Gathering via Curl, API Packages + Cleaning
+
+- Automatic Data Gathering via Web Scraping
+
+- Statistical Modelling with R
+
+**Part IV: Communicating Results from Statistical Analyses**
+
+- Automatic Table Generation and Static Visualisation
+
+- Dynamic Visualisation
+
+**Part V: Collaborative Research Project**
 
 ## <i class="fa fa-certificate"></i> Assessment
 
@@ -93,16 +271,16 @@ using **best practices** <i class="fa fa-exclamation"></i>
 ## <i class="fa fa-certificate"></i> Assessment Details (1)
 
 - <i class="fa fa-upload"></i> All assignments must be developed and submitted 
-electronically on <i class="fa fa-github"></i> GitHub.
+electronically on [<i class="fa fa-github"></i> GitHub](https://www.github.com).
 
 - <i class="fa fa-exclamation-triangle"></i> Late assignments: -10% every day that 
 the assignment is late.
 
-- All assigments must be completed in **pairs**.
+- All assignments must be completed in **pairs**.
 
     + Each pair member receives the same score
     
-    + Exception: very large discrepancy in 
+    + <i class="fa fa-exclamation-triangle"></i> Exception: very large discrepancy in 
     [contributor statistics](https://help.github.com/articles/about-repository-graphs)
     
 ## <i class="fa fa-certificate"></i> Assessment Details (2)
@@ -111,7 +289,7 @@ the assignment is late.
 
 - **Due**: Midnight on Friday of the week it is due.
 
-- More details will be given on the specific pair assigments/research project in 
+- More details will be given on the specific pair assignments/research project in 
 future classes.
 
 ## <i class="fa fa-certificate"></i> Assessment (attendance, participation)
@@ -125,40 +303,6 @@ future classes.
     + **Non-Traditional Participation**: [pair programming](http://en.wikipedia.org/wiki/Pair_programming) 
     in seminars, [pull request](https://help.github.com/articles/using-pull-requests) 
     to the course repository (syllabus/lecture slides), other groups' projects
-
-## Course Outline (1)
-
-**Part I: Motivation and Getting Started**
-
-- Introduction to the Course
-
-- Files, Files Structures, Version Control, and Collaboartion
-
-- Introduction to the R Programming Language
-
-**Part II Markup Languages and Literate Programming**
-
-- Introduction to Markup Languages and Literate Programming (1)
-
-- Introduction to Markup Languages and Literate Programming (2)
-
-## Course Outline (2)
-
-**Part III: Data Gathering, Trasformations, and Analysis**
-
-- Automatic Data Gathering via Curl, API Packages + Cleaning
-
-- Automatic Data Gathering via Web Scraping
-
-- Statistical Modelling with R
-
-**Part IV: Communicating Results from Statistical Analyses**
-
-- Automatic Table Generation and Static Visualisation
-
-- Dynamic Visualisation
-
-**Part V: Collaborative Research Project**
 
 ## Syllabus
 
@@ -174,10 +318,29 @@ future classes.
 <https://github.com/christophergandrud/Hertie_Collab_Data_Science/tree/master/LectureSlides>
 
 - Accessible as both HTML (recommended) or PDF.
-    
+
+- Slides will be **optimized for the web**.
+
+## <i class="fa fa-book"></i> Reading
+
+**Core Texts**
+
+- Gandrud, Christopher. 2013. *Reproducible Research with R and RStudio*. 
+Chapman & Hall/CRC Press, Oxford. (RRRR)
+
+- Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. John Wiley 
+and Sons Ltd., Chichester.
+
+<i class="fa fa-archive"></i> Both are available in the library. 
+
+<br>
+
+**Other readings** generally available online (see syllabus) or I will make a copy 
+available.
+
 ## <i class="fa fa-list-ol"></i> Seminar to-do
 
-- Objective: setup software
+- <i class="fa fa-arrow-circle-o-up"></i> **Objective**: setup software
 
 - **Highly recommend**: use your own laptop
 
@@ -223,4 +386,4 @@ install.packages('ggplot2')
 
 ## Post-Installation
 
-Play around with the softwared (especially RStudio)
+<i class="fa fa-play"></i> Play around with the software (especially RStudio)
