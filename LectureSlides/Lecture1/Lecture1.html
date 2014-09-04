@@ -232,9 +232,7 @@
 
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-question-circle"></i> What is reproducibility?</h2></hgroup><article  id="what-is-reproducibility">
 
-<ul>
-<li><strong>Really reproducible</strong> research (Peng 2011, 1226):</li>
-</ul>
+<p><strong>Really reproducible</strong> research (Peng 2011, 1226):</p>
 
 <blockquote>
 <p><i class="fa fa-quote-left"></i> the data and code used to make a finding are available and they are sufficient for an independent researcher to recreate the finding. <i class="fa fa-quote-right"></i></p>
@@ -256,9 +254,9 @@
 
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-question-circle"></i> Reproducibility vs. Replication?</h2></hgroup><article  id="reproducibility-vs.-replication-1">
 
-<p><i class="fa fa-exclamation-triangle"></i> &#39;&#39;A study can be reproducible and still be wrong&#39;&#39; <a href='http://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/' title=''>Peng 2014</a>.</p>
+<p><i class="fa fa-exclamation-triangle"></i> <strong>&#39;&#39;A study can be reproducible and still be wrong&#39;&#39;</strong> <a href='http://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/' title=''>Peng 2014</a>.</p>
 
-<p>E.g. a finding that is statistically significant in one study may remain statistically significant when reproduced using the original data/code, but replication studies are unable to find a similar result.</p>
+<p>E.g. a finding that is statistically significant in one study may remain statistically significant when reproduced using the original data/code, but <strong>replication studies are unable to find a similar result</strong>.</p>
 
 <p>The original finding could just have been <a href='http://andrewgelman.com/2014/09/03/disagree-alan-turing-daniel-kahneman-regarding-strength-statistical-evidence/' title=''>noise</a>.</p>
 
@@ -266,7 +264,7 @@
 
 <ul>
 <li><p><strong>Replication</strong> is the &#39;&#39;<strong>ultimate standard</strong>&#39;&#39; for judging scientific claims (Peng 2011).</p></li>
-<li><p>Reproducibility</p>
+<li><p><strong>Reproducibility</strong></p>
 
 <ul>
 <li><p><strong>Enhances replication</strong> (other researchers can understand how an analysis was actually done)</p></li>
@@ -412,7 +410,7 @@
 
 <ul>
 <li><p><strong>Traditional Participation</strong>, e.g. engaging in class discussions, doing readings</p></li>
-<li><p><strong>Non-Traditional Participation</strong>: <a href='http://en.wikipedia.org/wiki/Pair_programming' title=''>pair programming</a> in seminars, <a href='https://help.github.com/articles/using-pull-requests' title=''>pull request</a> to the course repository (syllabus/lecture slides), other groups&#39; projects</p></li>
+<li><p><strong>Non-Traditional Participation</strong>: <a href='http://en.wikipedia.org/wiki/Pair_programming' title=''>pair programming</a> in seminars, <a href='https://help.github.com/articles/using-pull-requests' title=''>pull request</a> to the course repository (syllabus/lecture slides) and other groups&#39; projects</p></li>
 </ul></li>
 </ul>
 
@@ -493,7 +491,13 @@
 <li><p><i class="fa fa-terminal"></i> Make sure that you can install R packages:</p></li>
 </ul>
 
-<pre class = 'prettyprint lang-r'>install.packages(&#39;ggplot2&#39;)</pre>
+<pre class = 'prettyprint lang-r'># Install the ggplot2 package
+install.packages(&#39;ggplot2&#39;)
+
+# Check to see if it loads properly
+library(ggolot2)
+
+ggplot(mtcars, aes(hp, mpg)) + geom_point()</pre>
 
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-font"></i> LaTeX</h2></hgroup><article  id="latex">
 

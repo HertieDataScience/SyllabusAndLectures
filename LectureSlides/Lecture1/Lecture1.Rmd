@@ -129,7 +129,7 @@ who are **not explicitly** working together often in **unexpected ways**.
 
 ## <i class="fa fa-question-circle"></i> What is reproducibility?
 
-- **Really reproducible** research (Peng 2011, 1226):
+**Really reproducible** research (Peng 2011, 1226):
 
 > <i class="fa fa-quote-left"></i> the data and code used to make a finding are
 available and they are sufficient for an independent researcher to recreate the finding.
@@ -152,12 +152,12 @@ i.e. independent verification.
 
 ## <i class="fa fa-question-circle"></i> Reproducibility vs. Replication?
 
-<i class="fa fa-exclamation-triangle"></i> ''A study can be reproducible and still
-be wrong'' [Peng 2014](http://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/).
+<i class="fa fa-exclamation-triangle"></i> **''A study can be reproducible and still
+be wrong''** [Peng 2014](http://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/).
 
 E.g. a finding that is statistically significant in one study may remain statistically
-significant when reproduced using the original data/code, but replication studies
-are unable to find a similar result.
+significant when reproduced using the original data/code, but **replication studies
+are unable to find a similar result**.
 
 The original finding could just have been 
 [noise](http://andrewgelman.com/2014/09/03/disagree-alan-turing-daniel-kahneman-regarding-strength-statistical-evidence/).
@@ -166,7 +166,7 @@ The original finding could just have been
 
 - **Replication** is the ''**ultimate standard**'' for judging scientific claims (Peng 2011).
 
-- Reproducibility
+- **Reproducibility**
 
     + **Enhances replication** (other researchers can understand how an analysis
     was actually done)
@@ -311,7 +311,7 @@ future classes.
 
     + **Non-Traditional Participation**: [pair programming](http://en.wikipedia.org/wiki/Pair_programming) 
     in seminars, [pull request](https://help.github.com/articles/using-pull-requests) 
-    to the course repository (syllabus/lecture slides), other groups' projects
+    to the course repository (syllabus/lecture slides) and other groups' projects
 
 ## Syllabus
 
@@ -380,7 +380,13 @@ available.
 - <i class="fa fa-terminal"></i> Make sure that you can install R packages:
 
 ```{r, eval=FALSE}
+# Install the ggplot2 package
 install.packages('ggplot2')
+
+# Check to see if it loads properly
+library(ggolot2)
+
+ggplot(mtcars, aes(hp, mpg)) + geom_point()
 ```
 
 ## <i class="fa fa-font"></i> LaTeX
