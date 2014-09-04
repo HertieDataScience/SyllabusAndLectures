@@ -196,6 +196,20 @@ The original finding could just have been
 - Data errors can cause spurious findings that ultimately **waste researchers time**,
 because they try to explain 'wrong' findings.
 
+## <i class="fa fa-question-circle"></i> Why reproducibility?
+
+- **Higher research impact**
+
+    + Reproducible research is likely to be more **useful for other researchers**.
+    They can use your data and learn from your code and methods. 
+    
+- **Better work habits**
+
+    + If you are thinking about reproducibility from the beginning your files
+    will be **better organised** and your work will be **better documented**.
+    
+    + This allows you to **build on your own work** more effectively.
+
 ## <i class="fa fa-sitemap"></i> Reproducible Workflow
 
 [<img src="img/Workflow.png" alt="Reproducible Work Flow" height=450 width=700 />](img/Workflow.png)
