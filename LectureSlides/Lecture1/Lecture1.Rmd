@@ -11,7 +11,7 @@ output:
 
 ## Christopher Gandrud
 
-Contact: Test change
+Contact: 
 
 - Public 
 
