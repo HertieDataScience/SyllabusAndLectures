@@ -150,8 +150,17 @@ analysis, and presentation of the results are 'weaved' or 'knitted' together.
 using **other data, code, and even methods**, 
 i.e. independent verification.
 
-<i class="fa fa-exclamation-triangle"></i> [''A study can be reproducible and still
-be wrong.''](http://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/)
+## <i class="fa fa-question-circle"></i> Reproducibility vs. Replication?
+
+<i class="fa fa-exclamation-triangle"></i> ''A study can be reproducible and still
+be wrong'' [Peng 2014](http://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/).
+
+E.g. a finding that is statistically significant in one study may remain statistically
+significant when reproduced using the original data/code, but replication studies
+are unable to find a similar result.
+
+The original finding could just have been 
+[noise](http://andrewgelman.com/2014/09/03/disagree-alan-turing-daniel-kahneman-regarding-strength-statistical-evidence/).
 
 ## <i class="fa fa-question-circle"></i> Why reproducibility?
 
