@@ -4,7 +4,7 @@
 
 ### Fall 2014
 
-**Version: *2 September 2014***
+**Version: *7 September 2014***
 
 ### Instructor: Christopher Gandrud
 
@@ -125,7 +125,7 @@ In this week I will give a general overview of the course objectives and key con
 
 ### Week 2: Files, File Structures, Version Control, & Collaboration
 
-Fundamentally, your research is a collection of files (preferably text files). Organising, manipulating, and storing files is at the heart of research practice. Well organised and stored files are crucial for enabling collaboration and making your research reproducible. We will learn how file systems work, as well as how to organize, version control, and store research files to enable collaboration and reproducibility.
+Fundamentally, your research is a collection of files (preferably text files). Organising, manipulating, and storing files is at the heart of research practice. Well organised and stored files are crucial for enabling collaboration and making your research reproducible. We will learn how file systems work, as well as how to organize, version control with Git/GitHub, and store research files to enable collaboration and reproducibility.
 
 #### Readings:
 

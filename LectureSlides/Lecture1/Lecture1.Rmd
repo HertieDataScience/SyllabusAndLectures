@@ -240,6 +240,8 @@ because they try to explain 'wrong' findings.
 
 - <i class="fa fa-exclamation-triangle"></i> **Patience**
 
+    + Work hard so you can be lazy.
+
 ## <i class="fa fa-list"></i> Course Outline (1)
 
 **Part I: Motivation and Getting Started**
