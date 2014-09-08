@@ -5,7 +5,7 @@ date: "11 September 2014"
 output:
   ioslides_presentation:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
-    logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/HertieLogoBasic.png
+    logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
   beamer_presentation: default
 ---
 
@@ -216,15 +216,15 @@ because they try to explain 'wrong' findings.
 
 ## <i class="fa fa-bookmark-o"></i> Practical Tips for Reproducible Research
 
-- Document Everything!
+- <i class="fa fa-pencil-square-o"></i> Document Everything!
 
-- Everything is a (text) file.
+- <i class="fa fa-file-code-o"></i> Everything is a (text) file.
 
-- All files should be human readable.
+- <i class="fa fa-smile-o"></i> All files should be human readable.
 
-- Explicitly tie your files together.
+- <i class="fa fa-link"></i> Explicitly tie your files together.
 
-- Have a plan to organise, store, and make your files available.
+- <i class="fa fa-list-ol"></i> Have a plan to organise, store, and make your files available.
 
 ## <i class="fa fa-check"></i> Course Prerequisites
 
@@ -276,6 +276,23 @@ because they try to explain 'wrong' findings.
 
 **Part V: Collaborative Research Project**
 
+## <i class="fa fa-sort-numeric-asc"></i> Typical Class Plan
+
+- ~ 1 hour lecture
+
+- ~ 1 hour seminar
+
+    + **Apply** what we learned in the lecture/readings to achieve specific goals,
+    i.e. **no set pattern** to copy by rote.
+    
+    + **Pair programming**: work together with others to acheive these goals.
+    
+    + **Documentation**: document your work with Git/GitHub. 
+    
+        - <i class="fa fa-exclamation"></i> Your seminar work should be **reproducible**.
+        
+        - It should be **useful** to your **future self** and **others**.
+
 ## <i class="fa fa-certificate"></i> Assessment
 
 
@@ -326,7 +343,8 @@ future classes.
     + **Traditional Participation**, e.g. engaging in class discussions, doing readings
 
     + **Non-Traditional Participation**: [pair programming](http://en.wikipedia.org/wiki/Pair_programming) 
-    in seminars, [pull request](https://help.github.com/articles/using-pull-requests) 
+    in seminars, document your seminar work on GitHub,
+    [pull request](https://help.github.com/articles/using-pull-requests) 
     to the course repository (syllabus/lecture slides) and other groups' projects
 
 ## Syllabus
@@ -367,7 +385,7 @@ available.
 
 - <i class="fa fa-arrow-circle-o-up"></i> **Objective**: setup software
 
-- **Highly recommend**: use your own laptop
+- **Highly recommend**: use your own <i class="fa fa-laptop"></i> laptop
 
 ## <i class="fa fa-globe"></i> Modern Web browser
 
