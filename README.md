@@ -1,4 +1,4 @@
-[<img src="HertieLogoBasic.png" align="right" height="75" width ="150"/>](http://www.hertie-school.org/)
+[<img src="img/HertieLogoBasic.png" align="right" height="75" width ="150"/>](http://www.hertie-school.org/)
 
 # MPP-E1180: Introduction to Collaborative Social Science Data Analysis
 
