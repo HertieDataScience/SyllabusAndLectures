@@ -15,7 +15,7 @@ Contact:
 
 - Public 
 
-    + <a href="https://github.com/christophergandrud/Hertie_Collab_Data_Science/issues"><i class="fa fa-exclamation-circle"></i> Hertie_Collab_Data_Science/issues</a>
+    + <a href="https://github.com/HertieDataScience2014/SyllabusAndLectures/issues"><i class="fa fa-exclamation-circle"></i> SyllabusAndLectures/issues</a>
 
     + <a href="https://twitter.com/ChrisGandrud"><i class="fa fa-twitter"></i> @ChrisGandrud</a>
     
@@ -347,18 +347,18 @@ future classes.
     [pull request](https://help.github.com/articles/using-pull-requests) 
     to the course repository (syllabus/lecture slides) and other groups' projects
 
-## Syllabus
+## Syllabus & Lecture Slides
 
-<https://github.com/christophergandrud/Hertie_Collab_Data_Science> 
+<https://github.com/HertieDataScience2014/SyllabusAndLectures> 
+
+**Syllabus** (<a href="https://github.com/HertieDataScience2014/SyllabusAndLectures/blob/master/README.md">README.md</a>)
 
 - The syllabus will be **updated**. **Check regularly**.
 
     + Course **difficulty** is **monotonically decreasing** from the original 
     (11 September) baseline.
         
-## Lecture Slides
-
-<https://github.com/christophergandrud/Hertie_Collab_Data_Science/tree/master/LectureSlides>
+**Lecture Slides** (<a href="https://github.com/HertieDataScience2014/SyllabusAndLectures/tree/master/LectureSlides">LectureSlides/</a>)
 
 - Accessible as both HTML (recommended) or PDF.
 
