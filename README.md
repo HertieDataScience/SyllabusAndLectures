@@ -1,10 +1,10 @@
-[<img src="img/HertieLogoBasic.png" align="right" height="75" width ="150"/>](http://www.hertie-school.org/)
+[<img src="img/HertieCollaborativeDataLogo_v1.png" align="right" height="75" width ="75"/>](http://www.hertie-school.org/)
 
 # MPP-E1180: Introduction to Collaborative Social Science Data Analysis
 
 ### Fall 2014
 
-**Version: *7 September 2014***
+**Version: *8 September 2014***
 
 ### Instructor: Christopher Gandrud
 
@@ -293,3 +293,15 @@ The transition of publishing from static mediums such as print journals and book
 We will bring together all of the tools we have learned to conduct an original collaborative and reproducible research project. You will present the results from the project in multiple mediums including as a paper, a presentation to the class, and a website. The project should ideally be the starting point of your thesis. Week 11 is an opportunity for you to work on your project and ask questions/get immediate feedback from the instructor/classmates.
 
 ### Week 12: Present Results
+
+---
+
+[<img src="img/HertieLogoBasic.png" align="left" height="75" width ="150"/>](http://www.hertie-school.org/)
+
+[<img src="http://media.tumblr.com/023c285c14ef01953d3b67ffe789004d/tumblr_inline_mor1uu2OOZ1qz4rgp.png" height = "100" align="right" />](http://nadrosia.tumblr.com/post/53520500877/made-in-berlin-badge-update)
+
+<br>
+<br>
+<br>
+
+Licensed under [MIT](https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/LICENSE)

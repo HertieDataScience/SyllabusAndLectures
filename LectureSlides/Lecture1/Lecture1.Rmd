@@ -383,7 +383,8 @@ available.
 
 ## <i class="fa fa-list-ol"></i> Seminar to-do
 
-- <i class="fa fa-arrow-circle-o-up"></i> **Objective**: setup software
+- <i class="fa fa-arrow-circle-o-up"></i> **Objective**: setup software (all 
+software is free)
 
 - **Highly recommend**: use your own <i class="fa fa-laptop"></i> laptop
 
@@ -395,7 +396,12 @@ available.
 
 ## <i class="fa fa-github"></i> GitHub
 
+Setup Git/GitHub for version control, collaboration, and remotely storing your files.
+
 - <i class="fa fa-user"></i> Set up (free) GitHub account: <https://github.com/join>
+
+- **Give me your GitHub username** so that I can add you to the **HertieDataScience2014**
+group (<https://github.com/HertieDataScience2014>).
 
 - <i class="fa fa-download"></i> Install GitHub application: 
 
@@ -405,7 +411,7 @@ available.
 
 ## <i class="fa fa-code"></i> Statistics software
 
-- <i class="fa fa-download"></i> **Install** software (all software is free):
+- <i class="fa fa-download"></i> **Install** software:
 
     + R: <http://cran.rstudio.com/>
     
@@ -425,13 +431,21 @@ ggplot(mtcars, aes(hp, mpg)) + geom_point()
 
 ## <i class="fa fa-font"></i> LaTeX
 
-- <i class="fa fa-download"></i> Install a LaTeX distribution
+- <i class="fa fa-download"></i> Install a LaTeX distribution. Creates well formatted
+PDF versions of your presentation documents.
 
     + Mac: <https://tug.org/mactex/>
     
     + Windows: <http://miktex.org/download>
 
 - <i class="fa fa-exclamation-triangle"></i> This is a large download, so maybe do it in your spare time.
+
+## <i class="fa fa-arrows-alt"></i> Pandoc
+
+Install Pandoc. We won't use this directly, but it is needed for creating
+presentation documents in multiple formats.
+
+- <http://johnmacfarlane.net/pandoc/installing.html>
 
 ## Post-Installation
 
