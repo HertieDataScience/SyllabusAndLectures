@@ -131,13 +131,13 @@ Fundamentally, your research is a collection of files (preferably text files). O
 
 - Ch 4-5: RRRR.
 
-- Wilson, Greg. 2014. [''Why Do Scientists Want to Learn About Code Review?''](http://mozillascience.org/why-do-scientists-want-to-learn-about-code-review/). Mozilla Science Lab.
+- Stewart, James. 2014. [''How the GDS uses git and github''](https://gdstechnology.blog.gov.uk/2014/01/27/how-we-use-github/). *United Kingdom Government Data Service*.
 
 *Reading Extras:*
 
-- Stewart, James. 2014. [''How the GDS uses git and github''](https://gdstechnology.blog.gov.uk/2014/01/27/how-we-use-github/). *United Kingdom Government Data Service*.
-
 - Use the nice [interactive introduction to Git from the Code School](http://try.github.io/levels/1/challenges/1).
+
+- Wilson, Greg. 2014. [''Why Do Scientists Want to Learn About Code Review?''](http://mozillascience.org/why-do-scientists-want-to-learn-about-code-review/). Mozilla Science Lab.
 
 - [Making Your Code Citable](https://guides.github.com/activities/citable-code/). 2014. GitHub Guides.
 

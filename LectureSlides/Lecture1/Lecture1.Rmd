@@ -11,21 +11,21 @@ output:
 
 ## Christopher Gandrud
 
-Contact: 
+Contact:
 
-- Public 
+- Public
 
     + <a href="https://github.com/HertieDataScience2014/SyllabusAndLectures/issues"><i class="fa fa-exclamation-circle"></i> SyllabusAndLectures/issues</a>
 
     + <a href="https://twitter.com/ChrisGandrud"><i class="fa fa-twitter"></i> @ChrisGandrud</a>
-    
+
 - Private
 
     + <a href="mailto:gandrud@hertie-school.org"><i class="fa fa-envelope"></i> gandrud@hertie-school.org</a>
 
-Official Office Hours: 
+Official Office Hours:
 
-- Room: 1.52 
+- Room: 1.52
 
 - Wednesday 15:00-17:00
 
@@ -33,7 +33,7 @@ Official Office Hours:
 
 - Introduce the course goals, plan, and expectations/assessment
 
-- Introduce Collaborative & Reproducible Data Analysis 
+- Introduce Collaborative & Reproducible Data Analysis
 
 - Set up computational research environment
 
@@ -50,7 +50,7 @@ Official Office Hours:
 <br>
 <br>
 
-<i class="fa fa-exclamation"></i> Learn how to actually **do** data analysis 
+<i class="fa fa-exclamation"></i> Learn how to actually **do** data analysis
 using **best practices** <i class="fa fa-exclamation"></i>
 
 ## <i class="fa fa-compass"></i> Motivation: Academic
@@ -62,11 +62,11 @@ using **best practices** <i class="fa fa-exclamation"></i>
 - State-of-the-art tools needed for **future high-level academic research**.
 
     + Take advantage of new data sources.
-    
+
     + Avoid effort duplication.
-    
-    + Make your research reproducible. 
-    
+
+    + Make your research reproducible.
+
     + Present your results in multiple forums.
 
 ## <i class="fa fa-compass"></i> Motivation: Government
@@ -81,30 +81,30 @@ of open data science.
 - Public data is being made increasingly **accessible**.
 
     + e.g. [World Bank Development Indicators](http://data.worldbank.org/data-catalog/world-development-indicators),
-    [GovData Germany](https://www.govdata.de/neues), [data.gov.uk](http://data.gov.uk/), 
+    [GovData Germany](https://www.govdata.de/neues), [data.gov.uk](http://data.gov.uk/),
     [New York City](https://nycopendata.socrata.com/),
     [data.gov](https://www.data.gov/open-gov/)
-    
-- Governments rely on data analysis for evidence based decision-making. 
+
+- Governments rely on data analysis for evidence based decision-making.
 
     + Tools of open data analysis enable better use of data **within** and **between**
     government actors.
-    
+
     + Governments can take advantage of analyses done by **third parties**.
 
 ## <i class="fa fa-compass"></i> Motivation: Government
 
-- They are also **sharing** and **collaboratively** developing code; **reducing 
+- They are also **sharing** and **collaboratively** developing code; **reducing
 development costs** and **improving applications**.
 
 - Version control to **increase engagement with the legislative process**.
 
-    + San Francisco laws are now [<i class="fa fa-code-fork"></i>](https://help.github.com/articles/fork-a-repo) 
+    + San Francisco laws are now [<i class="fa fa-code-fork"></i>](https://help.github.com/articles/fork-a-repo)
     [forkable](https://github.com/SFMOCI/openlaw).
-    
+
 ## <i class="fa fa-compass"></i> Motivation: Business
 
-- Data analysis and R programming skills in particular are **highly valued** in 
+- Data analysis and R programming skills in particular are **highly valued** in
 businesses such as finance and management.
 
 ![R salaries](img/RSalaries.png)
@@ -122,7 +122,7 @@ Source: [Revolution Analytics](http://blog.revolutionanalytics.com/2014/02/r-sal
 who are **not explicitly** working together often in **unexpected ways**.
 
     + **Avoids effort duplication**
-    
+
     + Enables **cumulative knowledge development**
 
 - Tools for collaboration tend to enhance **reproducibility**.
@@ -138,7 +138,7 @@ available and they are sufficient for an independent researcher to recreate the 
 - In practice reproduciblity is enhanced by **literate programming** where the data,
 analysis, and presentation of the results are 'weaved' or 'knitted' together.
 
-    + Make available the research, **not just the advertising** for the findings (e.g. 
+    + Make available the research, **not just the advertising** for the findings (e.g.
     papers, book).
 
 ## <i class="fa fa-question-circle"></i> Reproducibility vs. Replication?
@@ -147,7 +147,7 @@ analysis, and presentation of the results are 'weaved' or 'knitted' together.
 **same data** and **code** as the original researchers.
 
 **Replicability**: an independent study makes the same conclusions as the original
-using **other data, code, and even methods**, 
+using **other data, code, and even methods**,
 i.e. independent verification.
 
 ## <i class="fa fa-question-circle"></i> Reproducibility vs. Replication?
@@ -159,7 +159,7 @@ E.g. a finding that is statistically significant in one study may remain statist
 significant when reproduced using the original data/code, but **replication studies
 are unable to find a similar result**.
 
-The original finding could just have been 
+The original finding could just have been
 [noise](http://andrewgelman.com/2014/09/03/disagree-alan-turing-daniel-kahneman-regarding-strength-statistical-evidence/).
 
 ## <i class="fa fa-question-circle"></i> Why reproducibility?
@@ -176,21 +176,19 @@ The original finding could just have been
 
 ## <i class="fa fa-question-circle"></i> Why reproducibility?
 
-- Reproducibility helps **avoid effort duplication**: 
+- Reproducibility helps **avoid effort duplication**:
 
 - Others don't need to waste time:
 
     + Gathering data that has already been gathered.
-    
+
     + Discovering procedures that have already been discovered.
-    
-- This enables **effort duplication**.
 
 ## <i class="fa fa-question-circle"></i> Why reproducibility?
 
 - Reproducibility also makes it possible to **find and correct errors**.
 
-    + Recent example: translation errors in the 
+    + Recent example: translation errors in the
     [World Values Survey](http://www.washingtonpost.com/blogs/monkey-cage/wp/2014/09/02/world-values-lost-in-translation/).
 
 - Data errors can cause spurious findings that ultimately **waste researchers time**,
@@ -201,18 +199,25 @@ because they try to explain 'wrong' findings.
 - **Higher research impact**
 
     + Reproducible research is likely to be more **useful for other researchers**.
-    They can use your data and learn from your code and methods. 
-    
+    They can use your data and learn from your code and methods.
+
 - **Better work habits**
 
     + If you are thinking about reproducibility from the beginning your files
     will be **better organised** and your work will be **better documented**.
-    
+
     + This allows you to **build on your own work** more effectively.
 
 ## <i class="fa fa-sitemap"></i> Reproducible Workflow
 
 [<img src="img/Workflow.png" alt="Reproducible Work Flow" height=450 width=700 />](img/Workflow.png)
+
+## <i class="fa fa-files-o"></i> Example of Truncated Workflow
+
+This lecture is created using [RMarkdown](http://rmarkdown.rstudio.com/). It
+allows me to create both PDF and HTML slides.
+
+![Lecture file structure](img/RMDLectureFiles.png)
 
 ## <i class="fa fa-bookmark-o"></i> Practical Tips for Reproducible Research
 
@@ -229,11 +234,11 @@ because they try to explain 'wrong' findings.
 ## <i class="fa fa-check"></i> Course Prerequisites
 
 - **Introductory-level statistics**
-    
+
     + Basic descriptive statistics (e.g. data types, ways of describing distributions)
-    
+
     + Basic inferential statistics: (significance testing, linear regression)
-    
+
     + Exposure to statistics software (e.g. SPSS, STATA)
 
 - Knowledge of particular software or computer programming is **not expected**
@@ -284,13 +289,13 @@ because they try to explain 'wrong' findings.
 
     + **Apply** what we learned in the lecture/readings to achieve specific goals,
     i.e. **no set pattern** to copy by rote.
-    
+
     + **Pair programming**: work together with others to acheive these goals.
-    
-    + **Documentation**: document your work with Git/GitHub. 
-    
+
+    + **Documentation**: document your work with Git/GitHub.
+
         - <i class="fa fa-exclamation"></i> Your seminar work should be **reproducible**.
-        
+
         - It should be **useful** to your **future self** and **others**.
 
 ## <i class="fa fa-certificate"></i> Assessment
@@ -303,35 +308,35 @@ because they try to explain 'wrong' findings.
 - Collaborative Research Project (Presentation: Week 12, Website/Paper: Exam Week)
 
     + 50%
-    
+
 - Attendance & Active Participation
 
     + 20%
-    
+
 - <i class="fa fa-exclamation-triangle"></i> No traditional midterm or final exam
-    
+
 ## <i class="fa fa-certificate"></i> Assessment Details (1)
 
-- <i class="fa fa-upload"></i> All assignments must be developed and submitted 
+- <i class="fa fa-upload"></i> All assignments must be developed and submitted
 electronically on [<i class="fa fa-github"></i> GitHub](https://www.github.com).
 
-- <i class="fa fa-exclamation-triangle"></i> Late assignments: -10% every day that 
+- <i class="fa fa-exclamation-triangle"></i> Late assignments: -10% every day that
 the assignment is late.
 
 - All assignments must be completed in **pairs**.
 
     + Each pair member receives the same score
-    
-    + <i class="fa fa-exclamation-triangle"></i> Exception: very large discrepancy in 
+
+    + <i class="fa fa-exclamation-triangle"></i> Exception: very large discrepancy in
     [contributor statistics](https://help.github.com/articles/about-repository-graphs)
-    
+
 ## <i class="fa fa-certificate"></i> Assessment Details (2)
 
 - All assignments must be **reproducible**.
 
 - **Due**: Midnight on Friday of the week it is due.
 
-- More details will be given on the specific pair assignments/research project in 
+- More details will be given on the specific pair assignments/research project in
 future classes.
 
 ## <i class="fa fa-certificate"></i> Assessment (attendance, participation)
@@ -342,22 +347,22 @@ future classes.
 
     + **Traditional Participation**, e.g. engaging in class discussions, doing readings
 
-    + **Non-Traditional Participation**: [pair programming](http://en.wikipedia.org/wiki/Pair_programming) 
+    + **Non-Traditional Participation**: [pair programming](http://en.wikipedia.org/wiki/Pair_programming)
     in seminars, document your seminar work on GitHub,
-    [pull request](https://help.github.com/articles/using-pull-requests) 
+    [pull request](https://help.github.com/articles/using-pull-requests)
     to the course repository (syllabus/lecture slides) and other groups' projects
 
 ## Syllabus & Lecture Slides
 
-<https://github.com/HertieDataScience2014/SyllabusAndLectures> 
+<https://github.com/HertieDataScience2014/SyllabusAndLectures>
 
 **Syllabus** (<a href="https://github.com/HertieDataScience2014/SyllabusAndLectures/blob/master/README.md">README.md</a>)
 
 - The syllabus will be **updated**. **Check regularly**.
 
-    + Course **difficulty** is **monotonically decreasing** from the original 
+    + Course **difficulty** is **monotonically decreasing** from the original
     (11 September) baseline.
-        
+
 **Lecture Slides** (<a href="https://github.com/HertieDataScience2014/SyllabusAndLectures/tree/master/LectureSlides">LectureSlides/</a>)
 
 - Accessible as both HTML (recommended) or PDF.
@@ -368,22 +373,22 @@ future classes.
 
 **Core Texts**
 
-- Gandrud, Christopher. 2013. *Reproducible Research with R and RStudio*. 
+- Gandrud, Christopher. 2013. *Reproducible Research with R and RStudio*.
 Chapman & Hall/CRC Press, Oxford. (RRRR)
 
-- Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. John Wiley 
+- Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. John Wiley
 and Sons Ltd., Chichester.
 
-<i class="fa fa-archive"></i> Both are available in the library. 
+<i class="fa fa-archive"></i> Both are available in the library.
 
 <br>
 
-**Other readings** generally available online (see syllabus) or I will make a copy 
+**Other readings** generally available online (see syllabus) or I will make a copy
 available.
 
 ## <i class="fa fa-list-ol"></i> Seminar to-do
 
-- <i class="fa fa-arrow-circle-o-up"></i> **Objective**: setup software (all 
+- <i class="fa fa-arrow-circle-o-up"></i> **Objective**: setup software (all
 software is free)
 
 - **Highly recommend**: use your own <i class="fa fa-laptop"></i> laptop
@@ -403,10 +408,10 @@ Setup Git/GitHub for version control, collaboration, and remotely storing your f
 - **Give me your GitHub username** so that I can add you to the **HertieDataScience2014**
 group (<https://github.com/HertieDataScience2014>).
 
-- <i class="fa fa-download"></i> Install GitHub application: 
+- <i class="fa fa-download"></i> Install GitHub application:
 
     + Mac: <https://mac.github.com/>
-        
+
     + Windows: <https://windows.github.com/>
 
 ## <i class="fa fa-code"></i> Statistics software
@@ -414,9 +419,9 @@ group (<https://github.com/HertieDataScience2014>).
 - <i class="fa fa-download"></i> **Install** software:
 
     + R: <http://cran.rstudio.com/>
-    
+
     + RStudio (dev build): <http://www.rstudio.org/download/daily/desktop/>
-    
+
 - <i class="fa fa-terminal"></i> Make sure that you can install R packages:
 
 ```{r, eval=FALSE}
@@ -424,8 +429,18 @@ group (<https://github.com/HertieDataScience2014>).
 install.packages('ggplot2')
 
 # Check to see if it loads properly
-library(ggolot2)
+library(ggplot2)
 
+ggplot(mtcars, aes(hp, mpg)) + geom_point()
+```
+
+## Expected Test Result
+
+```{r include=FALSE}
+library(ggplot2)
+```
+
+```{r fig.height=4}
 ggplot(mtcars, aes(hp, mpg)) + geom_point()
 ```
 
@@ -435,7 +450,7 @@ ggplot(mtcars, aes(hp, mpg)) + geom_point()
 PDF versions of your presentation documents.
 
     + Mac: <https://tug.org/mactex/>
-    
+
     + Windows: <http://miktex.org/download>
 
 - <i class="fa fa-exclamation-triangle"></i> This is a large download, so maybe do it in your spare time.
