@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 2: Files, File Structures, Version Control, & Collabor
 author: "Christopher Gandrud"
 date: "18 September 2014"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
 ---
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
@@ -58,7 +58,7 @@ research
     
 ## <i class="fa fa-file-code-o"></i> Why text files?
 
-- Basically files are ultimately text files. 
+- (Almost) all files are ultimately text files. 
 
     + E.g. a website is typically just a series of connected `.html`, `.js`, 
     and `.css` files. 
