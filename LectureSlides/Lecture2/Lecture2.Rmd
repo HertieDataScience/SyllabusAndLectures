@@ -1,0 +1,112 @@
+---
+title: 'MPP-E1180 Lecture 2: Files, File Structures, Version Control, & Collaboration'
+author: "Christopher Gandrud"
+date: "18 September 2014"
+output:
+  ioslides_presentation:
+    css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
+    logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
+---
+
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
+
+- Importance of (text) files and understanding files structures for reproducible
+research
+
+- Understanding files paths (conventions, best practices)
+
+- Accessing the file system from R
+
+- Introduction to Git/GitHub for version control
+
+- Git/GitHub for collaboration
+
+
+## <i class="fa fa-bookmark-o"></i> Remember: Practical Tips for Reproducible Research
+
+- <i class="fa fa-pencil-square-o"></i> Document Everything!
+
+- <i class="fa fa-file-code-o"></i> Everything is a (text) file.
+
+- <i class="fa fa-smile-o"></i> All files should be human readable.
+
+- <i class="fa fa-link"></i> Explicitly tie your files together.
+
+- <i class="fa fa-list-ol"></i> Have a plan to organise, store, and make your files available.
+
+## <i class="fa fa-bolt"></i> Importance of understanding files/file structures
+
+- This topic may seem kind of . . . dry.
+
+- Why not just click and drag files?
+
+## <i class="fa fa-bolt"></i> Importance of understanding files/file structures
+
+- **Reproducibility**: other researchers only have your files. If they are **well
+    organised** and the **links** between the files are **explicitly stated** 
+    then they can better understand what you did.
+    
+    + Most clear way of explicitly stating links is **dynamically** using file 
+    paths in your source code.
+    
+- **The software tools of really reproducible research**: R, RMarkdown, LaTeX, etc.
+    all assume that you understand file paths.
+    
+- **You**: well organised files will be easier for you to find/understand/use
+    in 6 months.
+    
+## <i class="fa fa-file-code-o"></i> Why text files?
+
+- Basically files are ultimately text files. E.g. a website is typically just a
+series of connected `.html`, `.js`, and `.css` files. 
+
+    + These are text files!
+    
+- Text files are **versitile**.
+
+    + Store your code (`.csv`), store your analysis code (`.R`), store your 
+    presentation markup (`.Rmd`, `.tex`, `.bib`).
+    
+- They are **simple** and are **not dependent on particular software**. Any 
+text editor can open them.
+    
+    + Helps **future-proof** research.
+
+- Easy to **version control**.
+    
+## Text files best practices
+
+- Use RStudio or some **text editor** (personal current favourite: [atom.io](https://atom.io/))
+to edit text files.
+
+    + <i class="fa fa-exclamation-triangle"></i> Never open/edit using MS Word! 
+
+    + Word will add a lot of hidden background text that is likely to cause problems
+    with R and other software. R/etc doesn't understand Word's instructions.
+    
+## Text files best practices
+
++ Document your text files, including **informative header**. 
+
+    - Use **comment characters** (R: `#`, Markdown/HTML: `<!-- -->)
+    
+    - For example:
+    
+```{r, eval=FALSE}
+#####################
+# R source to gather World Bank data
+# Christopher Gandrud
+# 18 September 2014
+# MIT License
+####################
+```
+
+## Text files best practices
+
++ Keep line length to about 80 characters.
+
+    + In markdown/LaTeX paragraph breaks only exist if there are two line breaks.
+
+    + Improves version control. 
+
