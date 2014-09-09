@@ -330,6 +330,10 @@ the assignment is late.
     + <i class="fa fa-exclamation-triangle"></i> Exception: very large discrepancy in
     [contributor statistics](https://help.github.com/articles/about-repository-graphs)
 
+---
+
+[<img src="img/ContribCommits.png" width="800"/>](https://github.com/christophergandrud/GreenBook/graphs/contributors)
+
 ## <i class="fa fa-certificate"></i> Assessment Details (2)
 
 - All assignments must be **reproducible**.

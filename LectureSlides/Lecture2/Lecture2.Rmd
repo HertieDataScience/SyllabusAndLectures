@@ -58,10 +58,12 @@ research
     
 ## <i class="fa fa-file-code-o"></i> Why text files?
 
-- Basically files are ultimately text files. E.g. a website is typically just a
-series of connected `.html`, `.js`, and `.css` files. 
+- Basically files are ultimately text files. 
 
-    + These are text files!
+    + E.g. a website is typically just a series of connected `.html`, `.js`, 
+    and `.css` files. 
+
+    + These are text files! Despite different file extensions. 
     
 - Text files are **versitile**.
 
@@ -74,6 +76,25 @@ text editor can open them.
     + Helps **future-proof** research.
 
 - Easy to **version control**.
+
+## <i class="fa fa-file-code-o"></i> CSV Example
+
+CSV (Comma Separated Values)
+
+- All columns are separated by commas `,`.
+
+- All rows are separated by new lines.
+
+```
+iso2c, country, score
+US,United States,1.086
+US,United States,1.094
+US,United States,1.050
+```
+
+Makes:
+
+![Basic CSV](img/CSVBasic.png)
     
 ## <i class="fa fa-file-code-o"></i> Text files best practices
 
@@ -198,7 +219,7 @@ list.files()
 setwd('/')
 ```
 
-## <i class="fa fa-folder-open-o"></i> Extra: in the Terminal/Shell
+## <i class="fa fa-folder-open-o"></i> Extra: in the Terminal Shell
 
 ```{sh}
 # Find working directory
@@ -212,10 +233,10 @@ cd /
 
 Use **relative file paths** when possible.
 
-- Absolute file path: the entire path on a particular system, 
+- **Absolute file path**: the entire path on a particular system, 
     + E.g. `/git_repos/Project1/Paper.Rmd`
 
-- Relative file path: the path relative to the working directory. 
+- **Relative file path**: the path relative to the working directory. 
 
     + E.g. if `/git_repos` is the working directory then the relative path for 
     `Paper.Rmd` is `Project1/Paper.Rmd`.
@@ -223,6 +244,360 @@ Use **relative file paths** when possible.
 Why? 
 
 - Your scripts will run easily on other computers. Enhances reproducibility,
-easier for your collaborators, easier for you.
+easier for your collaborators, easier for you when you use another computer.
+
+## <i class="fa fa-folder-open-o"></i> File & directory name conventions
+
+- <i class="fa fa-exclamation-triangle"></i> **Don't use spaces** in your file names.
+The can create problems for programs that treat spaces as an indication that the
+path has ended.
+
+- Alternatives:
+
+    + `CamelCase`
+
+    + `file_underscore`
+
+## <i class="fa fa-folder-open-o"></i> Load files into R
+
+There are a number of R commands to load files, depending on the file type.
+
+- Load Data: `read.table`, `read.csv` `read.dta` `xlsx::read.xlsx`, 
+`repmis::source_data`
+
+```{r, eval=FALSE}
+read.csv('data/TestData.csv')
+```
+
+- Save Data: `write.csv`, `write.dta`
+
+- Load and run R source code: `source`
+   
+```{r, eval=FALSE}
+source('source/Analysis1.R')
+```
+
+## <i class="fa fa-folder-open-o"></i> URLs
+
+URLs are also file paths for files on the internet.
+
+You can use them the same way as local file paths.
+
+```{r}
+Disproportionality <- repmis::source_data("http://bit.ly/Ss6zDO")
+```
+    
+
+## <i class="fa fa-github"></i> Version Control with Git
+
+Why version control?
+
+- Detailed log of all changes. 
+
+- Clear attribution of work (who contributed what).
+
+- Easy to revert back to previous versions.
+
+## <i class="fa fa-github"></i> Git vs. GitHub
+
+What is [Git](http://git-scm.com/)?
+
+- Git is an open source command line program for version control.
+
+What is [<i class="fa fa-github"></i> GitHub](https://github.com/)? 
+
+- A company that hosts Git repositories and enables 'social coding'. 
+
+- Other services are available, e.g. [BitBucket](https://bitbucket.org/)
+
+- Note: ultimately your locally stored repositories are yours separate from GitHub.
+
+## <i class="fa fa-github"></i> GUI GitHub
+
+What is GitHub for Mac/Windows? 
+
+- A GUI (graphical user interface version of Git). 
+
+- Makes it easier to use.
+
+- Ultimately just does command line Git.
+
+## Getting started with Git
+    
+Note: using command line (Shell), but all of these things can be done in the
+GitHub GUI.
+
+First lets create a directory (`FirstRepo`) that will become our **Git repository** (i.e. parent
+directory)
+
+```
+# Make repository directory
+mkdir /git_repositories/FirstRepo
+
+# Change working directory 
+cd /git_repositories/FirstRepo
+
+# Begin version control by initialising as a Git repo
+git init
+```
+
+## Getting started with Git
+
+![Git Invisible](img/InvisibleGit.png)
+
+## Getting started with Git
+
+Add a text file to the repo.
+
+```
+# Create a new file called README.md
+echo "# My first repo" > README.md
+
+# Check Git status
+git status
+
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#    README.md
+```
+
+## Getting started with Git
+
+Begin tracking changes, by **staging** the repo's files.
+
+```
+git add .
+```
+
+Make some changes to `README.md`. These changes will not be logged by Git until
+they are **Committed**
+
+```
+git commit -am 'author name added to README'
+```
+
+- `a`: all changes are committed
+
+- `m`: add a Git commit message. Try to be **informative**.
+
+Also, compare to previous commits with `git diff`
+
+## Git Logg
+
+You can view all previous commits with `git log`
+
+```
+git log
+
+commit 3c49e3f1d2f03513c1554bb36d034562312b5bed
+Author: christophergandrud <christopher.gandrud@gmail.co>
+Date:   Tue Sep 9 15:54:44 2014 +0200
+
+    author name added to README
+```
+
+## Git Checkout
+
+Each commit is given a **unique SHA-1 hash**. 
+
+The hash in the previous example was `3c49e3f1d2f03513c1554bb36d034562312b5bed`.
+
+You can switch back to any previous commit with `git checkout` and the commit
+hash or `--` for the last commit.
+
+```
+git checkout --
+```
+
+## Add to GitHub
+
+So far the repo is only on your own computer. 
+
+To add it to GitHub:
+
+1. Create a new repository on GitHub. Give it the same name as you local repo (
+i.e. `FirstRepo`). Do not initialise with any files.
+
+2. Follow the instructions:
+
+---
+
+![New GitHub Repo](img/GitHubNewRepo.png)
+
+---
+
+[<img src="img/BasicRepo.png" align="center" width="800"/>](https://github.com/christophergandrud/FirstRepo)
+
+## Updating From Remote Repositories (1)
+
+After you commit a change to the **local** repository you need to **push** the changes
+to GitHub:
+
+```
+git push origin master
+```
+
+- `origin`: the remote repo on GitHub
+
+- `master` is the master branch (we'll get to this in a second)
+
+## Updating From Remote Repositories (2)
+
+If there are changes on the remote repo, then you will need to **pull** and **merge**
+them.
+
+```
+git pull origin master
+
+Unpacking objects: 100% (3/3), done.
+From https://github.com/christophergandrud/FirstRepo
+ * branch            master     -> FETCH_HEAD
+   3c49e3f..fe3cc0a  master     -> origin/master
+Updating 3c49e3f..fe3cc0a
+Fast-forward
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+```
+
+Git will tell you if there are any **merge confilcts**. You will need to sort these out.
+
+## Comparing Commits on GitHub
+
+View a file's `History`.
+
+[<img src="img/Compare.png" width="800"/>](https://github.com/christophergandrud/FirstRepo/commit/fe3cc0a7d758cd8f0e251ce9aaaeaa4bb57c1ab6?short_path=04c6e90#diff-04c6e90faac2675aa89e2176d2eec7d8)
+
+## Branches
+
+You can create multiple **branches** in your repo. 
+
+These allow you to:
+
+- Make changes to a project without affecting the **master** branch
+
+- A branch called **gh-pages** pushed to GitHub will become a hosted website.
+
+## Branches Example
+
+Create a new branch called `TestBranch`
+
+```
+git checkout -B TestBranch
+```
+
+You can make `add` files and `commit` changes. 
+
+When you think that the changes are ready to be merged with the `master` branch:
+
+```
+git commit -am 'last changes to TestBranch, ready for master`
+
+git checkout master
+
+git merge TestBranch
+
+# Delete the branch if you want to
+git branch -D TestBranch
+```
+
+## Tags
+
+You can **tag** a particular commit so that it is easy to find. 
+
+<i class="fa fa-exclamation"></i> You need to tag your assignments when you turn
+them in.
+
+```
+git tag -a v0.1 -m 'First tag'
+
+git push --tags
+```
+
+---
+
+![Git tag example](img/GitTag.png)
+
+## Tags and DOI
+
+You can use GitHub tags to create [**Digital Object Identifiers**](http://en.wikipedia.org/wiki/Digital_object_identifier).
+
+Use for **citing** (particular version of) research.
+
+See <https://guides.github.com/activities/citable-code/>
+
+## Data on GitHub
+
+CSV files are rendered in the browser:
+
+![CSV rendered](img/CSVRendered.png)
 
 
+## Collaborating on GitHub: Official Collaborators
+
+You can add **official collaborators** to the repo on GitHub:
+
+Settings > Collaborators > Enter collaborator's GitHub username
+
+Now the will have read/write privelages (they can **push** as well as **pull**)
+
+They should **clone** the repo. 
+
+![Clone](img/CLoneRepo.png)
+
+## GitHub Issues
+
+A good way to communicate is to use GitHub Issues. 
+
+Creates an open and public record of thoughts/issues that anyone can contribute to.
+
+## Forking/Pull Requests
+
+**Fork:** You can copy a repo and then build on it by <i class="fa fa-code-fork"></i> 
+**forking** it. 
+
+- This maintains entire version history, contributors, etc,
+
+**Pull:** Anyone (non-official contributors) can make a **pull request**. 
+
+Simplest way is to click edit (<i class="fa fa-pencil"></i>) on someone else's 
+repo. Begin editing.
+
+Note: 
+    
+- Need approval from a repo owner
+    
+- Once the request is accepted, the change is **automatically merged** 
+into master.
+
+## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Files/File Paths
+
+- Play around with the file system from R and the Shell
+
+    + Find the working directory, change the working directory, explore the files
+    in the working directory. 
+    
+    +  If you have any data files, try to load them into R.
+    
+    + If not download <https://github.com/christophergandrud/Rep-Res-ExampleProject1>
+    and load `Data/MainData.csv` into R.
+    
+## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Git/GitHub
+
+- Create a new local repository and push it to GitHub.
+
+- Add your neighbour as a collaborator. 
+
+- Push/Pull commits.
+
+- Open and close issues.
+
+- Fork a neighour's repo. 
+
+- Make a pull request to another neighour's repo.
+
+- Accept (or reject) a pull request.
