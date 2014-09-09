@@ -75,7 +75,7 @@ text editor can open them.
 
 - Easy to **version control**.
     
-## Text files best practices
+## <i class="fa fa-file-code-o"></i> Text files best practices
 
 - Use RStudio or some **text editor** (personal current favourite: [atom.io](https://atom.io/))
 to edit text files.
@@ -85,11 +85,11 @@ to edit text files.
     + Word will add a lot of hidden background text that is likely to cause problems
     with R and other software. R/etc doesn't understand Word's instructions.
     
-## Text files best practices
+## <i class="fa fa-file-code-o"></i> Text files best practices
 
 + Document your text files, including **informative header**. 
 
-    - Use **comment characters** (R: `#`, Markdown/HTML: `<!-- -->)
+    - Use **comment characters** (R: `#`, Markdown/HTML: `<!-- -->`)
     
     - For example:
     
@@ -100,13 +100,129 @@ to edit text files.
 # 18 September 2014
 # MIT License
 ####################
+
+2 + 2 # Inline comment 
 ```
 
-## Text files best practices
+## <i class="fa fa-file-code-o"></i> Text files best practices
 
 + Keep line length to about 80 characters.
 
-    + In markdown/LaTeX paragraph breaks only exist if there are two line breaks.
+    + In Markdown/LaTeX paragraph breaks only exist if there are **two line 
+    breaks**.
+    
+    + Most text editors, including RStudio have a character ruler.
 
     + Improves version control. 
+
+```
+This is treated as 
+only one paragraph.
+
+This is treated as 
+
+two paragraphs.
+```
+
+## <i class="fa fa-folder-open-o"></i> File paths
+
+- Files are organised **hierarchically** into (upside down) trees. 
+
+```
+Root
+|_
+    Parent
+    |_
+        Child1
+        Child2
+```
+
+## <i class="fa fa-folder-open-o"></i> Root
+
+**Root** directories are the first level of a disk. 
+
+They are the root out of which the file tree grows.
+
+**Naming Conventions**:
+
+**Linux/Mac**: `/`, e.g. `/git_repos` means that the `git_repos` directory is a child
+of the root directory.
+
+**Windows**: the disk is partitioned, e.g. the C partition is denoted `C:\`. 
+`C:\git_repos` indicates that the `git_repos` directory is a child
+of the `C:\` partition.
+
+## <i class="fa fa-folder-open-o"></i> Sub (child) directories
+
+Sub (child) directories are denoted with a `/` in Linux/Mac and `\` in Windows, e.g.:
+
+```
+# Linux/Mac
+/git_repos/Project1
+
+# Windows
+C:\git_repos\Project1
+```
+
+<i class="fa fa-exclamation"></i> R tip: 
+
+- In R for Windows you either use two backslashes `\\` (`\` is the R **escape
+character**).
+
+- Alternatively, use `/` in **relative paths** in R for Windows, it will know 
+what you mean.
+
+## <i class="fa fa-folder-open-o"></i> Working directories
+
+A **working directory** is the directory where the program looks for files/other
+directories. 
+
+<i class="fa fa-exclamation"></i> Always remember the working directory. Otherwise
+you may open/save files that you do not want to open/save or save them to places
+you don't want them saved.
+
+## <i class="fa fa-folder-open-o"></i> Working directories
+
+In R:
+
+```{r}
+# Find working directory
+getwd()
+
+# List all files in the working directory
+list.files()
+```
+
+```{r, eval=FALSE}
+# Set root as working directory
+setwd('/')
+```
+
+## <i class="fa fa-folder-open-o"></i> Extra: in the Terminal/Shell
+
+```{sh}
+# Find working directory
+pwd
+
+# Set root as working directory
+cd /
+```
+
+## <i class="fa fa-folder-open-o"></i> Relative vs. Absolute file paths
+
+Use **relative file paths** when possible.
+
+- Absolute file path: the entire path on a particular system, 
+    + E.g. `/git_repos/Project1/Paper.Rmd`
+
+- Relative file path: the path relative to the working directory. 
+
+    + E.g. if `/git_repos` is the working directory then the relative path for 
+    `Paper.Rmd` is `Project1/Paper.Rmd`.
+
+Why? 
+
+- Your scripts will run easily on other computers. Enhances reproducibility,
+easier for your collaborators, easier for you.
+
 

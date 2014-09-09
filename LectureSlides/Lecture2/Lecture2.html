@@ -166,7 +166,7 @@
 <li><p>Easy to <strong>version control</strong>.</p></li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>Text files best practices</h2></hgroup><article  id="text-files-best-practices">
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-file-code-o"></i> Text files best practices</h2></hgroup><article  id="text-files-best-practices">
 
 <ul>
 <li><p>Use RStudio or some <strong>text editor</strong> (personal current favourite: <a href='https://atom.io/' title=''>atom.io</a>) to edit text files.</p>
@@ -177,13 +177,13 @@
 </ul></li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>Text files best practices</h2></hgroup><article  id="text-files-best-practices-1">
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-file-code-o"></i> Text files best practices</h2></hgroup><article  id="text-files-best-practices-1">
 
 <ul>
 <li><p>Document your text files, including <strong>informative header</strong>.</p>
 
 <ul>
-<li><p>Use <strong>comment characters</strong> (R: <code>#</code>, Markdown/HTML: `<!-- -->)</p></li>
+<li><p>Use <strong>comment characters</strong> (R: <code>#</code>, Markdown/HTML: <code>&lt;!-- --&gt;</code>)</p></li>
 <li><p>For example:</p></li>
 </ul></li>
 </ul>
@@ -193,16 +193,116 @@
 # Christopher Gandrud
 # 18 September 2014
 # MIT License
-####################</pre>
+####################
 
-</article></slide><slide class=''><hgroup><h2>Text files best practices</h2></hgroup><article  id="text-files-best-practices-2">
+2 + 2 # Inline comment </pre>
+
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-file-code-o"></i> Text files best practices</h2></hgroup><article  id="text-files-best-practices-2">
 
 <ul>
 <li><p>Keep line length to about 80 characters.</p>
 
 <ul>
-<li><p>In markdown/LaTeX paragraph breaks only exist if there are two line breaks.</p></li>
+<li><p>In Markdown/LaTeX paragraph breaks only exist if there are <strong>two line breaks</strong>.</p></li>
+<li><p>Most text editors, including RStudio have a character ruler.</p></li>
 <li><p>Improves version control.</p></li>
+</ul></li>
+</ul>
+
+<pre >This is treated as 
+only one paragraph.
+
+This is treated as 
+
+two paragraphs.</pre>
+
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-folder-open-o"></i> File paths</h2></hgroup><article  id="file-paths">
+
+<ul>
+<li>Files are organised <strong>hierarchically</strong> into (upside down) trees.</li>
+</ul>
+
+<pre >Root
+|_
+    Parent
+    |_
+        Child1
+        Child2</pre>
+
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-folder-open-o"></i> Root</h2></hgroup><article  id="root">
+
+<p><strong>Root</strong> directories are the first level of a disk.</p>
+
+<p>They are the root out of which the file tree grows.</p>
+
+<p><strong>Naming Conventions</strong>:</p>
+
+<p><strong>Linux/Mac</strong>: <code>/</code>, e.g. <code>/git_repos</code> means that the <code>git_repos</code> directory is a child of the root directory.</p>
+
+<p><strong>Windows</strong>: the disk is partitioned, e.g. the C partition is denoted <code>C:\</code>. <code>C:\git_repos</code> indicates that the <code>git_repos</code> directory is a child of the <code>C:\</code> partition.</p>
+
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-folder-open-o"></i> Sub (child) directories</h2></hgroup><article  id="sub-child-directories">
+
+<p>Sub (child) directories are denoted with a <code>/</code> in Linux/Mac and <code>\</code> in Windows, e.g.:</p>
+
+<pre ># Linux/Mac
+/git_repos/Project1
+
+# Windows
+C:\git_repos\Project1</pre>
+
+<p><i class="fa fa-exclamation"></i> R tip:</p>
+
+<ul>
+<li><p>In R for Windows you either use two backslashes <code>\\</code> (<code>\</code> is the R <strong>escape character</strong>).</p></li>
+<li><p>Alternatively, use <code>/</code> in <strong>relative paths</strong> in R for Windows, it will know what you mean.</p></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-folder-open-o"></i> Working directories</h2></hgroup><article  id="working-directories">
+
+<p>A <strong>working directory</strong> is the directory where the program looks for files/other directories.</p>
+
+<p><i class="fa fa-exclamation"></i> Always remember the working directory. Otherwise you may open/save files that you do not want to open/save or save them to places you don&#39;t want them saved.</p>
+
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-folder-open-o"></i> Working directories</h2></hgroup><article  id="working-directories-1">
+
+<p>In R:</p>
+
+<pre class = 'prettyprint lang-r'># Find working directory
+getwd()</pre>
+
+<pre >## [1] &quot;/git_repositories/SyllabusAndLectures/LectureSlides/Lecture2&quot;</pre>
+
+<pre class = 'prettyprint lang-r'># List all files in the working directory
+list.files()</pre>
+
+<pre >## [1] &quot;Lecture2.html&quot; &quot;Lecture2.Rmd&quot;</pre>
+
+<pre class = 'prettyprint lang-r'># Set root as working directory
+setwd(&#39;/&#39;)</pre>
+
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-folder-open-o"></i> Extra: in the Terminal/Shell</h2></hgroup><article  id="extra-in-the-terminalshell">
+
+<pre class = 'prettyprint lang-{sh}'># Find working directory
+pwd
+
+# Set root as working directory
+cd /</pre>
+
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-folder-open-o"></i> Relative vs. Absolute file paths</h2></hgroup><article  id="relative-vs.-absolute-file-paths">
+
+<p>Use <strong>relative file paths</strong> when possible.</p>
+
+<ul>
+<li>Absolute file path: the entire path on a particular system,
+
+<ul>
+<li>E.g. <code>/git_repos/Project1/Paper.Rmd</code></li>
+</ul></li>
+<li><p>Relative file path: the path relative to the working directory.</p>
+
+<ul>
+<li>E.g. if <code>git_repos</code> is the working directory then the relative path for <code>Paper.Rmd</code> is <code>Project1/Paper.Rmd</code>.</li>
 </ul></li>
 </ul></article></slide>
 
