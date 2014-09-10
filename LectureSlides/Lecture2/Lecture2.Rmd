@@ -11,16 +11,16 @@ output:
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
 
-- Importance of (text) files and understanding files structures for reproducible
+- **Importance** of (text) files and understanding files structures for reproducible
 research
 
-- Understanding files paths (conventions, best practices)
+- Understanding **files paths** (conventions, best practices)
 
-- Accessing the file system from R
+- **Accessing** the file system from **R**
 
-- Introduction to Git/GitHub for version control
+- Introduction to Git/GitHub for **version control**
 
-- Git/GitHub for collaboration
+- Git/GitHub for **collaboration**
 
 
 ## <i class="fa fa-bookmark-o"></i> Remember: Practical Tips for Reproducible Research
@@ -58,24 +58,26 @@ research
     
 ## <i class="fa fa-file-code-o"></i> Why text files?
 
-- (Almost) all files are ultimately text files. 
+(Almost) all files are ultimately text files. 
 
-    + E.g. a website is typically just a series of connected `.html`, `.js`, 
-    and `.css` files. 
+- E.g. a website is typically just a series of connected `.html`, `.js`, 
+and `.css` files. 
 
-    + These are text files! Despite different file extensions. 
+- These are text files! Despite different file extensions. 
     
-- Text files are **versitile**.
-
-    + Store your code (`.csv`), store your analysis code (`.R`), store your 
-    presentation markup (`.Rmd`, `.tex`, `.bib`).
+## <i class="fa fa-file-code-o"></i> Why text files?
     
-- They are **simple** and are **not dependent on particular software**. Any 
+Text files are **versitile**.
+
+- Store your code (`.csv`), store your analysis code (`.R`), store your 
+presentation markup (`.Rmd`, `.tex`, `.bib`).
+    
+They are **simple** and are **not dependent on particular software**. Any 
 text editor can open them.
     
-    + Helps **future-proof** research.
+- Helps **future-proof** research.
 
-- Easy to **version control**.
+Easy to **version control**.
 
 ## <i class="fa fa-file-code-o"></i> CSV Example
 
@@ -85,6 +87,10 @@ CSV (Comma Separated Values)
 
 - All rows are separated by new lines.
 
+## <i class="fa fa-file-code-o"></i> CSV Example
+
+In CSV this:
+
 ```
 iso2c, country, score
 US,United States,1.086
@@ -92,7 +98,7 @@ US,United States,1.094
 US,United States,1.050
 ```
 
-Makes:
+makes:
 
 ![Basic CSV](img/CSVBasic.png)
     
@@ -136,7 +142,7 @@ to edit text files.
 
     + Improves version control. 
 
-```
+```{r eval=FALSE}
 This is treated as 
 only one paragraph.
 
@@ -149,7 +155,7 @@ two paragraphs.
 
 - Files are organised **hierarchically** into (upside down) trees. 
 
-```
+```{r eval=FALSE}
 Root
 |_
     Parent
@@ -177,7 +183,7 @@ of the `C:\` partition.
 
 Sub (child) directories are denoted with a `/` in Linux/Mac and `\` in Windows, e.g.:
 
-```
+```{r engine='sh', eval=FALSE}
 # Linux/Mac
 /git_repos/Project1
 
@@ -187,8 +193,8 @@ C:\git_repos\Project1
 
 <i class="fa fa-exclamation"></i> R tip: 
 
-- In R for Windows you either use two backslashes `\\` (`\` is the R **escape
-character**).
+- In R for Windows you either use two backslashes `\\` (`\` is the R [escape
+character](http://en.wikipedia.org/wiki/Escape_character)).
 
 - Alternatively, use `/` in **relative paths** in R for Windows, it will know 
 what you mean.
@@ -221,10 +227,14 @@ setwd('/')
 
 ## <i class="fa fa-folder-open-o"></i> Extra: in the Terminal Shell
 
-```{sh}
+In the Terminal Shell:
+
+```{r engine='sh'}
 # Find working directory
 pwd
+```
 
+```{r engine='sh', eval=FALSE}
 # Set root as working directory
 cd /
 ```
@@ -330,7 +340,7 @@ GitHub GUI.
 First lets create a directory (`FirstRepo`) that will become our **Git repository** (i.e. parent
 directory)
 
-```
+```{r engine='sh', eval=FALSE}
 # Make repository directory
 mkdir /git_repositories/FirstRepo
 
@@ -341,21 +351,23 @@ cd /git_repositories/FirstRepo
 git init
 ```
 
-## Getting started with Git
+## <i class="fa fa-github"></i> Getting started with Git
 
 ![Git Invisible](img/InvisibleGit.png)
 
-## Getting started with Git
+## <i class="fa fa-github"></i> Getting started with Git
 
 Add a text file to the repo.
 
-```
+```{r engine='sh', eval=FALSE}
 # Create a new file called README.md
 echo "# My first repo" > README.md
 
 # Check Git status
 git status
+```
 
+```
 # On branch master
 #
 # Initial commit
@@ -366,18 +378,18 @@ git status
 #    README.md
 ```
 
-## Getting started with Git
+## <i class="fa fa-github"></i> Getting started with Git
 
 Begin tracking changes, by **staging** the repo's files.
 
-```
+```{r engine='sh', eval=FALSE}
 git add .
 ```
 
 Make some changes to `README.md`. These changes will not be logged by Git until
 they are **Committed**
 
-```
+```{r engine='sh', eval=FALSE}
 git commit -am 'author name added to README'
 ```
 
@@ -387,13 +399,15 @@ git commit -am 'author name added to README'
 
 Also, compare to previous commits with `git diff`
 
-## Git Logg
+## <i class="fa fa-github"></i> Git Logg
 
 You can view all previous commits with `git log`
 
-```
+```{r engine='sh', eval=FALSE}
 git log
+```
 
+```
 commit 3c49e3f1d2f03513c1554bb36d034562312b5bed
 Author: christophergandrud <christopher.gandrud@gmail.co>
 Date:   Tue Sep 9 15:54:44 2014 +0200
@@ -401,7 +415,7 @@ Date:   Tue Sep 9 15:54:44 2014 +0200
     author name added to README
 ```
 
-## Git Checkout
+## <i class="fa fa-github"></i> Git Checkout
 
 Each commit is given a **unique SHA-1 hash**. 
 
@@ -410,11 +424,11 @@ The hash in the previous example was `3c49e3f1d2f03513c1554bb36d034562312b5bed`.
 You can switch back to any previous commit with `git checkout` and the commit
 hash or `--` for the last commit.
 
-```
+```{r engine='sh', eval=FALSE}
 git checkout --
 ```
 
-## Add to GitHub
+## <i class="fa fa-github"></i> Add to GitHub
 
 So far the repo is only on your own computer. 
 
@@ -433,12 +447,12 @@ i.e. `FirstRepo`). Do not initialise with any files.
 
 [<img src="img/BasicRepo.png" align="center" width="800"/>](https://github.com/christophergandrud/FirstRepo)
 
-## Updating From Remote Repositories (1)
+## <i class="fa fa-github"></i> Updating From Remote Repositories
 
 After you commit a change to the **local** repository you need to **push** the changes
 to GitHub:
 
-```
+```{r engine='sh', eval=FALSE}
 git push origin master
 ```
 
@@ -446,14 +460,16 @@ git push origin master
 
 - `master` is the master branch (we'll get to this in a second)
 
-## Updating From Remote Repositories (2)
+## <i class="fa fa-github"></i> Updating From Remote Repositories
 
 If there are changes on the remote repo, then you will need to **pull** and **merge**
 them.
 
-```
+```{r engine='sh', eval=FALSE}
 git pull origin master
+```
 
+```
 Unpacking objects: 100% (3/3), done.
 From https://github.com/christophergandrud/FirstRepo
  * branch            master     -> FETCH_HEAD
@@ -466,13 +482,13 @@ Fast-forward
 
 Git will tell you if there are any **merge confilcts**. You will need to sort these out.
 
-## Comparing Commits on GitHub
+## <i class="fa fa-github"></i> Comparing Commits on GitHub
 
 View a file's `History`.
 
 [<img src="img/Compare.png" width="800"/>](https://github.com/christophergandrud/FirstRepo/commit/fe3cc0a7d758cd8f0e251ce9aaaeaa4bb57c1ab6?short_path=04c6e90#diff-04c6e90faac2675aa89e2176d2eec7d8)
 
-## Branches
+## <i class="fa fa-code-fork"></i> Branches
 
 You can create multiple **branches** in your repo. 
 
@@ -482,20 +498,20 @@ These allow you to:
 
 - A branch called **gh-pages** pushed to GitHub will become a hosted website.
 
-## Branches Example
+## <i class="fa fa-code-fork"></i> Branches Example
 
 Create a new branch called `TestBranch`
 
-```
+```{r engine='sh', eval=FALSE}
 git checkout -B TestBranch
 ```
 
-You can make `add` files and `commit` changes. 
+You can `add` files and `commit` changes. 
 
 When you think that the changes are ready to be merged with the `master` branch:
 
-```
-git commit -am 'last changes to TestBranch, ready for master`
+```{r engine='sh', eval=FALSE}
+git commit -am 'last changes to TestBranch, ready for master'
 
 git checkout master
 
@@ -505,14 +521,14 @@ git merge TestBranch
 git branch -D TestBranch
 ```
 
-## Tags
+## <i class="fa fa-tag"></i> Tags
 
 You can **tag** a particular commit so that it is easy to find. 
 
 <i class="fa fa-exclamation"></i> You need to tag your assignments when you turn
 them in.
 
-```
+```{r engine='sh', eval=FALSE}
 git tag -a v0.1 -m 'First tag'
 
 git push --tags
@@ -522,7 +538,7 @@ git push --tags
 
 ![Git tag example](img/GitTag.png)
 
-## Tags and DOI
+## <i class="fa fa-tag"></i> Tags and DOI
 
 You can use GitHub tags to create [**Digital Object Identifiers**](http://en.wikipedia.org/wiki/Digital_object_identifier).
 
@@ -530,14 +546,14 @@ Use for **citing** (particular version of) research.
 
 See <https://guides.github.com/activities/citable-code/>
 
-## Data on GitHub
+## <i class="fa fa-table"></i> Data on GitHub
 
 CSV files are rendered in the browser:
 
 ![CSV rendered](img/CSVRendered.png)
 
 
-## Collaborating on GitHub: Official Collaborators
+## <i class="fa fa-users"></i> Collaborating on GitHub: Official Collaborators
 
 You can add **official collaborators** to the repo on GitHub:
 
@@ -549,13 +565,13 @@ They should **clone** the repo.
 
 ![Clone](img/CLoneRepo.png)
 
-## GitHub Issues
+## <i class="fa fa-exclamation-circle"></i> GitHub Issues
 
 A good way to communicate is to use GitHub Issues. 
 
 Creates an open and public record of thoughts/issues that anyone can contribute to.
 
-## Forking/Pull Requests
+## <i class="fa fa-code-fork"></i> Forking/Pull Requests
 
 **Fork:** You can copy a repo and then build on it by <i class="fa fa-code-fork"></i> 
 **forking** it. 
@@ -583,8 +599,8 @@ into master.
     
     +  If you have any data files, try to load them into R.
     
-    + If not download <https://github.com/christophergandrud/Rep-Res-ExampleProject1>
-    and load `Data/MainData.csv` into R.
+    + If not load `Data/MainData.csv` into R from
+    <https://github.com/christophergandrud/Rep-Res-ExampleProject1>.
     
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Git/GitHub
 
@@ -592,12 +608,13 @@ into master.
 
 - Add your neighbour as a collaborator. 
 
-- Push/Pull commits.
+- Push/Pull commits. 
 
 - Open and close issues.
 
 - Fork a neighour's repo. 
 
-- Make a pull request to another neighour's repo.
+- Make a pull request to another neighour's repo. Justify why it is an important
+request.
 
 - Accept (or reject) a pull request.
