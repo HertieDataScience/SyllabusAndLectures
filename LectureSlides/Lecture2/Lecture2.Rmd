@@ -304,7 +304,10 @@ Why version control?
 
 - Detailed log of all changes. 
 
-- Clear attribution of work (who contributed what).
+- Clear attribution of work (who contributed what). 
+
+    + <i class="fa fa-child"></i> Provides a **selective incentive**, helping to 
+    overcome the collaborative collective action problem!
 
 - Easy to revert back to previous versions.
 
