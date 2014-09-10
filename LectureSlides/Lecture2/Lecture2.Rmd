@@ -304,12 +304,17 @@ Why version control?
 
 - Detailed log of all changes. 
 
+- Easy to revert back to previous versions.
+
 - Clear attribution of work (who contributed what). 
 
     + <i class="fa fa-child"></i> Provides a **selective incentive**, helping to 
     overcome the collaborative collective action problem!
 
-- Easy to revert back to previous versions.
+---
+
+[<img src="img/ContribStats.png" width="800"/>](https://github.com/christophergandrud/GreenBook/graphs/contributors)
+
 
 ## <i class="fa fa-github"></i> Git vs. GitHub
 
@@ -543,11 +548,15 @@ git push --tags
 
 ## <i class="fa fa-tag"></i> Tags and DOI
 
-You can use GitHub tags to create [**Digital Object Identifiers**](http://en.wikipedia.org/wiki/Digital_object_identifier).
+You can use GitHub tags to create [Digital Object Identifiers (DOI)](http://en.wikipedia.org/wiki/Digital_object_identifier).
 
-Use for **citing** (particular version of) research.
+- Use for **citing** (particular version of) research.
 
-See <https://guides.github.com/activities/citable-code/>
+- For **How-To** see <https://guides.github.com/activities/citable-code/>
+
+DOI Badges in README files on GitHub:
+
+![DOI Readme](img/DOIreadme.png)
 
 ## <i class="fa fa-table"></i> Data on GitHub
 
