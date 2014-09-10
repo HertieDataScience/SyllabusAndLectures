@@ -614,7 +614,8 @@ into master.
 
 - Fork a neighour's repo. 
 
-- Make a pull request to another neighour's repo. Justify why it is an important
-request.
+- Make a pull request to another neighour's repo (or the 
+[SyllabusAndLectures](https://github.com/HertieDataScience2014/SyllabusAndLectures)). 
+Justify why it is an important request.
 
 - Accept (or reject) a pull request.
