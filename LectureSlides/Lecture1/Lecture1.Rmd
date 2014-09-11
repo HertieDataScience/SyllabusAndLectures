@@ -11,7 +11,7 @@ output:
 
 ## Christopher Gandrud
 
-Contact:
+**Contact**:
 
 - Public
 
@@ -23,7 +23,7 @@ Contact:
 
     + <a href="mailto:gandrud@hertie-school.org"><i class="fa fa-envelope"></i> gandrud@hertie-school.org</a>
 
-Official Office Hours:
+**Official Office Hours**:
 
 - Room: 1.52
 
@@ -53,6 +53,8 @@ Official Office Hours:
 <i class="fa fa-exclamation"></i> Learn how to actually **do** data analysis
 using **best practices** <i class="fa fa-exclamation"></i>
 
+We are going to use **ugly real-world data**, not pristine training data sets.
+
 ## <i class="fa fa-compass"></i> Motivation: Academic
 
 - Skills needed to do **original quantitative research** for your **thesis**.
@@ -78,7 +80,7 @@ of open data science.
 
 ## <i class="fa fa-compass"></i> Motivation: Government
 
-- Public data is being made increasingly **accessible**.
+- Public data is increasingly **accessible**.
 
     + e.g. [World Bank Development Indicators](http://data.worldbank.org/data-catalog/world-development-indicators),
     [GovData Germany](https://www.govdata.de/neues), [data.gov.uk](http://data.gov.uk/),
@@ -176,7 +178,7 @@ The original finding could just have been
 
 ## <i class="fa fa-question-circle"></i> Why reproducibility?
 
-- Reproducibility helps **avoid effort duplication**:
+Reproducibility helps **avoid effort duplication**:
 
 - Others don't need to waste time:
 
@@ -392,10 +394,11 @@ available.
 
 ## <i class="fa fa-list-ol"></i> Seminar to-do
 
-- <i class="fa fa-arrow-circle-o-up"></i> **Objective**: setup software (all
-software is free)
+- <i class="fa fa-users"></i> Meet each other, get idea of background.
 
-- **Highly recommend**: use your own <i class="fa fa-laptop"></i> laptop
+- <i class="fa fa-download"></i> Setup software (all software is free).
+
+    + **Highly recommended**: use your own <i class="fa fa-laptop"></i> laptop
 
 ## <i class="fa fa-globe"></i> Modern Web browser
 
