@@ -31,7 +31,7 @@ output:
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
 
-- Introduce the course goals, plan, and expectations/assessment
+- Introduce the course motivation, goals, plan, and expectations/assessment
 
 - Introduce Collaborative & Reproducible Data Analysis
 
@@ -39,16 +39,15 @@ output:
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the course
 
-**Collaboratively** and **reproducibly**
+**Collaboratively** and **reproducibly**:
 
-- Gather/clean social data
+1. Gather/clean social data
 
-- Analyse it
+2. Analyse it to draw informed descriptions/inferences
 
-- Present results (in a variety of mediums)
+3. Present results (in a variety of mediums)
 
-<br>
-<br>
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the course
 
 <i class="fa fa-exclamation"></i> Learn how to actually **do** data analysis
 using **best practices** <i class="fa fa-exclamation"></i>
@@ -134,8 +133,8 @@ who are **not explicitly** working together often in **unexpected ways**.
 **Really reproducible** research (Peng 2011, 1226):
 
 > <i class="fa fa-quote-left"></i> the data and code used to make a finding are
-available and they are sufficient for an independent researcher to recreate the finding.
-<i class="fa fa-quote-right"></i>
+**available** and they are **sufficient** for an independent researcher to 
+**recreate the finding**. <i class="fa fa-quote-right"></i>
 
 - In practice reproduciblity is enhanced by **literate programming** where the data,
 analysis, and presentation of the results are 'weaved' or 'knitted' together.
@@ -202,6 +201,8 @@ because they try to explain 'wrong' findings.
 
     + Reproducible research is likely to be more **useful for other researchers**.
     They can use your data and learn from your code and methods.
+    
+    + More use <i class="fa fa-long-arrow-right"></i> more impact (e.g. citations)
 
 - **Better work habits**
 
@@ -292,7 +293,7 @@ allows me to create both PDF and HTML slides.
     + **Apply** what we learned in the lecture/readings to achieve specific goals,
     i.e. **no set pattern** to copy by rote.
 
-    + **Pair programming**: work together with others to acheive these goals.
+    + **Pair programming**: work together with others to achieve these goals.
 
     + **Documentation**: document your work with Git/GitHub.
 
@@ -425,7 +426,7 @@ group (<https://github.com/HertieDataScience2014>).
 
 - <i class="fa fa-download"></i> **Install** software:
 
-    + R: <http://cran.rstudio.com/>
+    + R (version 3.1.1): <http://cran.rstudio.com/>
 
     + RStudio (dev build): <http://www.rstudio.org/download/daily/desktop/>
 
