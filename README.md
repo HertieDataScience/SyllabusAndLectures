@@ -4,7 +4,7 @@
 
 ### Fall 2014
 
-**Version: *8 September 2014***
+**Version: *13 September 2014***
 
 ### Instructor: Christopher Gandrud
 
@@ -205,7 +205,7 @@ Most social science data sets are now available for download online. This week w
 
 - Ch. 6-7: RRRR
 
-- Wickham, Hadley. 2014. ["Tidy Data"](http://vita.had.co.nz/papers/tidy-data.pdf).
+- Wickham, Hadley. 2014. “[Tidy Data](http://www.jstatsoft.org/v59/i10)”. Journal of Statistical Software 59(10): 1–23.
 
 - Janssen, Marijn, and Yannis Charalabidis, and Anneke Zulderwijk. 2012. [''Benefits, Adoption Barriers and Myths of Open Data and Open Government''](http://www.tandfonline.com/doi/abs/10.1080/10580530.2012.716740). *Information Systems Management*. 29(4): 258-268.
 
