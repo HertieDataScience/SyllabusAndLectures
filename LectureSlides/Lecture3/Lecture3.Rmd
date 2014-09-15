@@ -473,7 +473,7 @@ Simulated normally distributed data with SD of 30 and mean 50
 Normal30 <- rnorm(1e+6, mean = 50, sd = 30)
 ```
 
-```{r, echo=FALSE, message=FALSE, cache=TRUE}
+```{r, echo=FALSE, message=FALSE}
 # Helpful information from StackExchange discussion
 # http://stackoverflow.com/questions/3494593/shading-a-kernel-density-plot-between-two-points?lq=1
 # Load zoo package
@@ -547,7 +547,7 @@ hist(log(swiss$Education))
 plot(log(swiss$Education), swiss$Examination)
 ```
 
-## Joint distribution (summarise)
+## Summarise with loess
 
 ```{r, message=FALSE}
 ggplot2::ggplot(swiss, aes(log(Education), Examination)) +
@@ -571,4 +571,13 @@ In R this means closing
 
 - `""`
 
-## <i class="fa fa-arrow-circle-o-up"></i> Seminar:
+## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Start using R!
+
+- **Access** R data sets 
+
+- Explore the data and find ways to **numerically**/**graphically** describe it
+
+- Find and use R functions that were **not covered** in the lecture for exploring
+and transforming your data.
+
+- Create **your own function** (what it does is open to you).
