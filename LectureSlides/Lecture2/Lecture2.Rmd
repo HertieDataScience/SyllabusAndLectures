@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 2: Files, File Structures, Version Control, & Collabor
 author: "Christopher Gandrud"
 date: "18 September 2014"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
-  beamer_presentation: default
 ---
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
@@ -71,7 +71,7 @@ Each pair will create a **new public GitHub repository**
 
 - This topic may seem kind of . . . dry.
 
-- Why not just click and drag files?
+- Why not just click and drag files with the GUI (Graphical User Interface)?
 
 ## <i class="fa fa-bolt"></i> Importance of understanding files/file structures
 
@@ -79,11 +79,11 @@ Each pair will create a **new public GitHub repository**
     organised** and the **links** between the files are **explicitly stated** 
     then they can better understand what you did.
     
-    + Most clear way of explicitly stating links is **dynamically** using file 
+    + Clearest way of explicitly stating links is **dynamically** using file 
     paths in your source code.
     
 - **The software tools of really reproducible research**: R, RMarkdown, LaTeX, etc.
-    all assume that you understand file paths.
+    all require you to explicitly state file paths.
     
 - **You**: well organised files will be easier for you to find/understand/use
     in 6 months.
@@ -95,21 +95,25 @@ Each pair will create a **new public GitHub repository**
 - E.g. a website is typically just a series of connected `.html`, `.js`, 
 and `.css` files. 
 
-- These are text files! Despite different file extensions. 
+- **These are text files!** Despite different file extensions. 
+
+    + To see this explore a webpage with 
+    [Chrome Developer Tools](https://developer.chrome.com/devtools)
     
 ## <i class="fa fa-file-code-o"></i> Why text files?
     
 Text files are **versitile**.
 
-- Store your code (`.csv`), store your analysis code (`.R`), store your 
+- Store your data (`.csv`), store your analysis code (`.R`), store your 
 presentation markup (`.Rmd`, `.tex`, `.bib`).
     
-They are **simple** and are **not dependent on particular software**. Any 
-text editor can open them.
+- They are **simple** and are **not dependent on particular software**. 
+
+    - Any text editor can open them.
     
 - Helps **future-proof** research.
 
-Easy to **version control**.
+- Easy to **version control**.
 
 ## <i class="fa fa-file-code-o"></i> CSV Example
 
@@ -136,21 +140,23 @@ makes:
     
 ## <i class="fa fa-file-code-o"></i> Text files best practices
 
-- Use RStudio or some **text editor** (personal current favourite: [atom.io](https://atom.io/))
+Use RStudio or some **text editor** (personal current favourite: [atom.io](https://atom.io/))
 to edit text files.
 
-    + <i class="fa fa-exclamation-triangle"></i> Never open/edit using MS Word! 
+- RStudio can open/edit/save any text file
 
-    + Word will add a lot of hidden background text that is likely to cause problems
-    with R and other software. R/etc doesn't understand Word's instructions.
+<i class="fa fa-exclamation-triangle"></i> Never open/edit/save using MS Word! 
+
+- Word will add a lot of hidden background text that is likely to cause problems
+with R and other software. R/etc doesn't understand Word's instructions.
     
 ## <i class="fa fa-file-code-o"></i> Text files best practices
 
-+ Document your text files, including **informative header**. 
+Document your text files, including **informative headers**. 
 
-    - Use **comment characters** (R: `#`, Markdown/HTML: `<!-- -->`)
+Use **comment characters** (R: `#`, Markdown/HTML: `<!-- -->`)
     
-    - For example:
+    + For example:
     
 ```{r, eval=FALSE}
 #####################
@@ -165,12 +171,12 @@ to edit text files.
 
 ## <i class="fa fa-file-code-o"></i> Text files best practices
 
-+ Keep line length to about 80 characters.
++ Keep line length to about **80 characters**.
 
     + In Markdown/LaTeX paragraph breaks only exist if there are **two line 
     breaks**.
     
-    + Most text editors, including RStudio have a character ruler.
+    + Most text editors, including RStudio have a **margin ruler**.
 
     + Improves version control. 
 
@@ -198,18 +204,21 @@ Root
 
 ## <i class="fa fa-folder-open-o"></i> Root
 
-**Root** directories are the first level of a disk. 
+**Root** directories are the **first level of a disk**. 
 
 They are the root out of which the file tree grows.
 
 **Naming Conventions**:
 
-**Linux/Mac**: `/`, e.g. `/git_repos` means that the `git_repos` directory is a child
+**Linux/Mac**: `/` 
+
+- e.g. `/git_repos` means that the `git_repos` directory is a child
 of the root directory.
 
-**Windows**: the disk is partitioned, e.g. the C partition is denoted `C:\`. 
-`C:\git_repos` indicates that the `git_repos` directory is a child
-of the `C:\` partition.
+**Windows**: the disk is partitioned, e.g. the `C` partition is denoted `C:\`. 
+
+- `C:\git_repos` indicates that the `git_repos` directory is a child
+of the `C` partition.
 
 ## <i class="fa fa-folder-open-o"></i> Sub (child) directories
 
@@ -236,13 +245,13 @@ what you mean.
 A **working directory** is the directory where the program looks for files/other
 directories. 
 
-<i class="fa fa-exclamation"></i> Always remember the working directory. Otherwise
-you may open/save files that you do not want to open/save or save them to places
-you don't want them saved.
+<i class="fa fa-exclamation"></i> **Always remember the working directory.**
+
+- Otherwise you may open/save files that you do not want to open/save them.
 
 ## <i class="fa fa-folder-open-o"></i> Working directories
 
-In R:
+**In R:**
 
 ```{r}
 # Find working directory
@@ -259,7 +268,7 @@ setwd('/')
 
 ## <i class="fa fa-folder-open-o"></i> Extra: in the Terminal Shell
 
-In the Terminal Shell:
+In the **Terminal Shell**:
 
 ```{r engine='sh'}
 # Find working directory
@@ -285,20 +294,21 @@ Use **relative file paths** when possible.
 
 Why? 
 
-- Your scripts will run easily on other computers. Enhances reproducibility,
-easier for your collaborators, easier for you when you use another computer.
+- Your scripts will run easily on **other computers**. **Enhances reproducibility**.
+Easier for your collaborators. Easier for you when you use another computer.
 
 ## <i class="fa fa-folder-open-o"></i> File & directory name conventions
 
-- <i class="fa fa-exclamation-triangle"></i> **Don't use spaces** in your file names.
-The can create problems for programs that treat spaces as an indication that the
+<i class="fa fa-exclamation-triangle"></i> **Don't use spaces** in your file names.
+
+They can create problems for programs that treat spaces as an indication that the
 path has ended.
 
-- Alternatives:
+Alternatives:
 
-    + `CamelCase`
+- `CamelCase` (ex. `DataAnalysis.R`)
 
-    + `file_underscore`
+- `file_underscore` (ex. `data_analysis.R`)
 
 ## <i class="fa fa-folder-open-o"></i> Load files into R
 
@@ -334,11 +344,11 @@ Disproportionality <- repmis::source_data("http://bit.ly/Ss6zDO")
 
 Why version control?
 
-- Detailed log of all changes. 
+- Detailed log of **all changes**. 
 
-- Easy to revert back to previous versions.
+- Easy to **revert back** to previous versions.
 
-- Clear attribution of work (who contributed what). 
+- Clear **attribution of work** (who contributed what). 
 
     + <i class="fa fa-child"></i> Provides a **selective incentive**, helping to 
     overcome the collaborative collective action problem!
@@ -352,11 +362,11 @@ Why version control?
 
 What is [Git](http://git-scm.com/)?
 
-- Git is an open source command line program for version control.
+- Git is an **open source** command line program for version control.
 
 What is [<i class="fa fa-github"></i> GitHub](https://github.com/)? 
 
-- A company that hosts Git repositories and enables 'social coding'. 
+- A **company/web service** that hosts Git repositories and enables 'social coding'. 
 
 - Other services are available, e.g. [BitBucket](https://bitbucket.org/)
 
@@ -366,16 +376,61 @@ What is [<i class="fa fa-github"></i> GitHub](https://github.com/)?
 
 What is GitHub for Mac/Windows? 
 
-- A GUI (graphical user interface version of Git). 
+- A GUI for Git. 
 
 - Makes it easier to use.
 
 - Ultimately just does command line Git.
 
-## Getting started with Git
+## <i class="fa fa-github"></i> Getting started with Git
+
+Key terms (local):
+
+- **Repository** (repo): a directory where Git looks for changes
+
+- **Initialize** (init): have Git begin watching a directory
+
+- `add`: stage a file so that Git starts watching it
+
+- `commit`: record changes to the repo
+
+- `branch`: continuous history of the repository. You can have multiple branches. 
+
+- **master**: the main branch. By convention this should be the most stable version.
+
+## <i class="fa fa-github"></i> Getting started with Git
+
+Key terms (local):
+
+- `checkout`: revert to a previous version or a branch.
+
+- `merge`: combine two branches
+
+- `tag`: a human readable name given to a particular commit
+
+## <i class="fa fa-github"></i> Getting started with Git
+
+Key terms (remote):
+
+- *Collaborator* someone with read/write permission on a repo
+
+- `clone`: copy a remotely hosted repository onto your computer
+
+- `push`: commit changes to a remotely hosted repository
+
+- `pull`: merge changes from a remotely hosted repository
+
+    + In GUI GitHub `push` and `pull` are combined into **sync**
+
+- **fork**: copy a repository that you do not own
+
+- **pull request**: after forking a repo, changes can be made and suggested to the
+original repo's owner.
+
+## <i class="fa fa-github"></i> Getting started with Git
     
-Note: using command line (Shell), but all of these things can be done in the
-GitHub GUI.
+Note: using command line (Terminal Shell), but all of these things can be done 
+in with the GUI file system (point and click) + GitHub GUI.
 
 First lets create a directory (`FirstRepo`) that will become our **Git repository** (i.e. parent
 directory)
@@ -420,14 +475,24 @@ git status
 
 ## <i class="fa fa-github"></i> Getting started with Git
 
+**Note**: All repos should have an informative `README.md` file.
+
+- `.md` is for [Markdown](https://help.github.com/articles/markdown-basics)
+
+<i class="fa fa-star"></i> Bonus: They are **rendered on GitHub**. For example, the Syllabus on 
+[SyllabusAndLectures](https://github.com/HertieDataScience2014/SyllabusAndLectures).
+
+## <i class="fa fa-github"></i> Getting started with Git
+
 Begin tracking changes, by **staging** the repo's files.
 
 ```{r engine='sh', eval=FALSE}
 git add .
 ```
 
-Make some changes to `README.md`. These changes will not be logged by Git until
-they are **Committed**
+Make some changes to `README.md`. Save the changes.
+
+These changes will not be logged by Git until they are **committed**
 
 ```{r engine='sh', eval=FALSE}
 git commit -am 'author name added to README'
@@ -439,7 +504,7 @@ git commit -am 'author name added to README'
 
 Also, compare to previous commits with `git diff`
 
-## <i class="fa fa-github"></i> Git Logg
+## <i class="fa fa-github"></i> Git Log
 
 You can view all previous commits with `git log`
 
@@ -459,10 +524,12 @@ Date:   Tue Sep 9 15:54:44 2014 +0200
 
 Each commit is given a **unique SHA-1 hash**. 
 
-The hash in the previous example was `3c49e3f1d2f03513c1554bb36d034562312b5bed`.
+The hash in the previous example was: `3c49e3f1d2f03513c1554bb36d034562312b5bed`.
 
 You can switch back to any previous commit with `git checkout` and the commit
-hash or `--` for the last commit.
+hash.
+
+Use `--` for the last commit.
 
 ```{r engine='sh', eval=FALSE}
 git checkout --
@@ -603,7 +670,7 @@ You can add **official collaborators** to the repo on GitHub:
 
 Settings > Collaborators > Enter collaborator's GitHub username
 
-Now the will have read/write privelages (they can **push** as well as **pull**)
+Now the will have read/write privileges (they can **push** as well as **pull**)
 
 They should **clone** the repo. 
 
@@ -636,15 +703,15 @@ into master.
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Files/File Paths
 
-- Play around with the file system from R and the Shell
+Play around with the file system from R (and if you want to) the Shell
 
-    + Find the working directory, change the working directory, explore the files
-    in the working directory. 
+- Find the working directory, change the working directory, explore the files
+in the working directory. 
     
-    +  If you have any data files, try to load them into R.
+If you have any data files, try to load them into R.
     
-    + If not load `Data/MainData.csv` into R from
-    <https://github.com/christophergandrud/Rep-Res-ExampleProject1>.
+- If not load `Data/MainData.csv` into R from
+<https://github.com/christophergandrud/Rep-Res-ExampleProject1>.
     
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Git/GitHub
 
