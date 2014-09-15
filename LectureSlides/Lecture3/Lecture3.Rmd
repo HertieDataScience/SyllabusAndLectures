@@ -1,0 +1,52 @@
+---
+title: 'MPP-E1180 Lecture 2: Introduction to the R Programming Language'
+author: "Christopher Gandrud"
+date: "25 September 2014"
+output:
+  ioslides_presentation:
+    css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
+    logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
+---
+
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
+
+- Reminder: **Pair Assignment 1**
+
+- Basics of object oriented programming in R
+
+- R data structures
+
+- Simple descriptive statistics and plotting
+
+- Computer science problem solving skill
+
+## <i class="fa fa-certificate"></i> Pair Assignment 1
+
+- **Due:** Midnight 26 September.
+
+- Learning objectives: develop your understanding of
+
+    - **file structures**, 
+
+    - **version control**, 
+    
+    - **basic R data structures** and **descriptive statistics**.
+
+## <i class="fa fa-certificate"></i> Pair Assignment 1
+
+Each pair will create a **new public GitHub repository**
+
+- Must be **fully documented**, including with a **descriptive README.md** 
+    file.
+
+- Include **R source** code files that:
+
+    - Access at least **two** core R data sets
+    
+    - Illustrate the datas' distributions using a variety of **relevant 
+    descriptive statistics**
+        
+    - Two files must be **dynamically linked**
+        
+- **Another pair** makes a **pull request**. And this is discussed/merged.
