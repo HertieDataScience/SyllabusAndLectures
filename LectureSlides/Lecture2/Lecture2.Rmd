@@ -11,6 +11,8 @@ output:
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
 
+- Introduce **Pair Assignment 1**
+
 - **Importance** of (text) files and understanding files structures for reproducible
 research
 
@@ -22,6 +24,36 @@ research
 
 - Git/GitHub for **collaboration**
 
+
+## <i class="fa fa-certificate"></i> Pair Assignment 1
+
+- **Due:** Midnight 26 September.
+
+- Learning objectives: develop your understanding of
+
+    - **file structures**, 
+
+    - **version control**, 
+    
+    - **basic R data structures** and **descriptive statistics**.
+
+## <i class="fa fa-certificate"></i> Pair Assignment 1
+
+Each pair will create a **new public GitHub repository**
+
+- Must be **fully documented**, including with a **descriptive README.md** 
+    file.
+
+- Include **R source** code files that:
+
+    - Access at least **two** core R data sets
+    
+    - Illustrate the datas' distributions using a variety of **relevant 
+    descriptive statistics**
+        
+    - Two files must be **dynamically linked**
+        
+- **Another pair** makes a **pull request**. And this is discussed/merged.
 
 ## <i class="fa fa-bookmark-o"></i> Remember: Practical Tips for Reproducible Research
 
