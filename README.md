@@ -4,7 +4,7 @@
 
 ### Fall 2014
 
-**Version: *13 September 2014***
+**Version: *15 September 2014***
 
 ### Instructor: Christopher Gandrud
 
@@ -156,6 +156,8 @@ We will learn the basics of the R statistical programming language for data hand
 - p: 27-44: RRRR.
 
 - Ch. 2-4: Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. John Wiley and Sons Ltd., Chichester.
+
+*Reading Extras:*
 
 - Ch. 1: Spraul, V. Anton. 2012. *Think like a Programmer*. San Francisco: No Starch Press.
 
