@@ -119,7 +119,7 @@ word
 
 - Each object name must be **unique** in a workspace.
 
-    + Assigning something to an object name that is already in use with **overwrite
+    + Assigning something to an object name that is already in use will **overwrite
     the object's previous contents**.
 
 ```{r}
