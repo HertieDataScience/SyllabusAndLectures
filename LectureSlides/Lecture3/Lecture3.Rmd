@@ -15,11 +15,9 @@ output:
 
 - Basics of object oriented programming in R
 
-- R data structures
+- Simple R data structures
 
-- Simple descriptive statistics and plotting
-
-- Computer science problem solving skill
+- Simple descriptive statistics and plotting with Base R
 
 ## <i class="fa fa-certificate"></i> Pair Assignment 1
 
@@ -78,7 +76,7 @@ citation()
 
 R is **object-oriented**.
 
-**Objects are R's nouns**.
+**Objects are R's nouns**. They include (but are more):
 
 - a character string (e.g. word)
 
@@ -90,10 +88,12 @@ R is **object-oriented**.
 
 - a data frame
 
+- a list
+
 ## Assignment
 
-You use the **assignment operator** (`<-`) to assign character strings, numbers,
-vectors, etc. to object names
+You use the **assignment operator** (`<-`) to assign character strings,
+numbers, vectors, etc. to object names
 
 ```{r}
 ## Assign the number 10 to an object called number
@@ -103,11 +103,49 @@ number
 ```
 
 ```{r}
-# Assign Hello world to an object called word
-word <- "Hello World"
+# Assign Hello world to an object called words
+words <- "Hello World"
 
-word
+words
 ```
+
+## Assignment
+
+You can also use `=`, but it has a slightly different meaning.
+
+See [StackOverflow](http://stackoverflow.com/questions/1741820/assignment-operators-in-r-and)
+discussion.
+
+## Special values in R
+
+- `NA`: not available, missing
+
+    - Find with `is.na`
+
+- `NULL`: does not exist, is undefined
+
+    + Find with `is.null`
+
+- `TRUE`, `T`: logical true. ''logical'' is also an object class
+
+    + Find with `isTRUE`
+
+- `FALSE`, `F`: logical false
+
+    + Find with `!isTRUE`
+
+---
+
+| Operator | Meaning                  |
+| -------- | ------------------------ |
+| `<`      | less than                |
+| `>`      | greater than             |
+| `==`     | equal to                 |
+| `<=`     | less than or equal to    |
+| `>=`     | greater than or equal to |
+| `!=`     | not equal to             |
+| `a | b`  | a or b                   |
+| `a & b`  | a and b                  |
 
 ## Naming objects
 
@@ -115,7 +153,8 @@ word
 
     + Use `CamelCase`, `name_underscore`, or `name.period`
 
-- Avoid creating an object with the same name as a function (e.g. `c` and `t`).
+- Avoid creating an object with the same name as a function (e.g. `c` and `t`) or
+special value (`NA`, `NULL`, `TRUE`, `FALSE`).
 
 - Each object name must be **unique** in a workspace.
 
@@ -147,9 +186,10 @@ with your R code:
 
 ## Vectors
 
-A vector is an **ordered list** of numbers, characters, etc. of the **same type**.
+A vector is an **ordered collection** of numbers, characters, etc. of the
+**same type**.
 
-Vectors are created with the `c` (**concatenate**) function.
+Vectors can be created with the `c` (**combine**) function.
 
 ```{r}
 # Create numeric vector
@@ -157,6 +197,23 @@ numeric_vector <- c(1, 2, 3)
 
 # Create character vector
 character_vector <- c('Albania', 'Botswana', 'Cambodia')
+```
+
+## Factor class vector
+
+Categorical variables are called **factors** in R.
+
+```{r}
+# Create numeric vector
+fruits <- c(1, 1, 2)
+
+# Create character vector for factor labels
+fruit_names <- c('apples', 'mangos')
+
+# Convert to labelled factor
+fruits_factor <- factor(fruits, labels = fruit_names)
+
+summary(fruits_factor)
 ```
 
 ## Matrices
@@ -174,7 +231,7 @@ combined
 
 Data frames are collections of vectors with the same length.
 
-Each column can be of a **different class**.
+Each column (vector) can be of a **different class**.
 
 ```{r}
 # Combine numeric_vector and character_vector into a data frame
@@ -182,6 +239,21 @@ combined_df <- data.frame(numeric_vector, character_vector,
                           stringsAsFactors = FALSE)
 
 combined_df
+```
+
+## Lists 
+
+A list is a vector containing other objects.
+
+They the objects can have different lengths and classes.
+
+```{r}
+# Create a list with three objects of different lengths
+test_list <- list(countries = character_vector, 
+                  not_there = c(NA, NA), 
+                  more_numbers = 1:100)
+
+test_list
 ```
 
 ## Functions
@@ -194,7 +266,7 @@ separated by commas.
 
 ```{r}
 # Summarise combined_df
-summary(combined_df)
+summary(combined_df, digits = 2)
 ```
 
 ## Functions help
@@ -205,12 +277,9 @@ To find out what arguments a function can take use `?`.
 ?summary
 ```
 
-## Component selection (`$`)
+The help page will also show the function's **default argument values**.
 
-```{r}
-# Find the mean of numeric_vector
-mean(x = combined_df$numeric_vector)
-```
+## Component selection (`$`)
 
 The `$` is known as the component selector. It selects a component of an object.
 
@@ -294,6 +363,42 @@ See the first three rows and four columns
 head(swiss[1:3, 1:4])
 ```
 
+## What all the cool kids are doing: piping
+
+**Pipe**: pass a value forward to a function call.
+
+Why?
+
+- Faster compilation.
+
+- Enhanced code readability.
+
+In R use `%>%` from the 
+[magrittr](http://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html) package.
+
+`%>%` passes a value to the **first argument** of the next function call.
+
+## Simple piping example
+
+Not piped:
+
+```{r}
+values <- rnorm(1000, mean = 10)
+value_mean <- mean(values)
+round(value_mean, digits = 2)
+```
+
+Piped:
+
+```{r}
+library(magrittr)
+
+rnorm(1000, mean = 10) %>% mean() %>% round(digits = 2)
+
+
+```
+
+
 ## <i class="fa fa-area-chart"></i> Descriptive statistics: review
 
 **Descriptive Statistics:** describe samples
@@ -318,7 +423,7 @@ hist(swiss$Examination,
      xlab = '% receiving highest mark on army exam')
 ```
 
-## Creating functions
+## Digression: Creating functions
 
 You can create a function to find the sample mean
 ($\bar{x} = \frac{\sum x}{n}$) of a vector.
@@ -330,16 +435,6 @@ fun_mean <- function(x){
 
 ## Find the mean
 fun_mean(x = swiss$Examination)
-```
-
-## Loops
-
-You can 'loop' through the data set to find the mean for each column
-
-```{r}
-for (i in 1:length(names(swiss))) {
-    print(fun_mean(swiss[, i]))
-}
 ```
 
 ## Finding means
@@ -354,6 +449,20 @@ If you have missing values (`NA`):
 
 ```{r, eval=FALSE}
 mean(swiss$Examination, na.rm = TRUE)
+```
+
+## Digression: Loops
+
+You can 'loop' through the data set to find the mean for each column
+
+```{r}
+for (i in 1:length(names(swiss))) {
+    swiss[, i] %>%
+    mean() %>%
+    round(digits = 1) %>%
+    paste(names(swiss)[i], ., '\n') %>% 
+    cat()
+}
 ```
 
 ## Other functions for central tendency
@@ -420,7 +529,7 @@ $$\mathrm{df} = n - 1$$
 **Variance ($s^2$):**
 
 $$
-s^2 = \frac{\mathrm{Sum\:of\:Squares}}{\mathrm{Degrees\:of\:Freedom}} = 
+s^2 = \frac{\mathrm{Sum\:of\:Squares}}{\mathrm{Degrees\:of\:Freedom}} =
 \frac{\sum(x - \bar{x})^2}{n - 1}
 $$
 
@@ -432,7 +541,7 @@ $$s = \sqrt{s^2}$$
 
 The **standard error** of the mean:
 
-If we think of the variation as around a central tendancy as a measure of 
+If we think of the variation as around a central tendancy as a measure of
 **unreliability** then we want the measure to **decrease as the sample size goes up**.
 
 $$
@@ -441,7 +550,7 @@ $$
 
 ## Variation: Variance and Standard Deviation
 
-**Variance:** 
+**Variance:**
 
 ```{r}
 var(swiss$Examination)
@@ -510,17 +619,17 @@ UpperC <- "#4F6F80"
 # Create density plot
 ggplot(Normal30, aes(x = Normal30)) +
         geom_density() +
-        geom_ribbon(data = Lower, aes(x = XLower, ymax = YLower, ymin = Zero), 
+        geom_ribbon(data = Lower, aes(x = XLower, ymax = YLower, ymin = Zero),
                     fill = LowerC, alpha = 0.4) +
-        geom_ribbon(data = Upper, aes(x = XUpper, ymax = YUpper, ymin = Zero), 
+        geom_ribbon(data = Upper, aes(x = XUpper, ymax = YUpper, ymin = Zero),
                     fill = UpperC, alpha = 0.4) +
         geom_vline(xintercept = 50, colour = "red", linetype = "longdash") +
         annotate("text", x = 25, y = 0.015, label = "-1 SD", colour = LowerC) +
         annotate("text", x = 75, y = 0.015, label = "+1 SD", colour = UpperC) +
         scale_y_continuous(limits = c(0, 0.02)) +
-        scale_x_continuous(breaks = c(-90, -50, 0, 20, 50, 80, 100, 150, 185), 
+        scale_x_continuous(breaks = c(-90, -50, 0, 20, 50, 80, 100, 150, 185),
                            labels = c(-90, -50, 0, 20, 50, 80, 100, 150, 185)) +
-        xlab("\n Simulated Data") + ylab("Density\n") + 
+        xlab("\n Simulated Data") + ylab("Density\n") +
         theme_bw()
 ```
 
@@ -529,7 +638,7 @@ ggplot(Normal30, aes(x = Normal30)) +
 Highly skewed data can be transformed to have a normal distribution
 
 
-Helps correct two violations of key assumptions: (a) non-linearity and (b) heteroskedasticity. 
+Helps correct two violations of key assumptions: (a) non-linearity and (b) heteroskedasticity.
 
 ```{r, fig.height=3}
 hist(swiss$Education, main = '')
@@ -554,12 +663,12 @@ ggplot2::ggplot(swiss, aes(log(Education), Examination)) +
     geom_point() + geom_smooth() + theme_bw()
 ```
 
-## Programming Hint
+## Programming Hint (1)
 
 <i class="fa fa-exclamation"></i><i class="fa fa-exclamation">
 </i><i class="fa fa-exclamation"></i> ***Always close!***
 
-In R this means closing
+In R this means closing:
 
 - `()`
 
@@ -571,9 +680,46 @@ In R this means closing
 
 - `""`
 
+## Programming Hint (2)
+
+Make your code as **simple as possible**.
+
+- Easier to read.
+
+- Easier to write (ultimately).
+
+- Easier to find mistakes.
+
+- Often computationally more efficient.
+
+One way to do this is to **define things once**.
+
+## Programming Hint (2)
+
+**Bad**
+
+```{r}
+mean(rnorm(1000))
+
+sd(rnorm(1000))
+```
+
+## Programming Hint (2)
+
+**Good**
+
+```{r}
+rand_sample <- rnorm(1000)
+
+mean(rand_sample)
+
+sd(rand_sample)
+```
+
+
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Start using R!
 
-- **Access** R data sets 
+- **Access** R data sets
 
 - Explore the data and find ways to **numerically**/**graphically** describe it
 

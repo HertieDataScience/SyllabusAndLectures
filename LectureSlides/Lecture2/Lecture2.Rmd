@@ -382,7 +382,7 @@ What is GitHub for Mac/Windows?
 
 - Ultimately just does command line Git.
 
-## <i class="fa fa-github"></i> Getting started with Git
+## Getting started with Git
 
 Key terms (local):
 
@@ -394,21 +394,24 @@ Key terms (local):
 
 - `commit`: record changes to the repo
 
-- `branch`: continuous history of the repository. You can have multiple branches. 
+- `branch`: continuous history of the repository. You can have multiple branches
 
-- **master**: the main branch. By convention this should be the most stable version.
+- **master**: the main branch. By convention this should be the most stable 
+version
 
-## <i class="fa fa-github"></i> Getting started with Git
+## Getting started with Git
 
 Key terms (local):
 
 - `checkout`: revert to a previous version or a branch.
 
-- `merge`: combine two branches
+- `merge`: combine two branches.
 
-- `tag`: a human readable name given to a particular commit
+- `tag`: a human readable name given to a particular commit.
 
-## <i class="fa fa-github"></i> Getting started with Git
+- `blame`: atrribution of who changed what 
+
+## Getting started with Git
 
 Key terms (remote):
 
@@ -424,16 +427,16 @@ Key terms (remote):
 
 - **fork**: copy a repository that you do not own
 
-- **pull request**: after forking a repo, changes can be made and suggested to the
-original repo's owner.
+- **pull request**: after forking a repo, changes can be made and suggested to 
+the original repo's owner.
 
 ## <i class="fa fa-github"></i> Getting started with Git
     
 Note: using command line (Terminal Shell), but all of these things can be done 
 in with the GUI file system (point and click) + GitHub GUI.
 
-First lets create a directory (`FirstRepo`) that will become our **Git repository** (i.e. parent
-directory)
+First lets create a directory (`FirstRepo`) that will become our 
+**Git repository** (i.e. parent directory)
 
 ```{r engine='sh', eval=FALSE}
 # Make repository directory
@@ -446,7 +449,7 @@ cd /git_repositories/FirstRepo
 git init
 ```
 
-## <i class="fa fa-github"></i> Getting started with Git
+## Getting started with Git
 
 ![Git Invisible](img/InvisibleGit.png)
 
