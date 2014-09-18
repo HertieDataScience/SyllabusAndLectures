@@ -42,7 +42,7 @@ research
 Each pair will create a **new public GitHub repository**
 
 - Must be **fully documented**, including with a **descriptive README.md** 
-    file.
+    file. Your code must be **human readable** and **clearly commented**.
 
 - Include **R source** code files that:
 
@@ -156,7 +156,7 @@ Document your text files, including **informative headers**.
 
 Use **comment characters** (R: `#`, Markdown/HTML: `<!-- -->`)
     
-    + For example:
+For example:
     
 ```{r, eval=FALSE}
 #####################
@@ -237,7 +237,7 @@ C:\git_repos\Project1
 - In R for Windows you either use two backslashes `\\` (`\` is the R [escape
 character](http://en.wikipedia.org/wiki/Escape_character)).
 
-- Alternatively, use `/` in **relative paths** in R for Windows, it will know 
+- Or `/` in **relative paths** in R for Windows, it will know 
 what you mean.
 
 ## <i class="fa fa-folder-open-o"></i> Working directories
@@ -337,6 +337,8 @@ You can use them the same way as local file paths.
 
 ```{r}
 Disproportionality <- repmis::source_data("http://bit.ly/Ss6zDO")
+
+names(Disproportionality)
 ```
     
 
@@ -397,17 +399,17 @@ Key terms (local):
 - `branch`: continuous history of the repository. You can have multiple branches
 
 - **master**: the main branch. By convention this should be the most stable 
-version
+version.
 
 ## Getting started with Git
 
 Key terms (local):
 
-- `checkout`: revert to a previous version or a branch.
+- `checkout`: revert to a previous version or a branch
 
-- `merge`: combine two branches.
+- `merge`: combine one branch into another
 
-- `tag`: a human readable name given to a particular commit.
+- `tag`: a human readable name given to a particular commit
 
 - `blame`: atrribution of who changed what 
 

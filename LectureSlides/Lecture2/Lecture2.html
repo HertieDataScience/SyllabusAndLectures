@@ -135,7 +135,7 @@
 <p>Each pair will create a <strong>new public GitHub repository</strong></p>
 
 <ul>
-<li><p>Must be <strong>fully documented</strong>, including with a <strong>descriptive README.md</strong> file.</p></li>
+<li><p>Must be <strong>fully documented</strong>, including with a <strong>descriptive README.md</strong> file. Your code must be <strong>human readable</strong> and <strong>clearly commented</strong>.</p></li>
 <li><p>Include <strong>R source</strong> code files that:</p>
 
 <ul>
@@ -245,7 +245,7 @@ US,United States,1.050</pre>
 
 <p>Use <strong>comment characters</strong> (R: <code>#</code>, Markdown/HTML: <code>&lt;!-- --&gt;</code>)</p>
 
-<pre >+ For example:</pre>
+<p>For example:</p>
 
 <pre class = 'prettyprint lang-r'>#####################
 # R source to gather World Bank data
@@ -322,7 +322,7 @@ C:\git_repos\Project1</pre>
 
 <ul>
 <li><p>In R for Windows you either use two backslashes <code>\\</code> (<code>\</code> is the R <a href='http://en.wikipedia.org/wiki/Escape_character' title=''>escape character</a>).</p></li>
-<li><p>Alternatively, use <code>/</code> in <strong>relative paths</strong> in R for Windows, it will know what you mean.</p></li>
+<li><p>Or <code>/</code> in <strong>relative paths</strong> in R for Windows, it will know what you mean.</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-folder-open-o"></i> Working directories</h2></hgroup><article  id="working-directories">
@@ -430,6 +430,11 @@ cd /</pre>
 ## SHA-1 hash of the downloaded data file is:
 ## dc8110d6dff32f682bd2f2fdbacb89e37b94f95d</pre>
 
+<pre class = 'prettyprint lang-r'>names(Disproportionality)</pre>
+
+<pre >## [1] &quot;X&quot;                  &quot;country&quot;            &quot;year&quot;              
+## [4] &quot;disproportionality&quot;</pre>
+
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-github"></i> Version Control with Git</h2></hgroup><article  id="version-control-with-git">
 
 <p>Why version control?</p>
@@ -484,7 +489,7 @@ cd /</pre>
 <li><p><code>add</code>: stage a file so that Git starts watching it</p></li>
 <li><p><code>commit</code>: record changes to the repo</p></li>
 <li><p><code>branch</code>: continuous history of the repository. You can have multiple branches</p></li>
-<li><p><strong>master</strong>: the main branch. By convention this should be the most stable version</p></li>
+<li><p><strong>master</strong>: the main branch. By convention this should be the most stable version.</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Getting started with Git</h2></hgroup><article  id="getting-started-with-git-1">
@@ -492,9 +497,9 @@ cd /</pre>
 <p>Key terms (local):</p>
 
 <ul>
-<li><p><code>checkout</code>: revert to a previous version or a branch.</p></li>
-<li><p><code>merge</code>: combine two branches.</p></li>
-<li><p><code>tag</code>: a human readable name given to a particular commit.</p></li>
+<li><p><code>checkout</code>: revert to a previous version or a branch</p></li>
+<li><p><code>merge</code>: combine one branch into another</p></li>
+<li><p><code>tag</code>: a human readable name given to a particular commit</p></li>
 <li><p><code>blame</code>: atrribution of who changed what</p></li>
 </ul>
 

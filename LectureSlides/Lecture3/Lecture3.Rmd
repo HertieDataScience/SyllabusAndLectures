@@ -35,8 +35,8 @@ output:
 
 Each pair will create a **new public GitHub repository**
 
-- Must be **fully documented**, including with a **descriptive README.md**
-    file.
+- Must be **fully documented**, including with a **descriptive README.md** 
+    file. Your code must be **human readable** and **clearly commented**.
 
 - Include **R source** code files that:
 
@@ -156,10 +156,14 @@ discussion.
 - Avoid creating an object with the same name as a function (e.g. `c` and `t`) or
 special value (`NA`, `NULL`, `TRUE`, `FALSE`).
 
+- Use **descriptive object names**!
+
 - Each object name must be **unique** in a workspace.
 
     + Assigning something to an object name that is already in use will **overwrite
     the object's previous contents**.
+    
+## Finding objects
 
 ```{r}
 # Find objects in your workspace
@@ -226,6 +230,8 @@ combined <- cbind(numeric_vector, character_vector)
 
 combined
 ```
+
+Note: In addition to `cbind` you can `rbind` new rows onto a matrix.
 
 ## Data frames
 

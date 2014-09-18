@@ -133,7 +133,7 @@
 <p>Each pair will create a <strong>new public GitHub repository</strong></p>
 
 <ul>
-<li><p>Must be <strong>fully documented</strong>, including with a <strong>descriptive README.md</strong> file.</p></li>
+<li><p>Must be <strong>fully documented</strong>, including with a <strong>descriptive README.md</strong> file. Your code must be <strong>human readable</strong> and <strong>clearly commented</strong>.</p></li>
 <li><p>Include <strong>R source</strong> code files that:</p>
 
 <ul>
@@ -298,12 +298,15 @@ words</pre>
 <li>Use <code>CamelCase</code>, <code>name_underscore</code>, or <code>name.period</code></li>
 </ul></li>
 <li><p>Avoid creating an object with the same name as a function (e.g. <code>c</code> and <code>t</code>) or special value (<code>NA</code>, <code>NULL</code>, <code>TRUE</code>, <code>FALSE</code>).</p></li>
+<li><p>Use <strong>descriptive object names</strong>!</p></li>
 <li><p>Each object name must be <strong>unique</strong> in a workspace.</p>
 
 <ul>
 <li>Assigning something to an object name that is already in use will <strong>overwrite the object&#39;s previous contents</strong>.</li>
 </ul></li>
 </ul>
+
+</article></slide><slide class=''><hgroup><h2>Finding objects</h2></hgroup><article  id="finding-objects">
 
 <pre class = 'prettyprint lang-r'># Find objects in your workspace
 ls()</pre>
@@ -371,6 +374,8 @@ combined</pre>
 ## [1,] &quot;1&quot;            &quot;Albania&quot;       
 ## [2,] &quot;2&quot;            &quot;Botswana&quot;      
 ## [3,] &quot;3&quot;            &quot;Cambodia&quot;</pre>
+
+<p>Note: In addition to <code>cbind</code> you can <code>rbind</code> new rows onto a matrix.</p>
 
 </article></slide><slide class=''><hgroup><h2>Data frames</h2></hgroup><article  id="data-frames">
 
@@ -543,7 +548,7 @@ library(dplyr)</pre>
 value_mean &lt;- mean(values)
 round(value_mean, digits = 2)</pre>
 
-<pre >## [1] 10.04</pre>
+<pre >## [1] 9.98</pre>
 
 <p>Piped:</p>
 
@@ -551,7 +556,7 @@ round(value_mean, digits = 2)</pre>
 
 rnorm(1000, mean = 10) %&gt;% mean() %&gt;% round(digits = 2)</pre>
 
-<pre >## [1] 9.99</pre>
+<pre >## [1] 10.02</pre>
 
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-area-chart"></i> Descriptive statistics: review</h2></hgroup><article  id="descriptive-statistics-review">
 
