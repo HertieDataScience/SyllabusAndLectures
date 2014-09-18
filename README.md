@@ -267,6 +267,8 @@ We will first learn how to automatically generate summary and results tables for
 
 - Wickham, H., Cook, D., Hofmann, H., & Buia, A. (2010). [Graphical Inference for Infovis](http://stat.wharton.upenn.edu/~buja/PAPERS/Wickham-Cook-Hofmann-Buja-IEEE-TransVizCompGraphics_2010-Graphical%20Inference%20for%20Infovis.pdf). IEEE Transactions on Visualization and Computer Graphics, 16(6): 973–979.
 
+- Gelman, Andrew, and Phillip N Price. 1999. ''[All Maps of Parameter Estimates Are Misleading](http://www.stat.columbia.edu/~gelman/research/published/allmaps.pdf).'' Statistics in Medicine 18: 3221–34.
+
 - Fruehwald, Josef. 2012. [AVML 2012: ggplot2](http://www.ling.upenn.edu/~joseff/avml2012/).
 
 - Donahue, Rafe M. J. 2011. [Fundamental Statistical Concepts in Presenting Data: Principles for Constructing Better Graphics](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf). Version 2.11.
