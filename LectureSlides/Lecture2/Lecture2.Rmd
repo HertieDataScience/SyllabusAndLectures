@@ -412,7 +412,7 @@ Key terms (local):
 
 Key terms (remote):
 
-- *Collaborator* someone with read/write permission on a repo
+- *Collaborator*: someone with read/write permission on a repo
 
 - `clone`: copy a remotely hosted repository onto your computer
 
