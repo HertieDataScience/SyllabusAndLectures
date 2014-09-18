@@ -384,6 +384,21 @@ What is GitHub for Mac/Windows?
 
 - Ultimately just does command line Git.
 
+## Note: Explaining using the command line
+
+The following example uses command line Git, even though you are free to use
+GUI GitHub.
+
+Why?
+
+- **Easier to document** (not just a bunch of screen shots).
+
+- The command line Git is the '**real Git**'. GUI Git's are a facade, and more 
+likely to change/be different across implementations.
+
+- Understanding command line Git will help you **understand problems and concepts
+that arise later**.
+
 ## Getting started with Git
 
 Key terms (local):
@@ -705,6 +720,25 @@ Note:
     
 - Once the request is accepted, the change is **automatically merged** 
 into master.
+
+## <i class="fa fa-github"></i> GitHub Caveats 
+
+**Cannot store large files** (> 50 mb).
+
+Public repos are public! So **never put a password** or other sensitive information
+in them.
+
+- If you want Git/GitHub to **ignore** a file in your local repo, place its file path
+ in a file called `.gitignore`.
+ 
+- For efficiency can use 
+[regular expressions](http://en.wikipedia.org/wiki/Regular_expression)
+
+    + For example to ignore all PDF files use: 
+
+```{r, eval=FALSE}
+*.pdf
+```
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Files/File Paths
 

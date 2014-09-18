@@ -479,6 +479,18 @@ cd /</pre>
 <li><p>Ultimately just does command line Git.</p></li>
 </ul>
 
+</article></slide><slide class=''><hgroup><h2>Note: Explaining using the command line</h2></hgroup><article  id="note-explaining-using-the-command-line">
+
+<p>The following example uses command line Git, even though you are free to use GUI GitHub.</p>
+
+<p>Why?</p>
+
+<ul>
+<li><p><strong>Easier to document</strong> (not just a bunch of screen shots).</p></li>
+<li><p>The command line Git is the &#39;<strong>real Git</strong>&#39;. GUI Git&#39;s are a facade, and more likely to change/be different across implementations.</p></li>
+<li><p>Understanding command line Git will help you <strong>understand problems and concepts that arise later</strong>.</p></li>
+</ul>
+
 </article></slide><slide class=''><hgroup><h2>Getting started with Git</h2></hgroup><article  id="getting-started-with-git">
 
 <p>Key terms (local):</p>
@@ -763,6 +775,23 @@ git push --tags</pre>
 <li><p>Need approval from a repo owner</p></li>
 <li><p>Once the request is accepted, the change is <strong>automatically merged</strong> into master.</p></li>
 </ul>
+
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-github"></i> GitHub Caveats</h2></hgroup><article  id="github-caveats">
+
+<p><strong>Cannot store large files</strong> (&gt; 50 mb).</p>
+
+<p>Public repos are public! So <strong>never put a password</strong> or other sensitive information in them.</p>
+
+<ul>
+<li><p>If you want Git/GitHub to <strong>ignore</strong> a file in your local repo, place its file path in a file called <code>.gitignore</code>.</p></li>
+<li><p>For efficiency can use <a href='http://en.wikipedia.org/wiki/Regular_expression' title=''>regular expressions</a></p>
+
+<ul>
+<li>For example to ignore all PDF files use:</li>
+</ul></li>
+</ul>
+
+<pre class = 'prettyprint lang-r'>*.pdf</pre>
 
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Seminar: Files/File Paths</h2></hgroup><article  id="seminar-filesfile-paths">
 
