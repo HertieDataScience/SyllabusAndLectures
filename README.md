@@ -6,7 +6,7 @@
 
 **Version: *15 September 2014***
 
-### Instructor: Christopher Gandrud
+### Instructor: Christopher 
 
 - Office: 1.42
 
