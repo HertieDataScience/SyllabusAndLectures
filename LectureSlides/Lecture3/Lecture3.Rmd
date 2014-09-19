@@ -11,6 +11,8 @@ output:
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
 
+- Sync a fork with the original
+
 - Reminder: **Pair Assignment 1**
 
 - Basics of object oriented programming in R
@@ -18,6 +20,32 @@ output:
 - Simple R data structures
 
 - Simple descriptive statistics and plotting with Base R
+
+## <i class="fa fa-link"></i> Sync a fork with the original repo
+
+See: <https://help.github.com/articles/syncing-a-fork>.
+
+Change current working directory to the repo:
+
+```
+cd /FILE/PATH
+```
+
+Add the original repo as an **upstream repo**:
+
+```
+# Note: should be on one line & only need to do once
+git remote add upstream
+https://github.com/HertieDataScience2014/SyllabusAndLectures.git
+```
+
+Then **fetch** and **merge**:
+
+```
+git fetch upstream
+git checkout master
+git merge upstream/master
+```
 
 ## <i class="fa fa-certificate"></i> Pair Assignment 1
 
@@ -35,7 +63,7 @@ output:
 
 Each pair will create a **new public GitHub repository**
 
-- Must be **fully documented**, including with a **descriptive README.md** 
+- Must be **fully documented**, including with a **descriptive README.md**
     file. Your code must be **human readable** and **clearly commented**.
 
 - Include **R source** code files that:
@@ -162,7 +190,7 @@ special value (`NA`, `NULL`, `TRUE`, `FALSE`).
 
     + Assigning something to an object name that is already in use will **overwrite
     the object's previous contents**.
-    
+
 ## Finding objects
 
 ```{r}
@@ -247,7 +275,7 @@ combined_df <- data.frame(numeric_vector, character_vector,
 combined_df
 ```
 
-## Lists 
+## Lists
 
 A list is a vector containing other objects.
 
@@ -255,8 +283,8 @@ They the objects can have different lengths and classes.
 
 ```{r}
 # Create a list with three objects of different lengths
-test_list <- list(countries = character_vector, 
-                  not_there = c(NA, NA), 
+test_list <- list(countries = character_vector,
+                  not_there = c(NA, NA),
                   more_numbers = 1:100)
 
 test_list
@@ -379,7 +407,7 @@ Why?
 
 - Enhanced code readability.
 
-In R use `%>%` from the 
+In R use `%>%` from the
 [magrittr](http://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html) package.
 
 `%>%` passes a value to the **first argument** of the next function call.
@@ -466,7 +494,7 @@ for (i in 1:length(names(swiss))) {
     swiss[, i] %>%
     mean() %>%
     round(digits = 1) %>%
-    paste(names(swiss)[i], ., '\n') %>% 
+    paste(names(swiss)[i], ., '\n') %>%
     cat()
 }
 ```

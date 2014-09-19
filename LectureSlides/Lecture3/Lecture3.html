@@ -109,11 +109,32 @@
 <slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Objectives for the week</h2></hgroup><article  id="objectives-for-the-week">
 
 <ul>
+<li><p>Sync a fork with the original</p></li>
 <li><p>Reminder: <strong>Pair Assignment 1</strong></p></li>
 <li><p>Basics of object oriented programming in R</p></li>
 <li><p>Simple R data structures</p></li>
 <li><p>Simple descriptive statistics and plotting with Base R</p></li>
 </ul>
+
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-link"></i> Sync a fork with the original repo</h2></hgroup><article  id="sync-a-fork-with-the-original-repo">
+
+<p>See: <a href='https://help.github.com/articles/syncing-a-fork' title=''>https://help.github.com/articles/syncing-a-fork</a>.</p>
+
+<p>Change current working directory to the repo:</p>
+
+<pre >cd /FILE/PATH</pre>
+
+<p>Add the original repo as an <strong>upstream repo</strong>:</p>
+
+<pre ># Note: should be on one line &amp; only need to do once
+git remote add upstream
+https://github.com/HertieDataScience2014/SyllabusAndLectures.git</pre>
+
+<p>Then <strong>fetch</strong> and <strong>merge</strong>:</p>
+
+<pre >git fetch upstream
+git checkout master
+git merge upstream/master</pre>
 
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-certificate"></i> Pair Assignment 1</h2></hgroup><article  id="pair-assignment-1">
 
@@ -401,8 +422,8 @@ combined_df</pre>
 <p>They the objects can have different lengths and classes.</p>
 
 <pre class = 'prettyprint lang-r'># Create a list with three objects of different lengths
-test_list &lt;- list(countries = character_vector, 
-                  not_there = c(NA, NA), 
+test_list &lt;- list(countries = character_vector,
+                  not_there = c(NA, NA),
                   more_numbers = 1:100)
 
 test_list</pre>
@@ -548,7 +569,7 @@ library(dplyr)</pre>
 value_mean &lt;- mean(values)
 round(value_mean, digits = 2)</pre>
 
-<pre >## [1] 9.98</pre>
+<pre >## [1] 9.97</pre>
 
 <p>Piped:</p>
 
@@ -616,7 +637,7 @@ fun_mean(x = swiss$Examination)</pre>
     swiss[, i] %&gt;%
     mean() %&gt;%
     round(digits = 1) %&gt;%
-    paste(names(swiss)[i], ., &#39;\n&#39;) %&gt;% 
+    paste(names(swiss)[i], ., &#39;\n&#39;) %&gt;%
     cat()
 }</pre>
 
