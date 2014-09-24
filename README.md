@@ -177,15 +177,11 @@ This week we will focus on learning one of the simpler markup languages--[Markdo
 
 #### Readings
 
-- Ch. 13: RRRR.
+- Section 3.3 and Ch. 13: RRRR.
 
 - RStudio. 2014. [RMarkdown--Dynamic Documents for R](http://rmarkdown.rstudio.com/).
 
 - RStudio. 2014. [Presentations with ioslides](http://rmarkdown.rstudio.com/ioslides_presentation_format.html).
-
-*Reading Extras*
-
-- Alex Reinhart. Forthcoming. [*Statistics Done Wrong: The Woefully Complete Guide*](http://www.refsmmat.com/statistics/index.html).
 
 ### Week 5: Introduction to Markup Languages and Literate Programming (2)
 
