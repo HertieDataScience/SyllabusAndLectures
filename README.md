@@ -4,7 +4,7 @@
 
 ### Fall 2014
 
-**Version: *15 September 2014***
+**Version: *24 September 2014***
 
 ### Instructor: Christopher Gandrud
 
@@ -80,7 +80,7 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 
 1. The **first pair assignment** is designed to develop your understanding of file structures, version control, and basic R data structures and descriptive statistics. Each pair will create a new public GitHub repository. The  repository should be fully documented, including with a descriptive README.md file. The repository will include R source code files that access at least two core R data sets, perform basic transformations on the data, and illustrate the datas' distributions using a variety relevant of descriptive statistics. At least one file must dynamically link to another in a substantively meaningful way. Finally, another pair must make a pull request and it should be discussed and merged.  **Deadline Week 3, 10% of final grade**.
 
-2. The **second pair assignment** is a proposal for your Collaborative Research Project. It is an opportunity for you to layout your research paper question and methodology, basic literature review (properly cited using BibTeX), and identify data sources that you can access to help answer your question. You will also demonstrate your understanding of literate programming technologies  **Deadline Week 6, 2,000 words maximum, 10% of final grade**.
+2. The **second pair assignment** is a proposal for your Collaborative Research Project. It is an opportunity for you to layout your collaborative research paper question, basic literature review (properly cited using BibTeX), and identify data sources/methodologies that you can access to help answer your question. You will also demonstrate your understanding of literate programming technologies.  **Deadline Week 6, 2,000 words maximum, 10% of final grade**.
 
 3. In the **third pair assignment** you will gather web based data from at least two sources, merge the data sets,  conduct basic inferential statistics on the data to address a relevant research question and briefly describe the results including with dynamically generated tables and figures. Students are encouraged to access data and perform statistical analyses with an eye to answering questions relevant for their Collaborative Research Project. **Deadline Week 9, the write up should be 1,500 words maximum and use literate programming, 10% of final grade**.
 
