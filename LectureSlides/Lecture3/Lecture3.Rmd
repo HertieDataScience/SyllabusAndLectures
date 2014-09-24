@@ -23,6 +23,20 @@ output:
 
 - Simple descriptive statistics and plotting with Base R
 
+## Class make up
+
+We need to reschedule the classes originally on **30 October** and **13 November**.
+
+Possibilities:
+
+- Mondays, 14-16h & 18-20h
+
+- Tuesdays, 8-10h & 18-20h
+
+- Wednesdays, 8-10h & 18-20h
+
+- Thursdays, 14-16h (double session)
+
 ## <i class="fa fa-arrow-left"></i> Review
 
 With a partner: 
