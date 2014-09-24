@@ -1,15 +1,17 @@
 ---
-title: 'MPP-E1180 Lecture 2: Introduction to the R Programming Language'
+title: 'MPP-E1180 Lecture 3: Introduction to the R Programming Language'
 author: "Christopher Gandrud"
 date: "25 September 2014"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
-  beamer_presentation: default
 ---
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
+
+- Review
 
 - Sync a fork with the original
 
@@ -20,6 +22,16 @@ output:
 - Simple R data structures
 
 - Simple descriptive statistics and plotting with Base R
+
+## Review
+
+With a partner: 
+
+- What is the difference between **relative** and **absolute** file paths?
+
+- What is a **commit**?
+
+- What does it mean to **pull** and **push** a repo?
 
 ## <i class="fa fa-link"></i> Sync a fork with the original repo
 
@@ -81,10 +93,12 @@ Each pair will create a **new public GitHub repository**
 
 Open source programming language, with a particular focus on statistical programming.
 
-**History:** Originally 1993 implementation of the S programming language (Bell Labs), by
+**History:** Originally (in 1993) an implementation of the S programming language (Bell Labs), by
 **R**oss Ihaka and **R**obert Gentleman (hence **R**) at University of Auckland.
 
 Currently the R Foundation for Statistical Computing is based in Vienna.
+
+R is to RStudio as Git is to GitHub.
 
 ## <i class="fa fa-line-chart"></i> Growing popularity
 
@@ -104,19 +118,19 @@ citation()
 
 R is **object-oriented**.
 
-**Objects are R's nouns**. They include (but are more):
+**Objects are R's nouns**. They include (not exhaustive):
 
-- a character string (e.g. word)
+- character string (e.g. word)
 
-- a number
+- number
 
-- a vector of numbers or character strings
+- vector of numbers or character strings
 
-- a matrix
+- matrix
 
-- a data frame
+- data frame
 
-- a list
+- list
 
 ## Assignment
 
@@ -139,7 +153,15 @@ words
 
 ## Assignment
 
-You can also use `=`, but it has a slightly different meaning.
+You can also use `=`:
+
+```{r}
+number = 10
+
+number
+```
+
+Note: it has a slightly different meaning.
 
 See [StackOverflow](http://stackoverflow.com/questions/1741820/assignment-operators-in-r-and)
 discussion.
@@ -148,19 +170,27 @@ discussion.
 
 - `NA`: not available, missing
 
-    - Find with `is.na`
-
 - `NULL`: does not exist, is undefined
 
-    + Find with `is.null`
-
-- `TRUE`, `T`: logical true. ''logical'' is also an object class
-
-    + Find with `isTRUE`
+- `TRUE`, `T`: logical true. **Logical** is also an object class.
 
 - `FALSE`, `F`: logical false
 
-    + Find with `!isTRUE`
+## Finding special values
+
+| Function  | Meaning              |
+| --------- | -------------------- |
+| `is.na`   | Is the value `NA`    |
+| `is.null` | Is the value `NULL`  |
+| `isTRUE`  | Is the value `TRUE`  |
+| `!isTRUE` | Is the value `FALSE` |
+
+<br>
+
+```{r}
+absent <- NA
+is.na(absent)
+```
 
 ---
 
@@ -175,6 +205,18 @@ discussion.
 | `a | b`  | a or b                   |
 | `a & b`  | a and b                  |
 
+## Classes
+
+Objects have distinct classes.
+
+```{r}
+# Find the class of number
+class(number)
+
+# Find the class of absent
+class(absent)
+```
+
 ## Naming objects
 
 - Object names **cannot have spaces**
@@ -186,6 +228,8 @@ special value (`NA`, `NULL`, `TRUE`, `FALSE`).
 
 - Use **descriptive object names**!
 
+    + Not: `obj1`, `obj2`
+
 - Each object name must be **unique** in a workspace.
 
     + Assigning something to an object name that is already in use will **overwrite
@@ -196,15 +240,6 @@ special value (`NA`, `NULL`, `TRUE`, `FALSE`).
 ```{r}
 # Find objects in your workspace
 ls()
-```
-
-## Classes
-
-Objects have distinct classes.
-
-```{r}
-# Find the class of number
-class(number)
 ```
 
 ## Style Guides
@@ -283,8 +318,7 @@ They the objects can have different lengths and classes.
 
 ```{r}
 # Create a list with three objects of different lengths
-test_list <- list(countries = character_vector,
-                  not_there = c(NA, NA),
+test_list <- list(countries = character_vector, not_there = c(NA, NA),
                   more_numbers = 1:100)
 
 test_list
@@ -292,7 +326,7 @@ test_list
 
 ## Functions
 
-Functions do things to objects. Functions are like **R's verbs**.
+Functions do things to/with objects. Functions are like **R's verbs**.
 
 When using them to do things to objects, they are always followed by
 parentheses `()`. The parentheses contain the **arguments**. Arguments are
@@ -341,6 +375,22 @@ combined_df[c(1, 2), ]
 ```{r}
 # Select the character_vector column
 combined_df[, 'character_vector']
+```
+
+## Assigment with elements of objects
+
+You can use assigment with parts of objects. For example:
+
+```{r}
+combined_df$character_vector[3] <- 'China'
+combined_df$character_vector
+```
+
+You can even add new variables:
+
+```{r}
+combined_df$new_var <- 1:3
+combined_df
 ```
 
 ## Packages
@@ -494,7 +544,7 @@ for (i in 1:length(names(swiss))) {
     swiss[, i] %>%
     mean() %>%
     round(digits = 1) %>%
-    paste(names(swiss)[i], ., '\n') %>%
+    paste(names(swiss)[i], ., '\n') %>%  # the . directs the pipe
     cat()
 }
 ```
@@ -669,7 +719,7 @@ ggplot(Normal30, aes(x = Normal30)) +
 
 ## Transform skewed data
 
-Highly skewed data can be transformed to have a normal distribution
+Highly skewed data can be transformed to have a normal distribution.
 
 
 Helps correct two violations of key assumptions: (a) non-linearity and (b) heteroskedasticity.
@@ -681,7 +731,7 @@ hist(swiss$Education, main = '')
 ## Natural log transformed skewed data
 
 ```{r}
-hist(log(swiss$Education))
+log(swiss$Education) %>% hist()
 ```
 
 ## Joint distributions
@@ -755,7 +805,7 @@ sd(rand_sample)
 
 - **Access** R data sets
 
-- Explore the data and find ways to **numerically**/**graphically** describe it
+- Explore the data and find ways to **numerically**/**graphically** describe it.
 
 - Find and use R functions that were **not covered** in the lecture for exploring
 and transforming your data.
