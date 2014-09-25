@@ -17,7 +17,7 @@ output:
 
 - Reminder: **Pair Assignment 1**
 
-- Basics of object oriented programming in R
+- Basics of object-oriented programming in R
 
 - Simple R data structures
 
@@ -28,6 +28,8 @@ output:
 We need to reschedule the classes originally on **30 October** and **13 November**.
 
 Possibilities:
+
+- Sometime in Midterm Week
 
 - Mondays, 14-16h & 18-20h
 
@@ -105,12 +107,14 @@ Each pair will create a **new public GitHub repository**
 
 ## <i class="fa fa-question-circle"></i> What is R?
 
-Open source programming language, with a particular focus on statistical programming.
+**Open source programming language**, with a particular focus on statistical programming.
 
 **History:** Originally (in 1993) an implementation of the S programming language (Bell Labs), by
 **R**oss Ihaka and **R**obert Gentleman (hence **R**) at University of Auckland.
 
 Currently the R Foundation for Statistical Computing is based in Vienna.
+
+**RStudio**:
 
 R is to RStudio as Git is to GitHub.
 
@@ -134,7 +138,7 @@ R is **object-oriented**.
 
 **Objects are R's nouns**. They include (not exhaustive):
 
-- character string (e.g. word)
+- character string (e.g. words)
 
 - number
 
@@ -244,7 +248,7 @@ special value (`NA`, `NULL`, `TRUE`, `FALSE`).
 
     + Not: `obj1`, `obj2`
 
-- Each object name must be **unique** in a workspace.
+- Each object name must be **unique** in an environment.
 
     + Assigning something to an object name that is already in use will **overwrite
     the object's previous contents**.
@@ -328,7 +332,7 @@ combined_df
 
 A list is a vector containing other objects.
 
-They the objects can have different lengths and classes.
+The objects can have different lengths and classes.
 
 ```{r}
 # Create a list with three objects of different lengths
@@ -342,7 +346,7 @@ test_list
 
 Functions do things to/with objects. Functions are like **R's verbs**.
 
-When using them to do things to objects, they are always followed by
+When using functions to do things to objects, they are always followed by
 parentheses `()`. The parentheses contain the **arguments**. Arguments are
 separated by commas.
 
@@ -353,7 +357,7 @@ summary(combined_df, digits = 2)
 
 ## Functions help
 
-To find out what arguments a function can take use `?`.
+Use `?` to find out what arguments a function can take.
 
 ```{r, eval=FALSE}
 ?summary
@@ -410,7 +414,7 @@ combined_df
 ## Packages
 
 You can greatly expand the number of functions available to you by installing
-and loading user-created packages.
+and loading user created packages.
 
 ```{r, eval=FALSE}
 # Install dplyr package
@@ -752,6 +756,12 @@ log(swiss$Education) %>% hist()
 
 ```{r}
 plot(log(swiss$Education), swiss$Examination)
+```
+
+## Summarise with correlation coefficients
+
+```{r}
+cor.test(log(swiss$Education), swiss$Examination)
 ```
 
 ## Summarise with loess
