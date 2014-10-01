@@ -40,8 +40,8 @@ Result of voting:
 
 **Deadline:** Week 6
 
-**Submbit:** A (max) 2,000 word proposal created with **RMarkdown**. The proposal
-will:
+**Submbit:** A (max) 2,000 word proposal created with **RMarkdown**. The
+proposal will:
 
 - State your research question. And justify why it is interesting.
 
@@ -59,6 +59,9 @@ As always, submit the entire GitHub repo.
 <br>
 
 **Definitely see me with your ideas/draft.**
+
+Start thinking about types of models that you want to use. I can include these
+in Lecture 8 (Statistical Modeling with R).
 
 ## <i class="fa fa-arrow-left"></i> Review
 
@@ -93,9 +96,9 @@ Hierarchy is maintained with tabs (very different from R where tabs are meaningl
 
 <br>
 
-Nerd point: YAML is a recursive acronym: ''YAML Ain't Markup Language''.
+Super Nerd Point: YAML is a recursive acronym: ''YAML Ain't Markup Language''.
 
-## Different Presentation Styles
+## Example: Different Presentation Styles
 
 [FILL]
 
@@ -300,7 +303,8 @@ R code into code chunks can sometimes be **problematic**:
 
 - Long lines: use `source()` to run R code in other files.
 
-- `cache=TRUE` code chunk option: only runs the chunk when the **chunk code changes**.
+- `cache=TRUE` code chunk option: only runs the chunk when the **chunk code
+changes**.
 
 ## Make files
 
@@ -312,6 +316,8 @@ Big Idea: run a *make* file that runs a list of specific files in order.
 
 Files are only run if they have been changed since the last time the make
 file was last run.
+
+See me if you might want to do this.
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Begin working on your Proposal
 
