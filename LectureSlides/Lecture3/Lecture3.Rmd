@@ -98,7 +98,7 @@ Each pair will create a **new public GitHub repository**
 
     - Access at least **two** core R data sets
 
-    - Illustrate the datas' distributions using a variety of **relevant
+    - Illustrate the data's distributions using a variety of **relevant
     descriptive statistics**
 
     - Two files must be **dynamically linked**
