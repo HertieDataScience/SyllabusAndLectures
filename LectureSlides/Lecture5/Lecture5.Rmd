@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 5: Intro to Markup Lang. & Literate Programming (2)'
 author: "Christopher Gandrud"
 date: "9 October 2014"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
 bibliography:
 - RpackageCitations.bib
 - MainLit.bib
@@ -21,6 +21,8 @@ bibliography:
 - Advanced topics in markup languages and literate programming.
 
     + R Markdown Headers
+
+    + Footnotes
 
     + BibTeX/Pandoc and citing R Packages
 
@@ -72,6 +74,13 @@ in Lecture 8 (Statistical Modeling with R).
 - What is a code chunk?
 
 - What is the difference between Weave, Sweave, and knit? (kind of a trick question)
+
+## Example Paper
+
+An example of a paper + analysis + data project using many of the tools we cover
+today is available at:
+
+[/HertieDataScience2014/Examples/SimplePaperWithAnalysis](https://github.com/HertieDataScience2014/Examples/tree/master/SimplePaperWithAnalysis)
 
 ## R Markdown Headers
 
@@ -140,7 +149,26 @@ output:
   pdf_document:
     fig_width: 7
     fig_height: 6
+    fig_caption: true
 ```
+
+`fig_caption: true` attaches captions to figures (unfortunately only for PDFs).
+
+To set the actual caption label, use the `fig.cap='SOME CAPTION'` code chunk
+option.
+
+## Pandoc footnotes
+
+R Markdown can use Pandoc footnotes.
+
+**In-text**: In the text place a **unique** footnote key in the format:
+
+- `[^KEY]`
+
+**At the end** of your document put the full footnote starting with the key,
+e.g.
+
+- `[^KEY]: This is a footnote.`
 
 ## BibTeX citations
 

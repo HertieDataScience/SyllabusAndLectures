@@ -114,6 +114,7 @@
 
 <ul>
 <li><p>R Markdown Headers</p></li>
+<li><p>Footnotes</p></li>
 <li><p>BibTeX/Pandoc and citing R Packages</p></li>
 <li><p>Time consuming analyses: caching and Make files</p></li>
 </ul></li>
@@ -159,6 +160,12 @@
 <li><p>What is the difference between Weave, Sweave, and knit? (kind of a trick question)</p></li>
 </ul>
 
+</article></slide><slide class=''><hgroup><h2>Example Paper</h2></hgroup><article  id="example-paper">
+
+<p>An example of a paper + analysis + data project using many of the tools we cover today is available at:</p>
+
+<p><a href='https://github.com/HertieDataScience2014/Examples/tree/master/SimplePaperWithAnalysis' title=''>/HertieDataScience2014/Examples/SimplePaperWithAnalysis</a></p>
+
 </article></slide><slide class=''><hgroup><h2>R Markdown Headers</h2></hgroup><article  id="r-markdown-headers">
 
 <p>An R Markdown file is <strong>just a text file</strong> with markup instructions that <strong>RStudio</strong> understands.</p>
@@ -197,6 +204,8 @@
 
 <pre >output: revealjs::revealjs_presentation</pre>
 
+<p>For further styling see <a href='https://github.com/jjallaire/revealjs' title=''>https://github.com/jjallaire/revealjs</a></p>
+
 </article></slide><slide class=''><hgroup><h2>Table of contents</h2></hgroup><article  id="table-of-contents">
 
 <p>You can add a table of contents to your PDF output:</p>
@@ -205,16 +214,37 @@
   pdf_document:
     toc: true
     number_sections: true
----
+---</pre>
 
-## Figure Options
+</article></slide><slide class=''><hgroup><h2>Figure Options</h2></hgroup><article  id="figure-options">
 
-Create consistent figure formatting:
-</pre>
+<p>Create consistent figure formatting:</p>
 
-<p>output: pdf_document: fig_width: 7 fig_height: 6</p>
+<pre >output:
+  pdf_document:
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true</pre>
 
-<pre ></pre>
+<p><code>fig_caption: true</code> attaches captions to figures (unfortunately only for PDFs).</p>
+
+<p>To set the actual caption label, use the <code>fig.cap=&#39;SOME CAPTION&#39;</code> code chunk option.</p>
+
+</article></slide><slide class=''><hgroup><h2>Pandoc footnotes</h2></hgroup><article  id="pandoc-footnotes">
+
+<p>R Markdown can use Pandoc footnotes.</p>
+
+<p><strong>In-text</strong>: In the text place a <strong>unique</strong> footnote key in the format:</p>
+
+<ul>
+<li><code>[^KEY]</code></li>
+</ul>
+
+<p><strong>At the end</strong> of your document put the full footnote starting with the key, e.g.</p>
+
+<ul>
+<li><code>[^KEY]: This is a footnote.</code></li>
+</ul>
 
 </article></slide><slide class=''><hgroup><h2>BibTeX citations</h2></hgroup><article  id="bibtex-citations">
 
