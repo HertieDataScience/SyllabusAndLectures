@@ -4,7 +4,7 @@
 
 ### Fall 2014
 
-**Version: *24 September 2014***
+**Version: *1 October 2014***
 
 ### Instructor: Christopher Gandrud
 
@@ -189,9 +189,9 @@ We will expand our understanding of markup languages and literate programming by
 
 #### Readings
 
-- RStudio. 2014. [Pandoc Markdown](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html).
+- Ch. 11-12: RRRR.
 
-- Ch. 11: RRRR.
+- RStudio. 2014. [Pandoc Markdown](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html).
 
 ## Part III: Data gathering, transformation, & analysis
 
