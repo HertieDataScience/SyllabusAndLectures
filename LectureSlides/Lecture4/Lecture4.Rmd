@@ -1,7 +1,7 @@
 ---
 title: 'MPP-E1180 Lecture 4: Intro to Markup Lang. & Literate Programming (1)'
 author: "Christopher Gandrud"
-date: "1 October 2014"
+date: "2 October 2014"
 output:
   ioslides_presentation:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
@@ -11,15 +11,17 @@ output:
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
 
+- Housecleaning
+
 - Review
 
 - **Pair Assignment 2**
 
-- What is literate programming? Why is it important for rep. research?
+- What is literate programming? Why is it important for reproducible research?
 
-- Introduction to Markdown
+- Introduction to **Markdown**
 
-- Introduction to R Markdown.
+- Introduction to **R Markdown**.
 
     + Simple webpages
 
@@ -34,6 +36,51 @@ output:
 <i class="fa fa-smile-o"></i> Example files are at:
 
 <https://github.com/HertieDataScience2014/Examples>
+
+## <i class="fa fa-check"></i> Class reschedule
+
+We are rescheduling the classes on 30 October and 13 November.
+
+Please vote at:
+
+- 30 October: <http://doodle.com/batc4xbmrdzqmhy7>
+
+- 13 November: <http://doodle.com/hu9ehmd55zm6bw8v>
+
+**Voting Deadline:** 3 October
+
+## Assignment 1 General Feedback
+
+- **Always test your code!** Does it at least run on your computer as you expect 
+it to with no errors?
+
+- **Informative** Headers!
+
+- You are free to work across groups, just make sure to use **pull requests** and
+**fully document these contributions**.
+
+- Think of the **flow** that you are trying to create when you link your documents
+together.
+
+- Initialise repos with R **.gitignore** files.
+
+## Assignment 2
+
+**Proposal** for your Collaborative Research Project.
+
+**Deadline:** Week 6
+
+**Submbit:** A (max) 2,000 word proposal created with **RMarkdown**. The proposal
+will:
+
+- State your research question. And justify why it is interesting.
+
+- Provide a basic literature review (properly cited with BibTeX).
+
+- Identify data sources and appropriate research methodologies for answering your
+question.
+
+As always, submit the entire GitHub repo.
 
 ## <i class="fa fa-arrow-left"></i> Review
 
@@ -78,17 +125,16 @@ understandable to others.
 
 <br>
 
-In addition: allows you to **automatically update** documents when there are changes.
+Added benefit: allows you to **automatically update** documents when there are changes.
 
 ## Implementing literate programming
 
 In addition to the computer language, we need:
 
-**Natural language part** formatted using a **markup language**.
+1. **Natural language part** formatted using a **markup language**. 
+Markup language: typesetting instructions. E.g. Markdown, $\LaTeX$, HTML.
 
-- Markup language: typesetting instructions. E.g. Markdown, $\LaTeX$, HTML.
-
-A way to **tangle** or **weave** the **computer language** part into the natural
+2. A way to **tangle** or **weave** the **computer language** part into the natural
 language part.
 
 ## Tangle/Weave for R
@@ -127,7 +173,7 @@ Two parts:
 
 ![knit process](img/knitr_process.png)
 
-## Recently
+## <i class="fa fa-language"></i> Recently
 
 Most of the new focus is on [RStudio's RMarkdown](http://rmarkdown.rstudio.com/).
 
