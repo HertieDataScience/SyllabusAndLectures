@@ -193,6 +193,10 @@ We will expand our understanding of markup languages and literate programming by
 
 - RStudio. 2014. [Pandoc Markdown](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html).
 
+**Extras:**
+
+Kieran, Healy. 2014. [Plain Text, Papers, Pandoc](http://kieranhealy.org/blog/archives/2014/01/23/plain-text/).
+
 ## Part III: Data gathering, transformation, & analysis
 
 ### Week 6: Automatic Data Gathering via Curl, API Packages + Cleaning

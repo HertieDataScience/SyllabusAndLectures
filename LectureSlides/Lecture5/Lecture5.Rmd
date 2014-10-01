@@ -1,10 +1,329 @@
 ---
-title: 'MPP-E1180 Lecture 4: Intro to Markup Lang. & Literate Programming (2)'
+title: 'MPP-E1180 Lecture 5: Intro to Markup Lang. & Literate Programming (2)'
 author: "Christopher Gandrud"
 date: "9 October 2014"
+bibliography:  
+            - RpackageCitations.bib
+            - MainLit.bib
 output:
   ioslides_presentation:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
   beamer_presentation: default
 ---
+
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
+
+- Housecleaning
+
+- Review
+
+- Advanced topics in markup languages and literate programming.
+
+    + R Markdown Headers
+
+    + BibTeX/Pandoc and citing R Packages
+
+    + Time consuming analyses: caching and Make files
+
+- Begin working on your Assignment 2.
+
+## <i class="fa fa-check"></i> Class reschedule
+
+Result of voting:
+
+[GET]
+
+## Assignment 2
+
+**Proposal** for your Collaborative Research Project.
+
+**Deadline:** Week 6
+
+**Submbit:** A (max) 2,000 word proposal created with **RMarkdown**. The proposal
+will:
+
+- State your research question. And justify why it is interesting.
+
+- Provide a basic literature review (properly cited with BibTeX).
+
+- Identify data sources and appropriate research methodologies for answering your
+question.
+
+As always, submit the entire GitHub repo.
+
+## Assignment 2
+
+<br>
+<br>
+<br>
+
+**Definitely see me with your ideas/draft.**
+
+## <i class="fa fa-arrow-left"></i> Review
+
+- Why is literate programming useful for reproducible research?
+
+- What is a markup language?
+
+- What is a code chunk?
+
+- What is the difference between Weave, Sweave, and knit? (kind of a trick question)
+
+## R Markdown Headers
+
+An R Markdown file is **just a text file** with markup instructions that **RStudio**
+understands.
+
+The key to formatting is the **header**.
+
+It is at the start of a file and comes between `---`.
+
+The header is written in [YAML](http://en.wikipedia.org/wiki/YAML).
+
+## YAML
+
+YAML is basically a human read-able data format.
+
+Elements are separated from values with a colon (`:`).
+
+Each element is separated by new lines.
+
+Hierarchy is maintained with tabs (very different from R where tabs are meaningless).
+
+<br>
+
+Nerd point: YAML is a recursive acronym: ''YAML Ain't Markup Language''.
+
+## Different Presentation Styles
+
+[FILL]
+
+## BibTeX citations
+
+BibTex allows you to create a single data base of all of the literature/packages
+you cite.
+
+You can then insert them into your text and they will:
+
+- Be automatically formatted consistently.
+
+- Generate an appropriately ordered, consistently formatted reference list at
+the end of your document.
+
+## The BibTeX Database
+
+A BibTeX database is just a text file with the extension `.bib`.
+
+Each entry follows a standard format depending on the type of media.
+
+```
+@DOCUMENT_TYPE{CITE_KEY,
+    title = {TITLE},
+    author = {AUTHOR},
+    . . . = {. . .},
+}
+```
+
+**Note**: Commas are very important!
+
+## The Cite Key
+
+<br>
+<br>
+<br>
+
+The cite key **links** a specific citation in your presentation document to a specific
+BibTeX database entry.
+
+They must be **unique**.
+
+It **does not matter** what order your BibTeX entries are in the `.bib` file.
+
+## BibTeX Articles
+
+```
+@article{Acemoglu2000,
+    author = {Acemoglu, Daron and Robinson, James A.},
+    title = {Why Did the West Extend the Franchise? Democracy, Inequality,
+            and Growth in Historical Perspective},
+    journal = {The Quarterly Journal of Economics},
+    year = {2000},
+    volume = {115},
+    number = {4},
+    pages = {1167--1199},
+}
+```
+
+## BibTeX Books
+
+```
+@book{Cox1997,
+    title={Making Votes Count: Strategic Coordination in the World's
+            Electoral Systems},
+    author={Gary W. Cox},
+    year={1997},
+    publisher={Cambridge University Press},
+    address = {Cambridge}
+}
+```
+
+## More
+
+<br>
+<br>
+
+For more media types and entry fields see
+[http://en.wikipedia.org/wiki/BibTeX](http://en.wikipedia.org/wiki/BibTeX).
+
+## Tip: Google Scholar
+
+Google scholar generates BibTeX entries.
+
+On an entry click `Cite > BibTeX`.
+
+Sometimes they need to be **cleaned** a little.
+
+## Linking your .bib file.
+
+To link your `.bib` file to your RMarkdown document add:
+
+```
+bibliography:
+    - BIB_FILE_NAME.bib
+    - ANOTHER_BIB_FILE_NAME.bib
+```
+
+**Note**: The files should be in the same directory as you R Markdown file.
+
+## Including BibTeX citations in RMarkdown
+
+RMarkdown uses [Pandoc syntax](http://johnmacfarlane.net/pandoc/README.html)
+to include a citation in text.
+
+General format: `@CITE_KEY`.
+
+So if the cite key is `Box1973` then `@Box1973` will return  @Box1973 in the text
+of the presentation document.
+
+## Formatting In-Text Citations
+
+| Markup                      | Result                   |
+| --------------------------- | ------------------------ |
+| `[@Box1973]`                | [@Box1973]               |
+| `[see @Box1973]`            | [see @Box1973]           |
+| `[see @Box1973, 33-40]`     | [see @Box1973, 33-40]    |
+| `[@Box1973; @Acemoglu2000]` | [@Box1973 @Acemoglu2000] |
+| `@Box1973 [33-40]`          | @Box1973 [33-40]         |
+
+## Reference List
+
+A reference list with the full bibliographic details of all cited documents
+will be **automatically created** at the end of your document.
+
+Tip: Put a `## References` at the very end of your R Markdown document to
+have a section heading before the reference list.
+
+## Citing R and R Packages
+
+Why cite?
+
+- Give **credit** to the package authors (just like when citing literature).
+
+- Enable reproducible research: identify which software you used and **which
+version**.
+
+## Citing R and R Packages
+
+Base R way: print citation, copy BibTeX  entry into your *.bib* file.
+
+**Cite R**:
+
+```{r}
+toBibtex(citation())
+```
+
+## Citing R and R Packages
+
+**Cite R Packages**:
+
+```{r}
+toBibtex(citation('dplyr'))
+```
+
+## Citing R and R Packages: LoadandCite
+
+The dynamic literate programming way: Use `LoadandCite` from the
+[repmis](http://christophergandrud.github.io/repmis/) package.
+
+Load all of the packages at the beginning of you RMarkdown file in a chunk
+with `include=FALSE`.
+
+`LoadandCite` loads the packages and creates a BibTeX file with all of the citations.
+
+```{r, message=FALSE, warning=FALSE}
+pkgs <- c('dplyr', 'ggplot2')
+
+repmis::LoadandCite(pkgs, file = 'RpackageCitations.bib')
+```
+
+**Note:** Use a file name that is different from your literature BibTeX file!
+
+## Citing R and R Packages: LoadandCite
+
+Include the .bib file in your RMarkdown header.
+
+Each **cite key** follows: `R-PKG_NAME`.
+
+R itself has the key `CiteR`.
+
+So `@R-dplyr` and `@CiteR` create the citations:
+
+- @R-dplyr
+
+- @CiteR
+
+
+## <i class="fa fa-clock-o"></i> Time Consuming/Intensive Analyses
+
+Knitting your analysis and presentation documents together by placing all of your
+R code into code chunks can sometimes be **problematic**:
+
+- When they are time consuming (requires a lot of computational time).
+
+- When they access files over the internet (bad practice to make many repeated
+    calls to the same URL, can crash the site).
+
+- When they are many lines long.
+
+## Solutions
+
+- Long lines: use `source()` to run R code in other files.
+
+- `cache=TRUE` code chunk option: only runs the chunk when the **chunk code changes**.
+
+## Make files
+
+Make files are the ultimate solution to these problems.
+
+Make is a command line program.
+
+Big Idea: run a *make* file that runs a list of specific files in order.
+
+Files are only run if they have been changed since the last time the make
+file was last run.
+
+## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Begin working on your Proposal
+
+Begin working with your partner on your research proposal.
+
+- Identify the research area and key literature.
+
+- Create a new repo and R Markdown document for your proposal.
+
+- Begin building a BibTeX database for your key literature and try including them
+in your proposal.
+
+- Begin identifying data sources.
+
+## References
