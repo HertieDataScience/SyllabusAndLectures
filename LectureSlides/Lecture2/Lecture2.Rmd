@@ -247,7 +247,7 @@ directories.
 
 <i class="fa fa-exclamation"></i> **Always remember the working directory.**
 
-- Otherwise you may open/save files that you do not want to open/save them.
+- Otherwise you may open/save files that you do not want to open/save.
 
 ## <i class="fa fa-folder-open-o"></i> Working directories
 
