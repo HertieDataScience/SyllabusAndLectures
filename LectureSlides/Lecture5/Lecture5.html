@@ -185,7 +185,36 @@
 
 </article></slide><slide class=''><hgroup><h2>Different Presentation Styles</h2></hgroup><article  id="different-presentation-styles">
 
-<p>[FILL]</p>
+<p>By defualt, R Markdown uses the <a href='http://rmarkdown.rstudio.com/ioslides_presentation_format.html' title=''>isoslides</a> HTML presentation slides style.</p>
+
+<p>You can also use <a href='http://lab.hakim.se/reveal-js/' title=''>reveal.js</a>.</p>
+
+<p>First install revealjs:</p>
+
+<pre class = 'prettyprint lang-r'>devtools::install_github(&quot;jjallaire/revealjs&quot;)</pre>
+
+<p>Then in the YAML header use:</p>
+
+<pre >output: revealjs::revealjs_presentation</pre>
+
+</article></slide><slide class=''><hgroup><h2>Table of contents</h2></hgroup><article  id="table-of-contents">
+
+<p>You can add a table of contents to your PDF output:</p>
+
+<pre >output:
+  pdf_document:
+    toc: true
+    number_sections: true
+---
+
+## Figure Options
+
+Create consistent figure formatting:
+</pre>
+
+<p>output: pdf_document: fig_width: 7 fig_height: 6</p>
+
+<pre ></pre>
 
 </article></slide><slide class=''><hgroup><h2>BibTeX citations</h2></hgroup><article  id="bibtex-citations">
 

@@ -2,14 +2,14 @@
 title: 'MPP-E1180 Lecture 5: Intro to Markup Lang. & Literate Programming (2)'
 author: "Christopher Gandrud"
 date: "9 October 2014"
-bibliography:  
-            - RpackageCitations.bib
-            - MainLit.bib
 output:
+  beamer_presentation: default
   ioslides_presentation:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
-  beamer_presentation: default
+bibliography:
+- RpackageCitations.bib
+- MainLit.bib
 ---
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
@@ -98,9 +98,49 @@ Hierarchy is maintained with tabs (very different from R where tabs are meaningl
 
 Super Nerd Point: YAML is a recursive acronym: ''YAML Ain't Markup Language''.
 
-## Example: Different Presentation Styles
+## Different Presentation Styles
 
-[FILL]
+By defualt, R Markdown uses the [isoslides](http://rmarkdown.rstudio.com/ioslides_presentation_format.html)
+HTML presentation slides style.
+
+You can also use [reveal.js](http://lab.hakim.se/reveal-js/).
+
+First install revealjs:
+
+```{r, eval=FALSE}
+devtools::install_github("jjallaire/revealjs")
+```
+
+Then in the YAML header use:
+
+```
+output: revealjs::revealjs_presentation
+```
+
+For further styling see <https://github.com/jjallaire/revealjs>
+
+## Table of contents
+
+You can add a table of contents to your PDF output:
+
+```
+output:
+  pdf_document:
+    toc: true
+    number_sections: true
+---
+```
+
+## Figure Options
+
+Create consistent figure formatting:
+
+```
+output:
+  pdf_document:
+    fig_width: 7
+    fig_height: 6
+```
 
 ## BibTeX citations
 
