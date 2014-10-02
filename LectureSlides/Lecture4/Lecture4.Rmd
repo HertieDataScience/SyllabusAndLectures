@@ -13,9 +13,9 @@ output:
 
 - Housecleaning
 
-- Review
-
 - **Pair Assignment 2**
+
+- Review
 
 - What is literate programming? Why is it important for reproducible research?
 
@@ -70,8 +70,9 @@ together.
 
 **Deadline:** Week 6
 
-**Submbit:** A (max) 2,000 word proposal created with **RMarkdown**. The proposal
-will:
+**Submbit:** A (max) 2,000 word proposal created with **R Markdown**. 
+
+The proposal will:
 
 - State your research question. And justify why it is interesting.
 
@@ -128,7 +129,7 @@ Quantitative social science **is computer programming**.
 
 You are creating a program that gathers and analyses data.
 
-You then want to advertise this work (a paper) in a way that is completely
+You then **advertise** this work (a paper) in a way that is completely
 understandable to others.
 
 <br>
@@ -151,9 +152,9 @@ In R you can use Yihui Xie's [knitr](http://yihui.name/knitr/) package.
 
 - Language dependent:
 
-    + .Rmd <i class="fa fa-arrow-right"></i> .html
+    + .Rmd <i class="fa fa-arrow-right"></i> .html (using Markdown)
 
-    + .rnw <i class="fa fa-arrow-right"></i> .pdf (using $\LaTeX$)
+    + .Rnw <i class="fa fa-arrow-right"></i> .pdf (using $\LaTeX$)
 
 <br>
 
@@ -183,11 +184,11 @@ Two parts:
 
 ## <i class="fa fa-language"></i> Recently
 
-Most of the new focus is on [RStudio's RMarkdown](http://rmarkdown.rstudio.com/).
+Most of the new focus is on [RStudio's R Markdown](http://rmarkdown.rstudio.com/).
 
 - Directly builds on knitr (Yihui works at RStudio now).
 
-    + Code chunk syntax is almost identical to markdown in knitr.
+    + Code chunk syntax is almost identical to Markdown in knitr.
 
 - But uses [Pandoc](http://johnmacfarlane.net/pandoc/) to be more **output agnostic**.
 
@@ -266,7 +267,7 @@ Links:
 Images:
 
 ```
-![text description](file/path.png)
+![text description](FILE/PATH.png)
 ```
 
 ## Markdown syntax
@@ -294,21 +295,24 @@ Ordered Lists:
 ## Tables
 
 ```
-| Name  | Something |
-| ----- | --------- |
-| Stuff | Things    |
+| Name   | Something |
+| ------ | --------- |
+| Stuff  | Things    |
+| Things | Stuff     |
 ```
 
 <br>
 
-| Name  | Something |
-| ----- | --------- |
-| Stuff | Things    |
+| Name   | Something |
+| ------ | --------- |
+| Stuff  | Things    |
+| Things | Stuff     |
 
 ## Math
 
 R Markdown from RStudio supports [MathJax](http://www.mathjax.org/). So, you can
-write any [$\LaTeX$ math](http://en.wikibooks.org/wiki/LaTeX/Mathematics) with R Markdown.
+write any [$\LaTeX$ math](http://en.wikibooks.org/wiki/LaTeX/Mathematics) with 
+R Markdown.
 
 ```
 Inline equations have one dollar sign $s^2 =
@@ -340,11 +344,22 @@ Knitable inline chunks with a back-tick then `r`.
 
 ## Code chunks in Display
 
-Use three ticks (```) to start and end a code chunk that is **not run**.
+Use three ticks (```) to **start** and **end** a code chunk that is **not run**.
 
 Create a **knit-able** code chunk begin the chunk with ````{r}`.
 
 <img src="img/simpleRMarkdown.png" height=300, width=450/>
+
+## Automatic table generation (basics)
+
+You can turn any matrix or data frame into a well formatted table with the knitr
+function `kable`.
+
+```{r, eval=FALSE}
+knitr::kable(mtcars)
+```
+
+Make sure that the code chunk option `results='asis'`.
 
 ## Output Web
 
@@ -378,17 +393,6 @@ options in the chunk head: ````{r echo=FALSE, error=FALSE}`
 | `cache=TRUE`    | Cache the chunk. It is only run when the contents change.  |
 
 Many others at <http://yihui.name/knitr/options>
-
-## Automatic table generation (basics)
-
-You can turn any matrix or data frame into a well formatted table with the knitr
-function `kable`.
-
-```{r, eval=FALSE}
-knitr::kable(mtcars)
-```
-
-Make sure that the code chunk option `results='asis'`.
 
 ## RMarkdown Presentations
 
