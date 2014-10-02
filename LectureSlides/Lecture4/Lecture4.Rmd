@@ -432,3 +432,12 @@ Convert your Pair Assignment 1 to R Markdown and output to multiple formats.
 - Add relevant equations.
 
 Create a basic R Markdown presentation.
+
+## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Collaborative Research Project
+
+<br>
+<br>
+
+Begin trying to find a partner for the Collaborative Research Project.
+
+Discuss topics you might be interested in researching.
