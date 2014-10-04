@@ -34,7 +34,10 @@ bibliography:
 
 Result of voting:
 
-[GET]
+| Original          | Reschedule                                           |
+| ------------------ | --------------------------------------------------- |
+| 30 October     | 27 October (Monday) 14:00-16:00        |
+| 13 November | 10 November (Monday) 14:00-16:00    |
 
 ## Assignment 2
 
