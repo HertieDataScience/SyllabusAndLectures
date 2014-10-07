@@ -4,7 +4,7 @@
 
 ### Fall 2014
 
-**Version: *1 October 2014***
+**Version: *7 October 2014***
 
 ### Instructor: Christopher Gandrud
 
@@ -222,8 +222,6 @@ Most social science data sets are now available for download online. This week w
 - [Federal Reserve Economic Data](http://research.stlouisfed.org/fred2/), accessible through R with [quantmod](http://cran.r-project.org/web/packages/quantmod/quantmod.pdf).
 
 - [rOpenGov](http://ropengov.github.io/projects/)
-
-- [psData](https://github.com/rOpenGov/guidelines-docs/blob/master/psData-guidelines/README.md)
 
 ### Week 7: Automatic Data Gathering via Web Scraping
 
