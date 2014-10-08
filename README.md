@@ -223,9 +223,12 @@ Most social science data sets are now available for download online. This week w
 
 - [rOpenGov](http://ropengov.github.io/projects/)
 
-### Week 7: Automatic Data Gathering via Web Scraping
+### Week 7: Automatic Data Gathering via Web Scraping + Transformations
 
 A considerable amount of social science data is not stored in traditional data table type formats. Instead it is embedded in webpages. To access this data we will learn the basics of web scraping.
+
+We will also be examining in more detail ways to transform data, particularly
+with the [dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) package.
 
 #### Readings
 

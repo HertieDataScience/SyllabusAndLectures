@@ -392,8 +392,9 @@ R code into code chunks can sometimes be **problematic**:
 
 - Long lines: use `source()` to run R code in other files.
 
-- Time/computationally intensive: `cache=TRUE` code chunk option: only runs the 
-chunk when the **chunk code changes**.
+- [Caching](http://en.wikipedia.org/wiki/Cache_(computing)) for
+time/computationally intensive work: `cache=TRUE` code chunk option: only runs
+the chunk when the **chunk code changes**.
 
 ## Make files
 
@@ -406,7 +407,7 @@ Big Idea: run a *make* file that runs a list of specific files in order.
 Files are only run if they have been changed since the last time the make
 file was last run.
 
-See me if you might want to do this.
+See Ch. 6 of RRRR if you might want to do this.
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Practice
 
@@ -414,7 +415,7 @@ See me if you might want to do this.
 <br>
 <br>
 
-Clone the [HertieDataScience2014/Examples](https://github.com/HertieDataScience2014/Examples) repo and play around with **SimplePaperWithAnalysis**. 
+Clone the [HertieDataScience2014/Examples](https://github.com/HertieDataScience2014/Examples) repo and play around with **SimplePaperWithAnalysis**.
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Begin working on your Proposal
 

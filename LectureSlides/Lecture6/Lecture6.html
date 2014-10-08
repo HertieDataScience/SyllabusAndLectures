@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MPP-E1180 Lecture 5: Intro to Markup Lang. &amp; Literate Programming (2)</title>
+  <title>MPP-E1180 Lecture 6: Automatic Data Gathering + Cleaning</title>
 
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -10,6 +10,7 @@
 
 
 
+  <meta name="date" content="2014-10-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -25,7 +26,7 @@
     var SLIDE_CONFIG = {
       // Slide settings
       settings: {
-                title: 'MPP-E1180 Lecture 5: Intro to Markup Lang. &amp; Literate Programming (2)',
+                title: 'MPP-E1180 Lecture 6: Automatic Data Gathering + Cleaning',
                         useBuilds: true,
         usePrettify: true,
         enableSlideAreas: true,
@@ -101,7 +102,7 @@
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
       <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
       <p data-config-presenter><!-- populated from slide_config.json --></p>
-            <p style="margin-top: 6px; margin-left: -2px;">9 October 2014</p>
+            <p style="margin-top: 6px; margin-left: -2px;">16 October 2014</p>
           </hgroup>
   </slide>
 
@@ -110,15 +111,9 @@
 <ul>
 <li><p>Housecleaning</p></li>
 <li><p>Review</p></li>
-<li><p>Advanced topics in markup languages and literate programming.</p>
-
-<ul>
-<li><p>R Markdown Headers</p></li>
-<li><p>Footnotes</p></li>
-<li><p>BibTeX/Pandoc and citing R Packages</p></li>
-<li><p>Time consuming analyses: caching and Make files</p></li>
-</ul></li>
-<li><p>Begin working on your Assignment 2.</p></li>
+<li><p>Benefits and challenges of open public data.</p></li>
+<li><p>Automatic Data Gathering</p></li>
+<li><p>Tidying, Cleaning, and Merging data</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-check"></i> Class reschedule</h2></hgroup><article  id="class-reschedule">
@@ -156,376 +151,529 @@
 
 <p>As always, submit the entire GitHub repo.</p>
 
-</article></slide><slide class=''><hgroup><h2>Assignment 2</h2></hgroup><article  id="assignment-2-1">
-
-<p><br> <br> <br></p>
-
-<p><strong>Definitely see me with your ideas/draft.</strong></p>
-
-<p>Start thinking about <strong>types of models</strong> that you want to use. I can include these in Lecture 8 (Statistical Modeling with R).</p>
-
-</article></slide><slide class=''><hgroup><h2><i class="fa fa-arrow-left"></i> Review</h2></hgroup><article  id="review">
-
-<ul>
-<li><p>Why is literate programming useful for reproducible research?</p></li>
-<li><p>What is a markup language?</p></li>
-<li><p>What is a code chunk?</p></li>
-<li><p>What is the difference between Weave, Sweave, knitr, and R Markdown? (kind of a trick question)</p></li>
-</ul>
-
-</article></slide><slide class=''><hgroup><h2>Example Paper</h2></hgroup><article  id="example-paper">
-
-<p>An example of a paper + analysis + data project using many of the tools we cover today is available at:</p>
-
-<p><a href='https://github.com/HertieDataScience2014/Examples/tree/master/SimplePaperWithAnalysis' title=''>/HertieDataScience2014/Examples/SimplePaperWithAnalysis</a></p>
-
-</article></slide><slide class=''><hgroup><h2>R Markdown Headers</h2></hgroup><article  id="r-markdown-headers">
-
-<p>An R Markdown file is <strong>just a text file</strong> with markup instructions that <strong>RStudio</strong> understands.</p>
-
-<p>The key to formatting is the <strong>header</strong>.</p>
-
-<p>It is at the start of a file and comes between <code>---</code>.</p>
-
-<p>The header is written in <a href='http://en.wikipedia.org/wiki/YAML' title=''>YAML</a>.</p>
-
-</article></slide><slide class=''><hgroup><h2>YAML</h2></hgroup><article  id="yaml">
-
-<p>YAML is basically a <strong>human read-able data format</strong>.</p>
-
-<p>Elements are separated from values with a colon (<code>:</code>).</p>
-
-<p>Each element is separated by new lines.</p>
-
-<p>Hierarchy is maintained with tabs.</p>
-
-<pre >---
-title: &#39;MPP-E1180 Lecture 5&#39;
-author: &quot;Christopher Gandrud&quot;
-date: &quot;9 October 2014&quot;
-output:
-  ioslides_presentation:
-    css: css/font-awesome.min.css
-    logo: img/logo.png
-  beamer_presentation: default
----</pre>
-
-</article></slide><slide class=''><hgroup><h2>Super Nerd Point</h2></hgroup><article  id="super-nerd-point">
-
-<p><br> <br> <br></p>
-
-<p>YAML is a recursive acronym: &#39;&#39;YAML Ain&#39;t Markup Language&#39;&#39;.</p>
-
-</article></slide><slide class=''><hgroup><h2>Different Presentation Styles</h2></hgroup><article  id="different-presentation-styles">
-
-<p>By defualt, R Markdown uses the <a href='http://rmarkdown.rstudio.com/ioslides_presentation_format.html' title=''>isoslides</a> HTML presentation slides style.</p>
-
-<p>You can also use <a href='http://lab.hakim.se/reveal-js/' title=''>reveal.js</a>.</p>
-
-<p>First install the revealjs R package:</p>
-
-<pre class = 'prettyprint lang-r'>devtools::install_github(&quot;jjallaire/revealjs&quot;)</pre>
-
-<p>Then in the YAML header use:</p>
-
-<pre >output: revealjs::revealjs_presentation</pre>
-
-<p>For further styling see <a href='https://github.com/jjallaire/revealjs' title=''>https://github.com/jjallaire/revealjs</a></p>
-
-</article></slide><slide class=''><hgroup><h2>Table of contents &amp; Numbered Sections</h2></hgroup><article  id="table-of-contents-numbered-sections">
-
-<p>You can add a table of contents and numbered sections to your PDF output:</p>
-
-<pre >output:
-  pdf_document:
-    toc: true
-    number_sections: true</pre>
-
-<p>To do the same for <strong>HTML</strong> also include the information under <code>html_document</code>.</p>
-
-</article></slide><slide class=''><hgroup><h2>Figure Options</h2></hgroup><article  id="figure-options">
-
-<p>Create consistent figure formatting:</p>
-
-<pre >output:
-  pdf_document:
-    fig_width: 7
-    fig_height: 6
-    fig_caption: true</pre>
-
-<p><code>fig_caption: true</code> attaches captions to figures.</p>
-
-<p>To set the actual caption label, use the <code>fig.cap=&#39;SOME CAPTION&#39;</code> <strong>code chunk option</strong>.</p>
-
-</article></slide><slide class=''><hgroup><h2>Pandoc footnotes</h2></hgroup><article  id="pandoc-footnotes">
-
-<p>R Markdown can use Pandoc footnotes.</p>
-
-<p><strong>In-text</strong>: In the text place a <strong>unique</strong> footnote key in the format:</p>
-
-<ul>
-<li><code>[^KEY]</code></li>
-</ul>
-
-<p><strong>At the end</strong> of your document put the full footnote starting with the key, e.g.</p>
-
-<ul>
-<li><code>[^KEY]: This is a footnote.</code></li>
-</ul>
-
-</article></slide><slide class=''><hgroup><h2>BibTeX citations</h2></hgroup><article  id="bibtex-citations">
-
-<p>BibTex allows you to create a <strong>single database</strong> of <strong>all</strong> of the <strong>literature/packages you cite</strong>.</p>
-
-<p>You can then insert them into your text and they will:</p>
-
-<ul>
-<li><p>Be <strong>automatically formatted</strong> consistently.</p></li>
-<li><p>Generate an appropriately ordered, consistently formatted <strong>reference list</strong> at the end of your document.</p></li>
-</ul>
-
-</article></slide><slide class=''><hgroup><h2>The BibTeX Database</h2></hgroup><article  id="the-bibtex-database">
-
-<p>A BibTeX database is just a text file with the extension <code>.bib</code>.</p>
-
-<p>Each entry follows a standard format depending on the type of media.</p>
-
-<pre >@DOCUMENT_TYPE{CITE_KEY,
-    title = {TITLE},
-    author = {AUTHOR},
-    . . . = {. . .},
-}</pre>
-
-<p><strong>Note</strong>: Commas are very important!</p>
-
-</article></slide><slide class=''><hgroup><h2>The Cite Key</h2></hgroup><article  id="the-cite-key">
-
-<p><br> <br> <br></p>
-
-<p>The cite key <strong>links</strong> a specific citation in your presentation document to a specific BibTeX database entry.</p>
-
-<p>They must be <strong>unique</strong>.</p>
-
-<p>It <strong>does not matter</strong> what order your BibTeX entries are in the <code>.bib</code> file.</p>
-
-</article></slide><slide class=''><hgroup><h2>BibTeX Articles</h2></hgroup><article  id="bibtex-articles">
-
-<pre >@article{Acemoglu2000,
-    author = {Acemoglu, Daron and Robinson, James A.},
-    title = {Why Did the West Extend the Franchise? Democracy, Inequality,
-            and Growth in Historical Perspective},
-    journal = {The Quarterly Journal of Economics},
-    year = {2000},
-    volume = {115},
-    number = {4},
-    pages = {1167--1199},
-}</pre>
-
-</article></slide><slide class=''><hgroup><h2>BibTeX Books</h2></hgroup><article  id="bibtex-books">
-
-<pre >@book{Cox1997,
-    title={Making Votes Count: Strategic Coordination in the World&#39;s
-            Electoral Systems},
-    author={Gary W. Cox},
-    year={1997},
-    volume = {7},
-    publisher={Cambridge University Press},
-    address = {Cambridge}
-}</pre>
-
-</article></slide><slide class=''><hgroup><h2>More</h2></hgroup><article  id="more">
+</article></slide><slide class=''><hgroup><h2>Review</h2></hgroup><article  id="review">
 
 <p><br> <br></p>
 
-<p>For more media types and entry fields see <a href='http://en.wikipedia.org/wiki/BibTeX' title=''><a href='http://en.wikipedia.org/wiki/BibTeX' title=''>http://en.wikipedia.org/wiki/BibTeX</a></a>.</p>
+<p>What is BibTeX?</p>
 
-</article></slide><slide class=''><hgroup><h2>Tip: Google Scholar</h2></hgroup><article  id="tip-google-scholar">
+<p>How is it an example of working hard so you can be lazy?</p>
 
-<p>Google scholar generates BibTeX entries.</p>
+<p>What is caching?</p>
 
-<p>On an entry click <code>Cite &gt; BibTeX</code>.</p>
+</article></slide><slide class=''><hgroup><h2>What is open public data?</h2></hgroup><article  id="what-is-open-public-data">
 
-<p>Sometimes they need to be <strong>cleaned</strong> a little.</p>
+<p><span class="cite">Janssen, Charalabidis, and Zuiderwijk (2012, 258)</span>:</p>
 
-</article></slide><slide class=''><hgroup><h2>Linking your .bib file.</h2></hgroup><article  id="linking-your-.bib-file.">
+<p><i class="fa fa-quote-left"></i> Non-privacy-restricted and non-confidential data which is produced with public money and is made available without any restrictions on its usage or distribution. <i class="fa fa-quote-right"></i></p>
 
-<p>To link your <code>.bib</code> file to your RMarkdown document add to the header:</p>
-
-<pre >bibliography:
-    - BIB_FILE_NAME.bib
-    - ANOTHER_BIB_FILE_NAME.bib</pre>
-
-<p><strong>Note</strong>: The files should be in the <strong>same directory</strong> as you R Markdown file.</p>
-
-</article></slide><slide class=''><hgroup><h2>Including BibTeX citations in RMarkdown</h2></hgroup><article  id="including-bibtex-citations-in-rmarkdown">
-
-<p>RMarkdown uses <a href='http://johnmacfarlane.net/pandoc/README.html' title=''>Pandoc syntax</a> to include a citation in text.</p>
-
-<p>General format: <code>@CITE_KEY</code>.</p>
-
-<p>So if the cite key is <code>Box1973</code> then <code>@Box1973</code> will return <span class="cite">Box and Tiao (1973)</span> in the text of the presentation document.</p>
-
-</article></slide><slide class=''><hgroup><h2>Formatting In-Text Citations</h2></hgroup><article  id="formatting-in-text-citations">
-
-<table class = 'rmdtable'>
-<tr class="header">
-<th align="left">Markup</th>
-<th align="left">Result</th>
-</tr>
-<tr class="odd">
-<td align="left"><code>[@Box1973]</code></td>
-<td align="left"><span class="cite">(Box and Tiao 1973)</span></td>
-</tr>
-<tr class="even">
-<td align="left"><code>[see @Box1973]</code></td>
-<td align="left"><span class="cite">(see Box and Tiao 1973)</span></td>
-</tr>
-<tr class="odd">
-<td align="left"><code>[see @Box1973, 33-40]</code></td>
-<td align="left"><span class="cite">(see Box and Tiao 1973, 33–40)</span></td>
-</tr>
-<tr class="even">
-<td align="left"><code>[@Box1973; @Acemoglu2000]</code></td>
-<td align="left"><span class="cite">(Box and Tiao 1973 <span class="cite">Acemoglu and Robinson (2000)</span>)</span></td>
-</tr>
-<tr class="odd">
-<td align="left"><code>@Box1973 [33-40]</code></td>
-<td align="left"><span class="cite">Box and Tiao (1973, 33–40)</span></td>
-</tr>
-</table>
-
-</article></slide><slide class=''><hgroup><h2>Reference List</h2></hgroup><article  id="reference-list">
-
-<p>A reference list with the full bibliographic details of all cited documents will be <strong>automatically created</strong> at the end of your document.</p>
-
-<p>Tip: Put a <code># References</code> at the very end of your R Markdown document to have a section heading before the reference list.</p>
-
-</article></slide><slide class=''><hgroup><h2>Citing R and R Packages</h2></hgroup><article  id="citing-r-and-r-packages">
-
-<p>Why cite?</p>
+</article></slide><slide class=''><hgroup><h2>Some benefits of open public data</h2></hgroup><article  id="some-benefits-of-open-public-data">
 
 <ul>
-<li><p>Give <strong>credit</strong> to the package authors (just like when citing literature).</p></li>
-<li><p>Enable <strong>reproducible research</strong>: identify which software you used and <strong>which version</strong>.</p></li>
+<li><p>Greater returns on public investment in data gathering.</p></li>
+<li><p>Better coordination within government.</p></li>
+<li><p>Provides policy-makers with information needed to address complex problems.</p></li>
+<li><p>&#39;&#39;Mends the traditional separation between public organizations and users&#39;&#39;.</p></li>
+<li><p>See <span class="cite">Janssen, Charalabidis, and Zuiderwijk (2012, 261)</span> for more.</p></li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>Citing R and R Packages</h2></hgroup><article  id="citing-r-and-r-packages-1">
-
-<p>Base R way: print citation, copy BibTeX entry into your <em>.bib</em> file.</p>
-
-<p><strong>Cite R</strong>:</p>
-
-<pre class = 'prettyprint lang-r'>toBibtex(citation())</pre>
-
-<pre >## @Manual{,
-##   title = {R: A Language and Environment for Statistical Computing},
-##   author = {{R Core Team}},
-##   organization = {R Foundation for Statistical Computing},
-##   address = {Vienna, Austria},
-##   year = {2014},
-##   url = {http://www.R-project.org/},
-## }</pre>
-
-</article></slide><slide class=''><hgroup><h2>Citing R and R Packages</h2></hgroup><article  id="citing-r-and-r-packages-2">
-
-<p><strong>Cite R Packages</strong>:</p>
-
-<pre class = 'prettyprint lang-r'>toBibtex(citation(&#39;dplyr&#39;))</pre>
-
-<pre >## Warning: no date field in DESCRIPTION file of package &#39;dplyr&#39;</pre>
-
-<pre >## @Manual{,
-##   title = {dplyr: dplyr: a grammar of data manipulation},
-##   author = {Hadley Wickham and Romain Francois},
-##   note = {R package version 0.3},
-##   url = {https://github.com/hadley/dplyr},
-## }</pre>
-
-</article></slide><slide class=''><hgroup><h2>Citing R and R Packages: LoadandCite</h2></hgroup><article  id="citing-r-and-r-packages-loadandcite">
-
-<p>The dynamic literate programming way: Use <code>LoadandCite</code> from the <a href='http://christophergandrud.github.io/repmis/' title=''>repmis</a> package.</p>
-
-<p>Load all of the packages at the beginning of you RMarkdown file in a chunk with <code>include=FALSE</code>.</p>
-
-<p><code>LoadandCite</code> loads the packages and creates a BibTeX file with all of the citations.</p>
-
-<pre class = 'prettyprint lang-r'>pkgs &lt;- c(&#39;dplyr&#39;, &#39;ggplot2&#39;)
-
-repmis::LoadandCite(pkgs, file = &#39;RpackageCitations.bib&#39;)</pre>
-
-<p><strong>Note:</strong> Use a file name that is different from your literature BibTeX file!</p>
-
-</article></slide><slide class=''><hgroup><h2>Citing R and R Packages: LoadandCite</h2></hgroup><article  id="citing-r-and-r-packages-loadandcite-1">
-
-<p>Include the .bib file in your RMarkdown header.</p>
-
-<p>Each <strong>cite key</strong> follows: <code>R-PKG_NAME</code>.</p>
-
-<p>R itself has the key <code>CiteR</code>.</p>
-
-<p>So <code>@R-dplyr</code> and <code>@CiteR</code> create the citations:</p>
+</article></slide><slide class=''><hgroup><h2>Mending separation between public and users</h2></hgroup><article  id="mending-separation-between-public-and-users">
 
 <ul>
-<li><p><span class="cite">Wickham and Francois (2014)</span></p></li>
-<li><p><span class="cite">R Core Team (2014)</span></p></li>
+<li><p>Assumes that government considers outside views and information (including opposing) views as constructive.</p></li>
+<li><p>Results in government giving up (some) control and more actively interacting with its environment.</p></li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2><i class="fa fa-clock-o"></i> Time Consuming/Intensive Analyses</h2></hgroup><article  id="time-consumingintensive-analyses">
-
-<p>Knitting your analysis and presentation documents together by placing all of your R code into code chunks can sometimes be <strong>problematic</strong>:</p>
-
-<ul>
-<li><p>When they are <strong>time consuming</strong> (requires a lot of computational time).</p></li>
-<li><p>When they <strong>access files over the internet</strong> (bad practice to make many repeated calls to the same URL, can crash the site).</p></li>
-<li><p>When they are <strong>many lines long</strong>.</p></li>
-</ul>
-
-</article></slide><slide class=''><hgroup><h2>Solutions</h2></hgroup><article  id="solutions">
-
-<ul>
-<li><p>Long lines: use <code>source()</code> to run R code in other files.</p></li>
-<li><p><a href='http://en.wikipedia.org/wiki/Cache_(computing)' title=''>Caching</a> for time/computationally intensive work: <code>cache=TRUE</code> code chunk option: only runs the chunk when the <strong>chunk code changes</strong>.</p></li>
-</ul>
-
-</article></slide><slide class=''><hgroup><h2>Make files</h2></hgroup><article  id="make-files">
-
-<p>Make files are the ultimate solution to these problems.</p>
-
-<p>Make is a command line program.</p>
-
-<p>Big Idea: run a <em>make</em> file that runs a list of specific files in order.</p>
-
-<p>Files are only run if they have been changed since the last time the make file was last run.</p>
-
-<p>See me if you might want to do this.</p>
-
-</article></slide><slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Seminar: Practice</h2></hgroup><article  id="seminar-practice">
+</article></slide><slide class=''><hgroup><h2>An ideal for open public data</h2></hgroup><article  id="an-ideal-for-open-public-data">
 
 <p><br> <br> <br></p>
 
-<p>Clone the <a href='https://github.com/HertieDataScience2014/Examples' title=''>HertieDataScience2014/Examples</a> repo and play around with <strong>SimplePaperWithAnalysis</strong>.</p>
+<p>Not only should data be published, but potential <strong>data users in society</strong> should be <strong>actively</strong> sought for input on <strong>improving government</strong>.</p>
 
-</article></slide><slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Seminar: Begin working on your Proposal</h2></hgroup><article  id="seminar-begin-working-on-your-proposal">
-
-<p>Begin working with your partner on your research proposal.</p>
+</article></slide><slide class=''><hgroup><h2>Challenges to open data</h2></hgroup><article  id="challenges-to-open-data">
 
 <ul>
-<li><p>Identify the research area and key literature.</p></li>
-<li><p>Create a new repo and R Markdown document for your proposal.</p></li>
-<li><p>Begin building a BibTeX database for your key literature and try including them in your proposal.</p></li>
-<li><p>Begin identifying data sources.</p></li>
+<li><p><strong>Lack of technological competence</strong> to implement open data that is <strong>useful</strong>.</p></li>
+<li><p><strong>Worry</strong> by bureaucrats that open data will be used to <strong>criticise</strong> them.</p></li>
+<li><p><strong>No incentives</strong> for users to access the data. <strong>Lack of skills</strong> needed to use and understand the data.</p></li>
+<li><p>Balancing individual <strong>privacy</strong> concerns.</p></li>
+<li><p>See <span class="cite">Janssen, Charalabidis, and Zuiderwijk (2012, 262–63)</span> for more.</p></li>
 </ul>
+
+</article></slide><slide class=''><hgroup><h2>Accessing data</h2></hgroup><article  id="accessing-data">
+
+<p>Social science and public data is becoming <strong>increasingly open</strong> and <strong>accessible</strong>.</p>
+
+<p>However, the level of <strong>accessibility varies</strong>:</p>
+
+<ul>
+<li><p>format</p></li>
+<li><p>documentation</p></li>
+<li><p>version control</p></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>So . . .</h2></hgroup><article  id="so-.-.-.">
+
+<p><br> <br> <br></p>
+
+<p>We are only going to begin scratching the surface of the data formats you are likely to encounter.</p>
+
+</article></slide><slide class=''><hgroup><h2>Tie your research to your data</h2></hgroup><article  id="tie-your-research-to-your-data">
+
+<p>Do as much <strong>data gathering</strong> and <strong>cleaning</strong> as possible in R scripts:</p>
+
+<ul>
+<li><p>Fully document for reproducible research.</p></li>
+<li><p>Can find (inevitable) mistakes.</p></li>
+<li><p>Easy to update when the data is updated.</p></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>&#39;&#39;Easy&#39;&#39; automatic data gathering</h2></hgroup><article  id="easy-automatic-data-gathering">
+
+<ol>
+<li><p>Plain-text data (e.g. CSV) stored at non-secure (http) URL, not embedded in a larger HTML marked-up website.</p></li>
+<li><p>Plain-text data (e.g. CSV) stored at secure (https) URL, not embedded in a larger HTML marked-up website.</p></li>
+<li><p>Data stored in a database with a well structured API (Application Programming Interface), that has a corresponding R package.</p></li>
+</ol>
+
+</article></slide><slide class=''><hgroup><h2>Non-Secure URL Plain-text data</h2></hgroup><article  id="non-secure-url-plain-text-data">
+
+<p>Use <code>read.table</code> or <code>read.csv</code> (just a wrapper for <code>read.csv</code> with <code>sep = &#39;,&#39;</code>).</p>
+
+<p>Use the URL rather than the file path.</p>
+
+<pre class = 'prettyprint lang-r'>read.table(&#39;http://SOMEDATA.csv&#39;)</pre>
+
+</article></slide><slide class=''><hgroup><h2>Loading compressed plain-text data</h2></hgroup><article  id="loading-compressed-plain-text-data">
+
+<p>You can download and load data files in stored in compressed formats.</p>
+
+<ol>
+<li><p>Download the compressed file into a <strong>temporary file</strong>.</p></li>
+<li><p>Uncompress the file and pass it to <code>read.table</code>.</p></li>
+</ol>
+
+</article></slide><slide class=''><hgroup><h2>Loading compressed plain-text data</h2></hgroup><article  id="loading-compressed-plain-text-data-1">
+
+<p>Load data from <span class="cite">Pemstein, Meserve, and Melton (2010)</span> in a file called <em>uds_summary.csv</em>.</p>
+
+<pre class = 'prettyprint lang-r'># For simplicity, store the URL in an object called &#39;URL&#39;.
+URL &lt;- &quot;http://bit.ly/1jXJgDh&quot;
+
+# Create a temporary file called &#39;temp&#39; to put the zip file into.
+temp &lt;- tempfile()
+
+# Download the compressed file into the temporary file.
+download.file(URL, temp)
+
+# Decompress the file and convert it into a data frame
+UDSData &lt;- read.csv(gzfile(temp, &quot;uds_summary.csv&quot;))
+
+# Delete the temporary file.
+unlink(temp)</pre>
+
+</article></slide><slide class=''><hgroup><h2>Secure (https) URL Plain-text data</h2></hgroup><article  id="secure-https-url-plain-text-data">
+
+<p>Use <code>source_data</code> from the repmis package.</p>
+
+<p>Data on GitHub is stored at secure URLs. Select the RAW URL:</p>
+
+<pre class = 'prettyprint lang-r'>URL &lt;- &#39;https://raw.githubusercontent.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceDescriptives.csv&#39;
+main &lt;- repmis::source_data(URL)</pre>
+
+<pre >## Downloading data from: https://raw.githubusercontent.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceDescriptives.csv 
+## 
+## SHA-1 hash of the downloaded data file is:
+## 01cff579b689cea9ef9c98e433ce3122745cc5cb</pre>
+
+</article></slide><slide class=''><hgroup><h2>Versioning and reproducible research</h2></hgroup><article  id="versioning-and-reproducible-research">
+
+<p>Data maintainers (unfortunately) often change data sets with little or no documentation.</p>
+
+<p><code>source_data</code> allows you to notice these changes by assigning each file a unique <a href='http://en.wikipedia.org/wiki/SHA-1' title=''>SHA1 Hash</a>.</p>
+
+<p>Each download can be checked against this Hash</p>
+
+<pre class = 'prettyprint lang-r'>main &lt;- repmis::source_data(URL,
+                sha1 = &#39;01cff579b689cea9ef9c98e433ce3122745cc5cb&#39;)</pre>
+
+<pre >## Downloading data from: https://raw.githubusercontent.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceDescriptives.csv 
+## 
+## Specified SHA-1 hash matches downloaded data file.</pre>
+
+</article></slide><slide class=''><hgroup><h2>Caching</h2></hgroup><article  id="caching">
+
+<p><code>source_data</code> also allows you to <strong>cache</strong> data with <code>cache = TRUE</code>.</p>
+
+<p>This is useful if you are downloading a large data set.</p>
+
+</article></slide><slide class=''><hgroup><h2>Data APIs</h2></hgroup><article  id="data-apis">
+
+<p>API = Application Programming Interface, a documented way for programs to talk to each other.</p>
+
+<p>Data API = a documented way to access data from one program stored with another.</p>
+
+</article></slide><slide class=''><hgroup><h2>R and Data APIs</h2></hgroup><article  id="r-and-data-apis">
+
+<p>R can interact with most data APIs using the <a href='https://github.com/hadley/httr' title=''>httr</a> package.</p>
+
+<p>Fortunately, users have written packages to interact with some Data APIs.</p>
+
+</article></slide><slide class=''><hgroup><h2>World Bank Development Indications with WDI</h2></hgroup><article  id="world-bank-development-indications-with-wdi">
+
+<p>Access the <a href='http://data.worldbank.org/indicator' title=''>World Bank&#39;s Development Indicators</a> with the WDI package.</p>
+
+<p>Alternative Energy Use Example:</p>
+
+<pre class = 'prettyprint lang-r'># Load WDI package
+library(WDI)
+
+# Download per country alternative energy use as % of total energy use
+AltEnergy &lt;- WDI(indicator = &#39;EG.USE.COMM.CL.ZS&#39;)</pre>
+
+<p><br> <br></p>
+
+<p>Note: Find the indicator ID is in the Indicator URL.</p>
+
+</article></slide><slide class=''><hgroup><h2>Financial Data with quantmod</h2></hgroup><article  id="financial-data-with-quantmod">
+
+<p>The <a href='http://www.quantmod.com/' title=''>quantmod</a> package allows you to access financial data from a variety of sources (e.g. <a href='http://finance.yahoo.com/' title=''>Yahoo Finance</a>, <a href='https://www.google.com/finance' title=''>Google Finance</a>, <a href='http://research.stlouisfed.org/fred2/' title=''>US Federal Reserve&#39;s FRED database</a>).</p>
+
+<pre class = 'prettyprint lang-r'># Download Yen/USD exchange rate
+
+YenDollar &lt;- quantmod::getSymbols(Symbols = &#39;DEXJPUS&#39;, src = &#39;FRED&#39;)</pre>
+
+</article></slide><slide class=''><hgroup><h2>Other API-R packages</h2></hgroup><article  id="other-api-r-packages">
+
+<p>There are many more R packages that interact with web data APIs.</p>
+
+<p>For a good beginner list see: <a href='http://cran.r-project.org/web/views/WebTechnologies.html' title=''>http://cran.r-project.org/web/views/WebTechnologies.html</a></p>
+
+</article></slide><slide class=''><hgroup><h2>Loading non-table data</h2></hgroup><article  id="loading-non-table-data">
+
+<table class = 'rmdtable'>
+<tr class="header">
+<th align="left">Format</th>
+<th align="left">R packages</th>
+</tr>
+<tr class="odd">
+<td align="left">Excel</td>
+<td align="left">Try to save as CSV, otherwise <a href='https://code.google.com/p/rexcel/' title=''>xlsx</a></td>
+</tr>
+<tr class="even">
+<td align="left">Stata, SPSS, SAS</td>
+<td align="left">foreign</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href='http://en.wikipedia.org/wiki/JSON' title=''>JSON</a></td>
+<td align="left"><a href='http://cran.r-project.org/web/packages/rjson/index.html' title=''>rjson</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href='http://en.wikipedia.org/wiki/MySQL' title=''>MySQL</a></td>
+<td align="left"><a href='http://biostat.mc.vanderbilt.edu/wiki/Main/RMySQL' title=''>RMySQL</a>, <a href='http://www.jason-french.com/blog/2014/07/03/using-r-with-mysql-databases/' title=''>more info</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href='http://couchdb.apache.org/' title=''>couchDB</a></td>
+<td align="left"><a href='https://github.com/sckott/sofa' title=''>sofa</a></td>
+</tr>
+</table>
+
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-paint-brush"></i> Data Cleaning</h2></hgroup><article  id="data-cleaning">
+
+<p>The data you need for your analysis is often <strong>not clean</strong>.</p>
+
+<p>Perhaps <strong>80%</strong> of data analysis is typically spent cleaning and preparing data <span class="cite">(Dasu and Johnson 2003)</span>.</p>
+
+<p>To help streamline this process <span class="cite">Wickham (2014)</span> laid out <strong>principles of data tidying</strong>.</p>
+
+<ul>
+<li>Links the <strong>physical structure</strong> of a data set to its <strong>meaning</strong> (semantics).</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Data structure</h2></hgroup><article  id="data-structure">
+
+<p><br> <br> <br></p>
+
+<p>Many (not all) statistical data bases are organised into <strong>rows</strong> and <strong>columns</strong>.</p>
+
+<p>Rows and columns have <strong>no inherent meaning</strong>.</p>
+
+</article></slide><slide class=''><hgroup><h2>Data structure</h2></hgroup><article  id="data-structure-1">
+
+<p>Two structures for the same data:</p>
+
+<table class = 'rmdtable'>
+<tr class="header">
+<th align="left">Person</th>
+<th align="left">treatmentA</th>
+<th align="left">treatmentB</th>
+</tr>
+<tr class="odd">
+<td align="left">John Smith</td>
+<td align="left"></td>
+<td align="left">2</td>
+</tr>
+<tr class="even">
+<td align="left">Jane Doe</td>
+<td align="left">16</td>
+<td align="left">11</td>
+</tr>
+<tr class="odd">
+<td align="left">Mary Johnson</td>
+<td align="left">3</td>
+<td align="left">1</td>
+</tr>
+</table>
+
+<table class = 'rmdtable'>
+<tr class="header">
+<th align="left">Treatment</th>
+<th align="left">John Smith</th>
+<th align="left">Jane Doe</th>
+<th align="left">Mary Johnson</th>
+</tr>
+<tr class="odd">
+<td align="left">treatmentA</td>
+<td align="left"></td>
+<td align="left">16</td>
+<td align="left">3</td>
+</tr>
+<tr class="even">
+<td align="left">treatmentB</td>
+<td align="left">2</td>
+<td align="left">11</td>
+<td align="left">1</td>
+</tr>
+</table>
+
+</article></slide><slide class=''><hgroup><h2>Data semantics</h2></hgroup><article  id="data-semantics">
+
+<p>Data sets are <strong>collections of values</strong>.</p>
+
+<p>All values are assigned to a <strong>variable</strong> and an <strong>observation</strong>.</p>
+
+<ul>
+<li><p><strong>Variable</strong>: all values measuring the same attribute across units</p></li>
+<li><p><strong>Observation</strong>: all values measured within the same unit across attributes.</p></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Tidy data semantics + structure</h2></hgroup><article  id="tidy-data-semantics-structure">
+
+<p><br></p>
+
+<ol>
+<li><p>Each variable forms a column</p></li>
+<li><p>Each observation forms a row.</p></li>
+<li><p>Each type of observational unit forms a table.</p></li>
+</ol>
+
+</article></slide><slide class=''><hgroup><h2>Tidy data</h2></hgroup><article  id="tidy-data">
+
+<table class = 'rmdtable'>
+<tr class="header">
+<th align="left">Person</th>
+<th align="left">treatment</th>
+<th align="left">result</th>
+</tr>
+<tr class="odd">
+<td align="left">John Smith</td>
+<td align="left">a</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Jane Doe</td>
+<td align="left">a</td>
+<td align="left">16</td>
+</tr>
+<tr class="odd">
+<td align="left">Mary Johnson</td>
+<td align="left">a</td>
+<td align="left">3</td>
+</tr>
+<tr class="even">
+<td align="left">John Smith</td>
+<td align="left">b</td>
+<td align="left">2</td>
+</tr>
+<tr class="odd">
+<td align="left">Jane Doe</td>
+<td align="left">b</td>
+<td align="left">11</td>
+</tr>
+<tr class="even">
+<td align="left">Mary Johnson</td>
+<td align="left">b</td>
+<td align="left">1</td>
+</tr>
+</table>
+
+</article></slide><slide class=''><hgroup><h2>Messy to Tidy data</h2></hgroup><article  id="messy-to-tidy-data">
+
+<p>First identify what your observations and variables are.</p>
+
+<p>Then use R tools to convert your data into this format.</p>
+
+<p>tidyr and its predecessor reshape2 are particularly useful.</p>
+
+</article></slide><slide class=''><hgroup><h2>Messy to tidy data</h2></hgroup><article  id="messy-to-tidy-data-1">
+
+<pre class = 'prettyprint lang-r'># Create messy (wide) data
+messy &lt;- data.frame(
+  person = c(&quot;John Smith&quot;, &quot;Jane Doe&quot;, &quot;Mary Johnson&quot;),
+  a = c(NA, 16, 3),
+  b = c(2, 11, 1)
+)
+
+messy</pre>
+
+<pre >##         person  a  b
+## 1   John Smith NA  2
+## 2     Jane Doe 16 11
+## 3 Mary Johnson  3  1</pre>
+
+</article></slide><slide class=''><hgroup><h2>Messy to tidy data</h2></hgroup><article  id="messy-to-tidy-data-2">
+
+<pre class = 'prettyprint lang-r'>library(tidyr)
+
+# Gather the data into long format
+tidy &lt;- gather(messy, treatement, result, a:b)
+
+tidy</pre>
+
+<pre >##         person treatement result
+## 1   John Smith          a     NA
+## 2     Jane Doe          a     16
+## 3 Mary Johnson          a      3
+## 4   John Smith          b      2
+## 5     Jane Doe          b     11
+## 6 Mary Johnson          b      1</pre>
+
+</article></slide><slide class=''><hgroup><h2>Tidy to messy data</h2></hgroup><article  id="tidy-to-messy-data">
+
+<p>Sometimes it is useful to reverse this operation with <code>spread</code>.</p>
+
+<pre class = 'prettyprint lang-r'>messyAgain &lt;- spread(data = tidy, key = treatement, value = result)
+
+messyAgain</pre>
+
+<pre >##         person  a  b
+## 1     Jane Doe 16 11
+## 2   John Smith NA  2
+## 3 Mary Johnson  3  1</pre>
+
+</article></slide><slide class=''><hgroup><h2>Other issues cleaning data</h2></hgroup><article  id="other-issues-cleaning-data">
+
+<p>Always <strong>look at</strong> and <strong>poke your data</strong>.</p>
+
+<p>For example, see if:</p>
+
+<ul>
+<li><p>Missing values designated with <code>NA</code></p></li>
+<li><p>Variable classes are what you expect them to be.</p></li>
+<li><p>Distributions are what you expect them to be.</p></li>
+</ul>
+
+<p><a href='https://github.com/ropensci/testdat' title=''>testdat</a> can be useful for this.</p>
+
+</article></slide><slide class=''><hgroup><h2>Merging data</h2></hgroup><article  id="merging-data">
+
+<p>Once you have tidy data frames, you can merge them for analysis.</p>
+
+<p>In general: <strong>each observation</strong> must have a <strong>unique identifier</strong> to merge them on.</p>
+
+<p>These identifiers <strong>must match exactly across the data frames</strong>.</p>
+
+</article></slide><slide class=''><hgroup><h2>Merging data</h2></hgroup><article  id="merging-data-1">
+
+<pre class = 'prettyprint lang-r'>tail(AltEnergy, n = 3)</pre>
+
+<pre >##      iso2c  country EG.USE.COMM.CL.ZS year
+## 1804    ZW Zimbabwe             4.909 2007
+## 1805    ZW Zimbabwe             4.707 2006
+## 1806    ZW Zimbabwe             5.159 2005</pre>
+
+<pre class = 'prettyprint lang-r'>tail(UDSData, n = 3)</pre>
+
+<pre >##            country year cowcode   mean     sd median  pct025 pct975
+## 9135 Western Samoa 2006     990 0.2485 0.2156 0.2475 -0.1703 0.6648
+## 9136 Western Samoa 2007     990 0.2439 0.2152 0.2487 -0.1874 0.6572
+## 9137 Western Samoa 2008     990 0.2408 0.2193 0.2444 -0.1882 0.6623</pre>
+
+</article></slide><slide class=''><hgroup><h2>Create unique identifier</h2></hgroup><article  id="create-unique-identifier">
+
+<p>Unique identifier will be <a href='http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2' title=''>iso 2 letter country code</a> and <strong>year</strong>.</p>
+
+<p>Use the <a href='https://github.com/vincentarelbundock/countrycode' title=''>countrycode</a> package to turn UDS data&#39;s <a href='http://www.correlatesofwar.org/datasets.htm' title=''>Correlates of War Country Code</a> (<code>cowcode</code>) to <code>iso2c</code>.</p>
+
+<pre class = 'prettyprint lang-r'>library(countrycode)
+
+# Assign iso2c codes base on correlates of war codes
+UDSData$iso2c &lt;- countrycode(UDSData$cowcode, origin = &#39;cown&#39;,
+                             destination = &#39;iso2c&#39;, warn = TRUE)</pre>
+
+<pre >## Warning: Some values were not matched: 260, 265, 315, 345, 678, 680, 817, 971, 972, 973</pre>
+
+<p><strong>NOTE</strong>: Always check the data to make sure the correct codes have been applied!</p>
+
+</article></slide><slide class=''><hgroup><h2>Merge data</h2></hgroup><article  id="merge-data">
+
+<pre class = 'prettyprint lang-r'># Keep only desired variables
+UDSData &lt;- UDSData[, c(&#39;iso2c&#39;, &#39;year&#39;, &#39;median&#39;)]
+
+names(UDSData)</pre>
+
+<pre >## [1] &quot;iso2c&quot;  &quot;year&quot;   &quot;median&quot;</pre>
+
+<pre class = 'prettyprint lang-r'>Combined &lt;- merge(AltEnergy, UDSData,
+                  by = c(&#39;iso2c&#39;, &#39;year&#39;))
+
+head(Combined, n = 3)</pre>
+
+<pre >##   iso2c year country EG.USE.COMM.CL.ZS median
+## 1    AD 2005 Andorra                NA 0.7786
+## 2    AD 2006 Andorra                NA 0.7860
+## 3    AD 2007 Andorra                NA 0.7853</pre>
+
+</article></slide><slide class=''><hgroup><h2>Some merge details</h2></hgroup><article  id="some-merge-details">
+
+<p>By default, only observations in both data sets are kept. Use <code>all</code>, <code>all.x</code>, or <code>all.y</code> to keep non merged observations.</p>
+
+<p><br> <br></p>
+
+<p><i class="fa fa-exclamation"></i><i class="fa fa-exclamation"></i><i class="fa fa-exclamation"></i> <i class="fa fa-exclamation"></i><i class="fa fa-exclamation"></i> Always <strong>check your data</strong> after a merge to see if you did what you wanted to do!</p>
+
+</article></slide><slide class=''><hgroup><h2>Clean up</h2></hgroup><article  id="clean-up">
+
+<p>You many want to do some post merge cleaning. For example assign new variable names:</p>
+
+<pre class = 'prettyprint lang-r'>names(Combined) &lt;- c(&#39;iso2c&#39;, &#39;year&#39;, &#39;country&#39;,
+                     &#39;alt_energy_use&#39;,  &#39;uds_median&#39;)</pre>
+
+<p>And reorder variables</p>
+
+<pre class = 'prettyprint lang-r'>Combined &lt;- DataCombine::MoveFront(Combined, &#39;country&#39;)
+
+names(Combined)</pre>
+
+<pre >## [1] &quot;country&quot;        &quot;iso2c&quot;          &quot;year&quot;           &quot;alt_energy_use&quot;
+## [5] &quot;uds_median&quot;</pre>
+
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Seminar: Access web-based data</h2></hgroup><article  id="seminar-access-web-based-data">
+
+<p>Thinking of your pair research project, write an R script to download <strong>two or more</strong> data sets from the web.</p>
+
+<p>Either in the same or a linked R script <strong>clean</strong> and <strong>merge</strong> the data.</p>
 
 <div class="references">
 </article></slide><slide class=''><hgroup><h2>References</h2></hgroup><article  id="references" class="unnumbered">
 
-<p>Acemoglu, Daron, and James A. Robinson. 2000. “Why Did the West Extend the Franchise? Democracy, Inequality, and Growth in Historical Perspective.” <em>The Quarterly Journal of Economics</em> 115 (4): 1167–99.</p>
+<p>Dasu, Tamraparni, and Theodore Johnson. 2003. <em>Exploratory Data Mining and Data Cleaning</em>. Hoboken, NJ: John Wiley &amp; Sons.</p>
 
-<p>Box, G. E. P., and G. C. Tiao. 1973. <em>Bayesian Inference in Statistical Analysis</em>. New York: Wiley Classics.</p>
+<p>Janssen, Marijn, Yannis Charalabidis, and Anneke Zuiderwijk. 2012. “Benefits, Adoption Barriers and Myths of Open Data and Open Government.” <em>Information Systems Management</em> 29 (4): 258–68.</p>
 
-<p>R Core Team. 2014. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href='http://www.R-project.org/' title=''>http://www.R-project.org/</a>.</p>
+<p>Pemstein, Daniel, Stephen A. Meserve, and James Melton. 2010. “Democratic Compromise: A Latent Variable Analysis of Ten Measures of Regime Type.” <em>Political Analysis</em> 18 (4): 426–49.</p>
 
-<p>Wickham, Hadley, and Romain Francois. 2014. <em>dplyr: dplyr: a Grammar of Data Manipulation</em>. <a href='https://github.com/hadley/dplyr' title=''>https://github.com/hadley/dplyr</a>.</p></div></article></slide>
+<p>Wickham, Hadley. 2014. “Tidy Data.” <em>Journal of Statistical Software</em> 59 (10): 1–23.</p></div></article></slide>
 
 
   <slide class="backdrop"></slide>
