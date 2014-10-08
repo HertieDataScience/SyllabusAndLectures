@@ -45,7 +45,7 @@ Result of voting:
 
 **Deadline:** Week 6
 
-**Submbit:** A (max) 2,000 word proposal created with **RMarkdown**. The
+**Submbit:** A (max) 2,000 word proposal created with **R Markdown**. The
 proposal will:
 
 - State your research question. And justify why it is interesting.
@@ -65,7 +65,7 @@ As always, submit the entire GitHub repo.
 
 **Definitely see me with your ideas/draft.**
 
-Start thinking about types of models that you want to use. I can include these
+Start thinking about **types of models** that you want to use. I can include these
 in Lecture 8 (Statistical Modeling with R).
 
 ## <i class="fa fa-arrow-left"></i> Review
@@ -76,7 +76,7 @@ in Lecture 8 (Statistical Modeling with R).
 
 - What is a code chunk?
 
-- What is the difference between Weave, Sweave, and knit? (kind of a trick question)
+- What is the difference between Weave, Sweave, knitr, and R Markdown? (kind of a trick question)
 
 ## Example Paper
 
@@ -98,17 +98,34 @@ The header is written in [YAML](http://en.wikipedia.org/wiki/YAML).
 
 ## YAML
 
-YAML is basically a human read-able data format.
+YAML is basically a **human read-able data format**.
 
 Elements are separated from values with a colon (`:`).
 
 Each element is separated by new lines.
 
-Hierarchy is maintained with tabs (very different from R where tabs are meaningless).
+Hierarchy is maintained with tabs.
+
+```
+---
+title: 'MPP-E1180 Lecture 5'
+author: "Christopher Gandrud"
+date: "9 October 2014"
+output:
+  ioslides_presentation:
+    css: css/font-awesome.min.css
+    logo: img/logo.png
+  beamer_presentation: default
+---
+```
+
+## Super Nerd Point
 
 <br>
+<br>
+<br>
 
-Super Nerd Point: YAML is a recursive acronym: ''YAML Ain't Markup Language''.
+YAML is a recursive acronym: ''YAML Ain't Markup Language''.
 
 ## Different Presentation Styles
 
@@ -117,7 +134,7 @@ HTML presentation slides style.
 
 You can also use [reveal.js](http://lab.hakim.se/reveal-js/).
 
-First install revealjs:
+First install the revealjs R package:
 
 ```{r, eval=FALSE}
 devtools::install_github("jjallaire/revealjs")
@@ -131,17 +148,18 @@ output: revealjs::revealjs_presentation
 
 For further styling see <https://github.com/jjallaire/revealjs>
 
-## Table of contents
+## Table of contents & Numbered Sections
 
-You can add a table of contents to your PDF output:
+You can add a table of contents and numbered sections to your PDF output:
 
 ```
 output:
   pdf_document:
     toc: true
     number_sections: true
----
 ```
+
+To do the same for **HTML** also include the information under `html_document`.
 
 ## Figure Options
 
@@ -155,10 +173,10 @@ output:
     fig_caption: true
 ```
 
-`fig_caption: true` attaches captions to figures (unfortunately only for PDFs).
+`fig_caption: true` attaches captions to figures.
 
-To set the actual caption label, use the `fig.cap='SOME CAPTION'` code chunk
-option.
+To set the actual caption label, use the `fig.cap='SOME CAPTION'` **code chunk
+option**.
 
 ## Pandoc footnotes
 
@@ -175,14 +193,14 @@ e.g.
 
 ## BibTeX citations
 
-BibTex allows you to create a single data base of all of the literature/packages
-you cite.
+BibTex allows you to create a **single database** of **all** of the **literature/packages
+you cite**.
 
 You can then insert them into your text and they will:
 
-- Be automatically formatted consistently.
+- Be **automatically formatted** consistently.
 
-- Generate an appropriately ordered, consistently formatted reference list at
+- Generate an appropriately ordered, consistently formatted **reference list** at
 the end of your document.
 
 ## The BibTeX Database
@@ -237,6 +255,7 @@ It **does not matter** what order your BibTeX entries are in the `.bib` file.
             Electoral Systems},
     author={Gary W. Cox},
     year={1997},
+    volume = {7},
     publisher={Cambridge University Press},
     address = {Cambridge}
 }
@@ -260,7 +279,7 @@ Sometimes they need to be **cleaned** a little.
 
 ## Linking your .bib file.
 
-To link your `.bib` file to your RMarkdown document add:
+To link your `.bib` file to your RMarkdown document add to the header:
 
 ```
 bibliography:
@@ -268,7 +287,7 @@ bibliography:
     - ANOTHER_BIB_FILE_NAME.bib
 ```
 
-**Note**: The files should be in the same directory as you R Markdown file.
+**Note**: The files should be in the **same directory** as you R Markdown file.
 
 ## Including BibTeX citations in RMarkdown
 
@@ -295,7 +314,7 @@ of the presentation document.
 A reference list with the full bibliographic details of all cited documents
 will be **automatically created** at the end of your document.
 
-Tip: Put a `## References` at the very end of your R Markdown document to
+Tip: Put a `# References` at the very end of your R Markdown document to
 have a section heading before the reference list.
 
 ## Citing R and R Packages
@@ -304,7 +323,7 @@ Why cite?
 
 - Give **credit** to the package authors (just like when citing literature).
 
-- Enable reproducible research: identify which software you used and **which
+- Enable **reproducible research**: identify which software you used and **which
 version**.
 
 ## Citing R and R Packages
@@ -357,25 +376,24 @@ So `@R-dplyr` and `@CiteR` create the citations:
 
 - @CiteR
 
-
 ## <i class="fa fa-clock-o"></i> Time Consuming/Intensive Analyses
 
 Knitting your analysis and presentation documents together by placing all of your
 R code into code chunks can sometimes be **problematic**:
 
-- When they are time consuming (requires a lot of computational time).
+- When they are **time consuming** (requires a lot of computational time).
 
-- When they access files over the internet (bad practice to make many repeated
+- When they **access files over the internet** (bad practice to make many repeated
     calls to the same URL, can crash the site).
 
-- When they are many lines long.
+- When they are **many lines long**.
 
 ## Solutions
 
 - Long lines: use `source()` to run R code in other files.
 
-- `cache=TRUE` code chunk option: only runs the chunk when the **chunk code
-changes**.
+- Time/computationally intensive: `cache=TRUE` code chunk option: only runs the 
+chunk when the **chunk code changes**.
 
 ## Make files
 
@@ -389,6 +407,14 @@ Files are only run if they have been changed since the last time the make
 file was last run.
 
 See me if you might want to do this.
+
+## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Practice
+
+<br>
+<br>
+<br>
+
+Clone the [HertieDataScience2014/Examples](https://github.com/HertieDataScience2014/Examples) repo and play around with **SimplePaperWithAnalysis**. 
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Begin working on your Proposal
 

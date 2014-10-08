@@ -146,7 +146,7 @@
 
 <p><strong>Deadline:</strong> Week 6</p>
 
-<p><strong>Submbit:</strong> A (max) 2,000 word proposal created with <strong>RMarkdown</strong>. The proposal will:</p>
+<p><strong>Submbit:</strong> A (max) 2,000 word proposal created with <strong>R Markdown</strong>. The proposal will:</p>
 
 <ul>
 <li><p>State your research question. And justify why it is interesting.</p></li>
@@ -162,7 +162,7 @@
 
 <p><strong>Definitely see me with your ideas/draft.</strong></p>
 
-<p>Start thinking about types of models that you want to use. I can include these in Lecture 8 (Statistical Modeling with R).</p>
+<p>Start thinking about <strong>types of models</strong> that you want to use. I can include these in Lecture 8 (Statistical Modeling with R).</p>
 
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-arrow-left"></i> Review</h2></hgroup><article  id="review">
 
@@ -170,7 +170,7 @@
 <li><p>Why is literate programming useful for reproducible research?</p></li>
 <li><p>What is a markup language?</p></li>
 <li><p>What is a code chunk?</p></li>
-<li><p>What is the difference between Weave, Sweave, and knit? (kind of a trick question)</p></li>
+<li><p>What is the difference between Weave, Sweave, knitr, and R Markdown? (kind of a trick question)</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Example Paper</h2></hgroup><article  id="example-paper">
@@ -191,17 +191,30 @@
 
 </article></slide><slide class=''><hgroup><h2>YAML</h2></hgroup><article  id="yaml">
 
-<p>YAML is basically a human read-able data format.</p>
+<p>YAML is basically a <strong>human read-able data format</strong>.</p>
 
 <p>Elements are separated from values with a colon (<code>:</code>).</p>
 
 <p>Each element is separated by new lines.</p>
 
-<p>Hierarchy is maintained with tabs (very different from R where tabs are meaningless).</p>
+<p>Hierarchy is maintained with tabs.</p>
 
-<p><br></p>
+<pre >---
+title: &#39;MPP-E1180 Lecture 5&#39;
+author: &quot;Christopher Gandrud&quot;
+date: &quot;9 October 2014&quot;
+output:
+  ioslides_presentation:
+    css: css/font-awesome.min.css
+    logo: img/logo.png
+  beamer_presentation: default
+---</pre>
 
-<p>Super Nerd Point: YAML is a recursive acronym: &#39;&#39;YAML Ain&#39;t Markup Language&#39;&#39;.</p>
+</article></slide><slide class=''><hgroup><h2>Super Nerd Point</h2></hgroup><article  id="super-nerd-point">
+
+<p><br> <br> <br></p>
+
+<p>YAML is a recursive acronym: &#39;&#39;YAML Ain&#39;t Markup Language&#39;&#39;.</p>
 
 </article></slide><slide class=''><hgroup><h2>Different Presentation Styles</h2></hgroup><article  id="different-presentation-styles">
 
@@ -209,7 +222,7 @@
 
 <p>You can also use <a href='http://lab.hakim.se/reveal-js/' title=''>reveal.js</a>.</p>
 
-<p>First install revealjs:</p>
+<p>First install the revealjs R package:</p>
 
 <pre class = 'prettyprint lang-r'>devtools::install_github(&quot;jjallaire/revealjs&quot;)</pre>
 
@@ -219,15 +232,16 @@
 
 <p>For further styling see <a href='https://github.com/jjallaire/revealjs' title=''>https://github.com/jjallaire/revealjs</a></p>
 
-</article></slide><slide class=''><hgroup><h2>Table of contents</h2></hgroup><article  id="table-of-contents">
+</article></slide><slide class=''><hgroup><h2>Table of contents &amp; Numbered Sections</h2></hgroup><article  id="table-of-contents-numbered-sections">
 
-<p>You can add a table of contents to your PDF output:</p>
+<p>You can add a table of contents and numbered sections to your PDF output:</p>
 
 <pre >output:
   pdf_document:
     toc: true
-    number_sections: true
----</pre>
+    number_sections: true</pre>
+
+<p>To do the same for <strong>HTML</strong> also include the information under <code>html_document</code>.</p>
 
 </article></slide><slide class=''><hgroup><h2>Figure Options</h2></hgroup><article  id="figure-options">
 
@@ -239,9 +253,9 @@
     fig_height: 6
     fig_caption: true</pre>
 
-<p><code>fig_caption: true</code> attaches captions to figures (unfortunately only for PDFs).</p>
+<p><code>fig_caption: true</code> attaches captions to figures.</p>
 
-<p>To set the actual caption label, use the <code>fig.cap=&#39;SOME CAPTION&#39;</code> code chunk option.</p>
+<p>To set the actual caption label, use the <code>fig.cap=&#39;SOME CAPTION&#39;</code> <strong>code chunk option</strong>.</p>
 
 </article></slide><slide class=''><hgroup><h2>Pandoc footnotes</h2></hgroup><article  id="pandoc-footnotes">
 
@@ -261,13 +275,13 @@
 
 </article></slide><slide class=''><hgroup><h2>BibTeX citations</h2></hgroup><article  id="bibtex-citations">
 
-<p>BibTex allows you to create a single data base of all of the literature/packages you cite.</p>
+<p>BibTex allows you to create a <strong>single database</strong> of <strong>all</strong> of the <strong>literature/packages you cite</strong>.</p>
 
 <p>You can then insert them into your text and they will:</p>
 
 <ul>
-<li><p>Be automatically formatted consistently.</p></li>
-<li><p>Generate an appropriately ordered, consistently formatted reference list at the end of your document.</p></li>
+<li><p>Be <strong>automatically formatted</strong> consistently.</p></li>
+<li><p>Generate an appropriately ordered, consistently formatted <strong>reference list</strong> at the end of your document.</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>The BibTeX Database</h2></hgroup><article  id="the-bibtex-database">
@@ -314,6 +328,7 @@
             Electoral Systems},
     author={Gary W. Cox},
     year={1997},
+    volume = {7},
     publisher={Cambridge University Press},
     address = {Cambridge}
 }</pre>
@@ -334,13 +349,13 @@
 
 </article></slide><slide class=''><hgroup><h2>Linking your .bib file.</h2></hgroup><article  id="linking-your-.bib-file.">
 
-<p>To link your <code>.bib</code> file to your RMarkdown document add:</p>
+<p>To link your <code>.bib</code> file to your RMarkdown document add to the header:</p>
 
 <pre >bibliography:
     - BIB_FILE_NAME.bib
     - ANOTHER_BIB_FILE_NAME.bib</pre>
 
-<p><strong>Note</strong>: The files should be in the same directory as you R Markdown file.</p>
+<p><strong>Note</strong>: The files should be in the <strong>same directory</strong> as you R Markdown file.</p>
 
 </article></slide><slide class=''><hgroup><h2>Including BibTeX citations in RMarkdown</h2></hgroup><article  id="including-bibtex-citations-in-rmarkdown">
 
@@ -383,7 +398,7 @@
 
 <p>A reference list with the full bibliographic details of all cited documents will be <strong>automatically created</strong> at the end of your document.</p>
 
-<p>Tip: Put a <code>## References</code> at the very end of your R Markdown document to have a section heading before the reference list.</p>
+<p>Tip: Put a <code># References</code> at the very end of your R Markdown document to have a section heading before the reference list.</p>
 
 </article></slide><slide class=''><hgroup><h2>Citing R and R Packages</h2></hgroup><article  id="citing-r-and-r-packages">
 
@@ -391,7 +406,7 @@
 
 <ul>
 <li><p>Give <strong>credit</strong> to the package authors (just like when citing literature).</p></li>
-<li><p>Enable reproducible research: identify which software you used and <strong>which version</strong>.</p></li>
+<li><p>Enable <strong>reproducible research</strong>: identify which software you used and <strong>which version</strong>.</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Citing R and R Packages</h2></hgroup><article  id="citing-r-and-r-packages-1">
@@ -460,16 +475,16 @@ repmis::LoadandCite(pkgs, file = &#39;RpackageCitations.bib&#39;)</pre>
 <p>Knitting your analysis and presentation documents together by placing all of your R code into code chunks can sometimes be <strong>problematic</strong>:</p>
 
 <ul>
-<li><p>When they are time consuming (requires a lot of computational time).</p></li>
-<li><p>When they access files over the internet (bad practice to make many repeated calls to the same URL, can crash the site).</p></li>
-<li><p>When they are many lines long.</p></li>
+<li><p>When they are <strong>time consuming</strong> (requires a lot of computational time).</p></li>
+<li><p>When they <strong>access files over the internet</strong> (bad practice to make many repeated calls to the same URL, can crash the site).</p></li>
+<li><p>When they are <strong>many lines long</strong>.</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Solutions</h2></hgroup><article  id="solutions">
 
 <ul>
 <li><p>Long lines: use <code>source()</code> to run R code in other files.</p></li>
-<li><p><code>cache=TRUE</code> code chunk option: only runs the chunk when the <strong>chunk code changes</strong>.</p></li>
+<li><p>Time/computationally intensive: <code>cache=TRUE</code> code chunk option: only runs the chunk when the <strong>chunk code changes</strong>.</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Make files</h2></hgroup><article  id="make-files">
@@ -483,6 +498,12 @@ repmis::LoadandCite(pkgs, file = &#39;RpackageCitations.bib&#39;)</pre>
 <p>Files are only run if they have been changed since the last time the make file was last run.</p>
 
 <p>See me if you might want to do this.</p>
+
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Seminar: Practice</h2></hgroup><article  id="seminar-practice">
+
+<p><br> <br> <br></p>
+
+<p>Clone the <a href='https://github.com/HertieDataScience2014/Examples' title=''>HertieDataScience2014/Examples</a> repo and play around with <strong>SimplePaperWithAnalysis</strong>.</p>
 
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Seminar: Begin working on your Proposal</h2></hgroup><article  id="seminar-begin-working-on-your-proposal">
 
