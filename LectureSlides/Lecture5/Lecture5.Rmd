@@ -93,7 +93,7 @@ in Lecture 8 (Statistical Modeling with R).
 An example of a paper + analysis + data project using many of the tools we cover
 today is available at:
 
-[/HertieDataScience2014/Examples/SimplePaperWithAnalysis](https://github.com/HertieDataScience2014/Examples/tree/master/SimplePaperWithAnalysis)
+[HertieDataScience2014/Examples/SimplePaperWithAnalysis](https://github.com/HertieDataScience2014/Examples/tree/master/SimplePaperWithAnalysis)
 
 ## R Markdown Headers
 
@@ -108,7 +108,7 @@ The header is written in [YAML](http://en.wikipedia.org/wiki/YAML).
 
 ## YAML
 
-YAML is basically a **human read-able data format**.
+YAML is a **human read-able data format**.
 
 Elements are separated from values with a colon (`:`).
 
@@ -203,7 +203,7 @@ e.g.
 
 ## BibTeX citations
 
-BibTex allows you to create a **single database** of **all** of the **literature/packages
+BibTex allows you to create a **database** of **all** of the **literature/packages
 you cite**.
 
 You can then insert them into your text and they will:
@@ -211,7 +211,7 @@ You can then insert them into your text and they will:
 - Be **automatically formatted** consistently.
 
 - Generate an appropriately ordered, consistently formatted **reference list** at
-the end of your document.
+the end of your document **with only the works you actually cited**.
 
 ## The BibTeX Database
 
@@ -299,12 +299,12 @@ bibliography:
     - ANOTHER_BIB_FILE_NAME.bib
 ```
 
-**Note**: The files should be in the **same directory** as you R Markdown file.
+**Note**: The files should be in the **same directory** as your R Markdown file.
 
 ## Including BibTeX citations in RMarkdown
 
-RMarkdown uses [Pandoc syntax](http://johnmacfarlane.net/pandoc/README.html)
-to include a citation in text.
+R Markdown uses [Pandoc syntax](http://johnmacfarlane.net/pandoc/README.html)
+to include a citation in-text.
 
 General format: `@CITE_KEY`.
 
@@ -333,7 +333,7 @@ have a section heading before the reference list.
 
 Why cite?
 
-- Give **credit** to the package authors (just like when citing literature).
+- Give **credit** to the software authors (just like when citing literature).
 
 - Enable **reproducible research**: identify which software you used and **which
 version**.
@@ -361,7 +361,7 @@ toBibtex(citation('dplyr'))
 The dynamic literate programming way: Use `LoadandCite` from the
 [repmis](http://christophergandrud.github.io/repmis/) package.
 
-Load all of the packages at the beginning of you RMarkdown file in a chunk
+Load all of the packages at the beginning of you R Markdown file in a chunk
 with `include=FALSE`.
 
 `LoadandCite` loads the packages and creates a BibTeX file with all of the citations.
@@ -396,7 +396,8 @@ R code into code chunks can sometimes be **problematic**:
 - When they are **time consuming** (requires a lot of computational time).
 
 - When they **access files over the internet** (bad practice to make many repeated
-    calls to the same URL, can crash the site).
+    calls to the same URL, can crash the site. This is equivalent to a 
+    [denial-of-service attack](http://en.wikipedia.org/wiki/Denial-of-service_attack)).
 
 - When they are **many lines long**.
 
@@ -416,7 +417,7 @@ Make is a command line program.
 
 Big Idea: run a *make* file that runs a list of specific files in order.
 
-Files are only run if they have been changed since the last time the make
+Files are **only run** if they have been **changed** since the last time the make
 file was last run.
 
 See Ch. 6 of RRRR if you might want to do this.

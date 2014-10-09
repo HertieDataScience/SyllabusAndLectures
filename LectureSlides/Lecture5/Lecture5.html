@@ -185,7 +185,7 @@
 
 <p>An example of a paper + analysis + data project using many of the tools we cover today is available at:</p>
 
-<p><a href='https://github.com/HertieDataScience2014/Examples/tree/master/SimplePaperWithAnalysis' title=''>/HertieDataScience2014/Examples/SimplePaperWithAnalysis</a></p>
+<p><a href='https://github.com/HertieDataScience2014/Examples/tree/master/SimplePaperWithAnalysis' title=''>HertieDataScience2014/Examples/SimplePaperWithAnalysis</a></p>
 
 </article></slide><slide class=''><hgroup><h2>R Markdown Headers</h2></hgroup><article  id="r-markdown-headers">
 
@@ -199,7 +199,7 @@
 
 </article></slide><slide class=''><hgroup><h2>YAML</h2></hgroup><article  id="yaml">
 
-<p>YAML is basically a <strong>human read-able data format</strong>.</p>
+<p>YAML is a <strong>human read-able data format</strong>.</p>
 
 <p>Elements are separated from values with a colon (<code>:</code>).</p>
 
@@ -283,13 +283,13 @@ output:
 
 </article></slide><slide class=''><hgroup><h2>BibTeX citations</h2></hgroup><article  id="bibtex-citations">
 
-<p>BibTex allows you to create a <strong>single database</strong> of <strong>all</strong> of the <strong>literature/packages you cite</strong>.</p>
+<p>BibTex allows you to create a <strong>database</strong> of <strong>all</strong> of the <strong>literature/packages you cite</strong>.</p>
 
 <p>You can then insert them into your text and they will:</p>
 
 <ul>
 <li><p>Be <strong>automatically formatted</strong> consistently.</p></li>
-<li><p>Generate an appropriately ordered, consistently formatted <strong>reference list</strong> at the end of your document.</p></li>
+<li><p>Generate an appropriately ordered, consistently formatted <strong>reference list</strong> at the end of your document <strong>with only the works you actually cited</strong>.</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>The BibTeX Database</h2></hgroup><article  id="the-bibtex-database">
@@ -353,6 +353,8 @@ output:
 
 <p>On an entry click <code>Cite &gt; BibTeX</code>.</p>
 
+<p>For a YouTube how-to see <a href='https://www.youtube.com/watch?v=SsJSR2b4_qc' title=''><a href='https://www.youtube.com/watch?v=SsJSR2b4_qc' title=''>https://www.youtube.com/watch?v=SsJSR2b4_qc</a></a>.</p>
+
 <p>Sometimes they need to be <strong>cleaned</strong> a little.</p>
 
 </article></slide><slide class=''><hgroup><h2>Linking your .bib file.</h2></hgroup><article  id="linking-your-.bib-file.">
@@ -363,11 +365,11 @@ output:
     - BIB_FILE_NAME.bib
     - ANOTHER_BIB_FILE_NAME.bib</pre>
 
-<p><strong>Note</strong>: The files should be in the <strong>same directory</strong> as you R Markdown file.</p>
+<p><strong>Note</strong>: The files should be in the <strong>same directory</strong> as your R Markdown file.</p>
 
 </article></slide><slide class=''><hgroup><h2>Including BibTeX citations in RMarkdown</h2></hgroup><article  id="including-bibtex-citations-in-rmarkdown">
 
-<p>RMarkdown uses <a href='http://johnmacfarlane.net/pandoc/README.html' title=''>Pandoc syntax</a> to include a citation in text.</p>
+<p>R Markdown uses <a href='http://johnmacfarlane.net/pandoc/README.html' title=''>Pandoc syntax</a> to include a citation in-text.</p>
 
 <p>General format: <code>@CITE_KEY</code>.</p>
 
@@ -413,7 +415,7 @@ output:
 <p>Why cite?</p>
 
 <ul>
-<li><p>Give <strong>credit</strong> to the package authors (just like when citing literature).</p></li>
+<li><p>Give <strong>credit</strong> to the software authors (just like when citing literature).</p></li>
 <li><p>Enable <strong>reproducible research</strong>: identify which software you used and <strong>which version</strong>.</p></li>
 </ul>
 
@@ -452,7 +454,7 @@ output:
 
 <p>The dynamic literate programming way: Use <code>LoadandCite</code> from the <a href='http://christophergandrud.github.io/repmis/' title=''>repmis</a> package.</p>
 
-<p>Load all of the packages at the beginning of you RMarkdown file in a chunk with <code>include=FALSE</code>.</p>
+<p>Load all of the packages at the beginning of you R Markdown file in a chunk with <code>include=FALSE</code>.</p>
 
 <p><code>LoadandCite</code> loads the packages and creates a BibTeX file with all of the citations.</p>
 
@@ -483,7 +485,7 @@ repmis::LoadandCite(pkgs, file = &#39;RpackageCitations.bib&#39;)</pre>
 
 <ul>
 <li><p>When they are <strong>time consuming</strong> (requires a lot of computational time).</p></li>
-<li><p>When they <strong>access files over the internet</strong> (bad practice to make many repeated calls to the same URL, can crash the site).</p></li>
+<li><p>When they <strong>access files over the internet</strong> (bad practice to make many repeated calls to the same URL, can crash the site. This is equivalent to a <a href='http://en.wikipedia.org/wiki/Denial-of-service_attack' title=''>denial-of-service attack</a>).</p></li>
 <li><p>When they are <strong>many lines long</strong>.</p></li>
 </ul>
 
@@ -502,7 +504,7 @@ repmis::LoadandCite(pkgs, file = &#39;RpackageCitations.bib&#39;)</pre>
 
 <p>Big Idea: run a <em>make</em> file that runs a list of specific files in order.</p>
 
-<p>Files are only run if they have been changed since the last time the make file was last run.</p>
+<p>Files are <strong>only run</strong> if they have been <strong>changed</strong> since the last time the make file was last run.</p>
 
 <p>See Ch. 6 of RRRR if you might want to do this.</p>
 
