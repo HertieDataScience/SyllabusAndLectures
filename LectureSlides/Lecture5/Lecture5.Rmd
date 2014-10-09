@@ -285,6 +285,8 @@ Google scholar generates BibTeX entries.
 
 On an entry click `Cite > BibTeX`.
 
+For a YouTube how-to see [https://www.youtube.com/watch?v=SsJSR2b4_qc](https://www.youtube.com/watch?v=SsJSR2b4_qc).
+
 Sometimes they need to be **cleaned** a little.
 
 ## Linking your .bib file.
