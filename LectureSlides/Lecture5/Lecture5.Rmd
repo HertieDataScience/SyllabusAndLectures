@@ -318,7 +318,7 @@ of the presentation document.
 | `[@Box1973]`                | [@Box1973]               |
 | `[see @Box1973]`            | [see @Box1973]           |
 | `[see @Box1973, 33-40]`     | [see @Box1973, 33-40]    |
-| `[@Box1973; @Acemoglu2000]` | [@Box1973 @Acemoglu2000] |
+| `[@Box1973; @Acemoglu2000]` | [@Box1973; @Acemoglu2000] |
 | `@Box1973 [33-40]`          | @Box1973 [33-40]         |
 
 ## Reference List
