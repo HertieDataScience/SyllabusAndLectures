@@ -626,14 +626,16 @@ UDSData$iso2c &lt;- countrycode(UDSData$cowcode, origin = &#39;cown&#39;,
 
 <p>For example, <code>geocode</code> from <a href='http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf' title=''>ggmap</a> can be used to create latitude/longitudes for other geographic units:</p>
 
-<pre class = 'prettyprint lang-r'>places &lt;- c(&#39;Bavaria&#39;, &#39;Berlin&#39;, &#39;Seoul&#39;)
+<pre class = 'prettyprint lang-r'>places &lt;- c(&#39;Bavaria&#39;, &#39;Seoul&#39;, &#39;6 Parisier Platz, Berlin&#39;, 
+            &#39;Hertie School of Governance&#39;)
 
 ggmap::geocode(places)</pre>
 
-<pre >##     lon   lat
-## 1  11.5 48.79
-## 2  13.4 52.52
-## 3 127.0 37.57</pre>
+<pre >##      lon   lat
+## 1  11.50 48.79
+## 2 126.98 37.57
+## 3  13.38 52.52
+## 4  13.39 52.51</pre>
 
 </article></slide><slide class=''><hgroup><h2>Merge data</h2></hgroup><article  id="merge-data">
 

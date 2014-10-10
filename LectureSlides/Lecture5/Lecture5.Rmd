@@ -313,13 +313,13 @@ of the presentation document.
 
 ## Formatting In-Text Citations
 
-| Markup                      | Result                   |
-| --------------------------- | ------------------------ |
-| `[@Box1973]`                | [@Box1973]               |
-| `[see @Box1973]`            | [see @Box1973]           |
-| `[see @Box1973, 33-40]`     | [see @Box1973, 33-40]    |
+| Markup                      | Result                    |
+| --------------------------- | ------------------------- |
+| `[@Box1973]`                | [@Box1973]                |
+| `[see @Box1973]`            | [see @Box1973]            |
+| `[see @Box1973, 33-40]`     | [see @Box1973, 33-40]     |
 | `[@Box1973; @Acemoglu2000]` | [@Box1973; @Acemoglu2000] |
-| `@Box1973 [33-40]`          | @Box1973 [33-40]         |
+| `@Box1973 [33-40]`          | @Box1973 [33-40]          |
 
 ## Reference List
 

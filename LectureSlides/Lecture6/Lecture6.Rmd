@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 6: Automatic Data Gathering + Cleaning'
 author: "Christopher Gandrud"
 date: "16 October 2014"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
-  beamer_presentation: default
 bibliography: main.bib
 ---
 
@@ -462,7 +462,8 @@ For example, `geocode` from
 used to create latitude/longitudes for other geographic units:
 
 ```{r, message=FALSE}
-places <- c('Bavaria', 'Berlin', 'Seoul')
+places <- c('Bavaria', 'Seoul', '6 Parisier Platz, Berlin', 
+            'Hertie School of Governance')
 
 ggmap::geocode(places)
 ```

@@ -74,7 +74,7 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 | ----------------------- | --------------------- | ---------------- |
 | Pair Assignment 1       | 10%                   | Week 3           |
 | Pair Assignment 2       | 10%                   | Week 6           |
-| Pair Assignment 3       | 10%                   | Week 9           |
+| Pair Assignment 3       | 10%                   | Reading Week     |
 | Collaborative Research Project | 50%            | Presentation: Week 12, Paper/Website: Final Exam Week |
 | Attendance/active Participation | 20%           | -                |
 
