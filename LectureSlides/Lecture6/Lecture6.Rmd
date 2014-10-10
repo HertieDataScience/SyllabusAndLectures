@@ -35,7 +35,7 @@ Result of voting:
 
 **Proposal** for your Collaborative Research Project.
 
-**Deadline:** Week 6
+**Deadline:** Reading Week
 
 **Submbit:** A (max) 2,000 word proposal created with **R Markdown**. The
 proposal will:
@@ -264,9 +264,11 @@ data from a variety of sources (e.g. [Yahoo Finance](http://finance.yahoo.com/),
 [US Federal Reserve's FRED database](http://research.stlouisfed.org/fred2/)).
 
 ```{r, message=FALSE}
-# Download Yen/USD exchange rate
+library(quantmod)
 
-YenDollar <- quantmod::getSymbols(Symbols = 'DEXJPUS', src = 'FRED')
+# Download Yen/USD exchange rate
+YenDollar <- getSymbols(Symbols = 'DEXJPUS',
+                        src = 'FRED')
 ```
 
 ## Other API-R packages
@@ -391,7 +393,8 @@ tidy
 Sometimes it is useful to reverse this operation with `spread`.
 
 ```{r}
-messyAgain <- spread(data = tidy, key = treatement, value = result)
+messyAgain <- spread(data = tidy, key = treatement,
+                     value = result)
 
 messyAgain
 ```
@@ -447,6 +450,23 @@ UDSData$iso2c <- countrycode(UDSData$cowcode, origin = 'cown',
 ```
 
 **NOTE**: Always check the data to make sure the correct codes have been applied!
+
+## Creating IDs
+
+countrycode clearly only works for standardising country IDs
+
+Other packages can be useful for standardising other unit IDs.
+
+For example, `geocode` from
+[ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) can be
+used to create latitude/longitudes for other geographic units:
+
+```{r, message=FALSE}
+places <- c('Bavaria', 'Berlin', 'Seoul')
+
+ggmap::geocode(places)
+```
+
 
 ## Merge data
 

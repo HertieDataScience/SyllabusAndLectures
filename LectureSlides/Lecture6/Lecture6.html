@@ -139,7 +139,7 @@
 
 <p><strong>Proposal</strong> for your Collaborative Research Project.</p>
 
-<p><strong>Deadline:</strong> Week 6</p>
+<p><strong>Deadline:</strong> Reading Week</p>
 
 <p><strong>Submbit:</strong> A (max) 2,000 word proposal created with <strong>R Markdown</strong>. The proposal will:</p>
 
@@ -339,9 +339,11 @@ AltEnergy &lt;- WDI(indicator = &#39;EG.USE.COMM.CL.ZS&#39;)</pre>
 
 <p>The <a href='http://www.quantmod.com/' title=''>quantmod</a> package allows you to access financial data from a variety of sources (e.g. <a href='http://finance.yahoo.com/' title=''>Yahoo Finance</a>, <a href='https://www.google.com/finance' title=''>Google Finance</a>, <a href='http://research.stlouisfed.org/fred2/' title=''>US Federal Reserve&#39;s FRED database</a>).</p>
 
-<pre class = 'prettyprint lang-r'># Download Yen/USD exchange rate
+<pre class = 'prettyprint lang-r'>library(quantmod)
 
-YenDollar &lt;- quantmod::getSymbols(Symbols = &#39;DEXJPUS&#39;, src = &#39;FRED&#39;)</pre>
+# Download Yen/USD exchange rate
+YenDollar &lt;- getSymbols(Symbols = &#39;DEXJPUS&#39;,
+                        src = &#39;FRED&#39;)</pre>
 
 </article></slide><slide class=''><hgroup><h2>Other API-R packages</h2></hgroup><article  id="other-api-r-packages">
 
@@ -552,7 +554,8 @@ tidy</pre>
 
 <p>Sometimes it is useful to reverse this operation with <code>spread</code>.</p>
 
-<pre class = 'prettyprint lang-r'>messyAgain &lt;- spread(data = tidy, key = treatement, value = result)
+<pre class = 'prettyprint lang-r'>messyAgain &lt;- spread(data = tidy, key = treatement,
+                     value = result)
 
 messyAgain</pre>
 
@@ -614,6 +617,23 @@ UDSData$iso2c &lt;- countrycode(UDSData$cowcode, origin = &#39;cown&#39;,
 <pre >## Warning: Some values were not matched: 260, 265, 315, 345, 678, 680, 817, 971, 972, 973</pre>
 
 <p><strong>NOTE</strong>: Always check the data to make sure the correct codes have been applied!</p>
+
+</article></slide><slide class=''><hgroup><h2>Creating IDs</h2></hgroup><article  id="creating-ids">
+
+<p>countrycode clearly only works for standardising country IDs</p>
+
+<p>Other packages can be useful for standardising other unit IDs.</p>
+
+<p>For example, <code>geocode</code> from <a href='http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf' title=''>ggmap</a> can be used to create latitude/longitudes for other geographic units:</p>
+
+<pre class = 'prettyprint lang-r'>places &lt;- c(&#39;Bavaria&#39;, &#39;Berlin&#39;, &#39;Seoul&#39;)
+
+ggmap::geocode(places)</pre>
+
+<pre >##     lon   lat
+## 1  11.5 48.79
+## 2  13.4 52.52
+## 3 127.0 37.57</pre>
 
 </article></slide><slide class=''><hgroup><h2>Merge data</h2></hgroup><article  id="merge-data">
 
