@@ -111,7 +111,7 @@
 <ul>
 <li><p>Housecleaning</p></li>
 <li><p>Review</p></li>
-<li><p>Benefits and challenges of open public data.</p></li>
+<li><p>Benefits and challenges of open public data</p></li>
 <li><p>Automatic Data Gathering</p></li>
 <li><p>Tidying, Cleaning, and Merging data</p></li>
 </ul>
@@ -144,6 +144,7 @@
 <p><strong>Submbit:</strong> A (max) 2,000 word proposal created with <strong>R Markdown</strong>. The proposal will:</p>
 
 <ul>
+<li><p>Written in R Markdown.</p></li>
 <li><p>State your research question. And justify why it is interesting.</p></li>
 <li><p>Provide a basic literature review (properly cited with BibTeX).</p></li>
 <li><p>Identify data sources and appropriate research methodologies for answering your question.</p></li>
@@ -174,8 +175,9 @@
 <li><p>Better coordination within government.</p></li>
 <li><p>Provides policy-makers with information needed to address complex problems.</p></li>
 <li><p>&#39;&#39;Mends the traditional separation between public organizations and users&#39;&#39;.</p></li>
-<li><p>See <span class="cite">Janssen, Charalabidis, and Zuiderwijk (2012, 261)</span> for more.</p></li>
 </ul>
+
+<p>See <span class="cite">Janssen, Charalabidis, and Zuiderwijk (2012, 261)</span> for more.</p>
 
 </article></slide><slide class=''><hgroup><h2>Mending separation between public and users</h2></hgroup><article  id="mending-separation-between-public-and-users">
 
@@ -197,8 +199,9 @@
 <li><p><strong>Worry</strong> by bureaucrats that open data will be used to <strong>criticise</strong> them.</p></li>
 <li><p><strong>No incentives</strong> for users to access the data. <strong>Lack of skills</strong> needed to use and understand the data.</p></li>
 <li><p>Balancing individual <strong>privacy</strong> concerns.</p></li>
-<li><p>See <span class="cite">Janssen, Charalabidis, and Zuiderwijk (2012, 262–63)</span> for more.</p></li>
 </ul>
+
+<p>See <span class="cite">Janssen, Charalabidis, and Zuiderwijk (2012, 262–63)</span> for more.</p>
 
 </article></slide><slide class=''><hgroup><h2>Accessing data</h2></hgroup><article  id="accessing-data">
 
@@ -207,6 +210,7 @@
 <p>However, the level of <strong>accessibility varies</strong>:</p>
 
 <ul>
+<li><p>use restrictions</p></li>
 <li><p>format</p></li>
 <li><p>documentation</p></li>
 <li><p>version control</p></li>
@@ -216,7 +220,7 @@
 
 <p><br> <br> <br></p>
 
-<p>We are only going to begin scratching the surface of the data formats you are likely to encounter.</p>
+<p>We are only going to begin <strong>scratching the surface</strong> of the data <strong>obstacles</strong> you are likely to encounter.</p>
 
 </article></slide><slide class=''><hgroup><h2>Tie your research to your data</h2></hgroup><article  id="tie-your-research-to-your-data">
 
@@ -226,6 +230,7 @@
 <li><p>Fully document for reproducible research.</p></li>
 <li><p>Can find (inevitable) mistakes.</p></li>
 <li><p>Easy to update when the data is updated.</p></li>
+<li><p>Can apply methods to other data sets.</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>&#39;&#39;Easy&#39;&#39; automatic data gathering</h2></hgroup><article  id="easy-automatic-data-gathering">
@@ -240,7 +245,7 @@
 
 <p>Use <code>read.table</code> or <code>read.csv</code> (just a wrapper for <code>read.csv</code> with <code>sep = &#39;,&#39;</code>).</p>
 
-<p>Use the URL rather than the file path.</p>
+<p>Include the URL rather than the file path.</p>
 
 <pre class = 'prettyprint lang-r'>read.table(&#39;http://SOMEDATA.csv&#39;)</pre>
 
@@ -276,7 +281,7 @@ unlink(temp)</pre>
 
 <p>Use <code>source_data</code> from the repmis package.</p>
 
-<p>Data on GitHub is stored at secure URLs. Select the RAW URL:</p>
+<p>Data on GitHub is stored at secure URLs. Select the <strong>RAW</strong> URL:</p>
 
 <pre class = 'prettyprint lang-r'>URL &lt;- &#39;https://raw.githubusercontent.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceDescriptives.csv&#39;
 main &lt;- repmis::source_data(URL)</pre>
@@ -292,7 +297,7 @@ main &lt;- repmis::source_data(URL)</pre>
 
 <p><code>source_data</code> allows you to notice these changes by assigning each file a unique <a href='http://en.wikipedia.org/wiki/SHA-1' title=''>SHA1 Hash</a>.</p>
 
-<p>Each download can be checked against this Hash</p>
+<p>Each download can be checked against the Hash</p>
 
 <pre class = 'prettyprint lang-r'>main &lt;- repmis::source_data(URL,
                 sha1 = &#39;01cff579b689cea9ef9c98e433ce3122745cc5cb&#39;)</pre>
@@ -300,6 +305,14 @@ main &lt;- repmis::source_data(URL)</pre>
 <pre >## Downloading data from: https://raw.githubusercontent.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceDescriptives.csv 
 ## 
 ## Specified SHA-1 hash matches downloaded data file.</pre>
+
+</article></slide><slide class=''><hgroup><h2>Excel Files</h2></hgroup><article  id="excel-files">
+
+<p>The <code>source_XlsxData</code> function in repmis does the same thing as <code>source_data</code>, but for Excel files.</p>
+
+<p>Builds on <code>read.xlsx</code> for loading locally stored Excel files.</p>
+
+<p>Note: Excel data often needs <strong>a lot of cleaning</strong> before it is useful for statistical/graphical analyses.</p>
 
 </article></slide><slide class=''><hgroup><h2>Caching</h2></hgroup><article  id="caching">
 
@@ -317,7 +330,7 @@ main &lt;- repmis::source_data(URL)</pre>
 
 <p>R can interact with most data APIs using the <a href='https://github.com/hadley/httr' title=''>httr</a> package.</p>
 
-<p>Fortunately, users have written packages to interact with some Data APIs.</p>
+<p>Even easier: users have written API specific packages to interact with particular data APIs.</p>
 
 </article></slide><slide class=''><hgroup><h2>World Bank Development Indications with WDI</h2></hgroup><article  id="world-bank-development-indications-with-wdi">
 
@@ -328,12 +341,10 @@ main &lt;- repmis::source_data(URL)</pre>
 <pre class = 'prettyprint lang-r'># Load WDI package
 library(WDI)
 
-# Download per country alternative energy use as % of total energy use
+# Per country alternative energy use as % of total energy use
 AltEnergy &lt;- WDI(indicator = &#39;EG.USE.COMM.CL.ZS&#39;)</pre>
 
-<p><br> <br></p>
-
-<p>Note: Find the indicator ID is in the Indicator URL.</p>
+<p>Note: The indicator ID is at the end of the indicator&#39;s URL on the World Bank site..</p>
 
 </article></slide><slide class=''><hgroup><h2>Financial Data with quantmod</h2></hgroup><article  id="financial-data-with-quantmod">
 
@@ -386,6 +397,10 @@ YenDollar &lt;- getSymbols(Symbols = &#39;DEXJPUS&#39;,
 
 <p>Perhaps <strong>80%</strong> of data analysis is typically spent cleaning and preparing data <span class="cite">(Dasu and Johnson 2003)</span>.</p>
 
+<ul>
+<li>This doesn&#39;t include the time taken to gather the data.</li>
+</ul>
+
 <p>To help streamline this process <span class="cite">Wickham (2014)</span> laid out <strong>principles of data tidying</strong>.</p>
 
 <ul>
@@ -396,13 +411,11 @@ YenDollar &lt;- getSymbols(Symbols = &#39;DEXJPUS&#39;,
 
 <p><br> <br> <br></p>
 
-<p>Many (not all) statistical data bases are organised into <strong>rows</strong> and <strong>columns</strong>.</p>
+<p>Many (not all) statistical data sets are organised into <strong>rows</strong> and <strong>columns</strong>.</p>
 
 <p>Rows and columns have <strong>no inherent meaning</strong>.</p>
 
 </article></slide><slide class=''><hgroup><h2>Data structure</h2></hgroup><article  id="data-structure-1">
-
-<p>Two structures for the same data:</p>
 
 <table class = 'rmdtable'>
 <tr class="header">
@@ -426,6 +439,8 @@ YenDollar &lt;- getSymbols(Symbols = &#39;DEXJPUS&#39;,
 <td align="left">1</td>
 </tr>
 </table>
+
+<p><br></p>
 
 <table class = 'rmdtable'>
 <tr class="header">
@@ -571,7 +586,7 @@ messyAgain</pre>
 <p>For example, see if:</p>
 
 <ul>
-<li><p>Missing values designated with <code>NA</code></p></li>
+<li><p>Missing values are designated with <code>NA</code></p></li>
 <li><p>Variable classes are what you expect them to be.</p></li>
 <li><p>Distributions are what you expect them to be.</p></li>
 </ul>
@@ -591,18 +606,22 @@ messyAgain</pre>
 <pre class = 'prettyprint lang-r'>tail(AltEnergy, n = 3)</pre>
 
 <pre >##      iso2c  country EG.USE.COMM.CL.ZS year
-## 1804    ZW Zimbabwe             4.909 2007
-## 1805    ZW Zimbabwe             4.707 2006
-## 1806    ZW Zimbabwe             5.159 2005</pre>
+## 1804    ZW Zimbabwe          4.909348 2007
+## 1805    ZW Zimbabwe          4.707139 2006
+## 1806    ZW Zimbabwe          5.159120 2005</pre>
 
 <pre class = 'prettyprint lang-r'>tail(UDSData, n = 3)</pre>
 
-<pre >##            country year cowcode   mean     sd median  pct025 pct975
-## 9135 Western Samoa 2006     990 0.2485 0.2156 0.2475 -0.1703 0.6648
-## 9136 Western Samoa 2007     990 0.2439 0.2152 0.2487 -0.1874 0.6572
-## 9137 Western Samoa 2008     990 0.2408 0.2193 0.2444 -0.1882 0.6623</pre>
+<pre >##            country year cowcode      mean        sd    median     pct025
+## 9135 Western Samoa 2006     990 0.2485397 0.2155926 0.2474691 -0.1702781
+## 9136 Western Samoa 2007     990 0.2439135 0.2151686 0.2487054 -0.1874372
+## 9137 Western Samoa 2008     990 0.2407623 0.2192563 0.2443505 -0.1881970
+##         pct975
+## 9135 0.6648156
+## 9136 0.6571918
+## 9137 0.6622615</pre>
 
-</article></slide><slide class=''><hgroup><h2>Create unique identifier</h2></hgroup><article  id="create-unique-identifier">
+</article></slide><slide class=''><hgroup><h2>Create unique ID: country codes</h2></hgroup><article  id="create-unique-id-country-codes">
 
 <p>Unique identifier will be <a href='http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2' title=''>iso 2 letter country code</a> and <strong>year</strong>.</p>
 
@@ -614,11 +633,9 @@ messyAgain</pre>
 UDSData$iso2c &lt;- countrycode(UDSData$cowcode, origin = &#39;cown&#39;,
                              destination = &#39;iso2c&#39;, warn = TRUE)</pre>
 
-<pre >## Warning: Some values were not matched: 260, 265, 315, 345, 678, 680, 817, 971, 972, 973</pre>
-
 <p><strong>NOTE</strong>: Always check the data to make sure the correct codes have been applied!</p>
 
-</article></slide><slide class=''><hgroup><h2>Creating IDs</h2></hgroup><article  id="creating-ids">
+</article></slide><slide class=''><hgroup><h2>Creating IDs: geocodes</h2></hgroup><article  id="creating-ids-geocodes">
 
 <p>countrycode clearly only works for standardising country IDs</p>
 
@@ -631,11 +648,30 @@ UDSData$iso2c &lt;- countrycode(UDSData$cowcode, origin = &#39;cown&#39;,
 
 ggmap::geocode(places)</pre>
 
-<pre >##      lon   lat
-## 1  11.50 48.79
-## 2 126.98 37.57
-## 3  13.38 52.52
-## 4  13.39 52.51</pre>
+<pre >##         lon      lat
+## 1  11.49789 48.79045
+## 2 126.97797 37.56654
+## 3  13.37854 52.51701
+## 4  13.38921 52.51286</pre>
+
+</article></slide><slide class=''><hgroup><h2>Creating IDs: Time</h2></hgroup><article  id="creating-ids-time">
+
+<p>Time units may be important components of observation IDs.</p>
+
+<p>Use the <a href='http://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html' title=''>lubridate</a> package to standardise dates.</p>
+
+</article></slide><slide class=''><hgroup><h2>Creating IDs: Time</h2></hgroup><article  id="creating-ids-time-1">
+
+<pre class = 'prettyprint lang-r'>library(lubridate)
+
+# Create time data
+times &lt;- c(&#39;Sep. 17 1980&#39;, &#39;March 23 2000&#39;, &#39;Nov. 3 2003&#39;)
+
+mdy(times)</pre>
+
+<pre >## [1] &quot;1980-09-17 UTC&quot; &quot;2000-03-23 UTC&quot; &quot;2003-11-03 UTC&quot;</pre>
+
+<p>Note: Times should always go from <strong>longest to shortest</strong> unit. Makes dates <strong>sortable</strong>.</p>
 
 </article></slide><slide class=''><hgroup><h2>Merge data</h2></hgroup><article  id="merge-data">
 
@@ -651,10 +687,10 @@ names(UDSData)</pre>
 
 head(Combined, n = 3)</pre>
 
-<pre >##   iso2c year country EG.USE.COMM.CL.ZS median
-## 1    AD 2005 Andorra                NA 0.7786
-## 2    AD 2006 Andorra                NA 0.7860
-## 3    AD 2007 Andorra                NA 0.7853</pre>
+<pre >##   iso2c year country EG.USE.COMM.CL.ZS    median
+## 1    AD 2005 Andorra                NA 0.7785676
+## 2    AD 2006 Andorra                NA 0.7860388
+## 3    AD 2007 Andorra                NA 0.7853250</pre>
 
 </article></slide><slide class=''><hgroup><h2>Some merge details</h2></hgroup><article  id="some-merge-details">
 

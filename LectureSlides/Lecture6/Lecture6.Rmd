@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 6: Automatic Data Gathering + Cleaning'
 author: "Christopher Gandrud"
 date: "16 October 2014"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
 bibliography: main.bib
 ---
 
@@ -16,7 +16,7 @@ bibliography: main.bib
 
 - Review
 
-- Benefits and challenges of open public data.
+- Benefits and challenges of open public data
 
 - Automatic Data Gathering
 
@@ -39,6 +39,8 @@ Result of voting:
 
 **Submbit:** A (max) 2,000 word proposal created with **R Markdown**. The
 proposal will:
+
+- Written in R Markdown.
 
 - State your research question. And justify why it is interesting.
 
@@ -78,7 +80,7 @@ restrictions on its usage or distribution. <i class="fa fa-quote-right"></i>
 
 - ''Mends the traditional separation between public organizations and users''.
 
-- See @Janssen2012 [261] for more.
+See @Janssen2012 [261] for more.
 
 ## Mending separation between public and users
 
@@ -108,13 +110,15 @@ to use and understand the data.
 
 - Balancing individual **privacy** concerns.
 
-- See @Janssen2012 [262-263] for more.
+See @Janssen2012 [262-263] for more.
 
 ## Accessing data
 
 Social science and public data is becoming **increasingly open** and **accessible**.
 
 However, the level of **accessibility varies**:
+
+- use restrictions
 
 - format
 
@@ -128,8 +132,8 @@ However, the level of **accessibility varies**:
 <br>
 <br>
 
-We are only going to begin scratching the surface of the data formats you are
-likely to encounter.
+We are only going to begin **scratching the surface** of the data **obstacles** 
+you are likely to encounter.
 
 ## Tie your research to your data
 
@@ -140,6 +144,8 @@ Do as much **data gathering** and **cleaning** as possible in R scripts:
 - Can find (inevitable) mistakes.
 
 - Easy to update when the data is updated.
+
+- Can apply methods to other data sets.
 
 ## ''Easy'' automatic data gathering
 
@@ -156,7 +162,7 @@ a larger HTML marked-up website.
 
 Use `read.table` or `read.csv` (just a wrapper for `read.csv` with `sep = ','`).
 
-Use the URL rather than the file path.
+Include the URL rather than the file path.
 
 ```{r eval=FALSE}
 read.table('http://SOMEDATA.csv')
@@ -195,7 +201,7 @@ unlink(temp)
 
 Use `source_data` from the repmis package.
 
-Data on GitHub is stored at secure URLs. Select the RAW URL:
+Data on GitHub is stored at secure URLs. Select the **RAW** URL:
 
 ```{r}
 URL <- 'https://raw.githubusercontent.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceDescriptives.csv'
@@ -209,12 +215,22 @@ Data maintainers (unfortunately) often change data sets with little or no docume
 `source_data` allows you to notice these changes by assigning each file a unique
 [SHA1 Hash](http://en.wikipedia.org/wiki/SHA-1).
 
-Each download can be checked against this Hash
+Each download can be checked against the Hash
 
 ```{r}
 main <- repmis::source_data(URL,
                 sha1 = '01cff579b689cea9ef9c98e433ce3122745cc5cb')
 ```
+
+## Excel Files
+
+The `source_XlsxData` function in repmis does the same thing as `source_data`, but
+for Excel files. 
+
+Builds on `read.xlsx` for loading locally stored Excel files.
+
+Note: Excel data often needs **a lot of cleaning** before it is useful
+for statistical/graphical analyses.
 
 ## Caching
 
@@ -234,7 +250,8 @@ Data API = a documented way to access data from one program stored with another.
 R can interact with most data APIs using the [httr](https://github.com/hadley/httr)
 package.
 
-Fortunately, users have written packages to interact with some Data APIs.
+Even easier: users have written API specific packages to interact with 
+particular data APIs.
 
 ## World Bank Development Indications with WDI
 
@@ -247,14 +264,11 @@ Alternative Energy Use Example:
 # Load WDI package
 library(WDI)
 
-# Download per country alternative energy use as % of total energy use
+# Per country alternative energy use as % of total energy use
 AltEnergy <- WDI(indicator = 'EG.USE.COMM.CL.ZS')
 ```
 
-<br>
-<br>
-
-Note: Find the indicator ID is in the Indicator URL.
+Note: The indicator ID is at the end of the indicator's URL on the World Bank site..
 
 ## Financial Data with quantmod
 
@@ -294,6 +308,8 @@ The data you need for your analysis is often **not clean**.
 
 Perhaps **80%** of data analysis is typically spent cleaning and preparing data [@Dasu2003].
 
+- This doesn't include the time taken to gather the data.
+
 To help streamline this process @Wickham2014 laid out **principles of data
 tidying**.
 
@@ -306,19 +322,19 @@ tidying**.
 <br>
 <br>
 
-Many (not all) statistical data bases are organised into **rows** and **columns**.
+Many (not all) statistical data sets are organised into **rows** and **columns**.
 
 Rows and columns have **no inherent meaning**.
 
 ## Data structure
-
-Two structures for the same data:
 
 | Person       |  treatmentA | treatmentB |
 | ------------ | ----------- | ---------- |
 | John Smith   |             | 2          |
 | Jane Doe     | 16          | 11         |
 | Mary Johnson | 3           | 1          |
+
+<br>
 
 | Treatment  | John Smith | Jane Doe | Mary Johnson |
 | ---------- | ---------- | -------- | ------------ |
@@ -405,7 +421,7 @@ Always **look at** and **poke your data**.
 
 For example, see if:
 
-- Missing values designated with `NA`
+- Missing values are designated with `NA`
 
 - Variable classes are what you expect them to be.
 
@@ -430,7 +446,7 @@ tail(AltEnergy, n = 3)
 tail(UDSData, n = 3)
 ```
 
-## Create unique identifier
+## Create unique ID: country codes
 
 Unique identifier will be
 [iso 2 letter country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
@@ -441,7 +457,7 @@ package to turn UDS data's
 [Correlates of War Country Code](http://www.correlatesofwar.org/datasets.htm)
 (`cowcode`) to `iso2c`.
 
-```{r}
+```{r warning=FALSE}
 library(countrycode)
 
 # Assign iso2c codes base on correlates of war codes
@@ -451,7 +467,7 @@ UDSData$iso2c <- countrycode(UDSData$cowcode, origin = 'cown',
 
 **NOTE**: Always check the data to make sure the correct codes have been applied!
 
-## Creating IDs
+## Creating IDs: geocodes
 
 countrycode clearly only works for standardising country IDs
 
@@ -468,6 +484,26 @@ places <- c('Bavaria', 'Seoul', '6 Parisier Platz, Berlin',
 ggmap::geocode(places)
 ```
 
+## Creating IDs: Time 
+
+Time units may be important components of observation IDs.
+
+Use the [lubridate](http://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html)
+package to standardise dates.
+
+## Creating IDs: Time
+
+```{r}
+library(lubridate)
+
+# Create time data
+times <- c('Sep. 17 1980', 'March 23 2000', 'Nov. 3 2003')
+
+mdy(times)
+```
+
+Note: Times should always go from **longest to shortest** unit. 
+Makes dates **sortable**.
 
 ## Merge data
 
