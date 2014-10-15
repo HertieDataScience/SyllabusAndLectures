@@ -1,0 +1,101 @@
+---
+title: 'MPP-E1180 Lecture 7: Web Scraping + Transforms'
+author: "Christopher Gandrud"
+date: "27 October 2014"
+output:
+  ioslides_presentation:
+    css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
+    logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
+---
+
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
+
+- Assignment 3
+
+- Review
+
+- Web scraping Downloading and parsing webpages
+
+- Processing strings
+
+- Data and data set transformations with dplyr
+
+## Assignment 3
+
+**Purpose**: Gather, clean, and analyse data
+
+**Deadline**: 14 November 2015
+
+In the assignment you will:
+
+- Gather web-based data from at least **two sources**. Clean and merge the
+data so that it is ready for statistical analyses.
+
+- Conduct basic descriptive and inferential statistics on the data to address a relevant research question.
+
+- Briefly describe the results including with dynamically generated tables and figures.
+
+- The write up should be 1,500 words maximum and use literate programming.
+
+As always submit the GitHub repo.
+
+## Review
+
+What is open public data?
+
+- Name one challenge and one opportunity presented by open public data.
+
+What is a data API?
+
+What is tidy data?
+
+Why are unique observation IDs so important for data cleaning?
+
+## Caveat to Web scraping
+
+Caveat: I don't expect you to master or even use the tools of web scraping.
+
+I just want you to know that these things are possible, so that you know where to
+turn in future work.
+
+## Web scraping
+
+[Web scraping](http://en.wikipedia.org/wiki/Web_scraping) simply means gathering
+data from websites.
+
+Last class we learned a particular form of web scraping: downloading explicitly 
+structured data files/data APIs.
+
+You can also download information that is not as well structured for statistical 
+analysis:
+
+- HTML tables
+
+- Texts on websites
+
+- Navigate through web forms
+
+To really master you need a good knowledge of HTML.
+
+## Key tools
+
+The most basic tool for web scraping is [httr](https://github.com/hadley/httr).
+
+Key steps:
+
+1. Request a URL with `GET`.
+
+2. Extract the content from the request with `content`.
+
+    + You can extract either the raw text with `as = 'text'` or parse the content
+    with `as = parsed`. 
+    
+    + [Parsing](http://en.wikipedia.org/wiki/Parsing): the analysis of HTML 
+    (and other) markup resulting in a **parse tree** where each element is 
+    syntactically related. 
+    
+3. Clean parsed content (there are many tools for this suited to a variety of
+problems).
+
+
