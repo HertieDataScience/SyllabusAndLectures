@@ -17,7 +17,7 @@ output:
 
 - Web scraping Downloading and parsing webpages
 
-- Processing strings
+- Processing strings, including an intro to Regular Expressions
 
 - Data and data set transformations with dplyr
 
@@ -80,22 +80,294 @@ To really master you need a good knowledge of HTML.
 
 ## Key tools
 
-The most basic tool for web scraping is [httr](https://github.com/hadley/httr).
+<br>
 
-Key steps:
+The most basic tools for web scraping in R:
 
-1. Request a URL with `GET`.
+- [httr](https://github.com/hadley/httr): gather data + simple parsing
 
-2. Extract the content from the request with `content`.
+- [XML](http://cran.r-project.org/web/packages/XML/index.html): more advanced 
+parsing
+
+    + [Parsing](http://en.wikipedia.org/wiki/Parsing): the analysis of HTML 
+    (and other) markup so that each element is syntactically related in a 
+    **parse tree**. 
+
+## Key steps:
+
+1. **Look at** the HTML for the webpage you want to scrape (use Inspect Element in Chrome).
+
+2. **Request** a URL with `GET`.
+
+3. **Extract** the content from the request with `content`.
 
     + You can extract either the raw text with `as = 'text'` or parse the content
-    with `as = parsed`. 
+    with `as = 'parsed'`. 
     
-    + [Parsing](http://en.wikipedia.org/wiki/Parsing): the analysis of HTML 
-    (and other) markup resulting in a **parse tree** where each element is 
-    syntactically related. 
-    
-3. Clean parsed content (there are many tools for this suited to a variety of
+4. **Clean** parsed content (there are many tools for this suited to a variety of
 problems).
 
+## Web scraping example
 
+Scrape [BBC's MP's Expenses table](http://news.bbc.co.uk/2/hi/uk_news/politics/8044207.stm).
+
+HTML markup marks tables using `<table>` tags. 
+
+We can use these to extract tabular information and convert them into data frames.
+
+In particular we want the table tag with the id `expenses_table`.
+
+## Viewing the web pages source
+
+![expenses-table](img/expenseTable.png)
+
+## Web scraping example
+
+```{r, message=FALSE}
+library(httr)
+library(dplyr)
+library(XML)
+
+URL <- 'http://news.bbc.co.uk/2/hi/uk_news/politics/8044207.stm'
+
+# Get and parse all tables on the webpage
+tables <- URL %>% GET() %>% 
+            content(as = 'parsed') %>% 
+            readHTMLTable()
+
+names(tables)
+```
+
+## Web scraping example
+
+Now we just need to subset the *tables* list for the `expenses_table` data frame.
+
+```{r}
+ExpensesTable <- tables[[5]]
+
+head(ExpensesTable)[, 1:3]
+```
+
+## Processing strings
+
+A (frustratingly) large proportion of time spent web scraping and doing data
+cleaning generally is take up with **processing strings**.
+
+Key tools for processing strings:
+
+- knowing your encoding and `iconv` function in base R
+
+- `grep`, `gsub`, and related functions in base R
+
+- Regular expressions
+
+- [stringr](http://journal.r-project.org/archive/2010-2/RJournal_2010-2_Wickham.pdf) package
+
+## Character encoding: Motivation
+
+Sometimes when you load text into R you will get weird symbols like � 
+([the replacement character](http://en.wikipedia.org/wiki/Specials_(Unicode_block)#Replacement_character))
+or other strange things will happen to the text.
+
+NOTE: remember to always check your data when you import it!
+
+This often happens when R is using the **wrong character encoding**. 
+
+## Character encoding
+
+All characters in a computer are **encoded** using some standardised system.
+
+R can recognise [latin1](http://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block)) 
+and [UTF-8](http://en.wikipedia.org/wiki/UTF-8).
+
+- latin1 is fairly limited (mostly to the latin alphabet) 
+
+- UTF-8 covers a much wider range of characters in many languages
+
+You may need to use the `iconv` function to convert a text to UTF-8 before 
+trying to process it.
+
+## `grep`, `gsub`, and related functions
+
+<br>
+<br>
+
+R (and many programing languages) have functions for **identifying** and 
+**manipulating** strings.
+
+## Matching
+
+You can use `grep` and `grepl` to find patterns in a vector.
+
+```{r}
+pets <- c('cats', 'dogs', 'a big snake')
+
+grep(pattern = 'cat', x = pets)
+
+grepl(pattern = 'cat', pets)
+
+# Subset vector
+pets[grep('cats', pets)]
+```
+
+## Manipulation
+
+Use `gsub` to substitute strings.
+
+```{r}
+gsub(pattern = 'big', replacement = 'small', x = pets)
+```
+
+## Regular expressions
+
+[Regular expressions](http://en.wikipedia.org/wiki/Regular_expression) are a 
+powerful tool for finding an manipulating strings.
+
+They are special characters that can be used to search for text.
+
+For example:
+
+- find characters at only the begining or ending of a string
+
+- find characters that follow or are preceeded by a particular character
+
+- find only the first or last occurance of a character in a string
+
+Many more possibilities.
+
+## Regular expressions examples
+
+Examples modified from [Robin Lovelace](http://www.r-bloggers.com/regular-expressions-in-r-vs-rstudio/).
+
+```{r}
+base <- c("cat16_24", "25_34cat", "35_44catch", 
+          "45_54Cat", "55_4fat$", 'colour', 'color')
+
+## Find only all 'cat' regardles of case
+grep('cat', base, ignore.case = T)
+```
+
+## Regular expressions examples
+
+```{r}
+# Find only 'cat' at the end of the string with $
+grep('cat$', base)
+
+# Find only 'cat' at the begining of the string with ^
+grep('^cat', base)
+```
+
+## Regular expressions examples
+
+```{r}
+# Find zero or one of the preceeding character with ?
+grep('colou?r', base)
+
+# Find one or more of the preceeding character with +
+grep('colou+r', base)
+
+# Find '$' with the escape character \
+grep('\\$', base)
+```
+
+## Regular expressions examples
+
+```{r}
+# Find string with any single character between 'c' and 'l' with .
+grep('c.l', base)
+
+# Find a range of numbers with [ - ]
+grep('[1-3]', base)
+
+# Find capital letters
+grep('[A-Z]', base)
+```
+
+## Simple regular expression cheapsheet
+
+| Character | Use                                       |
+| --------- | ----------------------------------------- |
+| `$`       | characters at the end of the string       |
+| `^`       | characters at the begining of the string  |
+| `?`       | zero or more of the preceeding character  |
+| `*`       | zero or more of the preceeding character  |
+| `+`       | one or more of the preceeding character   |
+| `\`       | escape character use to find strings that are expressions |
+| `.`       | any single character                      |
+| `[ - ]`   | a range of characters                     |
+
+## String processing with stringer
+
+The stringr package has many helpful functions that make dealing with strings a
+bit **easier**. 
+
+## stringr examples
+
+Remove leading and trailing **whitespace** (this can be a real problem when creating
+consistent variable values):
+
+```{r}
+library(stringr)
+
+str_trim(' hello   ')
+```
+
+## stringr examples
+
+**Split** strings (really useful for turning 1 variable into 2):
+
+```{r}
+trees <- c('Jomon Sugi', 'Huon Pine')
+
+str_split_fixed(trees, pattern = ' ', n = 2)
+```
+
+## More data transformations with dplyr
+
+The **dplyr** package has powerful capabilities to manipulate data frames quickly
+(many of the functions are written in the [compiled](http://en.wikipedia.org/wiki/Compiled_language) 
+language [C++](http://en.wikipedia.org/wiki/C%2B%2B)).
+
+Very useful for **grouped observations**, e.g. countries, households.
+
+## dplyr
+
+```{r}
+# Create fake grouped data
+library(randomNames)
+
+people <- randomNames(n = 1000)
+people <- sort(rep(people, 4))
+year <- rep(2010:2013, 1000)
+trend_income <- c(30000, 31000, 32000, 33000)
+income <-  replicate(trend_income + rnorm(4, mean = 30000, sd = 20000), n = 1000)
+data <- data.frame(people, year, income)
+```
+
+## dplyr 
+
+```{r}
+head(data)
+```
+
+## Simple dplyr
+
+Select rows
+
+```{r}
+high_income <- filter(data, income > 40000)
+
+head(high_income)
+```
+
+## Seminar: Web scraping and data transformations
+
+**Scrape** and **clean** the Medal Table from 
+<http://www.bbc.com/sport/winter-olympics/2014/medals/countries>.
+
+- Also, sort by total medals in **descending order**.
+
+<br>
+<br>
+
+Work on gathering data and cleaning for **Assignment 3**.

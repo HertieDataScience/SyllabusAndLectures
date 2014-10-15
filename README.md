@@ -232,13 +232,16 @@ with the [dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introducti
 
 #### Readings
 
-- Barberá, Pablo. 2013. "[NYU Politics Data Lab Workshop: Scraping Twitter and Web Data Using R](http://www.nyu.edu/projects/politicsdatalab/workshops/twitter.pdf)".
+- Wickham, Hadley. 2010. ''[stringr: modern, consistent string processing](http://journal.r-project.org/archive/2010-2/RJournal_2010-2_Wickham.pdf)''.
+*The R Journal*. 2(2): 38-40.
 
 - A key tool for scraping websites (and dealing with text in general) is [Regular Expressions](http://en.wikipedia.org/wiki/Regular_expression). You can think of these as patterns of text to search for. To prepare for class read the helpful [regular expressions overview by Greg Bacon](http://stackoverflow.com/a/2759417) and practice using them with the [RegexOne](http://regexone.com/) website.
 
 *Reading Extras:*
 
 - Sanchez, Gaston. [Handling and Processing Strings in R](http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf).
+
+- Barberá, Pablo. 2013. "[NYU Politics Data Lab Workshop: Scraping Twitter and Web Data Using R](http://www.nyu.edu/projects/politicsdatalab/workshops/twitter.pdf)".
 
 
 ### Week 8: Statistical Modelling with R
