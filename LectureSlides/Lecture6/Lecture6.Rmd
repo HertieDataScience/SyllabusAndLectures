@@ -40,7 +40,7 @@ Result of voting:
 **Submbit:** A (max) 2,000 word proposal created with **R Markdown**. The
 proposal will:
 
-- Written in R Markdown.
+- Be written in R Markdown.
 
 - State your research question. And justify why it is interesting.
 
@@ -72,13 +72,13 @@ restrictions on its usage or distribution. <i class="fa fa-quote-right"></i>
 
 ## Some benefits of open public data
 
-- Greater returns on public investment in data gathering.
+- **Greater returns** on public investment in data gathering.
 
-- Better coordination within government.
+- Better **coordination** within government.
 
-- Provides policy-makers with information needed to address complex problems.
+- Provides **policy-makers with information** needed to address complex problems.
 
-- ''Mends the traditional separation between public organizations and users''.
+- ''**Mends the traditional separation** between public organizations and users''.
 
 See @Janssen2012 [261] for more.
 
@@ -132,8 +132,8 @@ However, the level of **accessibility varies**:
 <br>
 <br>
 
-We are only going to begin **scratching the surface** of the data **obstacles** 
-you are likely to encounter.
+We are only going to begin **scratching the surface** of the data access
+**obstacles** you are likely to encounter.
 
 ## Tie your research to your data
 
