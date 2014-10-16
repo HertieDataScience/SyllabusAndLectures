@@ -111,7 +111,7 @@
 <ul>
 <li><p>Assignment 3</p></li>
 <li><p>Review</p></li>
-<li><p>Web scraping Downloading and parsing webpages</p></li>
+<li><p>Intro to web scraping</p></li>
 <li><p>Processing strings, including an intro to Regular Expressions</p></li>
 <li><p>Data and data set transformations with dplyr</p></li>
 </ul>
@@ -122,16 +122,20 @@
 
 <p><strong>Deadline</strong>: 14 November 2015</p>
 
-<p>In the assignment you will:</p>
+<p>You will submit a GitHub repo that:</p>
 
 <ul>
-<li><p>Gather web-based data from at least <strong>two sources</strong>. Clean and merge the data so that it is ready for statistical analyses.</p></li>
-<li><p>Conduct basic descriptive and inferential statistics on the data to address a relevant research question.</p></li>
-<li><p>Briefly describe the results including with dynamically generated tables and figures.</p></li>
-<li><p>The write up should be 1,500 words maximum and use literate programming.</p></li>
+<li><p>Gathers web-based data from at least <strong>two sources</strong>. Cleans and merges the data so that it is ready for statistical analyses.</p></li>
+<li><p>Conducts basic descriptive and inferential statistics with the data to address a relevant research question.</p></li>
+<li><p>Briefly describes the results including with dynamically generated tables and figures.</p></li>
+<li><p>Has a write up of 1,500 words maximum that describes the data gathering and analysis and uses literate programming.</p></li>
 </ul>
 
-<p>As always submit the GitHub repo.</p>
+</article></slide><slide class=''><hgroup><h2>Assignment 3</h2></hgroup><article  id="assignment-3-1">
+
+<p><br> <br> <br></p>
+
+<p>This is ideally a <strong>good first run</strong> at the data gathering and analysis for your final project.</p>
 
 </article></slide><slide class=''><hgroup><h2>Review</h2></hgroup><article  id="review">
 
@@ -163,7 +167,7 @@
 
 <ul>
 <li><p>HTML tables</p></li>
-<li><p>Texts on websites</p></li>
+<li><p>Text on websites</p></li>
 <li><p>Navigate through web forms</p></li>
 </ul>
 
@@ -314,14 +318,14 @@ pets[grep(&#39;cats&#39;, pets)]</pre>
 
 </article></slide><slide class=''><hgroup><h2>Regular expressions</h2></hgroup><article  id="regular-expressions">
 
-<p><a href='http://en.wikipedia.org/wiki/Regular_expression' title=''>Regular expressions</a> are a powerful tool for finding an manipulating strings.</p>
+<p><a href='http://en.wikipedia.org/wiki/Regular_expression' title=''>Regular expressions</a> are a powerful tool for finding and manipulating strings.</p>
 
 <p>They are special characters that can be used to search for text.</p>
 
 <p>For example:</p>
 
 <ul>
-<li><p>find characters at only the begining or ending of a string</p></li>
+<li><p>find characters at only the begining or end of a string</p></li>
 <li><p>find characters that follow or are preceeded by a particular character</p></li>
 <li><p>find only the first or last occurance of a character in a string</p></li>
 </ul>
@@ -429,6 +433,8 @@ grep(&#39;[A-Z]&#39;, base)</pre>
 
 </article></slide><slide class=''><hgroup><h2>String processing with stringer</h2></hgroup><article  id="string-processing-with-stringer">
 
+<p><br> <br> <br></p>
+
 <p>The stringr package has many helpful functions that make dealing with strings a bit <strong>easier</strong>.</p>
 
 </article></slide><slide class=''><hgroup><h2>stringr examples</h2></hgroup><article  id="stringr-examples">
@@ -457,32 +463,162 @@ str_split_fixed(trees, pattern = &#39; &#39;, n = 2)</pre>
 
 <p>The <strong>dplyr</strong> package has powerful capabilities to manipulate data frames quickly (many of the functions are written in the <a href='http://en.wikipedia.org/wiki/Compiled_language' title=''>compiled</a> language <a href='http://en.wikipedia.org/wiki/C%2B%2B' title=''>C++</a>).</p>
 
-<p>Very useful for <strong>grouped observations</strong>, e.g. countries, households.</p>
+<p>It is also useful for transforming <strong>grouped observations</strong>, e.g. countries, households.</p>
 
-</article></slide><slide class=''><hgroup><h2>Simple dplyr</h2></hgroup><article  id="simple-dplyr">
+</article></slide><slide class=''><hgroup><h2>dplyr</h2></hgroup><article  id="dplyr">
+
+<p>Set up for examples</p>
 
 <pre class = 'prettyprint lang-r'># Create fake grouped data
 library(randomNames)
+library(dplyr)
+library(tidyr)
 
 people &lt;- randomNames(n = 1000)
 people &lt;- sort(rep(people, 4))
 year &lt;- rep(2010:2013, 1000)
 trend_income &lt;- c(30000, 31000, 32000, 33000)
-income &lt;-  rep(trend_income + rnorm(4, sd = 10000), 1000)
+income &lt;-  replicate(trend_income + rnorm(4, sd = 20000), 
+                     n = 1000) %&gt;% 
+            data.frame() %&gt;%
+            gather(obs, value, X1:X1000) 
+income$value[income$value &lt; 0] &lt;- 0
+data &lt;- data.frame(people, year, income = income$value)</pre>
 
-data &lt;- data.frame(people, year, income)
+</article></slide><slide class=''><hgroup><h2>dplyr</h2></hgroup><article  id="dplyr-1">
 
-head(data)</pre>
+<pre class = 'prettyprint lang-r'>head(data)</pre>
 
-<pre >##            people year   income
-## 1    Abenes, Brim 2010 20266.91
-## 2    Abenes, Brim 2011 47409.56
-## 3    Abenes, Brim 2012 37690.70
-## 4    Abenes, Brim 2013 40604.63
-## 5 Abera, Savannah 2010 20266.91
-## 6 Abera, Savannah 2011 47409.56</pre>
+<pre >##           people year    income
+## 1 Abeyta, Kai Li 2010 40102.683
+## 2 Abeyta, Kai Li 2011     0.000
+## 3 Abeyta, Kai Li 2012 48820.536
+## 4 Abeyta, Kai Li 2013  1339.957
+## 5 Abraham, Kevin 2010  1488.555
+## 6 Abraham, Kevin 2011 47398.903</pre>
 
-</article></slide><slide class=''><hgroup><h2>Seminar: Web scraping and data transformations</h2></hgroup><article  id="seminar-web-scraping-and-data-transformations">
+</article></slide><slide class=''><hgroup><h2>Simple dplyr</h2></hgroup><article  id="simple-dplyr">
+
+<p>Select rows</p>
+
+<pre class = 'prettyprint lang-r'>higher_income &lt;- filter(data, income &gt; 60000)
+
+head(higher_income)</pre>
+
+<pre >##                   people year   income
+## 1           Adam, Arturo 2013 68765.78
+## 2         Afalava, Kevin 2012 80282.32
+## 3 Aguilar Mares, Maribel 2011 78877.10
+## 4       Aguilar, Chelsea 2010 62845.84
+## 5       Alexander, Sasha 2012 87928.80
+## 6        Alphonse, Jeana 2013 79525.74</pre>
+
+</article></slide><slide class=''><hgroup><h2>Simple dplyr</h2></hgroup><article  id="simple-dplyr-1">
+
+<p>Select columns</p>
+
+<pre class = 'prettyprint lang-r'>people_income &lt;- select(data, people, income)
+
+# OR
+
+people_income &lt;- select(data, -year)
+
+head(people_income)</pre>
+
+<pre >##           people    income
+## 1 Abeyta, Kai Li 40102.683
+## 2 Abeyta, Kai Li     0.000
+## 3 Abeyta, Kai Li 48820.536
+## 4 Abeyta, Kai Li  1339.957
+## 5 Abraham, Kevin  1488.555
+## 6 Abraham, Kevin 47398.903</pre>
+
+</article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data">
+
+<p>Tell dplyr what the groups are in the data with <code>group_by</code>.</p>
+
+<pre class = 'prettyprint lang-r'>group_data &lt;- group_by(data, people)
+head(group_data)[1:5, ]</pre>
+
+<pre >## Source: local data frame [5 x 3]
+## Groups: people
+## 
+##           people year    income
+## 1 Abeyta, Kai Li 2010 40102.683
+## 2 Abeyta, Kai Li 2011     0.000
+## 3 Abeyta, Kai Li 2012 48820.536
+## 4 Abeyta, Kai Li 2013  1339.957
+## 5 Abraham, Kevin 2010  1488.555</pre>
+
+<p>Note: all of the following functions work on <strong>non-grouped data</strong> as well.</p>
+
+</article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data-1">
+
+<p>Now that we have declared the data as grouped, we can do operations on each group.</p>
+
+<p>For example, we can extract the highest and lowest income years for each person:</p>
+
+<pre class = 'prettyprint lang-r'>min_max_income &lt;- summarize(group_data, 
+                            min_income = min(income),
+                            max_income = max(income))
+head(min_max_income)[1:3, ]</pre>
+
+<pre >## Source: local data frame [3 x 3]
+## 
+##           people min_income max_income
+## 1 Abeyta, Kai Li      0.000   48820.54
+## 2 Abraham, Kevin   1488.555   47398.90
+## 3    Aceves, Luz  10557.127   30452.68</pre>
+
+</article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data-2">
+
+<p>We can sort the data using <code>arrange</code>.</p>
+
+<pre class = 'prettyprint lang-r'># Sort highest income for each person in ascending order
+ascending &lt;- arrange(min_max_income, max_income)
+head(ascending)[1:3, ]</pre>
+
+<pre >## Source: local data frame [3 x 3]
+## 
+##            people min_income max_income
+## 1   Castro, Leroy          0   8725.549
+## 2 Hammond, Selena          0  12350.093
+## 3      Bamaw, Zoe          0  15366.856</pre>
+
+</article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data-3">
+
+<p>Add <code>desc</code> to sort in descending order</p>
+
+<pre class = 'prettyprint lang-r'>descending &lt;- arrange(min_max_income, desc(max_income))
+head(descending)[1:3, ]</pre>
+
+<pre >## Source: local data frame [3 x 3]
+## 
+##           people min_income max_income
+## 1    Chen, Julio  20254.967   107347.7
+## 2 Dishmon, Aarti  26355.232   107031.2
+## 3 Green, Heather   5800.514   106362.8</pre>
+
+</article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data-4">
+
+<p><code>summarize</code> creates a new data frame with the summarised data.</p>
+
+<p>We can use <code>mutate</code> to add new columns to the original data frame.</p>
+
+<pre class = 'prettyprint lang-r'>data &lt;- mutate(group_data, 
+                min_income = min(income),
+                max_income = max(income))
+head(data)[1:3, ]</pre>
+
+<pre >## Source: local data frame [3 x 5]
+## Groups: people
+## 
+##           people year   income min_income max_income
+## 1 Abeyta, Kai Li 2010 40102.68          0   48820.54
+## 2 Abeyta, Kai Li 2011     0.00          0   48820.54
+## 3 Abeyta, Kai Li 2012 48820.54          0   48820.54</pre>
+
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Seminar: Web scraping and data transformations</h2></hgroup><article  id="seminar-web-scraping-and-data-transformations">
 
 <p><strong>Scrape</strong> and <strong>clean</strong> the Medal Table from <a href='http://www.bbc.com/sport/winter-olympics/2014/medals/countries' title=''>http://www.bbc.com/sport/winter-olympics/2014/medals/countries</a>.</p>
 
@@ -490,9 +626,9 @@ head(data)</pre>
 <li>Also, sort by total medals in <strong>descending order</strong>.</li>
 </ul>
 
-<p><br> <br></p>
+<p><br></p>
 
-<p>Work on gathering data and cleaning for <strong>Assignment 3</strong>.</p></article></slide>
+<p>Work on <strong>gathering data and cleaning</strong> for <strong>Assignment 3</strong>.</p></article></slide>
 
 
   <slide class="backdrop"></slide>
