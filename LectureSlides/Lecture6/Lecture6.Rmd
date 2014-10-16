@@ -355,7 +355,7 @@ All values are assigned to a **variable** and an **observation**.
 
 <br>
 
-1. Each variable forms a column
+1. Each variable forms a column.
 
 2. Each observation forms a row.
 
@@ -378,7 +378,7 @@ First identify what your observations and variables are.
 
 Then use R tools to convert your data into this format.
 
-tidyr and its predecessor reshape2 are particularly useful.
+**tidyr** and its predecessor **reshape2** are particularly useful.
 
 ## Messy to tidy data
 
