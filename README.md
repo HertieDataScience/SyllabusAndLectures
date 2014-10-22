@@ -292,7 +292,7 @@ The transition of publishing from static mediums such as print journals and book
 
 - [d3.js](http://d3js.org/)
 
-- Sigal, Mathew. 2011. [Make it Pretty: An Graphical Post-Processing with Adobe Illustrator](http://www.psych.yorku.ca/quantmethods/BrownBag/Sigal-2011-Post-Processing-Handouts.pdf). Presentation to York University Department of Psychology Quantitative Methods Brownbag.
+- Sigal, Mathew. 2011. [Make it Pretty: An Graphical Post-Processing with Adobe Illustrator](https://4aeb9508-a-62cb3a1a-s-sites.googlegroups.com/site/matthewsigal/teaching/Sigal-2011-Post-Processing-Handouts.pdf?attachauth=ANoY7cofvfsNzK3PAtJVKM04n5w_eMlJoFb4x2vANV6tPyiFXmb9TSCK4fKy6aKXmZPoj4hkblLr6Sdr50eliXtuN8VtIsqr5P0R4kkrZfXDzAn9nZlRdroAaIT8XVqNRuaR0Kbl90_F1HvJLuID2QkxbZv6Ft4UpkbOD1ahe94iHjSKmcKlD1hM-hjL90Nybj9WVS5DGdM-tVReWYDoI-_PtxjgYdS9lZJ3Jz5uf1CWptYE5YSzRRU1XLmPwCkD-PwzYvWtDDTT&attredirects=0). Presentation to York University Department of Psychology Quantitative Methods Brownbag.
 
 ## Part V: Collaborative research project
 
