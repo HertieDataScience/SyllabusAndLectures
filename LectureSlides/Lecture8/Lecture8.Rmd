@@ -1,0 +1,49 @@
+---
+title: 'MPP-E1180 Lecture 8: Statistical Modeling with R'
+author: "Christopher Gandrud"
+date: "6 November 2014"
+output:
+  ioslides_presentation:
+    css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
+    logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
+---
+
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
+
+- Assignment 3
+
+- Review
+
+
+
+## Assignment 3
+
+**Purpose**: Gather, clean, and analyse data
+
+**Deadline**: 14 November 2015
+
+You will submit a GitHub repo that:
+
+- Gathers web-based data from at least **two sources**. Cleans and merges the
+data so that it is ready for statistical analyses.
+
+- Conducts basic descriptive and inferential statistics with the data to address
+a relevant research question.
+
+- Briefly describes the results including with dynamically generated tables and
+figures.
+
+- Has a write up of 1,500 words maximum that describes the data gathering and analysis
+and uses literate programming.
+
+## Assignment 3
+
+<br>
+<br>
+<br>
+
+This is ideally a **good first run** at the data gathering and analysis for your
+final project.
+
+## Review

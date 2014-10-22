@@ -32,10 +32,10 @@ You will submit a GitHub repo that:
 - Gathers web-based data from at least **two sources**. Cleans and merges the
 data so that it is ready for statistical analyses.
 
-- Conducts basic descriptive and inferential statistics with the data to address 
+- Conducts basic descriptive and inferential statistics with the data to address
 a relevant research question.
 
-- Briefly describes the results including with dynamically generated tables and 
+- Briefly describes the results including with dynamically generated tables and
 figures.
 
 - Has a write up of 1,500 words maximum that describes the data gathering and analysis
@@ -47,7 +47,7 @@ and uses literate programming.
 <br>
 <br>
 
-This is ideally a **good first run** at the data gathering and analysis for your 
+This is ideally a **good first run** at the data gathering and analysis for your
 final project.
 
 ## Review
@@ -58,13 +58,13 @@ What is open public data?
 
 What is a data API?
 
-What is tidy data?
+What are the characteristics of tidy data?
 
 Why are unique observation IDs so important for data cleaning?
 
 ## Caveat to Web scraping
 
-Caveat: I don't expect you to master or even use the tools of web scraping.
+I don't expect you to master the tools of web scraping in this course.
 
 I just want you to know that these things are possible, so that you know where to
 turn in future work.
@@ -74,19 +74,19 @@ turn in future work.
 [Web scraping](http://en.wikipedia.org/wiki/Web_scraping) simply means gathering
 data from websites.
 
-Last class we learned a particular form of web scraping: downloading explicitly 
+Last class we learned a particular form of web scraping: downloading explicitly
 structured data files/data APIs.
 
-You can also download information that is not as well structured for statistical 
+You can also download information that is not as well structured for statistical
 analysis:
 
 - HTML tables
 
 - Text on websites
 
-- Navigate through web forms
+- Information that requires you to navigate through web forms
 
-To really master you need a good knowledge of HTML.
+To really master web scraping you need a good knowledge of HTML.
 
 ## Key tools
 
@@ -96,12 +96,12 @@ The most basic tools for web scraping in R:
 
 - [httr](https://github.com/hadley/httr): gather data + simple parsing
 
-- [XML](http://cran.r-project.org/web/packages/XML/index.html): more advanced 
+- [XML](http://cran.r-project.org/web/packages/XML/index.html): more advanced
 parsing
 
-    + [Parsing](http://en.wikipedia.org/wiki/Parsing): the analysis of HTML 
-    (and other) markup so that each element is syntactically related in a 
-    **parse tree**. 
+    + [Parsing](http://en.wikipedia.org/wiki/Parsing): the analysis of HTML
+    (and other) markup so that each element is syntactically related in a
+    **parse tree**.
 
 ## Key steps:
 
@@ -112,8 +112,8 @@ parsing
 3. **Extract** the content from the request with `content`.
 
     + You can extract either the raw text with `as = 'text'` or parse the content
-    with `as = 'parsed'`. 
-    
+    with `as = 'parsed'`.
+
 4. **Clean** parsed content (there are many tools for this suited to a variety of
 problems).
 
@@ -121,11 +121,11 @@ problems).
 
 Scrape [BBC's MP's Expenses table](http://news.bbc.co.uk/2/hi/uk_news/politics/8044207.stm).
 
-HTML markup marks tables using `<table>` tags. 
+HTML markup marks tables using `<table>` tags.
 
 We can use these to extract tabular information and convert them into data frames.
 
-In particular we want the table tag with the id `expenses_table`.
+In particular, we want the table tag with the id `expenses_table`.
 
 ## Viewing the web pages source
 
@@ -141,8 +141,8 @@ library(XML)
 URL <- 'http://news.bbc.co.uk/2/hi/uk_news/politics/8044207.stm'
 
 # Get and parse all tables on the webpage
-tables <- URL %>% GET() %>% 
-            content(as = 'parsed') %>% 
+tables <- URL %>% GET() %>%
+            content(as = 'parsed') %>%
             readHTMLTable()
 
 names(tables)
@@ -181,20 +181,20 @@ or other strange things will happen to the text.
 
 NOTE: remember to always check your data when you import it!
 
-This often happens when R is using the **wrong character encoding**. 
+This often happens when R is using the **wrong character encoding**.
 
 ## Character encoding
 
 All characters in a computer are **encoded** using some standardised system.
 
-R can recognise [latin1](http://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block)) 
+R can recognise [latin1](http://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block))
 and [UTF-8](http://en.wikipedia.org/wiki/UTF-8).
 
-- latin1 is fairly limited (mostly to the latin alphabet) 
+- latin1 is fairly limited (mostly to the latin alphabet)
 
 - UTF-8 covers a much wider range of characters in many languages
 
-You may need to use the `iconv` function to convert a text to UTF-8 before 
+You may need to use the `iconv` function to convert a text to UTF-8 before
 trying to process it.
 
 ## `grep`, `gsub`, and related functions
@@ -202,7 +202,7 @@ trying to process it.
 <br>
 <br>
 
-R (and many programing languages) have functions for **identifying** and 
+R (and many programing languages) have functions for **identifying** and
 **manipulating** strings.
 
 ## Matching
@@ -220,6 +220,15 @@ grepl(pattern = 'cat', pets)
 pets[grep('cats', pets)]
 ```
 
+## Terminology
+
+<br>
+<br>
+<br>
+
+grep stands for: **G**lobally search a **R**egular **E**xpression and
+**P**rint
+
 ## Manipulation
 
 Use `gsub` to substitute strings.
@@ -230,7 +239,7 @@ gsub(pattern = 'big', replacement = 'small', x = pets)
 
 ## Regular expressions
 
-[Regular expressions](http://en.wikipedia.org/wiki/Regular_expression) are a 
+[Regular expressions](http://en.wikipedia.org/wiki/Regular_expression) are a
 powerful tool for finding and manipulating strings.
 
 They are special characters that can be used to search for text.
@@ -250,7 +259,7 @@ Many more possibilities.
 Examples modified from [Robin Lovelace](http://www.r-bloggers.com/regular-expressions-in-r-vs-rstudio/).
 
 ```{r}
-base <- c("cat16_24", "25_34cat", "35_44catch", 
+base <- c("cat16_24", "25_34cat", "35_44catch",
           "45_54Cat", "55_4fat$", 'colour', 'color')
 
 ## Find only all 'cat' regardles of case
@@ -313,7 +322,7 @@ grep('[A-Z]', base)
 <br>
 
 The stringr package has many helpful functions that make dealing with strings a
-bit **easier**. 
+bit **easier**.
 
 ## stringr examples
 
@@ -339,12 +348,12 @@ str_split_fixed(trees, pattern = ' ', n = 2)
 ## More data transformations with dplyr
 
 The **dplyr** package has powerful capabilities to manipulate data frames quickly
-(many of the functions are written in the 
-[compiled](http://en.wikipedia.org/wiki/Compiled_language) language 
+(many of the functions are written in the
+[compiled](http://en.wikipedia.org/wiki/Compiled_language) language
 [C++](http://en.wikipedia.org/wiki/C%2B%2B)).
 
-It is also useful for transforming **grouped observations**, e.g. countries, 
-households.
+It is also useful for transforming data from **grouped observations**, e.g.
+countries, households.
 
 ## dplyr
 
@@ -360,15 +369,15 @@ people <- randomNames(n = 1000)
 people <- sort(rep(people, 4))
 year <- rep(2010:2013, 1000)
 trend_income <- c(30000, 31000, 32000, 33000)
-income <-  replicate(trend_income + rnorm(4, sd = 20000), 
-                     n = 1000) %>% 
+income <-  replicate(trend_income + rnorm(4, sd = 20000),
+                     n = 1000) %>%
             data.frame() %>%
-            gather(obs, value, X1:X1000) 
+            gather(obs, value, X1:X1000)
 income$value[income$value < 0] <- 0
 data <- data.frame(people, year, income = income$value)
 ```
 
-## dplyr 
+## dplyr
 
 ```{r}
 head(data)
@@ -416,13 +425,13 @@ Now that we have declared the data as grouped, we can do operations on each grou
 For example, we can extract the highest and lowest income years for each person:
 
 ```{r}
-min_max_income <- summarize(group_data, 
+min_max_income <- summarize(group_data,
                             min_income = min(income),
                             max_income = max(income))
 head(min_max_income)[1:3, ]
 ```
 
-## dplyr with grouped data 
+## dplyr with grouped data
 
 We can sort the data using `arrange`.
 
@@ -432,7 +441,7 @@ ascending <- arrange(min_max_income, max_income)
 head(ascending)[1:3, ]
 ```
 
-## dplyr with grouped data 
+## dplyr with grouped data
 
 Add `desc` to sort in descending order
 
@@ -441,14 +450,14 @@ descending <- arrange(min_max_income, desc(max_income))
 head(descending)[1:3, ]
 ```
 
-## dplyr with grouped data 
+## dplyr with grouped data
 
-`summarize` creates a new data frame with the summarised data. 
+`summarize` creates a new data frame with the summarised data.
 
 We can use `mutate` to add new columns to the original data frame.
 
 ```{r}
-data <- mutate(group_data, 
+data <- mutate(group_data,
                 min_income = min(income),
                 max_income = max(income))
 head(data)[1:3, ]
@@ -456,7 +465,7 @@ head(data)[1:3, ]
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Web scraping and data transformations
 
-**Scrape** and **clean** the Medal Table from 
+**Scrape** and **clean** the Medal Table from
 <http://www.bbc.com/sport/winter-olympics/2014/medals/countries>.
 
 - Also, sort by total medals in **descending order**.
