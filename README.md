@@ -4,7 +4,7 @@
 
 ### Fall 2014
 
-**Version: *15 October 2014***
+**Version: *23 October 2014***
 
 ### Instructor: Christopher Gandrud
 
@@ -246,11 +246,14 @@ with the [dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introducti
 
 ### Week 8: Statistical Modelling with R
 
-We will learn how to fit and evaluate a variety of statistical models using the R language, including simple linear models and logistic regression models for categorical dependent data.
+We will learn how to fit and evaluate a variety of statistical models using the
+R language, including simple linear models and logistic regression models for
+binary dependent variables.
 
 #### Readings:
 
-- Ch. 7-8: Crawley, Michael J. 2005. Statistics: An Introduction Using R. John Wiley and Sons Ltd., Chichester.
+- Ch. 7-8, 11: Crawley, Michael J. 2005. Statistics: An Introduction Using R.
+John Wiley and Sons Ltd., Chichester.
 
 
 ## Part IV: Communicating results from statistical analyses

@@ -47,3 +47,7 @@ This is ideally a **good first run** at the data gathering and analysis for your
 final project.
 
 ## Review
+
+- What is web scraping? What are some of tools R has for web scraping?
+
+- 
