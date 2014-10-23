@@ -248,12 +248,19 @@ with the [dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introducti
 
 We will learn how to fit and evaluate a variety of statistical models using the
 R language, including simple linear models and logistic regression models for
-binary dependent variables.
+binary dependent variables. We will also discuss basic techniques for model checking and showing
+results from these models.
 
 #### Readings:
 
 - Ch. 7-8, 11: Crawley, Michael J. 2005. Statistics: An Introduction Using R.
 John Wiley and Sons Ltd., Chichester.
+
+*Reading Extras*
+
+King, Gary, Micheal Tomz, and Jason Wittenberg. 2001. [Making the Most of
+Statistical Analyses: Improving interpretation and presentation](http://gking.harvard.edu/files/gking/files/making.pdf).
+*American Journal of Political Science*. 22(4): 341–355.
 
 
 ## Part IV: Communicating results from statistical analyses

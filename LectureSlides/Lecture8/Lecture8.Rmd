@@ -15,7 +15,13 @@ output:
 
 - Review
 
+- Introduction to the general syntax for statistical modelling in R.
 
+- Specific examples using:
+
+    + Normal Linear regression
+
+    + Logistic regression
 
 ## Assignment 3
 
@@ -50,4 +56,67 @@ final project.
 
 - What is web scraping? What are some of tools R has for web scraping?
 
-- 
+- What are regular expressions (give at least two examples)? Why are they useful?
+
+- What dplyr functions can you use to create a new variable in a data frame by
+running a command on values from groups in that data frame?
+
+## Statistical Modelling in R
+
+**Caveat**: We are definitely not going to cover anywhere near R's full
+capabilities for statistical modeling.
+
+We are also not going to cover all of the modeling concerns/diagnostics you need
+to consider when using a given model.
+
+<i class="fa fa-question"></i> What are we going to do?
+
+- Discuss the basic syntax and capabilities in R for estimating normal linear
+and logistic regressions.
+
+- Basic model checking.
+
+- Discuss basic ways of interpreting results.
+
+## The basic model
+
+Most statistical models you will likely estimate are from a general class that
+has **two parts**:
+
+**Stocastic Component** that generates the dependent variable $Y_{i}$ as a
+random draw from the probability density function:
+
+$$
+Y_{i} \sim f(\theta_{i},\: \alpha)
+$$
+
+- $\theta_{i}$: parameter vector of the part of the function that varies between observations.
+
+- $\alpha$: matrix of non-varying parameters.
+
+## The basic model
+
+The **systematic component** indicating how $\theta_{i}$ varies across
+observations depending on values of the explanatory variables and (often)
+some constant:
+
+$$
+\theta_{i} = g(X_{i},\: \beta)
+$$
+
+- $X_{i}$: a $1\: x\: k$ vector of explanatory variables.
+
+- $\beta$: a $1\: x\: k$ vector of parameters (i.e. coefficients).
+
+- $g(.,\: .)$: the "link function", specifying how the explanatory
+variables and parameters are translated into $\theta_{i}$.
+
+## Today
+
+Today we will cover two variations of this general model:
+
+- linear-normal regression (i.e. ordinary least squares)
+
+- logit model
+
+## Linear-normal regression
