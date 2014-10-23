@@ -177,6 +177,8 @@ Y_{i} \sim f(\theta_{i},\: \alpha)
 <li><p>\(\alpha\): matrix of non-varying parameters.</p></li>
 </ul>
 
+<p>Sometimes referred to as the &#39;error structure&#39;.</p>
+
 </article></slide><slide class=''><hgroup><h2>The basic model</h2></hgroup><article  id="the-basic-model-1">
 
 <p>The <strong>systematic component</strong> indicating how \(\theta_{i}\) varies across observations depending on values of the explanatory variables and (often) some constant:</p>
@@ -186,9 +188,9 @@ Y_{i} \sim f(\theta_{i},\: \alpha)
 \]</p>
 
 <ul>
-<li><p>\(X_{i}\): a \(1\: x\: k\) vector of explanatory variables.</p></li>
-<li><p>\(\beta\): a \(1\: x\: k\) vector of parameters (i.e. coefficients).</p></li>
-<li><p>\(g(.,\: .)\): the &quot;link function&quot;, specifying how the explanatory variables and parameters are translated into \(\theta_{i}\).</p></li>
+<li><p>\(X_{i}\): a \(1\: \mathrm{x}\: k\) vector of explanatory variables.</p></li>
+<li><p>\(\beta\): a \(1\: \mathrm{x}\: k\) vector of parameters (i.e. coefficients).</p></li>
+<li><p>\(g(.,.)\): the &quot;link function&quot;, specifying how the explanatory variables and parameters are translated into \(\theta_{i}\).</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Today</h2></hgroup><article  id="today">
@@ -200,7 +202,89 @@ Y_{i} \sim f(\theta_{i},\: \alpha)
 <li><p>logit model</p></li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>Linear-normal regression</h2></hgroup><article  id="linear-normal-regression"></article></slide>
+</article></slide><slide class=''><hgroup><h2>Linear-normal regression</h2></hgroup><article  id="linear-normal-regression">
+
+<p>For continuous dependent variables assume that \(Y_{i}\) is from the <strong>normal distribution</strong> (\(N(.,.)\)).</p>
+
+<p>Set the main parameter vector \(\theta_{i}\) to the scalar mean of: \(\theta_{i} = E(y_{i})= \mu_{i}\).</p>
+
+<p>Assume the ancillary parameter matrix is the scalar homoskedastic variance: \(\alpha = V(Y_{i}) = \sigma^2\).</p>
+
+<ul>
+<li><strong>Homoskedastic variance</strong>: variance does not depend on the value of \(x\). The standard deviation of the error terms is constant across values of \(x\).</li>
+</ul>
+
+<p>Set the systematic component to the linear form: \(g(X_{i},\: \beta) = X_{i}\beta = \beta_{0} + X_{i1}\beta_{1} + \ldots\).</p>
+
+</article></slide><slide class=''><hgroup><h2>Linear-normal regression</h2></hgroup><article  id="linear-normal-regression-1">
+
+<p><br></p>
+
+<p>So:</p>
+
+<p>\[
+Y_{i} \sim N(\mu_{i},\: \sigma^2), \:\:\: \mu_{i} = X_{i}\beta
+\]</p>
+
+</article></slide><slide class=''><hgroup><h2>Logit regression</h2></hgroup><article  id="logit-regression">
+
+<p>For binary data (e.g. 0, 1) we can assume that the stochastic component has a Bernoulli distribution.</p>
+
+<p>The main parameter is \(\pi_{i} = \mathrm{Pr}(Y_{i} = 1)\).</p>
+
+<p>The systematic component is set to a logistic form: \(\pi_{i} = \frac{1}{1 + e^{-X_{i}\beta}}\).</p>
+
+<p>So:</p>
+
+<p>\[
+Y_{i} \sim \mathrm{Bernoulli}(\pi_{i}), \:\:\: \pi_{i} = \frac{1}{1 + e^{-X_{i}\beta}}
+\]</p>
+
+</article></slide><slide class=''><hgroup><h2>R syntax</h2></hgroup><article  id="r-syntax">
+
+<p>The general syntax for estimating statistical models in are is:</p>
+
+<pre class = 'prettyprint lang-r'>response variable ~ explanatory variable(s)</pre>
+
+<p>Where <code>~</code> reads &#39;is modelled as a function of&#39;.</p>
+
+</article></slide><slide class=''><hgroup><h2>Model functions</h2></hgroup><article  id="model-functions">
+
+<p>We use model functions to specify the specific model structure.</p>
+
+<p>Basic model functions include:</p>
+
+<ul>
+<li><p><code>lm</code>: fits a linear model where \(Y\) is assumed to be normally distributed and with homoskedastic variance.</p></li>
+<li><p><code>glm</code>: allows the fitting of many Generalised Linear Models. Lets you specify the \(Y\)&#39;s distribution <code>family</code> and the <code>link</code> function.</p></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Example of <code>lm</code></h2></hgroup><article  id="example-of-lm">
+
+<p>Example data <em>Prestige</em> (example based on <a href='http://www.princeton.edu/~otorres/Regression101R.pdf' title=''>http://www.princeton.edu/~otorres/Regression101R.pdf</a>).</p>
+
+<p>The observations are <strong>occupations</strong> and the dependent variable is a score of each occupations <strong>prestige</strong>.</p>
+
+</article></slide><slide class=''><hgroup><h2>Example of <code>lm</code></h2></hgroup><article  id="example-of-lm-1">
+
+<pre class = 'prettyprint lang-r'>library(car)
+data(Prestige)
+summary(Prestige)</pre>
+
+<pre >##    education          income          women           prestige    
+##  Min.   : 6.380   Min.   :  611   Min.   : 0.000   Min.   :14.80  
+##  1st Qu.: 8.445   1st Qu.: 4106   1st Qu.: 3.592   1st Qu.:35.23  
+##  Median :10.540   Median : 5930   Median :13.600   Median :43.60  
+##  Mean   :10.738   Mean   : 6798   Mean   :28.979   Mean   :46.83  
+##  3rd Qu.:12.648   3rd Qu.: 8187   3rd Qu.:52.203   3rd Qu.:59.27  
+##  Max.   :15.970   Max.   :25879   Max.   :97.510   Max.   :87.20  
+##      census       type   
+##  Min.   :1113   bc  :44  
+##  1st Qu.:3120   prof:31  
+##  Median :5135   wc  :23  
+##  Mean   :5402   NA&#39;s: 4  
+##  3rd Qu.:8312            
+##  Max.   :9517</pre></article></slide>
 
 
   <slide class="backdrop"></slide>

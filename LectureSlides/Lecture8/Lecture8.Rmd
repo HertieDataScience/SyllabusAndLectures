@@ -94,6 +94,8 @@ $$
 
 - $\alpha$: matrix of non-varying parameters.
 
+Sometimes referred to as the 'error structure'.
+
 ## The basic model
 
 The **systematic component** indicating how $\theta_{i}$ varies across
@@ -104,11 +106,12 @@ $$
 \theta_{i} = g(X_{i},\: \beta)
 $$
 
-- $X_{i}$: a $1\: x\: k$ vector of explanatory variables.
+- $X_{i}$: a $1\: \mathrm{x}\: k$ vector of explanatory variables.
 
-- $\beta$: a $1\: x\: k$ vector of parameters (i.e. coefficients).
+- $\beta$: a $1\: \mathrm{x}\: k$ vector of parameters
+(i.e. coefficients).
 
-- $g(.,\: .)$: the "link function", specifying how the explanatory
+- $g(.,.)$: the "link function", specifying how the explanatory
 variables and parameters are translated into $\theta_{i}$.
 
 ## Today
@@ -120,3 +123,81 @@ Today we will cover two variations of this general model:
 - logit model
 
 ## Linear-normal regression
+
+For continuous dependent variables assume that $Y_{i}$ is from the
+ **normal distribution** ($N(.,.)$).
+
+Set the main parameter vector $\theta_{i}$ to the scalar mean of: $\theta_{i} = E(y_{i})= \mu_{i}$.
+
+Assume the ancillary parameter matrix is the scalar homoskedastic variance: $\alpha = V(Y_{i}) = \sigma^2$.
+
+- **Homoskedastic variance**: variance does not depend on the value of $x$. The standard deviation of the error terms is constant across values of $x$.
+
+Set the systematic component to the linear form:
+$g(X_{i},\: \beta) = X_{i}\beta =  \beta_{0} + X_{i1}\beta_{1} + \ldots$.
+
+## Linear-normal regression
+
+<br>
+
+So:
+
+$$
+Y_{i} \sim N(\mu_{i},\: \sigma^2), \:\:\: \mu_{i} = X_{i}\beta
+$$
+
+## Logit regression
+
+For binary data (e.g. 0, 1) we can assume that the stochastic component has a
+Bernoulli distribution.
+
+The main parameter is $\pi_{i} = \mathrm{Pr}(Y_{i} = 1)$.
+
+The systematic component is set to a logistic form:
+$\pi_{i} = \frac{1}{1 + e^{-X_{i}\beta}}$.
+
+So:
+
+$$
+Y_{i} \sim \mathrm{Bernoulli}(\pi_{i}), \:\:\: \pi_{i} = \frac{1}{1 + e^{-X_{i}\beta}}
+$$
+
+## R syntax
+
+The general syntax for estimating statistical models in are is:
+
+
+```{r, eval=FALSE}
+response variable ~ explanatory variable(s)
+```
+
+Where `~` reads 'is modelled as a function of'.
+
+## Model functions
+
+We use model functions to specify the specific model structure.
+
+Basic model functions include:
+
+- `lm`: fits a linear model where $Y$ is assumed to be normally distributed 
+and with homoskedastic variance.
+
+- `glm`: allows the fitting of many Generalised Linear Models. Lets you specify 
+the $Y$'s distribution `family` and the `link` function.
+
+## Example of `lm` 
+
+Example data *Prestige* (example based on 
+<http://www.princeton.edu/~otorres/Regression101R.pdf>). 
+
+The observations are **occupations** and the dependent variable is a score of 
+each occupations **prestige**.
+
+## Example of `lm`
+
+```{r}
+library(car)
+data(Prestige)
+summary(Prestige)
+```
+
