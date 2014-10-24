@@ -40,8 +40,8 @@ a relevant research question.
 - Briefly describes the results including with dynamically generated tables and
 figures.
 
-- Has a write up of 1,500 words maximum that describes the data gathering and analysis
-and uses literate programming.
+- Has a write up of 1,500 words maximum that describes the data gathering and
+analysis and uses literate programming.
 
 ## Assignment 3
 
@@ -49,14 +49,15 @@ and uses literate programming.
 <br>
 <br>
 
-This is ideally a **good first run** at the data gathering and analysis for your
-final project.
+This is ideally a **good first run** at the data gathering and analysis for
+your final project.
 
 ## Review
 
 - What is web scraping? What are some of tools R has for web scraping?
 
-- What are regular expressions (give at least two examples)? Why are they useful?
+- What are regular expressions (give at least two examples)? Why are they
+useful?
 
 - What dplyr functions can you use to create a new variable in a data frame by
 running a command on values from groups in that data frame?
@@ -90,7 +91,8 @@ $$
 Y_{i} \sim f(\theta_{i},\: \alpha)
 $$
 
-- $\theta_{i}$: parameter vector of the part of the function that varies between observations.
+- $\theta_{i}$: parameter vector of the part of the function that varies between
+observations.
 
 - $\alpha$: matrix of non-varying parameters.
 
@@ -127,11 +129,14 @@ Today we will cover two variations of this general model:
 For continuous dependent variables assume that $Y_{i}$ is from the
  **normal distribution** ($N(.,.)$).
 
-Set the main parameter vector $\theta_{i}$ to the scalar mean of: $\theta_{i} = E(y_{i})= \mu_{i}$.
+Set the main parameter vector $\theta_{i}$ to the scalar mean of:
+$\theta_{i} = E(y_{i})= \mu_{i}$.
 
-Assume the ancillary parameter matrix is the scalar homoskedastic variance: $\alpha = V(Y_{i}) = \sigma^2$.
+Assume the ancillary parameter matrix is the scalar homoskedastic variance:
+$\alpha = V(Y_{i}) = \sigma^2$.
 
-- **Homoskedastic variance**: variance does not depend on the value of $x$. The standard deviation of the error terms is constant across values of $x$.
+- **Homoskedastic variance**: variance does not depend on the value of $x$.
+The standard deviation of the error terms is constant across values of $x$.
 
 Set the systematic component to the linear form:
 $g(X_{i},\: \beta) = X_{i}\beta =  \beta_{0} + X_{i1}\beta_{1} + \ldots$.
@@ -179,18 +184,18 @@ We use model functions to specify the specific model structure.
 
 Basic model functions include:
 
-- `lm`: fits a linear model where $Y$ is assumed to be normally distributed 
+- `lm`: fits a linear model where $Y$ is assumed to be normally distributed
 and with homoskedastic variance.
 
-- `glm`: allows the fitting of many Generalised Linear Models. Lets you specify 
+- `glm`: allows the fitting of many Generalised Linear Models. Lets you specify
 the $Y$'s distribution `family` and the `link` function.
 
-## Example of `lm` 
+## Example of `lm`
 
-Example data *Prestige* (example based on 
-<http://www.princeton.edu/~otorres/Regression101R.pdf>). 
+Example data *Prestige* (example based on
+<http://www.princeton.edu/~otorres/Regression101R.pdf>).
 
-The observations are **occupations** and the dependent variable is a score of 
+The observations are **occupations** and the dependent variable is a score of
 each occupations **prestige**.
 
 ## Example of `lm`
@@ -198,6 +203,236 @@ each occupations **prestige**.
 ```{r}
 library(car)
 data(Prestige)
-summary(Prestige)
 ```
 
+## Examine correlation matrix
+
+```{r}
+car::scatterplotMatrix(Prestige)
+```
+
+
+## Example of `lm`
+
+Estimate simple model:
+
+```{r}
+M1 <- lm(prestige ~ education, data = Prestige)
+```
+
+## Example of `lm`
+
+```{r}
+summary(M1)
+```
+
+## Find confidence intervals of parameter estimates
+
+Note: **Always prefer estimation intervals** over point estimates.
+
+Deal with your **uncertainty**!
+
+```{r}
+confint(M1)
+```
+
+## Example of `lm`
+
+Estimate model with categorical variable:
+
+```{r}
+M2 <- lm(prestige ~ education + type, 
+         data = Prestige)
+```
+
+## Example of `lm`
+
+```{r}
+summary(M2)
+```
+
+## Create categorical variable from continuous variable
+
+Use the `cut` function to create a categorical (factor) variable from a
+continuous variable.
+
+```{r}
+Prestige$income_cat <- cut(Prestige$income,
+                breaks = c(0, 4999, 9999, 14999, 30000),
+                labels = c('< 5,000', '< 10,000', '< 15,000',
+                            '>= 15,000'))
+summary(Prestige$income_cat)
+```
+
+Note: `cut` excludes the left value and includes the right value, e.g.
+$[0,\: 4999]$.
+
+## Example of `lm`
+
+```{r}
+M3 <- lm(prestige ~ education + income_cat, 
+         data = Prestige)
+confint(M3)
+```
+
+## Example of `lm`
+
+Estimate models with polynomial transformations:
+
+```{r}
+# Cubic polynomial transformation
+M4  <- lm(prestige ~ education + poly(income, 2), 
+          data = Prestige)
+confint(M4)
+```
+
+## Example of `lm`
+
+Estimate models with (natural) logarithmic transformations:
+
+```{r}
+# Cubic polynomial transformation
+M5  <- lm(prestige ~ education + log(income), 
+          data = Prestige)
+```
+
+## Example of `lm`
+
+```{r}
+summary(M5)
+```
+
+## Example of `lm`
+
+Estimate model with interactions:
+
+```{r}
+M6 <- lm(prestige ~ education * type, 
+         data = Prestige)
+```
+
+## Example of `lm`
+
+```{r}
+summary(M6)
+```
+
+## Diagnose heteroscedasticity
+
+Use `plot` on a model object to run visual diagnostics.
+
+```{r}
+plot(M2, which = 1)
+```
+
+## Diagnose non-normality of errors
+
+`plot` to see if a model's errors are normally distributed.
+
+```{r}
+plot(M2, which = 2)
+```
+
+## Example of logistic regression with `glm`
+
+Example from [UCLA IDRE](http://www.ats.ucla.edu/stat/r/dae/logit.htm).
+
+Simulated data of admission to grad school.
+
+```{r}
+# Load data
+URL <- 'http://www.ats.ucla.edu/stat/data/binary.csv'
+Admission <- read.csv(URL)
+```
+
+## Example of logistic regression with `glm`
+
+```{r, warning=FALSE, message=FALSE}
+car::scatterplotMatrix(Admission)
+```
+
+## Contingency table for school rank and admission
+
+```{r}
+xtabs(~admit + rank, data = Admission)
+```
+
+## Example of logistic regression with `glm`
+
+```{r}
+Logit1 <- glm(admit ~ gre + gpa + as.factor(rank),
+              data = Admission, family = 'binomial')
+```
+
+Note: Link function is assumed to be logit if `family = 'binomial'`.
+
+## Example of logistic regression with `glm`
+
+```{r, message=FALSE}
+confint(Logit1)
+```
+
+## Interpreting logistic regression results
+
+$\beta$'s in logistic regression are interpretable as **log odds**. These are
+weird.
+
+If we exponentiate log odds we get **odds ratios**.
+
+```{r, message=FALSE}
+exp(cbind(OddsRatio = coef(Logit1), confint(Logit1)))
+```
+
+These are also weird.
+
+## Interpreting logistic regression results
+
+What we really want are **predicted probabilities**
+
+**First** create a data frame of fitted values:
+
+```{r}
+fitted <- with(Admission, 
+               data.frame(gre = mean(gre), 
+                          gpa = mean(gpa),
+                          rank = factor(1:4)))
+fitted
+```
+
+## Interpreting logistic regression results
+
+**Second** predict probability point estimates for each fitted value.
+
+```{r}
+fitted$predicted <- predict(Logit1, newdata = fitted,
+                            type = 'response')
+
+fitted
+```
+
+
+## More interpretation
+
+Next week we will explore other methods of interpreting results from regression
+models.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, cache=TRUE}
+Admission$rank <- as.factor(Admission$rank)
+
+library(Zelig)
+Z1 <- zelig(admit ~ gre + gpa + rank, cite = FALSE,
+              data = Admission, model = 'logit')
+
+setZ1 <- setx(Z1, gre = seq(220, 800, by = 1))
+
+simZ1 <- sim(Z1, x = setZ1)
+
+plot(simZ1)
+```
+
+## <i class="fa fa-arrow-circle-o-up"></i> Seminar: modeling
+
+<br>
+<br>
+
+Begin working on the statistical models for **your project**.
