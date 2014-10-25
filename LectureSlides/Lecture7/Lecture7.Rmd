@@ -90,8 +90,6 @@ To really master web scraping you need a good knowledge of HTML.
 
 ## Key tools
 
-<br>
-
 The most basic tools for web scraping in R:
 
 - [httr](https://github.com/hadley/httr): gather data + simple parsing
@@ -102,6 +100,11 @@ parsing
     + [Parsing](http://en.wikipedia.org/wiki/Parsing): the analysis of HTML
     (and other) markup so that each element is syntactically related in a
     **parse tree**.
+
+Also take a look at [rvest](https://github.com/hadley/rvest). It is a new package
+that aims to implement features form Python's popular
+[Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/).
+
 
 ## Key steps:
 

@@ -175,8 +175,6 @@
 
 </article></slide><slide class=''><hgroup><h2>Key tools</h2></hgroup><article  id="key-tools">
 
-<p><br></p>
-
 <p>The most basic tools for web scraping in R:</p>
 
 <ul>
@@ -187,6 +185,8 @@
 <li><a href='http://en.wikipedia.org/wiki/Parsing' title=''>Parsing</a>: the analysis of HTML (and other) markup so that each element is syntactically related in a <strong>parse tree</strong>.</li>
 </ul></li>
 </ul>
+
+<p>Also take a look at <a href='https://github.com/hadley/rvest' title=''>rvest</a>. It is a new package that aims to implement features form Python&#39;s popular <a href='http://www.crummy.com/software/BeautifulSoup/' title=''>Beautiful Soup</a>.</p>
 
 </article></slide><slide class=''><hgroup><h2>Key steps:</h2></hgroup><article  id="key-steps">
 
@@ -495,13 +495,13 @@ data &lt;- data.frame(people, year, income = income$value)</pre>
 
 <pre class = 'prettyprint lang-r'>head(data)</pre>
 
-<pre >##              people year   income
-## 1 Abdullahi, Dillon 2010 33347.59
-## 2 Abdullahi, Dillon 2011 51160.74
-## 3 Abdullahi, Dillon 2012 28247.58
-## 4 Abdullahi, Dillon 2013 34678.46
-## 5    Ablay, Matthew 2010 32691.41
-## 6    Ablay, Matthew 2011 23680.03</pre>
+<pre >##               people year   income
+## 1 Abdulaziz, Michael 2010 36654.27
+## 2 Abdulaziz, Michael 2011 29209.52
+## 3 Abdulaziz, Michael 2012 15182.77
+## 4 Abdulaziz, Michael 2013 37562.21
+## 5  Abeyta, Christina 2010 35203.59
+## 6  Abeyta, Christina 2011 47065.27</pre>
 
 </article></slide><slide class=''><hgroup><h2>Simple dplyr</h2></hgroup><article  id="simple-dplyr">
 
@@ -511,13 +511,13 @@ data &lt;- data.frame(people, year, income = income$value)</pre>
 
 head(higher_income)</pre>
 
-<pre >##              people year   income
-## 1  Acharya, Kenneth 2013 68700.21
-## 2  Adolfson, Robert 2011 66248.36
-## 3  Adolfson, Robert 2013 65804.74
-## 4 Agboglo, Margaret 2012 70327.53
-## 5       Allen, Guma 2012 80103.74
-## 6   Amussen, Austin 2013 70355.13</pre>
+<pre >##                      people year   income
+## 1             Acosta, Amara 2011 61314.76
+## 2              Aleman, Reno 2012 65884.78
+## 3              Amaral, Juan 2010 65257.65
+## 4              Amaral, Juan 2012 62252.48
+## 5            Arellano, Alex 2011 78273.59
+## 6 Ashcroft-Bitsilly, Jordan 2010 67987.06</pre>
 
 </article></slide><slide class=''><hgroup><h2>Simple dplyr</h2></hgroup><article  id="simple-dplyr-1">
 
@@ -531,13 +531,13 @@ people_income &lt;- select(data, -year)
 
 head(people_income)</pre>
 
-<pre >##              people   income
-## 1 Abdullahi, Dillon 33347.59
-## 2 Abdullahi, Dillon 51160.74
-## 3 Abdullahi, Dillon 28247.58
-## 4 Abdullahi, Dillon 34678.46
-## 5    Ablay, Matthew 32691.41
-## 6    Ablay, Matthew 23680.03</pre>
+<pre >##               people   income
+## 1 Abdulaziz, Michael 36654.27
+## 2 Abdulaziz, Michael 29209.52
+## 3 Abdulaziz, Michael 15182.77
+## 4 Abdulaziz, Michael 37562.21
+## 5  Abeyta, Christina 35203.59
+## 6  Abeyta, Christina 47065.27</pre>
 
 </article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data">
 
@@ -549,12 +549,12 @@ head(group_data)[1:5, ]</pre>
 <pre >## Source: local data frame [5 x 3]
 ## Groups: people
 ## 
-##              people year   income
-## 1 Abdullahi, Dillon 2010 33347.59
-## 2 Abdullahi, Dillon 2011 51160.74
-## 3 Abdullahi, Dillon 2012 28247.58
-## 4 Abdullahi, Dillon 2013 34678.46
-## 5    Ablay, Matthew 2010 32691.41</pre>
+##               people year   income
+## 1 Abdulaziz, Michael 2010 36654.27
+## 2 Abdulaziz, Michael 2011 29209.52
+## 3 Abdulaziz, Michael 2012 15182.77
+## 4 Abdulaziz, Michael 2013 37562.21
+## 5  Abeyta, Christina 2010 35203.59</pre>
 
 <p>Note: all of the following functions work on <strong>non-grouped data</strong> as well.</p>
 
@@ -571,10 +571,10 @@ head(min_max_income)[1:3, ]</pre>
 
 <pre >## Source: local data frame [3 x 3]
 ## 
-##              people min_income max_income
-## 1 Abdullahi, Dillon   28247.58   51160.74
-## 2    Ablay, Matthew   21692.20   32691.41
-## 3 Abraha, Christina   17620.85   41656.82</pre>
+##               people min_income max_income
+## 1 Abdulaziz, Michael   15182.77   37562.21
+## 2  Abeyta, Christina   34690.48   47065.27
+## 3   Abeyta, Nongkhan       0.00   24503.48</pre>
 
 </article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data-2">
 
@@ -586,10 +586,10 @@ head(ascending)[1:3, ]</pre>
 
 <pre >## Source: local data frame [3 x 3]
 ## 
-##            people min_income max_income
-## 1   Fifita, Norbu       0.00   12864.88
-## 2 Barcelona, Kang    8685.09   15439.39
-## 3 Cerqueira, Zoua       0.00   18581.85</pre>
+##               people min_income max_income
+## 1    Claycomb, Tamar   327.4355   12880.48
+## 2       Sais, Payton     0.0000   13678.66
+## 3 Padilla, Brittanie     0.0000   16133.82</pre>
 
 </article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data-3">
 
@@ -600,10 +600,10 @@ head(descending)[1:3, ]</pre>
 
 <pre >## Source: local data frame [3 x 3]
 ## 
-##             people min_income max_income
-## 1 Randall, Lakesha  16915.079   111797.0
-## 2    Casey, Briana  37069.244   102526.3
-## 3      Nicol, Auna   3958.571   102032.2</pre>
+##              people min_income max_income
+## 1     Lampe, Joseph   6775.653  101703.25
+## 2      Rivera, Sinh  10323.787   97512.13
+## 3 Preskitt, Heather  18279.038   96197.03</pre>
 
 </article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data-4">
 
@@ -619,10 +619,10 @@ head(data)[1:3, ]</pre>
 <pre >## Source: local data frame [3 x 5]
 ## Groups: people
 ## 
-##              people year   income min_income max_income
-## 1 Abdullahi, Dillon 2010 33347.59   28247.58   51160.74
-## 2 Abdullahi, Dillon 2011 51160.74   28247.58   51160.74
-## 3 Abdullahi, Dillon 2012 28247.58   28247.58   51160.74</pre>
+##               people year   income min_income max_income
+## 1 Abdulaziz, Michael 2010 36654.27   15182.77   37562.21
+## 2 Abdulaziz, Michael 2011 29209.52   15182.77   37562.21
+## 3 Abdulaziz, Michael 2012 15182.77   15182.77   37562.21</pre>
 
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Seminar: Web scraping and data transformations</h2></hgroup><article  id="seminar-web-scraping-and-data-transformations">
 
