@@ -109,11 +109,24 @@
 <slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Objectives for the week</h2></hgroup><article  id="objectives-for-the-week">
 
 <ul>
-<li><p>Assignment 3</p></li>
+<li><p>Assignments</p></li>
 <li><p>Review</p></li>
 <li><p>Intro to web scraping</p></li>
-<li><p>Processing strings, including an intro to Regular Expressions</p></li>
+<li><p>Processing strings, including an intro to regular expressions</p></li>
 <li><p>Data and data set transformations with dplyr</p></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Assignment 2</h2></hgroup><article  id="assignment-2">
+
+<p>I have marked Assignment 2 and aim to email you the feedback later this week.</p>
+
+<p>Overall, everyone has made a <strong>good first start</strong>.</p>
+
+<p>Minor: checkout these posts on GitHub:</p>
+
+<ul>
+<li><p>Problems compiling PDF: <a href='https://github.com/HertieDataScience2014/SyllabusAndLectures/issues/19' title=''>SyllabusAndLectures/issues/19</a></p></li>
+<li><p>Double spacing in R Markdown: <a href='https://github.com/HertieDataScience2014/SyllabusAndLectures/issues/20' title=''>SyllabusAndLectures/issues/20</a></p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Assignment 3</h2></hgroup><article  id="assignment-3">
@@ -126,16 +139,16 @@
 
 <ul>
 <li><p>Gathers web-based data from at least <strong>two sources</strong>. Cleans and merges the data so that it is ready for statistical analyses.</p></li>
-<li><p>Conducts basic descriptive and inferential statistics with the data to address a relevant research question.</p></li>
-<li><p>Briefly describes the results including with dynamically generated tables and figures.</p></li>
-<li><p>Has a write up of 1,500 words maximum that describes the data gathering and analysis and uses literate programming.</p></li>
+<li><p>Conducts basic descriptive <strong>and</strong> inferential statistics with the data to address a relevant research question.</p></li>
+<li><p>Briefly describes the results including with <strong>dynamically</strong> generated tables and figures.</p></li>
+<li><p>Has a write up of <strong>1,500 words maximum</strong> that describes the data gathering and analysis, It also will use literate programming.</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Assignment 3</h2></hgroup><article  id="assignment-3-1">
 
 <p><br> <br> <br></p>
 
-<p>This is ideally a <strong>good first run</strong> at the data gathering and analysis for your final project.</p>
+<p>This is ideally a <strong>good first run</strong> at the data gathering and analysis parts of your final project.</p>
 
 </article></slide><slide class=''><hgroup><h2>Review</h2></hgroup><article  id="review">
 
@@ -155,7 +168,7 @@
 
 <p>I don&#39;t expect you to master the tools of web scraping in this course.</p>
 
-<p>I just want you to know that these things are possible, so that you know where to turn in future work.</p>
+<p>I just want you to know that these things are <strong>possible</strong>, so that you <strong>know where to look</strong> in future work.</p>
 
 </article></slide><slide class=''><hgroup><h2>Web scraping</h2></hgroup><article  id="web-scraping">
 
@@ -186,7 +199,7 @@
 </ul></li>
 </ul>
 
-<p>Also take a look at <a href='https://github.com/hadley/rvest' title=''>rvest</a>. It is a new package that aims to implement features form Python&#39;s popular <a href='http://www.crummy.com/software/BeautifulSoup/' title=''>Beautiful Soup</a>.</p>
+<p>Also take a look at <a href='https://github.com/hadley/rvest' title=''>rvest</a>. It is a new package that aims to implement features from Python&#39;s popular <a href='http://www.crummy.com/software/BeautifulSoup/' title=''>Beautiful Soup</a>.</p>
 
 </article></slide><slide class=''><hgroup><h2>Key steps:</h2></hgroup><article  id="key-steps">
 
@@ -198,7 +211,7 @@
 <ul>
 <li>You can extract either the raw text with <code>as = &#39;text&#39;</code> or parse the content with <code>as = &#39;parsed&#39;</code>.</li>
 </ul></li>
-<li><p><strong>Clean</strong> parsed content (there are many tools for this suited to a variety of problems).</p></li>
+<li><p><strong>Clean</strong> content (there are many tools for this suited to a variety of problems).</p></li>
 </ol>
 
 </article></slide><slide class=''><hgroup><h2>Web scraping example</h2></hgroup><article  id="web-scraping-example">
@@ -251,9 +264,9 @@ head(ExpensesTable)[, 1:3]</pre>
 
 </article></slide><slide class=''><hgroup><h2>Processing strings</h2></hgroup><article  id="processing-strings">
 
-<p>A (frustratingly) large proportion of time spent web scraping and doing data cleaning generally is take up with <strong>processing strings</strong>.</p>
+<p>A (frustratingly) large proportion of time web scraping and doing data cleaning generally is taken up with <strong>processing strings</strong>.</p>
 
-<p>Key tools for processing strings:</p>
+<p><strong>Key tools</strong> for processing strings:</p>
 
 <ul>
 <li><p>knowing your encoding and <code>iconv</code> function in base R</p></li>
@@ -396,7 +409,7 @@ grep(&#39;[A-Z]&#39;, base)</pre>
 
 <pre >## [1] 4</pre>
 
-</article></slide><slide class=''><hgroup><h2>Simple regular expression cheapsheet</h2></hgroup><article  id="simple-regular-expression-cheapsheet">
+</article></slide><slide class=''><hgroup><h2>Simple regular expressions cheatsheet</h2></hgroup><article  id="simple-regular-expressions-cheatsheet">
 
 <table class = 'rmdtable'>
 <tr class="header">
@@ -409,19 +422,19 @@ grep(&#39;[A-Z]&#39;, base)</pre>
 </tr>
 <tr class="even">
 <td align="left"><code>^</code></td>
-<td align="left">characters at the begining of the string</td>
+<td align="left">characters at the beginning of the string</td>
 </tr>
 <tr class="odd">
 <td align="left"><code>?</code></td>
-<td align="left">zero or more of the preceeding character</td>
+<td align="left">zero or more of the preceding character</td>
 </tr>
 <tr class="even">
 <td align="left"><code>*</code></td>
-<td align="left">zero or more of the preceeding character</td>
+<td align="left">zero or more of the preceding character</td>
 </tr>
 <tr class="odd">
 <td align="left"><code>+</code></td>
-<td align="left">one or more of the preceeding character</td>
+<td align="left">one or more of the preceding character</td>
 </tr>
 <tr class="even">
 <td align="left"><code>\</code></td>
@@ -436,6 +449,12 @@ grep(&#39;[A-Z]&#39;, base)</pre>
 <td align="left">a range of characters</td>
 </tr>
 </table>
+
+</article></slide><slide class=''><hgroup><h2>Simple regular expressions cheatsheet</h2></hgroup><article  id="simple-regular-expressions-cheatsheet-1">
+
+<p><br> <br> <br></p>
+
+<p>You can also find the cheatsheet at: <a href='' title=''>SyllabusAndLectures/Lecture7/README</a></p>
 
 </article></slide><slide class=''><hgroup><h2>String processing with stringer</h2></hgroup><article  id="string-processing-with-stringer">
 
@@ -495,13 +514,13 @@ data &lt;- data.frame(people, year, income = income$value)</pre>
 
 <pre class = 'prettyprint lang-r'>head(data)</pre>
 
-<pre >##               people year   income
-## 1 Abdulaziz, Michael 2010 36654.27
-## 2 Abdulaziz, Michael 2011 29209.52
-## 3 Abdulaziz, Michael 2012 15182.77
-## 4 Abdulaziz, Michael 2013 37562.21
-## 5  Abeyta, Christina 2010 35203.59
-## 6  Abeyta, Christina 2011 47065.27</pre>
+<pre >##          people year    income
+## 1 Abenes, Jason 2010 35760.438
+## 2 Abenes, Jason 2011  7492.749
+## 3 Abenes, Jason 2012 20869.664
+## 4 Abenes, Jason 2013 34637.825
+## 5 Abeyta, Seung 2010 36208.401
+## 6 Abeyta, Seung 2011 33343.647</pre>
 
 </article></slide><slide class=''><hgroup><h2>Simple dplyr</h2></hgroup><article  id="simple-dplyr">
 
@@ -511,13 +530,13 @@ data &lt;- data.frame(people, year, income = income$value)</pre>
 
 head(higher_income)</pre>
 
-<pre >##                      people year   income
-## 1             Acosta, Amara 2011 61314.76
-## 2              Aleman, Reno 2012 65884.78
-## 3              Amaral, Juan 2010 65257.65
-## 4              Amaral, Juan 2012 62252.48
-## 5            Arellano, Alex 2011 78273.59
-## 6 Ashcroft-Bitsilly, Jordan 2010 67987.06</pre>
+<pre >##             people year   income
+## 1 Abrams, Jonathan 2011 81342.72
+## 2    Agan, Scottie 2011 60271.24
+## 3  Alanizi, J&#39;Quan 2011 60957.10
+## 4 Alexander, Tateh 2012 70660.46
+## 5  Allen, Ambrozha 2012 60234.85
+## 6     Almeda, Dung 2013 71403.95</pre>
 
 </article></slide><slide class=''><hgroup><h2>Simple dplyr</h2></hgroup><article  id="simple-dplyr-1">
 
@@ -531,13 +550,13 @@ people_income &lt;- select(data, -year)
 
 head(people_income)</pre>
 
-<pre >##               people   income
-## 1 Abdulaziz, Michael 36654.27
-## 2 Abdulaziz, Michael 29209.52
-## 3 Abdulaziz, Michael 15182.77
-## 4 Abdulaziz, Michael 37562.21
-## 5  Abeyta, Christina 35203.59
-## 6  Abeyta, Christina 47065.27</pre>
+<pre >##          people    income
+## 1 Abenes, Jason 35760.438
+## 2 Abenes, Jason  7492.749
+## 3 Abenes, Jason 20869.664
+## 4 Abenes, Jason 34637.825
+## 5 Abeyta, Seung 36208.401
+## 6 Abeyta, Seung 33343.647</pre>
 
 </article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data">
 
@@ -549,12 +568,12 @@ head(group_data)[1:5, ]</pre>
 <pre >## Source: local data frame [5 x 3]
 ## Groups: people
 ## 
-##               people year   income
-## 1 Abdulaziz, Michael 2010 36654.27
-## 2 Abdulaziz, Michael 2011 29209.52
-## 3 Abdulaziz, Michael 2012 15182.77
-## 4 Abdulaziz, Michael 2013 37562.21
-## 5  Abeyta, Christina 2010 35203.59</pre>
+##          people year    income
+## 1 Abenes, Jason 2010 35760.438
+## 2 Abenes, Jason 2011  7492.749
+## 3 Abenes, Jason 2012 20869.664
+## 4 Abenes, Jason 2013 34637.825
+## 5 Abeyta, Seung 2010 36208.401</pre>
 
 <p>Note: all of the following functions work on <strong>non-grouped data</strong> as well.</p>
 
@@ -571,10 +590,10 @@ head(min_max_income)[1:3, ]</pre>
 
 <pre >## Source: local data frame [3 x 3]
 ## 
-##               people min_income max_income
-## 1 Abdulaziz, Michael   15182.77   37562.21
-## 2  Abeyta, Christina   34690.48   47065.27
-## 3   Abeyta, Nongkhan       0.00   24503.48</pre>
+##          people min_income max_income
+## 1 Abenes, Jason   7492.749   35760.44
+## 2 Abeyta, Seung  12644.752   53066.88
+## 3  Abram, Annie  30686.409   45853.08</pre>
 
 </article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data-2">
 
@@ -587,9 +606,9 @@ head(ascending)[1:3, ]</pre>
 <pre >## Source: local data frame [3 x 3]
 ## 
 ##               people min_income max_income
-## 1    Claycomb, Tamar   327.4355   12880.48
-## 2       Sais, Payton     0.0000   13678.66
-## 3 Padilla, Brittanie     0.0000   16133.82</pre>
+## 1       Bough, Mario   5453.624   15254.89
+## 2    Hite, Christian      0.000   18421.63
+## 3 Villalvilla, Erica   2903.912   18797.53</pre>
 
 </article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data-3">
 
@@ -601,9 +620,9 @@ head(descending)[1:3, ]</pre>
 <pre >## Source: local data frame [3 x 3]
 ## 
 ##              people min_income max_income
-## 1     Lampe, Joseph   6775.653  101703.25
-## 2      Rivera, Sinh  10323.787   97512.13
-## 3 Preskitt, Heather  18279.038   96197.03</pre>
+## 1 Navarro, Charlene   14161.85   97299.52
+## 2   Gadlin, D&#39;Ahnya   28543.36   93485.25
+## 3    Hallman, David       0.00   92734.79</pre>
 
 </article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data-4">
 
@@ -619,10 +638,10 @@ head(data)[1:3, ]</pre>
 <pre >## Source: local data frame [3 x 5]
 ## Groups: people
 ## 
-##               people year   income min_income max_income
-## 1 Abdulaziz, Michael 2010 36654.27   15182.77   37562.21
-## 2 Abdulaziz, Michael 2011 29209.52   15182.77   37562.21
-## 3 Abdulaziz, Michael 2012 15182.77   15182.77   37562.21</pre>
+##          people year    income min_income max_income
+## 1 Abenes, Jason 2010 35760.438   7492.749   35760.44
+## 2 Abenes, Jason 2011  7492.749   7492.749   35760.44
+## 3 Abenes, Jason 2012 20869.664   7492.749   35760.44</pre>
 
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Seminar: Web scraping and data transformations</h2></hgroup><article  id="seminar-web-scraping-and-data-transformations">
 
