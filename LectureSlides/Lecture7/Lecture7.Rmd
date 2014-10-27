@@ -219,7 +219,7 @@ trying to process it.
 <br>
 <br>
 
-R (and many programing languages) have functions for **identifying** and
+R (and many programming languages) have functions for **identifying** and
 **manipulating** strings.
 
 ## Matching
@@ -263,11 +263,11 @@ They are special characters that can be used to search for text.
 
 For example:
 
-- find characters at only the begining or end of a string
+- find characters at only the beginning or end of a string
 
-- find characters that follow or are preceeded by a particular character
+- find characters that follow or are preceded by a particular character
 
-- find only the first or last occurance of a character in a string
+- find only the first or last occurrence of a character in a string
 
 Many more possibilities.
 
@@ -338,8 +338,8 @@ grep('[A-Z]', base)
 <br>
 <br>
 
-You can also find the cheatsheet at: 
-[SyllabusAndLectures/Lecture7/README]()
+You can also find the cheat-sheet at: 
+[SyllabusAndLectures/Lecture7/README](https://github.com/HertieDataScience2014/SyllabusAndLectures/blob/master/LectureSlides/Lecture7/README.md)
 
 ## String processing with stringer
 
