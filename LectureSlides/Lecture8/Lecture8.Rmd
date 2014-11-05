@@ -15,13 +15,21 @@ output:
 
 - Review
 
-- Introduction to the general syntax for statistical modelling in R.
+- Intro to the general syntax for statistical modelling in R.
 
 - Specific examples using:
 
-    + Normal Linear regression
+    + Normal linear regression
 
     + Logistic regression
+    
+## Week 9
+
+<br>
+<br>
+<br>
+
+Class for Week 9 is on **10 October (Monday) from 14:00-16:00**.
 
 ## Assignment 3
 
@@ -49,8 +57,13 @@ analysis and uses literate programming.
 <br>
 <br>
 
-This is ideally a **good first run** at the data gathering and analysis for
-your final project.
+<i class="fa fa-exclamation"></i><i class="fa fa-exclamation"></i><i class="fa fa-exclamation"></i>
+**Note**: I will be traveling/at a conference/not able to check my email much
+on the **13th** and **14th**. 
+
+So try to ask all of your **questions by the 12th (Wednesday)**.
+
+I will have **normal office hours** on Wednesday.
 
 ## Review
 
@@ -64,13 +77,15 @@ running a command on values from groups in that data frame?
 
 ## Statistical Modelling in R
 
-**Caveat**: We are definitely not going to cover anywhere near R's full
+**Caveat**: We are **definitely not** going to cover anywhere near R's full
 capabilities for statistical modeling.
 
-We are also not going to cover all of the modeling concerns/diagnostics you need
-to consider when using a given model.
+We are also **not going to cover** all of the **modeling concerns/diagnostics** 
+you need to consider when using a given model.
 
-<i class="fa fa-question"></i> What are we going to do?
+You will need to **rely on your other stats courses**.
+
+## <i class="fa fa-question"></i> What are we going to do?
 
 - Discuss the basic syntax and capabilities in R for estimating normal linear
 and logistic regressions.
@@ -81,26 +96,26 @@ and logistic regressions.
 
 ## The basic model
 
-Most statistical models you will likely estimate are from a general class that
+Most statistical models you will estimate are from a general class that
 has **two parts**:
 
-**Stocastic Component** that generates the dependent variable $Y_{i}$ as a
-random draw from the probability density function:
+**Stocastic Component** that assumes the dependent variable $Y_{i}$ is generated 
+from as a random draw from the probability density function:
 
 $$
 Y_{i} \sim f(\theta_{i},\: \alpha)
 $$
 
-- $\theta_{i}$: parameter vector of the part of the function that varies between
-observations.
+- $\theta_{i}$: parameter vector of the part of the function that **varies between
+observations**.
 
-- $\alpha$: matrix of non-varying parameters.
+- $\alpha$: matrix of **non-varying parameters**.
 
-Sometimes referred to as the 'error structure'.
+Sometimes referred to as the '**error structure**'.
 
 ## The basic model
 
-The **systematic component** indicating how $\theta_{i}$ varies across
+The **Systematic Component** indicating how $\theta_{i}$ varies across
 observations depending on values of the explanatory variables and (often)
 some constant:
 
@@ -129,7 +144,7 @@ Today we will cover two variations of this general model:
 For continuous dependent variables assume that $Y_{i}$ is from the
  **normal distribution** ($N(.,.)$).
 
-Set the main parameter vector $\theta_{i}$ to the scalar mean of:
+Set the main parameter vector $\theta_{i}$ to the **scalar mean** of:
 $\theta_{i} = E(y_{i})= \mu_{i}$.
 
 Assume the ancillary parameter matrix is the scalar homoskedastic variance:
@@ -169,18 +184,18 @@ $$
 
 ## R syntax
 
-The general syntax for estimating statistical models in are is:
+The general syntax for estimating statistical models in R is:
 
 
 ```{r, eval=FALSE}
 response variable ~ explanatory variable(s)
 ```
 
-Where `~` reads 'is modelled as a function of'.
+Where '`~`' reads 'is modelled as a function of'.
 
 ## Model functions
 
-We use model functions to specify the specific model structure.
+We use model functions to specify the model structure.
 
 Basic model functions include:
 
@@ -196,9 +211,7 @@ Example data *Prestige* (example based on
 <http://www.princeton.edu/~otorres/Regression101R.pdf>).
 
 The observations are **occupations** and the dependent variable is a score of
-each occupations **prestige**.
-
-## Example of `lm`
+each occupations' **prestige**.
 
 ```{r}
 library(car)
@@ -220,17 +233,29 @@ Estimate simple model:
 M1 <- lm(prestige ~ education, data = Prestige)
 ```
 
-## Example of `lm`
+---
 
 ```{r}
 summary(M1)
 ```
 
-## Find confidence intervals of parameter estimates
+## Confidence intervals of parameter point estimates
 
 Note: **Always prefer estimation intervals** over point estimates.
 
 Deal with your **uncertainty**!
+
+About **95%** of the time the population parameter will be within **about 2 
+standard errors** of the point estimate. 
+
+Using **Central Limit Theorem** (at least about 50 observations and the data is not
+extremely skewed):
+
+$$
+CI\_95 = \mathrm{point\: estimate} \pm 1.96 * SE
+$$
+
+## Confidence intervals of parameter point estimates
 
 ```{r}
 confint(M1)
@@ -238,7 +263,7 @@ confint(M1)
 
 ## Example of `lm`
 
-Estimate model with categorical variable:
+Estimate model with categorical (factor) variable:
 
 ```{r}
 M2 <- lm(prestige ~ education + type, 
@@ -265,7 +290,7 @@ summary(Prestige$income_cat)
 ```
 
 Note: `cut` excludes the left value and includes the right value, e.g.
-$[0,\: 4999]$.
+$(0,\: 4999]$.
 
 ## Example of `lm`
 
@@ -296,8 +321,7 @@ M5  <- lm(prestige ~ education + log(income),
           data = Prestige)
 ```
 
-## Example of `lm`
-
+---
 ```{r}
 summary(M5)
 ```
@@ -311,7 +335,7 @@ M6 <- lm(prestige ~ education * type,
          data = Prestige)
 ```
 
-## Example of `lm`
+---
 
 ```{r}
 summary(M6)
@@ -383,7 +407,7 @@ If we exponentiate log odds we get **odds ratios**.
 exp(cbind(OddsRatio = coef(Logit1), confint(Logit1)))
 ```
 
-These are also weird.
+These are **also weird**.
 
 ## Interpreting logistic regression results
 

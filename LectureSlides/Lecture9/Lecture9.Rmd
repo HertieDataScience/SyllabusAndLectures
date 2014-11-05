@@ -1,0 +1,62 @@
+---
+title: 'MPP-E1180 Lecture 9: Statistical Modeling with R'
+author: "Christopher Gandrud"
+date: "10 November 2014"
+output:
+  ioslides_presentation:
+    css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
+    logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
+---
+
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
+
+- Assignment 3
+
+- Review
+
+- Static results presentation
+
+    + Automatic table creation
+
+    + Zelig simulations for showing results
+
+    + ggplot2 for general graphing
+
+    + ggmap for mapping
+
+## Assignment 3
+
+**Purpose**: Gather, clean, and analyse data
+
+**Deadline**: 14 November 2015
+
+You will submit a GitHub repo that:
+
+- Gathers web-based data from at least **two sources**. Cleans and merges the
+data so that it is ready for statistical analyses.
+
+- Conducts basic descriptive and inferential statistics with the data to address
+a relevant research question.
+
+- Briefly describes the results including with dynamically generated tables and
+figures.
+
+- Has a write up of 1,500 words maximum that describes the data gathering and
+analysis and uses literate programming.
+
+## Assignment 3
+
+<br>
+<br>
+<br>
+
+<i class="fa fa-exclamation"></i><i class="fa fa-exclamation"></i><i class="fa fa-exclamation"></i>
+**Note**: I will be traveling/at a conference/not able to check my email much
+on the **13th** and **14th**.
+
+So try to ask all of your **questions by the 12th (Wednesday)**.
+
+I will have **normal office hours** on Wednesday.
+
+## Review
