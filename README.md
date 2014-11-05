@@ -4,7 +4,7 @@
 
 ### Fall 2014
 
-**Version: *23 October 2014***
+**Version: *5 November 2014***
 
 ### Instructor: Christopher Gandrud
 
@@ -258,7 +258,7 @@ John Wiley and Sons Ltd., Chichester.
 
 *Reading Extras*
 
-King, Gary, Micheal Tomz, and Jason Wittenberg. 2001. [Making the Most of
+- King, Gary, Micheal Tomz, and Jason Wittenberg. 2001. [Making the Most of
 Statistical Analyses: Improving interpretation and presentation](http://gking.harvard.edu/files/gking/files/making.pdf).
 *American Journal of Political Science*. 22(4): 341–355.
 

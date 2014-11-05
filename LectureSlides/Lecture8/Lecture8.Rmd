@@ -270,7 +270,7 @@ M2 <- lm(prestige ~ education + type,
          data = Prestige)
 ```
 
-## Example of `lm`
+---
 
 ```{r}
 summary(M2)
@@ -379,6 +379,10 @@ car::scatterplotMatrix(Admission)
 
 ```{r}
 xtabs(~admit + rank, data = Admission)
+```
+
+```{r}
+summary(xtabs(~admit + rank, data = Admission))
 ```
 
 ## Example of logistic regression with `glm`
