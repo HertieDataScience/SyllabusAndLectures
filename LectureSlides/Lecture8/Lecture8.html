@@ -153,9 +153,9 @@
 </article></slide><slide class=''><hgroup><h2>Review</h2></hgroup><article  id="review">
 
 <ul>
-<li><p>What is web scraping? What are some of tools R has for web scraping?</p></li>
-<li><p>What are regular expressions (give at least two examples)? Why are they useful?</p></li>
-<li><p>What dplyr functions can you use to create a new variable in a data frame by running a command on values from groups in that data frame?</p></li>
+<li><p>What is <strong>web scraping</strong>? What are some of tools R has for web scraping?</p></li>
+<li><p>What are <strong>regular expressions</strong> (give at least two examples)? Why are they useful?</p></li>
+<li><p>What dplyr function can you use to create a <strong>new variable</strong> in a data frame by running a command on values from groups in that data frame?</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Statistical Modelling in R</h2></hgroup><article  id="statistical-modelling-in-r">
@@ -164,14 +164,14 @@
 
 <p>We are also <strong>not going to cover</strong> all of the <strong>modeling concerns/diagnostics</strong> you need to consider when using a given model.</p>
 
-<p>You will need to <strong>rely on your other stats courses</strong>.</p>
+<p>You will need to <strong>rely on your other stats courses</strong> and <strong>texts</strong>.</p>
 
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-question"></i> What are we going to do?</h2></hgroup><article  id="what-are-we-going-to-do">
 
 <ul>
 <li><p>Discuss the basic syntax and capabilities in R for estimating normal linear and logistic regressions.</p></li>
-<li><p>Basic model checking.</p></li>
-<li><p>Discuss basic ways of interpreting results.</p></li>
+<li><p>Basic model checking in R.</p></li>
+<li><p>Discuss basic ways of interpreting results (we&#39;ll do more on this next week).</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>The basic model</h2></hgroup><article  id="the-basic-model">
@@ -200,9 +200,9 @@ Y_{i} \sim f(\theta_{i},\: \alpha)
 \]</p>
 
 <ul>
-<li><p>\(X_{i}\): a \(1\: \mathrm{x}\: k\) vector of explanatory variables.</p></li>
-<li><p>\(\beta\): a \(1\: \mathrm{x}\: k\) vector of parameters (i.e. coefficients).</p></li>
-<li><p>\(g(.,.)\): the &quot;link function&quot;, specifying how the explanatory variables and parameters are translated into \(\theta_{i}\).</p></li>
+<li><p>\(X_{i}\): a \(1\: \mathrm{x}\: k\) vector of <strong>explanatory variables</strong>.</p></li>
+<li><p>\(\beta\): a \(1\: \mathrm{x}\: k\) vector of <strong>parameters</strong> (i.e. coefficients).</p></li>
+<li><p>\(g(.,.)\): the <strong>link function</strong>, specifying how the explanatory variables and parameters are translated into \(\theta_{i}\).</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Today</h2></hgroup><article  id="today">
@@ -251,6 +251,27 @@ Y_{i} \sim N(\mu_{i},\: \sigma^2), \:\:\: \mu_{i} = X_{i}\beta
 <p>\[
 Y_{i} \sim \mathrm{Bernoulli}(\pi_{i}), \:\:\: \pi_{i} = \frac{1}{1 + e^{-X_{i}\beta}}
 \]</p>
+
+</article></slide><slide class=''><hgroup><h2>Error structure family and link function</h2></hgroup><article  id="error-structure-family-and-link-function">
+
+<table class = 'rmdtable'>
+<tr class="header">
+<th align="left">Error Family</th>
+<th align="left">Canonical link</th>
+</tr>
+<tr class="odd">
+<td align="left">Normal</td>
+<td align="left">identity</td>
+</tr>
+<tr class="even">
+<td align="left">binomial</td>
+<td align="left">logit</td>
+</tr>
+<tr class="odd">
+<td align="left">poisson</td>
+<td align="left">log</td>
+</tr>
+</table>
 
 </article></slide><slide class=''><hgroup><h2>R syntax</h2></hgroup><article  id="r-syntax">
 

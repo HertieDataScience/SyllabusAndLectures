@@ -67,12 +67,12 @@ I will have **normal office hours** on Wednesday.
 
 ## Review
 
-- What is web scraping? What are some of tools R has for web scraping?
+- What is **web scraping**? What are some of tools R has for web scraping?
 
-- What are regular expressions (give at least two examples)? Why are they
+- What are **regular expressions** (give at least two examples)? Why are they
 useful?
 
-- What dplyr functions can you use to create a new variable in a data frame by
+- What dplyr function can you use to create a **new variable** in a data frame by
 running a command on values from groups in that data frame?
 
 ## Statistical Modelling in R
@@ -83,16 +83,16 @@ capabilities for statistical modeling.
 We are also **not going to cover** all of the **modeling concerns/diagnostics** 
 you need to consider when using a given model.
 
-You will need to **rely on your other stats courses**.
+You will need to **rely on your other stats courses** and **texts**.
 
 ## <i class="fa fa-question"></i> What are we going to do?
 
 - Discuss the basic syntax and capabilities in R for estimating normal linear
 and logistic regressions.
 
-- Basic model checking.
+- Basic model checking in R.
 
-- Discuss basic ways of interpreting results.
+- Discuss basic ways of interpreting results (we'll do more on this next week).
 
 ## The basic model
 
@@ -123,12 +123,12 @@ $$
 \theta_{i} = g(X_{i},\: \beta)
 $$
 
-- $X_{i}$: a $1\: \mathrm{x}\: k$ vector of explanatory variables.
+- $X_{i}$: a $1\: \mathrm{x}\: k$ vector of **explanatory variables**.
 
-- $\beta$: a $1\: \mathrm{x}\: k$ vector of parameters
+- $\beta$: a $1\: \mathrm{x}\: k$ vector of **parameters**
 (i.e. coefficients).
 
-- $g(.,.)$: the "link function", specifying how the explanatory
+- $g(.,.)$: the **link function**, specifying how the explanatory
 variables and parameters are translated into $\theta_{i}$.
 
 ## Today
@@ -182,6 +182,14 @@ $$
 Y_{i} \sim \mathrm{Bernoulli}(\pi_{i}), \:\:\: \pi_{i} = \frac{1}{1 + e^{-X_{i}\beta}}
 $$
 
+## Error structure family and link function
+
+| Error Family | Canonical link |
+| ------------ | -------------- |
+| Normal       | identity       |
+| binomial     | logit          |
+| poisson      | log            |
+
 ## R syntax
 
 The general syntax for estimating statistical models in R is:
@@ -203,7 +211,7 @@ Basic model functions include:
 and with homoskedastic variance.
 
 - `glm`: allows the fitting of many Generalised Linear Models. Lets you specify
-the $Y$'s distribution `family` and the `link` function.
+the `family` and the `link` function.
 
 ## Example of `lm`
 
