@@ -7,8 +7,7 @@ output:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
   beamer_presentation: default
-bibliography:
-    - main.bib
+bibliography: main.bib
 ---
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
@@ -21,11 +20,12 @@ bibliography:
 
     + Automatic table creation
 
-    + Zelig simulations for showing results
+    + Plotting best practices
 
     + ggplot2 for general graphing
 
-    + ggmap for mapping
+    + Zelig simulations for showing results
+
 
 ## Assignment 3
 
@@ -494,8 +494,8 @@ effectively communicate **results from regression models**.
 1. Estimate our parameters' point estimates for $\hat{\beta}_{1\ldots k}$.
 
 2. Draw $n$ values of the point estimates from multivariate normal distributions
-with means $\bar{\beta}_{1\ldots k}$ and variances specified by the paramteters'
-estimated covariance.
+with means $\bar{\beta}_{1\ldots k}$ and variances specified by the parameters'
+estimated co-variance.
 
 3. Use the simulated values to calculate quantities of interest (e.g. predicted
 probabilities).
@@ -508,7 +508,7 @@ Post-estimation simulations allow us to effectively communicate our estimates
 and the **uncertainty around them**.
 
 This method is broadly similar to a fully Bayesian approach with Markov-Chain
-Monete Carlo or bootstrapping. Just differ on **how the parameters are
+Monte Carlo or bootstrapping. Just differ on **how the parameters are
 drawn**.
 
 ## Implementation
@@ -516,7 +516,7 @@ drawn**.
 It is relatively easy find the coefficient estimates from an estimated
 model with `coef`.
 
-You can find the covariance matrix with `vcov`.
+You can find the co-variance matrix with `vcov`.
 
 Then draw the values from the multivariate normal distribution with `mvrnorm`.
 
