@@ -29,13 +29,13 @@ output:
 <br>
 <br>
 
-Class for Week 9 is on **10 October (Monday) from 14:00-16:00**.
+Class for Week 9 is on **10 November (Monday) from 14:00-16:00**.
 
 ## Assignment 3
 
 **Purpose**: Gather, clean, and analyse data
 
-**Deadline**: 14 November 2015
+**Deadline**: 14 November 2014
 
 You will submit a GitHub repo that:
 
