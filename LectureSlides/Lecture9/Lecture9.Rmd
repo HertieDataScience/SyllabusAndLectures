@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 9: Automatic Tables and Static Visualisation'
 author: "Christopher Gandrud"
 date: "10 November 2014"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
-  beamer_presentation: default
 bibliography: main.bib
 ---
 
@@ -31,7 +31,7 @@ bibliography: main.bib
 
 **Purpose**: Gather, clean, and analyse data
 
-**Deadline**: 14 November 2015
+**Deadline**: 14 November 2014
 
 You will submit a GitHub repo that:
 
@@ -166,7 +166,7 @@ kable(fitted, align = 'c', digits = 2,
 `kable` is limited if we want to create regression output tables, especially for
 multiple models.
 
-`texreg is good for this.
+`texreg` is good for this.
 
 ## `texreg` example
 
