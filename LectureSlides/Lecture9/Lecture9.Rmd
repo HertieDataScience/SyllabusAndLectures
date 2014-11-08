@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 9: Automatic Tables and Static Visualisation'
 author: "Christopher Gandrud"
 date: "10 November 2014"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
 bibliography: main.bib
 ---
 
@@ -63,6 +63,8 @@ I will have **normal office hours** on Wednesday.
 
 ## Review
 
+- How do you find a function's help file?
+
 - What is the basic R syntax for a regression model?
 
 - What is a model function?
@@ -115,12 +117,12 @@ package
 
 ## Today
 
-We will focus on `kable` and `texreg`.
+We will focus on `kable` and `stargazer`.
 
 - `kable` is a good, **simple** tool for creating tables from **data frames** (or
 matrices).
 
-- `texreg` is useful for creating more complex tables with **regression model
+- `stargazer` is useful for creating more complex tables with **regression model
 output**.
 
 ## `kable` example: predicted probabilities
@@ -161,14 +163,14 @@ kable(fitted, align = 'c', digits = 2,
       caption = 'Predicted Probabilities for Fitted Values')
 ```
 
-## Show regression output with `texreg`
+## Show regression output with `stargazer`
 
 `kable` is limited if we want to create regression output tables, especially for
 multiple models.
 
-`texreg` is good for this.
+`stargazer` is good for this.
 
-## `texreg` example
+## `stargazer` example
 
 Estimate models
 
@@ -183,12 +185,49 @@ L3 <- glm(admit ~ gre + gpa + as.factor(rank),
               data = Admission, family = 'binomial')
 ```
 
-## `texreg` example
+## `stargazer` example HTML
 
-```{r, message=FALSE, echo=FALSE, results='asis'}
-library(texreg)
-htmlreg(list(L1, L2, L3), body.tag=F, head.tag=F, html.tag=F, doctype=F, inline.css=T)
+When you are creating a table for an HTML doc with stargazer use:
+
+- `type = 'html'`
+
+```{r, eval=FALSE}
+# Create cleaner covariate labels
+labels <- c('(Intercept)', 'GRE Score', 'GPA Score',
+            '2nd Ranked School', '3rd Ranked School',
+            '4th Ranked School')
+
+stargazer::stargazer(L1, L2, L3, covariate.labels = labels,
+    title = 'Logistic Regression Estimates of Grad School Acceptance',
+    type = 'html')
 ```
+
+## `stargazer` example HTML
+
+<img src="img/HTMLStargazer.png" height=450 width=450 />
+
+## `stargazer` example PDF
+
+**When you are creating a PDF** use the arguments:
+
+- `type = 'latex'`
+
+- `header = FALSE`
+
+```{r, eval=FALSE}
+# Create cleaner covariate labels
+labels <- c('(Intercept)', 'GRE Score', 'GPA Score',
+            '2nd Ranked School', '3rd Ranked School',
+            '4th Ranked School')
+
+stargazer::stargazer(L1, L2, L3, covariate.labels = labels,
+    title = 'Logistic Regression Estimates of Grad School Acceptance',
+    type = 'latex', header = FALSE)
+```
+
+## `stargazer` output in PDF
+
+<img src="img/PDFStargazer.png" height=450 width=450 />
 
 ## Showing Results with Figures
 
