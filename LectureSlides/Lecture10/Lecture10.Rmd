@@ -257,13 +257,14 @@ Use the dygraphs package to plot interactive time series using the
 Not on CRAN yet, so install from GitHub
 
 ```{r, eval=FALSE}
-devtools::install_github(c("ramnathv/htmlwidgets",
-                           "rstudio/dygraphs"))
+devtools::install_github(c('rstudio/htmltools',
+                           'ramnathv/htmlwidgets',
+                           'rstudio/dygraphs'))
 ```
 
 ## dygraphs example (1)
 
-```{r results='asis'}
+```{r}
 library(dygraphs)
 lungDeaths <- cbind(mdeaths, fdeaths)
 dygraph(lungDeaths)
@@ -271,6 +272,29 @@ dygraph(lungDeaths)
 
 ## dygraphs example (2)
 
-```{r results='asis'}
+```{r}
 dygraph(lungDeaths) %>% dyRangeSelector()
+```
+
+
+## Network data with networkD3
+
+```{r, eval=FALSE}
+library(networkD3)
+data(MisLinks); data(MisNodes)
+forceNetwork(Links = MisLinks, Nodes = MisNodes,
+            Source = "source", Target = "target",
+            Value = "value", NodeID = "name",
+            Group = "group", opacity = 0.8)
+```
+
+## Network data with networkD3
+
+```{r, echo=FALSE}
+library(networkD3)
+data(MisLinks); data(MisNodes)
+forceNetwork(Links = MisLinks, Nodes = MisNodes,
+            Source = "source", Target = "target",
+            Value = "value", NodeID = "name",
+            Group = "group", opacity = 0.8)
 ```
