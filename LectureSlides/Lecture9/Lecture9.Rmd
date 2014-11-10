@@ -97,7 +97,7 @@ In general include the functions to create the tables/figures in a code chunk.
 Include in the **code chunk head** `echo=FALSE, warning=FALSE, error=FALSE,
 message=FALSE`.
 
-You may need to also include `results='asis` for some table functions.
+You may need to also include `results='asis'` for some table functions.
 
 See previous weeks 4 and 5 for figure code chunk options.
 
@@ -246,7 +246,7 @@ stargazer::stargazer(L1, L2, L3, covariate.labels = labels,
 <br>
 <br>
 
-Tables are **are important** to include so that readers can **explore
+Tables **are important** to include so that readers can **explore
 details**, but are **usually not the best way** to show your results.
 
 **Figures** are often more effective.

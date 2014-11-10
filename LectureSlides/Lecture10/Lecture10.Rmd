@@ -20,7 +20,6 @@ output:
 
     + Static website hosting with gh-pages
 
-    + Shiny Server
 
 ## Collaborative Research Project (1)
 
@@ -200,7 +199,7 @@ fake_compare <- data.frame(
 
 ## googleVis simple example
 
-```{r, message=FALSE, results='asis'}
+```{r, message=FALSE}
 library(googleVis)
 line_plot <- gvisLineChart(fake_compare)
 print(line_plot, tag = 'chart')
@@ -298,3 +297,55 @@ forceNetwork(Links = MisLinks, Nodes = MisNodes,
             Value = "value", NodeID = "name",
             Group = "group", opacity = 0.8)
 ```
+
+## Hosting a website on GitHub Pages
+
+Any file called *index.html* in a GitHub **repository branch** called
+*gh-pages* will be a hosted website.
+
+The URL will be:
+
+`http://GITHUB_USER_NAME.github.io/REPO_NAME`
+
+Note: you can use a custom URL if you own one. See
+<https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/>
+
+## Set Up GitHub Pages
+
+First create a new branch in your repository called `gh-pages`:
+
+![Create Branch](img/CreateBranch.png)
+
+## Set Up GitHub Pages
+
+Then sync your branch with the local version of the repository.
+
+![sync](img/sync.png)
+
+Finally switch to the gh-pages branch.
+
+<img src="img/SwitchBranch.png" width=400 height=300 />
+
+## GitHub Pages and R Markdown
+
+You can use R Markdown to create the index.html page as before.
+
+Simply place a new .Rmd file in the repository called `index.Rmd` and
+knit it to HTML. Then push it back up.
+
+Your website will now be live.
+
+## Seminar
+
+Begin to create a website for your project with static and interactive graphics.
+
+If relevant include: 
+
+- A table of key results
+
+- A googleVis map
+
+- A bar or line chart with googleVis or other
+
+- A simulation plot created with Zelig showing key results from your regression 
+analysis.
