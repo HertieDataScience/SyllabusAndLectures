@@ -6,7 +6,6 @@ output:
   ioslides_presentation:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
-  beamer_presentation: default
 ---
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
@@ -70,3 +69,208 @@ project, I expect **high quality work**.
 ## ggmap
 
 Last class we didn't have time to cover mapping with ggmap.
+
+We've already seen how ggmap can be used to find latitude and longitude.
+
+```{r, message=FALSE}
+library(ggmap)
+
+places <- c('Bavaria', 'Seoul', '6 Parisier Platz, Berlin',
+            'Hertie School of Governance')
+
+geocode(places)
+```
+
+## ggmap: get the map
+
+```{r, message=FALSE}
+qmap(location = 'Berlin', zoom = 15)
+```
+
+## Plot Houston crime with ggmap
+
+Example from:
+[Kahle and Wickham (2013)](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)
+
+Use *crime* data set that comes with ggmap
+
+```{r}
+names(crime)
+```
+
+## Clean data
+
+```{r message=FALSE}
+# find a reasonable spatial extent
+qmap('houston', zoom = 13) # gglocator(2) see in RStudio
+```
+
+## Clean data
+
+```{r}
+# only violent crimes
+violent_crimes <- subset(crime,
+    offense != "auto theft" & offense != "theft" &
+    offense != "burglary")
+
+# order violent crimes
+violent_crimes$offense <- factor(violent_crimes$offense,
+    levels = c("robbery", "aggravated assault", "rape", "murder"))
+
+# restrict to downtown
+violent_crimes <- subset(violent_crimes,
+    -95.39681 <= lon & lon <= -95.34188 &
+    29.73631 <= lat & lat <= 29.78400)
+```
+
+## Plot crime data
+
+```{r, message=FALSE}
+# Set up base map
+HoustonMap <- qmap("houston", zoom = 14, color = "bw",
+                legend = "topleft")
+
+# Add points
+FinalMap <- HoustonMap +
+                geom_point(aes(x = lon, y = lat, colour = offense,
+                               size = offense),
+                data = violent_crimes)
+```
+
+---
+
+```{r}
+print(FinalMap)
+```
+
+## Interactive visualisations
+
+When your output documents are in **HTML**, you can create interactive
+visualisations.
+
+Potentially more engaging and could let users explore data on their own.
+
+## Interactive visualisations
+
+Big distinction:
+
+**Client Side**: Plots are created on the user's (client's) computer. Often
+JavaScript in the browser. You simply send them static HTML/JavaScript needed for
+their browser to create the plots.
+
+**Server Side**: Data manipulations and/or plots (e.g. with Shiny Server) are
+done on a server.
+
+There are lots of **free** services (e.g. GitHub Pages) for hosting webpages for
+client side plot rendering.
+
+You usually have to use a **paid** service for server side data manipulation
+plotting.
+
+## Set up
+
+You already know how to create HTML documents with R Markdown.
+
+There are a growing set of tools for interactive plotting:
+
+- [googleVis](https://code.google.com/p/google-motion-charts-with-r/)
+
+- [dygraphs](http://rstudio.github.io/dygraphs/)
+
+- [rcharts](http://rcharts.io/)
+
+- [ggvis](http://ggvis.rstudio.com/)
+
+- [networkD3](http://christophergandrud.github.io/networkD3/)
+
+## Google Plots with googleVis
+
+You can use the googleVis package to create Google plots from R.
+
+Example from
+[googleVis Vignettes](http://cran.r-project.org/web/packages/googleVis/vignettes/googleVis_examples.html).
+
+```{r}
+# Create fake data
+fake_compare <- data.frame(
+                country = c("US", "GB", "BR"),
+                val1 = c(10,13,14),
+                val2 = c(23,12,32))
+```
+
+## googleVis simple example
+
+```{r, message=FALSE, results='asis'}
+library(googleVis)
+line_plot <- gvisLineChart(fake_compare)
+print(line_plot, tag = 'chart')
+```
+
+**Note**: Uses `results='asis' in the code chunk head.
+
+To show the in R use `plot` instead of `print` and don't include
+`tag = 'chart'`.
+
+## Map with googleVis
+
+```{r, message=FALSE}
+library(WDI)
+co2 <- WDI(indicator = 'EN.ATM.CO2E.PC', start = 2010, end = 2010)
+co2 <- co2[, c('iso2c','EN.ATM.CO2E.PC')]
+
+# Clean
+names(co2) <- c('iso2c', 'CO2 Emmissions per Capita')
+co2[, 2] <- round(log(co2[, 2]), digits = 2)
+
+co2_map <- gvisGeoMap(co2, locationvar = 'iso2c',
+                      numvar = 'CO2 Emmissions per Capita',
+                      options = list(
+                          colors = '[0xfff7bc, 0xfec44f,
+                                    0xd95f0e]'
+                          ))
+```
+
+**Note**: That `0x` replaces `#` for hexadecimal colors.
+
+---
+
+CO2 Emmissions (metric tons per capita)
+
+```{r, results='asis'}
+print(co2_map, tag = 'chart')
+```
+
+## googleVis Maps in RStudio
+
+<br>
+<br>
+<br>
+
+Note: you will need to view googleVis maps that are in R Markdown documents in
+your *browser* rather than RStudio's built in HTML viewer.
+
+## Plot time series with dygraphs
+
+Use the dygraphs package to plot interactive time series using the
+[dygraphs](http://dygraphs.com/) JavaScript library.
+
+Not on CRAN yet, so install from GitHub
+
+```{r, eval=FALSE}
+devtools::install_github(c("ramnathv/htmlwidgets",
+                           "rstudio/dygraphs"))
+```
+
+## dygraphs example (1)
+
+```{r results='asis'}
+library(dygraphs)
+lungDeaths <- cbind(mdeaths, fdeaths)
+dygraph(lungDeaths)
+```
+
+## dygraphs example (2)
+
+```{r results='asis'}
+dygraph(lungDeaths) %>% dyRangeSelector()
+```

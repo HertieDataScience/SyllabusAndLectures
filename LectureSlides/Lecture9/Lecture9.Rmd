@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 9: Automatic Tables and Static Visualisation'
 author: "Christopher Gandrud"
 date: "10 November 2014"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
 bibliography: main.bib
 ---
 
@@ -356,7 +356,13 @@ Colours should be used to:
 
 - group items,
 
-- encode quantitative values.
+- encode quantitative values
+
+    + Values of continuous variables should be represented using **increasing
+    hues of the same colour**.
+
+    + Categorical variables should be represented with **different colours**.
+    (rule of thumb: avoid using more than about 7 colours in a plot)
 
 ## Bad
 
@@ -379,9 +385,15 @@ About 5-8% of men are colour blind.
 We need to choose colour schemes for our graphics that are **colour
 blind friendly**.
 
-A good resource: <http://colorbrewer2.org/>
-
 For more information see <http://www.usability.gov/get-involved/blog/2010/02/color-blindness.html>.
+
+## Selecting colors
+
+<br>
+<br>
+
+Color Brewer is a great resource for selecting colours:
+<http://colorbrewer2.org/>.
 
 ## A more systematic introduction to ggplot2
 
@@ -389,7 +401,7 @@ For more information see <http://www.usability.gov/get-involved/blog/2010/02/col
 <br>
 <br>
 
-"gg" means "Grammar of Graphics". 
+"gg" means "Grammar of Graphics".
 
 "2" just means that it is the second one.
 
