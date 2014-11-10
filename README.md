@@ -4,7 +4,7 @@
 
 ### Fall 2014
 
-**Version: *5 November 2014***
+**Version: *10 November 2014***
 
 ### Instructor: Christopher Gandrud
 
@@ -267,7 +267,7 @@ Statistical Analyses: Improving interpretation and presentation](http://gking.ha
 
 ### Week 9: Automatic Table Generation and Static Visualisation
 
-We will first learn how to automatically generate summary and results tables for multiple markup languages using  [texreg](http://diffuseprior.wordpress.com/2013/01/20/texreg-a-package-for-beautiful-and-easily-customizable-latex-regression-tables-from-r/). We will then learn static descriptive and inferential data visualisation best practices including avoiding introducing optical illusions that distort data presentations and accommodating readers with visual impairments. We will also cover specific R packages for creating static visualisations, primarily [ggplot2](http://docs.ggplot2.org/current/) and [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) for mapping.
+We will first learn how to automatically generate summary and results tables for multiple markup languages using  [stargazer](http://cran.r-project.org/web/packages/stargazer/stargazer.pdf). We will then learn static descriptive and inferential data visualisation best practices including avoiding introducing optical illusions that distort data presentations and accommodating readers with visual impairments. We will also cover specific R packages for creating static visualisations, primarily [ggplot2](http://docs.ggplot2.org/current/) and [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) for mapping.
 
 #### Readings
 
