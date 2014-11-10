@@ -69,11 +69,11 @@ I will have **normal office hours** on Wednesday.
 
 - What is a model function?
 
-- How do you find a confidence interval for a parameter point estimate (both
+- How do you find a 95% confidence interval for a parameter point estimate (both
     mathematically and in R)?
 
-- What is a good way to interpret and present results from a logistic
-regression?
+- What is one good way to interpret and present results from a logistic
+regression to both an statistical and general audience?
 
 ## Motivation
 
@@ -83,7 +83,7 @@ automatically generated tables and static plots.
 Why automatically generate?
 
 - **Saves time**: don't have to re-enter numbers by hand into a table or
-restyle a graph.
+restyle a graph each time you change the data/analysis.
 
 - Easier to **find and correct errors**: all source code that created
 all tables and figures  is linked and output updated when corrections are made.
@@ -122,8 +122,11 @@ We will focus on `kable` and `stargazer`.
 - `kable` is a good, **simple** tool for creating tables from **data frames** (or
 matrices).
 
-- `stargazer` is useful for creating more complex tables with **regression model
+- `stargazer` is useful for creating more complex tables of **regression model
 output**.
+
+**Example Docs**:
+[HertieDataScience2014/Examples/PaperWithRegressionTables](https://github.com/HertieDataScience2014/Examples/tree/master/PaperWithRegressionTables)
 
 ## `kable` example: predicted probabilities
 
@@ -163,6 +166,15 @@ kable(fitted, align = 'c', digits = 2,
       caption = 'Predicted Probabilities for Fitted Values')
 ```
 
+## Note
+
+**Don't** showing more digits to the right of the decimal than are statistically
+and substantively meaningful.
+
+**A rule of thumb**: more than one or two digits are rarely meaningful.
+
+See also: <http://andrewgelman.com/2012/07/02/moving-beyond-hopeless-graphics/>
+
 ## Show regression output with `stargazer`
 
 `kable` is limited if we want to create regression output tables, especially for
@@ -199,12 +211,12 @@ labels <- c('(Intercept)', 'GRE Score', 'GPA Score',
 
 stargazer::stargazer(L1, L2, L3, covariate.labels = labels,
     title = 'Logistic Regression Estimates of Grad School Acceptance',
-    type = 'html')
+    digits = 2, type = 'html')
 ```
 
 ## `stargazer` example HTML
 
-<img src="img/HTMLStargazer.png" height=450 width=450 />
+<img src="img/HTMLStargazer.png" height=450 width=400 />
 
 ## `stargazer` example PDF
 
@@ -222,7 +234,7 @@ labels <- c('(Intercept)', 'GRE Score', 'GPA Score',
 
 stargazer::stargazer(L1, L2, L3, covariate.labels = labels,
     title = 'Logistic Regression Estimates of Grad School Acceptance',
-    type = 'latex', header = FALSE)
+    digits = 2, type = 'latex', header = FALSE)
 ```
 
 ## `stargazer` output in PDF
@@ -332,7 +344,7 @@ Which square is darkest?
 <br>
 <br>
 
-**Only** give give graphical features (e.g. bars in a bar chart) different
+**Only** give graphical features (e.g. bars in a bar chart) different
 colours if it **means something** in the data.
 
 
@@ -364,8 +376,10 @@ People who are colour blind can have difficulty distinguishing between
 
 About 5-8% of men are colour blind.
 
-We need to choose colour schemes for our graphics that are colour
-blind friendly.
+We need to choose colour schemes for our graphics that are **colour
+blind friendly**.
+
+A good resource: <http://colorbrewer2.org/>
 
 For more information see <http://www.usability.gov/get-involved/blog/2010/02/color-blindness.html>.
 
@@ -375,16 +389,18 @@ For more information see <http://www.usability.gov/get-involved/blog/2010/02/col
 <br>
 <br>
 
-"gg" means "Grammar of Graphics". "2" just means that it is the second one.
+"gg" means "Grammar of Graphics". 
+
+"2" just means that it is the second one.
 
 ## ggplot2 syntax
 
 Each plot is made of **layers**. Layers include the coordinate system (x-y), points,
 labels, etc.
 
-Each layer has **aesthetics** (aes) including the x & y, size, shape, and colour.
+Each layer has **aesthetics** (`aes`) including the x & y, size, shape, and colour.
 
-The **main layer types** are called **geometrics** (geom). These include
+The **main layer types** are called **geometrics** (`geom`). These include
 lines, points, density plots, bars, and text.
 
 ## ggplot2 examples setup
@@ -395,7 +411,7 @@ library(ggplot2)
 
 source_url("http://bit.ly/OTWEGS")
 
-# Create data with no missing values of infant mortali
+# Create data with no missing values of infant mortality
 InfantNoMiss <- subset(MortalityGDP,
                            !is.na(InfantMortality))
 
@@ -539,7 +555,7 @@ estimated co-variance.
 3. Use the simulated values to calculate quantities of interest (e.g. predicted
 probabilities).
 
-4. Plot the results.
+4. Plot the simulated distribution using **visual weighting**.
 
 ## Notes
 
@@ -552,7 +568,7 @@ drawn**.
 
 ## Implementation
 
-It is relatively easy find the coefficient estimates from an estimated
+It is relatively easy to find the coefficient estimates from an estimated
 model with `coef`.
 
 You can find the co-variance matrix with `vcov`.
@@ -589,7 +605,7 @@ Z1 <- zelig(admit ~ gre + gpa + rank, cite = FALSE,
 Then set the fitted values with `setx`.
 
 ```{r}
-setZ1 <- setx(Z1, gre = seq(220, 800, by = 1))
+setZ1 <- setx(Z1, gre = 220:800)
 ```
 
 And run the simulations (1,000 by default) with `sim`.

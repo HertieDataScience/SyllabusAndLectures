@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 10: Dynamic Visualisation'
 author: "Christopher Gandrud"
 date: "20 November 2014"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
 ---
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
@@ -27,7 +27,7 @@ output:
 
 **Purpose**: Pose an interesting research question and try to answer it using
 data analysis and standard academic practices. Effectively communicate your
-results in a **variety of formats**.
+results to a **variety of audiences** in a **variety of formats**.
 
 **Deadline**:
 
@@ -36,3 +36,37 @@ results in a **variety of formats**.
 - Website/Paper: 12 December
 
 ## Collaborative Research Project (2)
+
+The project is a 'dry run' for your thesis with multiple presentation outputs.
+
+Presentation: 10 minutes **maximum**. **Engagingly** present your research
+question and key findings to a general academic audience (fellow students).
+
+Paper: 6,000 words maximum. Standard academic paper, properly cited laying out
+your research question, literature review, data and methods, and findings.
+
+Website: An engaging website designed to convey your research to **a general
+audience**.
+
+## Collaborative Research Project (3)
+
+As always, you should **submit one GitHub repository** with all of the
+materials needed to completely reproduce your data gathering, analysis, and
+presentation documents.
+
+**Note**: Because you've had two assignments already to work on parts of the
+project, I expect **high quality work**.
+
+## Review
+
+- What is the data-ink ratio? Why is it important for effective plotting.
+
+- What is visual weighting?
+
+- Why should you avoid using the size of circles to mean anything in a plot?
+
+- How many decimal places should you report in a table?
+
+## ggmap
+
+Last class we didn't have time to cover mapping with ggmap.
