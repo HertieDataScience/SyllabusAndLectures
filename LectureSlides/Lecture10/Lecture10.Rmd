@@ -126,14 +126,17 @@ violent_crimes <- subset(violent_crimes,
 
 ```{r, message=FALSE}
 # Set up base map
-HoustonMap <- qmap("houston", zoom = 14, color = "bw",
-                legend = "topleft")
+HoustonMap <- qmap("houston", zoom = 14,  
+                   source = "stamen", maptype = "toner",
+                   legend = "topleft")
 
 # Add points
 FinalMap <- HoustonMap +
-                geom_point(aes(x = lon, y = lat, colour = offense,
-                               size = offense),
-                data = violent_crimes)
+                geom_point(aes(x = lon, y = lat, colour = offense, 
+                               size = 100, alpha = 0.8),
+                data = violent_crimes) +
+                guides(size = FALSE, alpha = FALSE,
+                       colour = guide_legend(title = 'Offense'))
 ```
 
 ---
