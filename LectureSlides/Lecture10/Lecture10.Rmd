@@ -132,10 +132,10 @@ HoustonMap <- qmap("houston", zoom = 14,
 
 # Add points
 FinalMap <- HoustonMap +
-                geom_point(aes(x = lon, y = lat, colour = offense, 
-                               size = 100, alpha = 0.8),
+                geom_point(aes(x = lon, y = lat, colour = offense,
+                               size = offense),
                 data = violent_crimes) +
-                guides(size = FALSE, alpha = FALSE,
+                guides(size = guide_legend(title = 'Offense'),
                        colour = guide_legend(title = 'Offense'))
 ```
 
@@ -173,6 +173,8 @@ plotting.
 
 You already know how to create HTML documents with R Markdown.
 
+Set your code chunk to `results='asis'`.
+
 There are a growing set of tools for interactive plotting:
 
 - [googleVis](https://code.google.com/p/google-motion-charts-with-r/)
@@ -184,6 +186,18 @@ There are a growing set of tools for interactive plotting:
 - [ggvis](http://ggvis.rstudio.com/)
 
 - [networkD3](http://christophergandrud.github.io/networkD3/)
+
+## Caveat
+
+<br>
+<br>
+
+These packages simply create an interface between R and JavaScript. 
+
+Debugging often requires some knowledge of JavaScript and the 
+[DOM](http://en.wikipedia.org/wiki/Document_Object_Model).
+
+In sum: usually simple, but can be difficult.
 
 ## Google Plots with googleVis
 
@@ -202,7 +216,7 @@ fake_compare <- data.frame(
 
 ## googleVis simple example
 
-```{r, message=FALSE}
+```{r, message=FALSE, results='asis'}
 library(googleVis)
 line_plot <- gvisLineChart(fake_compare)
 print(line_plot, tag = 'chart')
@@ -251,55 +265,14 @@ print(co2_map, tag = 'chart')
 Note: you will need to view googleVis maps that are in R Markdown documents in
 your *browser* rather than RStudio's built in HTML viewer.
 
-## Plot time series with dygraphs
+## More Examples
 
-Use the dygraphs package to plot interactive time series using the
-[dygraphs](http://dygraphs.com/) JavaScript library.
+<br>
+<br>
+<br>
 
-Not on CRAN yet, so install from GitHub
-
-```{r, eval=FALSE}
-devtools::install_github(c('rstudio/htmltools',
-                           'ramnathv/htmlwidgets',
-                           'rstudio/dygraphs'))
-```
-
-## dygraphs example (1)
-
-```{r}
-library(dygraphs)
-lungDeaths <- cbind(mdeaths, fdeaths)
-dygraph(lungDeaths)
-```
-
-## dygraphs example (2)
-
-```{r}
-dygraph(lungDeaths) %>% dyRangeSelector()
-```
-
-
-## Network data with networkD3
-
-```{r, eval=FALSE}
-library(networkD3)
-data(MisLinks); data(MisNodes)
-forceNetwork(Links = MisLinks, Nodes = MisNodes,
-            Source = "source", Target = "target",
-            Value = "value", NodeID = "name",
-            Group = "group", opacity = 0.8)
-```
-
-## Network data with networkD3
-
-```{r, echo=FALSE}
-library(networkD3)
-data(MisLinks); data(MisNodes)
-forceNetwork(Links = MisLinks, Nodes = MisNodes,
-            Source = "source", Target = "target",
-            Value = "value", NodeID = "name",
-            Group = "group", opacity = 0.8)
-```
+More examples are available at:
+<http://hertiedatascience2014.github.io/Examples/>
 
 ## Hosting a website on GitHub Pages
 
@@ -325,9 +298,11 @@ Then sync your branch with the local version of the repository.
 
 ![sync](img/sync.png)
 
+<br>
+
 Finally switch to the gh-pages branch.
 
-<img src="img/SwitchBranch.png" width=400 height=300 />
+<img src="img/SwitchBranch.png" width=400 height=200 />
 
 ## GitHub Pages and R Markdown
 
@@ -338,11 +313,14 @@ knit it to HTML. Then push it back up.
 
 Your website will now be live.
 
+Everytime you *push* to the gh-pages branch, the website will be **updated**.
+
 ## Seminar
 
-Begin to create a website for your project with static and interactive graphics.
+Begin to **create a website** for your project with static and interactive 
+graphics.
 
-If relevant include: 
+If relevant include:
 
 - A table of key results
 
@@ -350,5 +328,7 @@ If relevant include:
 
 - A bar or line chart with googleVis or other
 
-- A simulation plot created with Zelig showing key results from your regression 
+- A simulation plot created with Zelig showing key results from your regression
 analysis.
+
+Push to the gh-pages branch.
