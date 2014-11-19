@@ -4,7 +4,7 @@
 
 ### Fall 2014
 
-**Version: *10 November 2014***
+**Version: *19 November 2014***
 
 ### Instructor: Christopher Gandrud
 
@@ -292,15 +292,15 @@ We will first learn how to automatically generate summary and results tables for
 
 The transition of publishing from static mediums such as print journals and books to internet based platforms has greatly expanded the tools data scientists have to dynamically communicate results. In particular, a number of tools frequently powered by [JavaScript](http://www.w3schools.com/js/DEFAULT.asp) make interactive presentations possible. There are a number of R based tools that allow you to use these technologies within Markdown/HTML presentation documents.
 
-- [Shiny Server](http://shiny.rstudio.com/)
+- [googleVis](https://code.google.com/p/google-motion-charts-with-r/)
 
 - [rcharts](http://rcharts.io/)
-
-- [googleVis](https://code.google.com/p/google-motion-charts-with-r/)
 
 *Reading Extras:*
 
 - [d3.js](http://d3js.org/)
+
+- [Shiny Server](http://shiny.rstudio.com/)
 
 - Sigal, Mathew. 2011. [Make it Pretty: An Graphical Post-Processing with Adobe Illustrator](https://4aeb9508-a-62cb3a1a-s-sites.googlegroups.com/site/matthewsigal/teaching/Sigal-2011-Post-Processing-Handouts.pdf?attachauth=ANoY7cofvfsNzK3PAtJVKM04n5w_eMlJoFb4x2vANV6tPyiFXmb9TSCK4fKy6aKXmZPoj4hkblLr6Sdr50eliXtuN8VtIsqr5P0R4kkrZfXDzAn9nZlRdroAaIT8XVqNRuaR0Kbl90_F1HvJLuID2QkxbZv6Ft4UpkbOD1ahe94iHjSKmcKlD1hM-hjL90Nybj9WVS5DGdM-tVReWYDoI-_PtxjgYdS9lZJ3Jz5uf1CWptYE5YSzRRU1XLmPwCkD-PwzYvWtDDTT&attredirects=0). Presentation to York University Department of Psychology Quantitative Methods Brownbag.
 

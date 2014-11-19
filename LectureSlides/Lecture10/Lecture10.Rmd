@@ -12,6 +12,8 @@ output:
 
 - Collaborative Research Project
 
+- Next Class
+
 - Review
 
 - Static maps with ggmap
@@ -54,6 +56,14 @@ presentation documents.
 
 **Note**: Because you've had two assignments already to work on parts of the
 project, I expect **high quality work**.
+
+## Next class
+
+Next class is the **final class before the presentations**.
+
+Mostly it is an opportunity for you to work on your project and ask me questions.
+
+**Be prepared.**
 
 ## Review
 
@@ -192,9 +202,9 @@ There are a growing set of tools for interactive plotting:
 <br>
 <br>
 
-These packages simply create an interface between R and JavaScript. 
+These packages simply create an interface between R and JavaScript.
 
-Debugging often requires some knowledge of JavaScript and the 
+Debugging often requires some knowledge of JavaScript and the
 [DOM](http://en.wikipedia.org/wiki/Document_Object_Model).
 
 In sum: usually simple, but can be difficult.
@@ -313,11 +323,11 @@ knit it to HTML. Then push it back up.
 
 Your website will now be live.
 
-Everytime you *push* to the gh-pages branch, the website will be **updated**.
+Every time you *push* to the gh-pages branch, the website will be **updated**.
 
 ## Seminar
 
-Begin to **create a website** for your project with static and interactive 
+Begin to **create a website** for your project with static and interactive
 graphics.
 
 If relevant include:
