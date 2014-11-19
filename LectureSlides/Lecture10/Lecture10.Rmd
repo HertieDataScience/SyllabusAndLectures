@@ -25,7 +25,7 @@ output:
 
 ## Collaborative Research Project (1)
 
-**Purpose**: Pose an interesting research question and try to answer it using
+**Purposes**: Pose an interesting research question and try to answer it using
 data analysis and standard academic practices. Effectively communicate your
 results to a **variety of audiences** in a **variety of formats**.
 
@@ -42,8 +42,8 @@ The project is a 'dry run' for your thesis with multiple presentation outputs.
 Presentation: 10 minutes **maximum**. **Engagingly** present your research
 question and key findings to a general academic audience (fellow students).
 
-Paper: 6,000 words maximum. Standard academic paper, properly cited laying out
-your research question, literature review, data and methods, and findings.
+Paper: 6,000 words maximum. **Standard academic paper**, properly cited laying out
+your research question, literature review, data, methods, and findings.
 
 Website: An engaging website designed to convey your research to **a general
 audience**.
@@ -71,7 +71,8 @@ Mostly it is an opportunity for you to work on your project and ask me questions
 
 - What is visual weighting?
 
-- Why should you avoid using the size of circles to mean anything in a plot?
+- Why should you avoid using the **size** of circles to have meaning about
+continuous variables?
 
 - How many decimal places should you report in a table?
 
@@ -173,19 +174,30 @@ their browser to create the plots.
 **Server Side**: Data manipulations and/or plots (e.g. with Shiny Server) are
 done on a server.
 
+## Hosting
+
 There are lots of **free** services (e.g. GitHub Pages) for hosting webpages for
 client side plot rendering.
 
 You usually have to use a **paid** service for server side data manipulation
 plotting.
 
-## Set up
+## Server Side Applications
 
-You already know how to create HTML documents with R Markdown.
+You can use R to (relatively) easily create server side web applications with R.
+
+To do this use [Shiny](http://shiny.rstudio.com/).
+
+We are not going to cover Shiny in the class as it does require a paid service
+to host.
+
+## Set up for Creating Websites with Client Side Visualisations
+
+You already know how to create HTML documents with **R Markdown**.
 
 Set your code chunk to `results='asis'`.
 
-There are a growing set of tools for interactive plotting:
+There is a growing set of tools for interactive plotting:
 
 - [googleVis](https://code.google.com/p/google-motion-charts-with-r/)
 
@@ -202,16 +214,17 @@ There are a growing set of tools for interactive plotting:
 <br>
 <br>
 
-These packages simply create an interface between R and JavaScript.
+These packages simply create an interface between R and (usually) JavaScript.
 
 Debugging often requires some knowledge of JavaScript and the
 [DOM](http://en.wikipedia.org/wiki/Document_Object_Model).
 
-In sum: usually simple, but can be difficult.
+In sum: usually simple, but can be mysteriously difficult without a good
+knowledge of JavaScript/HTML.
 
 ## Google Plots with googleVis
 
-You can use the googleVis package to create Google plots from R.
+The googleVis package can create Google plots from R.
 
 Example from
 [googleVis Vignettes](http://cran.r-project.org/web/packages/googleVis/vignettes/googleVis_examples.html).
@@ -232,9 +245,7 @@ line_plot <- gvisLineChart(fake_compare)
 print(line_plot, tag = 'chart')
 ```
 
-**Note**: Uses `results='asis' in the code chunk head.
-
-To show the in R use `plot` instead of `print` and don't include
+**Note**: To show in R use `plot` instead of `print` and don't include
 `tag = 'chart'`.
 
 ## Map with googleVis
@@ -245,11 +256,12 @@ co2 <- WDI(indicator = 'EN.ATM.CO2E.PC', start = 2010, end = 2010)
 co2 <- co2[, c('iso2c','EN.ATM.CO2E.PC')]
 
 # Clean
-names(co2) <- c('iso2c', 'CO2 Emmissions per Capita')
+names(co2) <- c('iso2c', 'CO2 Emissions per Capita')
 co2[, 2] <- round(log(co2[, 2]), digits = 2)
 
+# Plot
 co2_map <- gvisGeoMap(co2, locationvar = 'iso2c',
-                      numvar = 'CO2 Emmissions per Capita',
+                      numvar = 'CO2 Emissions per Capita',
                       options = list(
                           colors = '[0xfff7bc, 0xfec44f,
                                     0xd95f0e]'
@@ -298,32 +310,38 @@ Note: you can use a custom URL if you own one. See
 
 ## Set Up GitHub Pages
 
-First create a new branch in your repository called `gh-pages`:
+First **create a new branch** in your repository called `gh-pages`:
 
 ![Create Branch](img/CreateBranch.png)
 
 ## Set Up GitHub Pages
 
-Then sync your branch with the local version of the repository.
-
-![sync](img/sync.png)
+Then **sync** your branch with the local version of the repository.
 
 <br>
 
-Finally switch to the gh-pages branch.
+Finally **switch** to the gh-pages branch.
 
 <img src="img/SwitchBranch.png" width=400 height=200 />
 
 ## GitHub Pages and R Markdown
 
-You can use R Markdown to create the index.html page as before.
+You can use R Markdown to create the index.html page.
 
 Simply place a new .Rmd file in the repository called `index.Rmd` and
-knit it to HTML. Then push it back up.
+knit it to HTML. Then sync it.
 
 Your website will now be live.
 
 Every time you *push* to the gh-pages branch, the website will be **updated**.
+
+## Note
+
+<br>
+<br>
+<br>
+
+Note branches in git repositories can have totally different files in them.
 
 ## Seminar
 
@@ -336,7 +354,7 @@ If relevant include:
 
 - A googleVis map
 
-- A bar or line chart with googleVis or other
+- A bar or line chart with googleVis or other package
 
 - A simulation plot created with Zelig showing key results from your regression
 analysis.

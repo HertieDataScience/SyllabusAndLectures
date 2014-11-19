@@ -1,5 +1,5 @@
 ---
-title: 'MPP-E1180 Lecture 11: Review and Prepare Final Project'
+title: 'MPP-E1180 Lecture 11: Prepare Final Project'
 author: "Christopher Gandrud"
 date: "27 November 2014"
 output:
@@ -7,3 +7,73 @@ output:
     css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
 ---
+
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
+
+- Collaborative Research Project (expations)
+
+- Peer discussion/feedback
+
+- Further work on Collaborative Research Project
+
+## Collaborative Research Project (1)
+
+**Purposes**: Pose an interesting research question and try to answer it using
+data analysis and standard academic practices. Effectively communicate your
+results to a **variety of audiences** in a **variety of formats**.
+
+**Deadline**:
+
+- Presentation: In-class Friday 5 December
+
+- Website/Paper: 12 December
+
+## Collaborative Research Project (2)
+
+The project is a 'dry run' for your thesis with multiple presentation outputs.
+
+Presentation: 10 minutes **maximum**. **Engagingly** present your research
+question and key findings to a general academic audience (fellow students).
+
+Paper: 6,000 words maximum. **Standard academic paper**, properly cited laying out
+your research question, literature review, data, methods, and findings.
+
+Website: An engaging website designed to convey your research to **a general
+audience**.
+
+## Collaborative Research Project (3)
+
+As always, you should **submit one GitHub repository** with all of the
+materials needed to completely reproduce your data gathering, analysis, and
+presentation documents.
+
+**Note**: Because you've had two assignments already to work on parts of the
+project, I expect **high quality work**.
+
+## Peer discussion/feedback
+
+**First**: take ~12 minutes to come up with a **five minute pitch** for your project:
+
+- What is your research question? Why is it interesting?
+
+- What data did you gather/methods did you use?
+
+- What are your results? How do you plan to present these?
+
+- What issue do you still have/questions you want to ask?
+
+**Second**: Pair with *one* other group and **give your pitch**/**ask** the
+other pair **at least two questions** about their project.
+
+**Third**: Show the other group in **your GitHub repo**. Explain how it is
+**organised**. Pick one file and **explain what this file does** in detail.
+
+## Final Stretch
+
+<br>
+<br>
+<br>
+
+Work on your project.
+
+Ask me/other groups questions.
