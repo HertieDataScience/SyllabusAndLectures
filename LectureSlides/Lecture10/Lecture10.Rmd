@@ -51,7 +51,7 @@ audience**.
 ## Collaborative Research Project (3)
 
 As always, you should **submit one GitHub repository** with all of the
-materials needed to completely reproduce your data gathering, analysis, and
+materials needed to **completely reproduce** your data gathering, analysis, and
 presentation documents.
 
 **Note**: Because you've had two assignments already to work on parts of the
@@ -272,7 +272,7 @@ co2_map <- gvisGeoMap(co2, locationvar = 'iso2c',
 
 ---
 
-CO2 Emmissions (metric tons per capita)
+CO2 Emissions (metric tons per capita)
 
 ```{r, results='asis'}
 print(co2_map, tag = 'chart')
