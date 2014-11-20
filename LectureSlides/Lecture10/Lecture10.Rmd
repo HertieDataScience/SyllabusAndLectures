@@ -248,7 +248,7 @@ print(line_plot, tag = 'chart')
 **Note**: To show in R use `plot` instead of `print` and don't include
 `tag = 'chart'`.
 
-## Map with googleVis
+## Choropleth map with googleVis
 
 ```{r, message=FALSE}
 library(WDI)
