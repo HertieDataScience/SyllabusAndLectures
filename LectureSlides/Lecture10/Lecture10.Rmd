@@ -168,11 +168,11 @@ Potentially more engaging and could let users explore data on their own.
 Big distinction:
 
 **Client Side**: Plots are created on the user's (client's) computer. Often
-JavaScript in the browser. You simply send them static HTML/JavaScript needed for
+**JavaScript in the browser**. You simply send them static HTML/JavaScript needed for
 their browser to create the plots.
 
 **Server Side**: Data manipulations and/or plots (e.g. with Shiny Server) are
-done on a server.
+done on a **server in R**. Browsers don't come with R built in.
 
 ## Hosting
 
