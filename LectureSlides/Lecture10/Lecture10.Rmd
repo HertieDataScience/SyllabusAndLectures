@@ -226,15 +226,15 @@ knowledge of JavaScript/HTML.
 
 The googleVis package can create Google plots from R.
 
-Example from
+Example modified from
 [googleVis Vignettes](http://cran.r-project.org/web/packages/googleVis/vignettes/googleVis_examples.html).
 
 ```{r}
 # Create fake data
 fake_compare <- data.frame(
-                country = c("US", "GB", "BR"),
-                val1 = c(10,13,14),
-                val2 = c(23,12,32))
+                country = c("2010", "2011", "2012"),
+                US = c(10,13,14),
+                GB = c(23,12,32))
 ```
 
 ## googleVis simple example
@@ -260,15 +260,12 @@ names(co2) <- c('iso2c', 'CO2 Emissions per Capita')
 co2[, 2] <- round(log(co2[, 2]), digits = 2)
 
 # Plot
-co2_map <- gvisGeoMap(co2, locationvar = 'iso2c',
-                      numvar = 'CO2 Emissions per Capita',
+co2_map <- gvisGeoChart(co2, locationvar = 'iso2c',
+                      colorvar = 'CO2 Emissions per Capita',
                       options = list(
-                          colors = '[0xfff7bc, 0xfec44f,
-                                    0xd95f0e]'
+                          colors = "['#fff7bc', '#d95f0e']"
                           ))
 ```
-
-**Note**: That `0x` replaces `#` for hexadecimal colors.
 
 ---
 
@@ -277,15 +274,6 @@ CO2 Emissions (metric tons per capita)
 ```{r, results='asis'}
 print(co2_map, tag = 'chart')
 ```
-
-## googleVis Maps in RStudio
-
-<br>
-<br>
-<br>
-
-Note: you will need to view googleVis maps that are in R Markdown documents in
-your *browser* rather than RStudio's built in HTML viewer.
 
 ## More Examples
 
