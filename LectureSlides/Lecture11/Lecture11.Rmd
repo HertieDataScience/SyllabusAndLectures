@@ -16,6 +16,16 @@ output:
 
 - Further work on Collaborative Research Project
 
+## EU public data source
+
+<br>
+<br>
+<br>
+
+Publicdata.eu might be a useful source of data for future projects:
+
+<http://publicdata.eu/>
+
 ## Collaborative Research Project (1)
 
 **Purposes**: Pose an interesting research question and try to answer it using
