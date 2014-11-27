@@ -72,10 +72,10 @@ project, I expect **high quality work**.
 
 - What issue do you still have/questions you want to ask?
 
-**Second**: Pair with *one* other group and **give your pitch**/**ask** the
+**Second**: Pair with *one* other group and **give your pitch** + **ask** the
 other pair **at least two questions** about their project.
 
-**Third**: Show the other group in **your GitHub repo**. Explain how it is
+**Third**: Show the other group **your GitHub repo**. Explain how it is
 **organised**. Pick one file and **explain what this file does** in detail.
 
 ## Final Stretch
