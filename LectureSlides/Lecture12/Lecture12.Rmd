@@ -1,0 +1,41 @@
+---
+title: 'MPP-E1180 Lecture 12: Presentations and a Few Final Notes'
+author: "Christopher Gandrud"
+date: "4 December 2014"
+output:
+  ioslides_presentation:
+    logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+---
+
+## Course wrap-up
+
+Hopefully you have learned **real-world tools** for doing/presenting collaborative 
+quantitative research using reproducible research best practices.
+
+More importantly: get you **over the early hurdles** to taking advantage of 
+computational tools needed to conduct/present cutting edge research. 
+
+Learn a way of **thinking about research problems** and **finding solutions**.
+
+Sounds silly, but **Curiousness** and **Patience** are really some of the most 
+important skills for doing research. 
+
+## Paper/Website
+
+- **Deadline:** Website/Paper: 12 December
+
+Paper: 6,000 words maximum. **Standard academic paper**, properly cited laying out
+your research question, literature review, data, methods, and findings.
+
+Website: An engaging website designed to convey your research to **a general
+audience**.
+
+## Presentations
+
+**Remember:** 
+
+- 10 minutes **maximum**.
+
+- **Engagingly** present your research question and key findings.
+
+- **1 question** from the audience (2 minutes max).
