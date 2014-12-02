@@ -9,20 +9,42 @@ output:
 
 ## Course wrap-up
 
+<br>
+<br>
+<br>
+
 Hopefully you have learned **real-world tools** for doing/presenting collaborative 
 quantitative research using reproducible research best practices.
+
+## Course wrap-up
+
+<br>
+<br>
+<br>
 
 More importantly: get you **over the early hurdles** to taking advantage of 
 computational tools needed to conduct/present cutting edge research. 
 
+## Course wrap-up
+
+<br>
+<br>
+<br>
+
 Learn a way of **thinking about research problems** and **finding solutions**.
+
+## Course wrap-up
+
+<br>
+<br>
+<br>
 
 Sounds silly, but **Curiousness** and **Patience** are really some of the most 
 important skills for doing research. 
 
 ## Paper/Website
 
-- **Deadline:** Website/Paper: 12 December
+**Deadline:** Website/Paper: 12 December
 
 Paper: 6,000 words maximum. **Standard academic paper**, properly cited laying out
 your research question, literature review, data, methods, and findings.
