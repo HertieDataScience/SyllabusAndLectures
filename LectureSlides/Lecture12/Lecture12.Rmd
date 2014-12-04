@@ -25,6 +25,8 @@ quantitative research using reproducible research best practices.
 More importantly: get you **over the early hurdles** to taking advantage of 
 computational tools needed to conduct/present cutting edge research. 
 
+Hopefully set you up to be able to **learn more**.
+
 ## Course wrap-up
 
 <br>
@@ -41,6 +43,21 @@ Learn a way of **thinking about research problems** and **finding solutions**.
 
 Sounds silly, but **Curiousness** and **Patience** are really some of the most 
 important skills for doing research. 
+
+## Final Project
+
+The final project is worth **50%** of your final mark for the course.
+
+- Presentation: 10%
+
+- Website: 10%
+
+- Paper: 30%
+
+<br>
+<br>
+
+(Sorry, I should have announced this earlier.)
 
 ## Paper/Website
 
