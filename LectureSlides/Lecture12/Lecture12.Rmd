@@ -13,8 +13,8 @@ output:
 <br>
 <br>
 
-Hopefully you have learned **real-world tools** for doing/presenting collaborative 
-quantitative research using reproducible research best practices.
+Hopefully you have learned **real-world tools** for **doing/presenting** collaborative 
+quantitative research using **reproducible research best practices**.
 
 ## Course wrap-up
 
@@ -43,6 +43,8 @@ Learn a way of **thinking about research problems** and **finding solutions**.
 
 Sounds silly, but **Curiousness** and **Patience** are really some of the most 
 important skills for doing research. 
+
+These are qualities that can be **improved with practice**.
 
 ## Final Project
 
@@ -73,7 +75,7 @@ audience**.
 
 **Remember:** 
 
-- 10 minutes **maximum**.
+- 10 minutes **maximum** (less can even be better).
 
 - **Engagingly** present your research question and key findings.
 
