@@ -4,7 +4,7 @@
 
 ### Fall 2014
 
-**Version: *4 December 2014***
+**Version: *15 December 2014***
 
 ### Instructor: Christopher Gandrud
 
@@ -105,6 +105,8 @@ If unavoidable circumstances arise which prevent attendance or preparation, the 
 
 In this week I will give a general overview of the course objectives and key concepts. We will also make sure that you are able to install and load all of the necessary software required for the course.
 
+#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture1/Lecture1.html#1)
+
 #### Readings:
 
 - Ch.1-[2](https://github.com/christophergandrud/RepResR-RStudio/raw/gh-pages/other/ReproducibleResearch_Chapter2.pdf): RRRR.
@@ -126,6 +128,8 @@ In this week I will give a general overview of the course objectives and key con
 ### Week 2: Files, File Structures, Version Control, & Collaboration
 
 Fundamentally, your research is a collection of files (preferably text files). Organising, manipulating, and storing files is at the heart of research practice. Well organised and stored files are crucial for enabling collaboration and making your research reproducible. We will learn how file systems work, as well as how to organize, version control with Git/GitHub, and store research files to enable collaboration and reproducibility.
+
+#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture2/Lecture2.html#1)
 
 #### Readings:
 
@@ -151,6 +155,9 @@ If you additionally want to get really good at command line file management (pre
 
 We will learn the basics of the R statistical programming language for data handling and simple descriptive statistics, as well as general computer science problem solving skills.
 
+#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture3/Lecture3.html#1)
+
+
 #### Readings:
 
 - p: 27-44: RRRR.
@@ -175,6 +182,9 @@ A markup language is a set of instructions that allows you to take a text file a
 
 This week we will focus on learning one of the simpler markup languages--[Markdown](http://daringfireball.net/projects/markdown/syntax) as well has how to use Markdown for literate programming with [knitr](http://yihui.name/knitr/).
 
+#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture4/Lecture4.html#1)
+
+
 #### Readings
 
 - Section 3.3 and Ch. 13: RRRR.
@@ -186,6 +196,8 @@ This week we will focus on learning one of the simpler markup languages--[Markdo
 ### Week 5: Introduction to Markup Languages and Literate Programming (2)
 
 We will expand our understanding of markup languages and literate programming by venturing into two more advanced languages: HTML and pandoc/LaTeX/BibTex.
+
+#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture5/Lecture5.html#1)
 
 #### Readings
 
@@ -202,6 +214,8 @@ Kieran, Healy. 2014. [Plain Text, Papers, Pandoc](http://kieranhealy.org/blog/ar
 ### Week 6: Automatic Data Gathering via Curl, API Packages + Cleaning
 
 Most social science data sets are now available for download online. This week we will learn how to programmatically access this data and clean it so that it can be used for statistical analysis. We will also consider the benefits and challenges of government increasing the openness and accessibility of their data.
+
+#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture6/Lecture6.html#1)
 
 #### Readings
 
@@ -230,6 +244,8 @@ A considerable amount of social science data is not stored in traditional data t
 We will also be examining in more detail ways to transform data, particularly
 with the [dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) package.
 
+#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture7/Lecture7.html#1)
+
 #### Readings
 
 - Wickham, Hadley. 2010. ''[stringr: modern, consistent string processing](http://journal.r-project.org/archive/2010-2/RJournal_2010-2_Wickham.pdf)''.
@@ -243,13 +259,14 @@ with the [dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introducti
 
 - Barberá, Pablo. 2013. "[NYU Politics Data Lab Workshop: Scraping Twitter and Web Data Using R](http://www.nyu.edu/projects/politicsdatalab/workshops/twitter.pdf)".
 
-
 ### Week 8: Statistical Modelling with R
 
 We will learn how to fit and evaluate a variety of statistical models using the
 R language, including simple linear models and logistic regression models for
 binary dependent variables. We will also discuss basic techniques for model checking and showing
 results from these models.
+
+#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture8/Lecture8.html#1)
 
 #### Readings:
 
@@ -268,6 +285,8 @@ Statistical Analyses: Improving interpretation and presentation](http://gking.ha
 ### Week 9: Automatic Table Generation and Static Visualisation
 
 We will first learn how to automatically generate summary and results tables for multiple markup languages using  [stargazer](http://cran.r-project.org/web/packages/stargazer/stargazer.pdf). We will then learn static descriptive and inferential data visualisation best practices including avoiding introducing optical illusions that distort data presentations and accommodating readers with visual impairments. We will also cover specific R packages for creating static visualisations, primarily [ggplot2](http://docs.ggplot2.org/current/) and [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) for mapping.
+
+#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture9/Lecture9.html#1)
 
 #### Readings
 
@@ -292,6 +311,10 @@ We will first learn how to automatically generate summary and results tables for
 
 The transition of publishing from static mediums such as print journals and books to internet based platforms has greatly expanded the tools data scientists have to dynamically communicate results. In particular, a number of tools frequently powered by [JavaScript](http://www.w3schools.com/js/DEFAULT.asp) make interactive presentations possible. There are a number of R based tools that allow you to use these technologies within Markdown/HTML presentation documents.
 
+#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture10/Lecture10.html#1)
+
+#### Resources
+
 - [googleVis](https://code.google.com/p/google-motion-charts-with-r/)
 
 - [rcharts](http://rcharts.io/)
@@ -309,6 +332,8 @@ The transition of publishing from static mediums such as print journals and book
 ### Week 11: Prepare Collaborative Research Project
 
 We will bring together all of the tools we have learned to conduct an original collaborative and reproducible research project. You will present the results from the project in multiple mediums including as a paper, a presentation to the class, and a website. The project should ideally be the starting point of your thesis. Week 11 is an opportunity for you to work on your project and ask questions/get immediate feedback from the instructor/classmates.
+
+#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture11/Lecture1.html#1)
 
 ### Week 12: Present Results
 
