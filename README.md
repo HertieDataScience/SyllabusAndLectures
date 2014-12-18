@@ -300,7 +300,10 @@ Significance 8(4): 183.
 
 *Reading Extras:*
 
-- Schenker, N., & Gentleman, J. F. 2001. On Judging the Significance of Difference by Examining the Overlap Between Confidence Intervals. The American Statistician, 55(3), 182–186.
+- Ehrenberg, A S C. 1977. ''Rudiments of Numeracy''. Journal of the Royal Statistical Society. 
+Series A General 140(3): 277–97.
+
+- Schenker, N., & Gentleman, J. F. 2001. ''On Judging the Significance of Difference by Examining the Overlap Between Confidence Intervals''. The American Statistician, 55(3), 182–186.
 
 - Wickham, H., Cook, D., Hofmann, H., & Buia, A. (2010). [Graphical Inference for Infovis](http://stat.wharton.upenn.edu/~buja/PAPERS/Wickham-Cook-Hofmann-Buja-IEEE-TransVizCompGraphics_2010-Graphical%20Inference%20for%20Infovis.pdf). IEEE Transactions on Visualization and Computer Graphics, 16(6): 973–979.
 
