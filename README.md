@@ -80,23 +80,23 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 
 | Name                    | Percent of Final Mark | Due              |
 | ----------------------- | --------------------- | ---------------- |
-| Pair Assignment 1       | 10%                   | Week 3           |
-| Pair Assignment 2       | 10%                   | Reading Week     |
-| Pair Assignment 3       | 10%                   | Week 9           |
-| Collaborative Research Project | 50%            | Presentation: Week 12, Paper/Website: Final Exam Week |
+| Pair Assignment 1       | 10%                   | 2 October        |
+| Pair Assignment 2       | 10%                   | 23 October       |
+| Pair Assignment 3       | 10%                   | 6 November       |
+| Collaborative Research Project | 50%            | Presentation: Final Class, Paper/Website: Final Exam Week |
 | Attendance/active Participation | 20%           | -                |
 
-1. The **first pair assignment** is designed to develop your understanding of file structures, version control, and basic R data structures and descriptive statistics. Each pair will create a new public GitHub repository. The  repository should be fully documented, including with a descriptive README.md file. The repository will include R source code files that access at least two core R data sets, perform basic transformations on the data, and illustrate the datas' distributions using a variety relevant of descriptive statistics. At least one file must dynamically link to another in a substantively meaningful way. Finally, another pair must make a pull request and it should be discussed and merged.  **Deadline Week 3, 10% of final grade**.
+1. The **first pair assignment** is designed to develop your understanding of file structures, version control, and basic R data structures and descriptive statistics. Each pair will create a new public GitHub repository. The  repository should be fully documented, including with a descriptive README.md file. The repository will include R source code files that access at least two core R data sets, perform basic transformations on the data, and illustrate the datas' distributions using a variety relevant of descriptive statistics. At least one file must dynamically link to another in a substantively meaningful way. Finally, another pair must make a pull request and it should be discussed and merged.  **Deadline 2 October, 10% of final grade**.
 
-2. The **second pair assignment** is a proposal for your Collaborative Research Project. It is an opportunity for you to layout your collaborative research paper question, justify why it is interesting, provide basic literature review (properly cited using BibTeX), and identify data sources/methodologies that you can access to help answer your question. You will also demonstrate your understanding of literate programming technologies.  **Deadline Reading Week, 2,000 words maximum, 10% of final grade**.
+2. The **second pair assignment** is a proposal for your Collaborative Research Project. It is an opportunity for you to layout your collaborative research paper question, justify why it is interesting, provide basic literature review (properly cited using BibTeX), and identify data sources/methodologies that you can access to help answer your question. You will also demonstrate your understanding of literate programming technologies.  **Deadline 23 October, 2,000 words maximum, 10% of final grade**.
 
-3. In the **third pair assignment** you will gather web based data from at least two sources, merge the data sets, conduct basic descriptive and inferential statistics on the data to address a relevant research question and briefly describe the results including with dynamically generated tables and figures. Students are encouraged to access data and perform statistical analyses with an eye to answering questions relevant for their Collaborative Research Project. **Deadline Week 9, the write up should be 1,500 words maximum and use literate programming, 10% of final grade**.
+3. In the **third pair assignment** you will gather web based data from at least two sources, merge the data sets, conduct basic descriptive and inferential statistics on the data to address a relevant research question and briefly describe the results including with dynamically generated tables and figures. Students are encouraged to access data and perform statistical analyses with an eye to answering questions relevant for their Collaborative Research Project. **Deadline 6 November, the write up should be 1,500 words maximum and use literate programming, 10% of final grade**.
 
-4. For the **Collaborative Research Project** you will pose an interesting social science question and attempt to answer it using standard academic practices including original data collection and statistical analysis. The project should be considered a ‘dry run’ for your thesis. The project has **three presentation outputs** designed to present your research to multiple audiences.  The first is a oral presentation (**10 minute maximum**) given in **Week 12**. The second is a standard academic paper (**5,000 words maximum**) that is fully reproducible and dynamically generated. The third is a website designed to present key aspects of your research in an engaging way to a general audience. The **paper and website are due in the Final Exam Week**. The presentation and website are each worth 10% of your final mark. The paper is worth 30%.
+4. For the **Collaborative Research Project** you will pose an interesting social science question and attempt to answer it using standard academic practices including original data collection and statistical analysis. The project should be considered a ‘dry run’ for your thesis. The project has **three presentation outputs** designed to present your research to multiple audiences.  The first is a oral presentation (**10 minute maximum**) given in the **final class**. The second is a standard academic paper (**5,000 words maximum**) that is fully reproducible and dynamically generated. The third is a website designed to present key aspects of your research in an engaging way to a general audience. The **paper and website are due in the Final Exam Week**. The presentation and website are each worth 10% of your final mark. The paper is worth 30%.
 
 All of the assignments for the course will be completed in pairs. All assignments must be developed using Git and submitted on GitHub. All assignments, including the version history must be completely reproducible from the repository files. In general a single mark for the pair will be given. However, as all assignments are developed using Git, your contributor statistics will be taken into consideration. Major discrepancies between team members will result in scores reflecting individual’s contributions.
 
-Assignments are due by **midnight on Friday**. When you have completed the assignment, email me the GitHub tag URL for the final version of your assignment.
+Assignments are due by **midnight** on the due date. When you have completed the assignment, email me the GitHub tag URL for the final version of your assignment.
 
 **Examination Requirement**: Weighted average grade of all course assignment must be 50% or higher on numerical scale.
 
@@ -109,21 +109,25 @@ If unavoidable circumstances arise which prevent attendance or preparation, the 
 
 ## Part I: Motivation and getting started
 
-### Week 1: Introduction to the Course
+### Week 1: Introduction to the Course + Introduction to the R Programming Language (1)
 
-In this week I will give a general overview of the course objectives and key concepts. We will also make sure that you are able to install and load all of the necessary software required for the course.
+In this week I will first give a general overview of the course objectives and key concepts. We will also make sure that you are able to install and load all of the necessary software required for the course.
 
-#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture1/Lecture1.html#1)
+Then, we will learn the basics of the R statistical programming language for data handling and simple descriptive statistics, as well as general computer science problem solving skills.
+
+#### [Slides (1)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture1/Lecture1.html#1)
+
+#### [Slides (2)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture3/Lecture3.html#1)
 
 #### Readings:
 
-- Ch.1-[2](https://github.com/christophergandrud/RepResR-RStudio/raw/gh-pages/other/ReproducibleResearch_Chapter2.pdf): RRRR.
+- Ch.1-[2](https://github.com/christophergandrud/RepResR-RStudio/raw/gh-pages/other/ReproducibleResearch_Chapter2.pdf), Sections 3.1-3.2: RRRR.
 
-- Peng, Roger D. 2011. [''Reproducible Research in Computational Science''](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3383002/pdf/nihms382015.pdf). *Science*. 334(6060): 1226-1227.
-
-*Reading Extras:*
+- Leek, Jeffrey T. and Roger D. Peng. 2015. ''[P-values are Just the Tip of the Iceberg](http://www.nature.com/polopoly_fs/1.17412!/menu/main/topColumns/topLeftColumn/pdf/520612a.pdf)''. *Nature*. 520: 612.
 
 - Lazer, David, et al. 2009. ''[Computational Social Science](http://www.sciencemag.org/content/323/5915/721.summary)''. *Science*.  323(5915): 721-723. ([Open access version](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2745217/))
+
+*Reading Extras:*
 
 - Stodden, Victoria and Miguez, Sheila 2014. ''[Best Practices for Computational Science: Software Infrastructure and Environments for Reproducible and Extensible Research](http://dx.doi.org/10.5334/jors.ay)''. *Journal of Open Research Software* 2(1):e21.
 
@@ -133,23 +137,27 @@ In this week I will give a general overview of the course objectives and key con
 
 - Lazer, David. Ryan Kennedy, Gary King, and Alessandro Vespignani. 2014. ''[The Parable of Google Flu: Traps in Big Data Analysis](http://www.sciencemag.org/content/343/6176/1203.summary)''. *Science*. 343(6176): 1203-1205.
 
+- Ch. 1: Spraul, V. Anton. 2012. *Think like a Programmer*. San Francisco: No Starch Press.
+
 ### Week 2: Files, File Structures, Version Control, & Collaboration
 
-Fundamentally, your research is a collection of files (preferably text files). Organising, manipulating, and storing files is at the heart of research practice. Well organised and stored files are crucial for enabling collaboration and making your research reproducible. We will learn how file systems work, as well as how to organize, version control with Git/GitHub, and store research files to enable collaboration and reproducibility.
+We will complete our introduction to the R programming language.
+
+Then we will learn about the importance and use of file structures for your research. Fundamentally, your research is a collection of files (preferably text files). Organising, manipulating, and storing files are at the heart of research practice. Well-organised and stored files are crucial for enabling collaboration and making your research reproducible. We will learn how file systems work, as well as how to organize, version control, and store research files to enable collaboration and reproducibility.
 
 #### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture2/Lecture2.html#1)
 
 #### Readings:
 
+- Ch. 2-4: Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. John Wiley and Sons Ltd., Chichester.
+
 - Ch 4-5: RRRR.
 
-- Stewart, James. 2014. [''How the GDS uses git and github''](https://gdstechnology.blog.gov.uk/2014/01/27/how-we-use-github/). *United Kingdom Government Data Service*.
+- Wilson, Greg. 2014. [''Why Do Scientists Want to Learn About Code Review?''](http://mozillascience.org/why-do-scientists-want-to-learn-about-code-review/). Mozilla Science Lab.
 
 *Reading Extras:*
 
 - Use the nice [interactive introduction to Git from the Code School](http://try.github.io/levels/1/challenges/1).
-
-- Wilson, Greg. 2014. [''Why Do Scientists Want to Learn About Code Review?''](http://mozillascience.org/why-do-scientists-want-to-learn-about-code-review/). Mozilla Science Lab.
 
 - [Making Your Code Citable](https://guides.github.com/activities/citable-code/). 2014. GitHub Guides.
 
@@ -159,23 +167,6 @@ If you additionally want to get really good at command line file management (pre
 
 - Shotts Jr., William E. 2012. ''The Linux Command Line: A complete introduction''. No Starch Press, San Fransisco.
 
-### Week 3: Introduction to the R Programming Language
-
-We will learn the basics of the R statistical programming language for data handling and simple descriptive statistics, as well as general computer science problem solving skills.
-
-#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture3/Lecture3.html#1)
-
-
-#### Readings:
-
-- p: 27-44: RRRR.
-
-- Ch. 2-4: Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. John Wiley and Sons Ltd., Chichester.
-
-*Reading Extras:*
-
-- Ch. 1: Spraul, V. Anton. 2012. *Think like a Programmer*. San Francisco: No Starch Press.
-
 **Style Guides**: it generally doesn't matter what style guide you use for your code, but it is good to agree on a style with your team and stick to it. Otherwise it will take longer to figure out what your teammates are doing. If your teammates have difficulty understanding your code, other researchers will be even less able to figure out what you did. Two widely used style guides are:
 
 - Wickham, Hadley. 2014. [Style Guide](http://adv-r.had.co.nz/Style.html). Advanced R Programming.
@@ -184,44 +175,33 @@ We will learn the basics of the R statistical programming language for data hand
 
 ## Part II: Markup languages and literate programming
 
-### Week 4: Introduction to Markup Languages and Literate Programming (1)
+### Week 3: Introduction to Markup Languages and Literate Programming (1)
 
 A markup language is a set of instructions that allows you to take a text file and turn it into some formatted presentation document such as a PDF or webpage. Markup languages are a crucial tool for collaborative data science for at least two reasons. First they enable literate programming--the combination of computer code and the human readable description of this code--that is the foundation of highly reproducible research. Second, data is often embedded in markup languages, especially on websites. Understanding how markup languages work will enable you to gather this data more easily.
 
 This week we will focus on learning one of the simpler markup languages--[Markdown](http://daringfireball.net/projects/markdown/syntax) as well has how to use Markdown for literate programming with [knitr](http://yihui.name/knitr/).
 
-#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture4/Lecture4.html#1)
+#### [Slides (1)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture4/Lecture4.html#1)
 
-
-#### Readings
-
-- Section 3.3 and Ch. 13: RRRR.
-
-- RStudio. 2014. [RMarkdown--Dynamic Documents for R](http://rmarkdown.rstudio.com/).
-
-- RStudio. 2014. [Presentations with ioslides](http://rmarkdown.rstudio.com/ioslides_presentation_format.html).
-
-### Week 5: Introduction to Markup Languages and Literate Programming (2)
-
-We will expand our understanding of markup languages and literate programming by venturing into two more advanced languages: HTML and pandoc/LaTeX/BibTex.
-
-#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture5/Lecture5.html#1)
+#### [Slides (2)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture5/Lecture5.html#1)
 
 #### Readings
 
-- Ch. 11-12: RRRR.
+- Section 3.3 and Ch. 11, 13: RRRR.
 
-- RStudio. 2014. [Pandoc Markdown](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html).
+- RStudio. 2015. [RMarkdown--Dynamic Documents for R](http://rmarkdown.rstudio.com/).
 
-**Extras:**
+- RStudio. 2015. [Pandoc Markdown](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html).
 
-Kieran, Healy. 2014. [Plain Text, Papers, Pandoc](http://kieranhealy.org/blog/archives/2014/01/23/plain-text/).
+- RStudio. 2015. [Presentations with ioslides](http://rmarkdown.rstudio.com/ioslides_presentation_format.html).
 
 ## Part III: Data gathering, transformation, & analysis
 
-### Week 6: Automatic Data Gathering via Curl, API Packages + Cleaning
+### Week 4: Introduction to Markup Languages and Literate Programming (2) + Automatic Data Gathering via Curl, API Packages + Cleaning
 
-Most social science data sets are now available for download online. This week we will learn how to programmatically access this data and clean it so that it can be used for statistical analysis. We will also consider the benefits and challenges of government increasing the openness and accessibility of their data.
+We will finish up our introduction to Markup languages by venturing into two more advanced languages: HTML and LaTeX/BibTex.
+
+Then we will begin to examine how to access and clean social science data. Most social science data sets are now available for download online. This week we will learn how to programmatically access this data and clean it so that it can be used for statistical analysis. We will also consider the benefits and challenges of government increasing the openness and accessibility of their data.
 
 #### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture6/Lecture6.html#1)
 
@@ -245,54 +225,40 @@ Most social science data sets are now available for download online. This week w
 
 - [rOpenGov](http://ropengov.github.io/projects/)
 
-### Week 7: Automatic Data Gathering via Web Scraping + Transformations
+### Week 5: Automatic Data Gathering Via Web Scraping + Statistical Modeling with R (1)
 
-A considerable amount of social science data is not stored in traditional data table type formats. Instead it is embedded in webpages. To access this data we will learn the basics of web scraping.
-
-We will also be examining in more detail ways to transform data, particularly
+A considerable amount of social science data is not stored in traditional data table type formats. Instead it is embedded in webpages. To access this data we will learn the basics of web scraping. We will also be examining in more detail ways to transform data, particularly
 with the [dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) package.
 
-#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture7/Lecture7.html#1)
+We will learn then begin to learn how to fit and evaluate a variety of statistical models using the R language, including simple linear models and logistic regression models for categorical dependent data.
+
+#### [Slides (1)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture7/Lecture7.html#1)
+
+#### [Slides (2)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture8/Lecture8.html#1)
 
 #### Readings
 
 - Wickham, Hadley. 2010. ''[stringr: modern, consistent string processing](http://journal.r-project.org/archive/2010-2/RJournal_2010-2_Wickham.pdf)''.
 *The R Journal*. 2(2): 38-40.
 
-- A key tool for scraping websites (and dealing with text in general) is [Regular Expressions](http://en.wikipedia.org/wiki/Regular_expression). You can think of these as patterns of text to search for. To prepare for class read the helpful [regular expressions overview by Greg Bacon](http://stackoverflow.com/a/2759417) and practice using them with the [RegexOne](http://regexone.com/) website.
-
-*Reading Extras:*
-
-- Sanchez, Gaston. [Handling and Processing Strings in R](http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf).
-
-- Barberá, Pablo. 2013. "[NYU Politics Data Lab Workshop: Scraping Twitter and Web Data Using R](http://www.nyu.edu/projects/politicsdatalab/workshops/twitter.pdf)".
-
-### Week 8: Statistical Modelling with R
-
-We will learn how to fit and evaluate a variety of statistical models using the
-R language, including simple linear models and logistic regression models for
-binary dependent variables. We will also discuss basic techniques for model checking and showing
-results from these models.
-
-#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture8/Lecture8.html#1)
-
-#### Readings:
-
 - Ch. 7-8, 11: Crawley, Michael J. 2005. Statistics: An Introduction Using R.
 John Wiley and Sons Ltd., Chichester.
 
-*Reading Extras*
+*Reading Extras:*
+
+- A key tool for scraping websites (and dealing with text in general) is [Regular Expressions](http://en.wikipedia.org/wiki/Regular_expression). You can think of these as patterns of text to search for. To prepare for class read the helpful [regular expressions overview by Greg Bacon](http://stackoverflow.com/a/2759417) and practice using them with the [RegexOne](http://regexone.com/) website.
 
 - King, Gary, Micheal Tomz, and Jason Wittenberg. 2001. [Making the Most of
 Statistical Analyses: Improving interpretation and presentation](http://gking.harvard.edu/files/gking/files/making.pdf).
 *American Journal of Political Science*. 22(4): 341–355.
 
-
 ## Part IV: Communicating results from statistical analyses
 
-### Week 9: Automatic Table Generation and Static Visualisation
+### Week 6: Statistical Modeling with R (2) + Automatic Table Generation and Static Visualisation
 
-We will first learn how to automatically generate summary and results tables for multiple markup languages using  [stargazer](http://cran.r-project.org/web/packages/stargazer/stargazer.pdf). We will then learn static descriptive and inferential data visualisation best practices including avoiding introducing optical illusions that distort data presentations and accommodating readers with visual impairments. We will also cover specific R packages for creating static visualisations, primarily [ggplot2](http://docs.ggplot2.org/current/) and [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) for mapping.
+We will conclude our introduction to statistical modelling in R.
+
+We will learn how to automatically generate summary and results tables for multiple markup languages using  [stargazer](http://cran.r-project.org/web/packages/stargazer/stargazer.pdf). We will then learn static descriptive and inferential data visualisation best practices including avoiding introducing optical illusions that distort data presentations and accommodating readers with visual impairments. We will also cover specific R packages for creating static visualisations, primarily [ggplot2](http://docs.ggplot2.org/current/) and [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) for mapping.
 
 #### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture9/Lecture9.html#1)
 
@@ -302,7 +268,7 @@ We will first learn how to automatically generate summary and results tables for
 
 - Gelman, Andrew. 2011.
 ''[Tables as Graphs: the Ramanujan Principle](http://www.significancemagazine.org/details/magazine/1405003/Tables-as-graphs-the-Ramanujan-principle.html)''.
-Significance 8(4): 183.
+*Significance* 8(4): 183.
 
 - Ch. 1, 4, and 9: Tufte, Edward R. 2001. The Visual Display of Quantitative Information. Cheshire, Connecticut: Graphics Press.
 
@@ -322,21 +288,23 @@ Series A General 140(3): 277–97.
 - Donahue, Rafe M. J. 2011. [Fundamental Statistical Concepts in Presenting Data: Principles for Constructing Better Graphics](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf). Version 2.11.
 
 
-### Week 10: Dynamic Visualisation
+### Week 7: Dynamic visualisation + Prepare Collaborative Research Project
 
 The transition of publishing from static mediums such as print journals and books to internet based platforms has greatly expanded the tools data scientists have to dynamically communicate results. In particular, a number of tools frequently powered by [JavaScript](http://www.w3schools.com/js/DEFAULT.asp) make interactive presentations possible. There are a number of R based tools that allow you to use these technologies within Markdown/HTML presentation documents.
 
-#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture10/Lecture10.html#1)
+In addition, we will bring together all of the tools we have learned to conduct an original collaborative and reproducible research project. You will present the results from the project in multiple mediums including as a paper, a presentation to the class, and a website. The project should ideally be the starting point of your thesis. This is an opportunity for you to work on your project and ask questions/get immediate feedback from the instructor/classmates.
+
+#### [Slides (1)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture10/Lecture10.html#1)
+
+#### [Slides (2)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture11/Lecture11.html#1)
 
 #### Resources
 
+- [htmlwidgets](http://www.htmlwidgets.org/)
+
 - [googleVis](https://code.google.com/p/google-motion-charts-with-r/)
 
-- [rcharts](http://rcharts.io/)
-
 *Reading Extras:*
-
-- [d3.js](http://d3js.org/)
 
 - [Shiny Server](http://shiny.rstudio.com/)
 
@@ -344,13 +312,7 @@ The transition of publishing from static mediums such as print journals and book
 
 ## Part V: Collaborative research project
 
-### Week 11: Prepare Collaborative Research Project
-
-We will bring together all of the tools we have learned to conduct an original collaborative and reproducible research project. You will present the results from the project in multiple mediums including as a paper, a presentation to the class, and a website. The project should ideally be the starting point of your thesis. Week 11 is an opportunity for you to work on your project and ask questions/get immediate feedback from the instructor/classmates.
-
-#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture11/Lecture11.html#1)
-
-### Week 12: Present Results
+### Week 8: Present Results
 
 ---
 
