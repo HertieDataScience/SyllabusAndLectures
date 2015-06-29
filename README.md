@@ -2,13 +2,13 @@
 
 # MPP-E1180: Introduction to Collaborative Social Science Data Analysis
 
-### Fall 2014
+### Fall 2015
 
-**Version: 18 December 2014**
+**Version: 30 June 2015**
 
 ### Instructor: Christopher Gandrud
 
-- Office: 1.42
+- Office: 1.64
 
 - Email: <a href="mailto:gandrud@hertie-school.org">gandrud@hertie-school.org</a>
 
@@ -38,15 +38,20 @@ The course assumes that you have a good basic understanding of descriptive and i
 
 **Readings**
 
-> Gandrud, Christopher. 2013. *[Reproducible Research with R and RStudio](http://christophergandrud.github.io/RepResR-RStudio/)*. Chapman & Hall/CRC Press, Oxford. (**RRRR**)
+> Gandrud, Christopher. 2015. *[Reproducible Research with R and RStudio](http://christophergandrud.github.io/RepResR-RStudio/)*. 2nd Edition.
+Chapman & Hall/CRC Press, Oxford. (**RRRR**)
 
 A good reference text to have by your side when doing statistics with R is:
 
-> Crawley, Michael J. 2005. *[Statistics: An Introduction Using R](http://www.hertie-school.org/campus/library/find-resources/ebooks/)*. John Wiley and Sons Ltd., Chichester.
+> Crawley, Michael J. 2005. *[Statistics: An Introduction Using R](http://www.hertie-school.org/campus/library/find-resources/ebooks/)*.
+John Wiley and Sons Ltd., Chichester.
 
-A great free resource for more advanced R programming is is Hadley Wickam's aptly named [Advanced R Programming](http://adv-r.had.co.nz/). This has a lot of useful resources especially for package development.
+A great free resource for more advanced R programming is is Hadley Wickam's
+aptly named [Advanced R Programming](http://adv-r.had.co.nz/).
 
-If you ever get stuck, a good first place to turn for answers is [StackExchange](http://stackexchange.com/). If you are stuck on a coding problem, chances are someone else has had the same problem before, asked an question on StackExchange, and found answers.
+If you ever get stuck, a good first place to turn for answers is [StackExchange](http://stackexchange.com/). If you are stuck on a coding
+problem, chances are someone else has had the same problem before, asked an
+question on StackExchange, and found answers.
 
 **Software and Computers**
 
@@ -56,15 +61,18 @@ All of the software used in this course will be open source, i.e. free.
 
 - Sign up for a [GitHub account](www.github.com) and [install Git](https://help.github.com/articles/set-up-git).
 
-- Install [LaTeX](http://latex-project.org/ftp.html). This is a large install, so dedicate some time to doing it.
+- Install [LaTeX](http://latex-project.org/ftp.html). This is a large
+installation, so dedicate some time to doing it.
 
-- Download and install [R](http://cran.ma.imperial.ac.uk/) and [RStudio](http://www.rstudio.com/ide/download/).
+- Download and install [R](http://cran.ma.imperial.ac.uk/) and [RStudio](http://www.rstudio.com/products/rstudio/download/).
 
-- You need to have a modern web browser installed on your computer. [Chrome](https://support.google.com/chrome/answer/95346?hl=en) or [Firefox](http://www.mozilla.org/en-GB/firefox/new/) are the best choices for what we will do in Week 7: Automatic Data Gathering via Web Scraping.
+- You need to have a modern web browser installed on your computer. [Chrome](https://support.google.com/chrome/answer/95346?hl=en) or [Firefox](http://www.mozilla.org/en-GB/firefox/new/) are the best choices for
+Web Scraping.
 
 **Lectures**
 
-All lecture materials and their source files will be hosted in the [course's GitHub repository](https://github.com/christophergandrud/Hertie_Collab_Data_Science).
+All lecture materials and their source files will be hosted in the
+[course's GitHub repository](https://github.com/HertieDataScience2014/SyllabusAndLectures).
 
 You are **highly encouraged to suggest** changes to the lecture material with a pull request (we'll learn about how to do this in Week 2) if you think of improvements that can be made for clarity, relevance, and to fix typos.
 
@@ -84,7 +92,7 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 
 3. In the **third pair assignment** you will gather web based data from at least two sources, merge the data sets, conduct basic descriptive and inferential statistics on the data to address a relevant research question and briefly describe the results including with dynamically generated tables and figures. Students are encouraged to access data and perform statistical analyses with an eye to answering questions relevant for their Collaborative Research Project. **Deadline Week 9, the write up should be 1,500 words maximum and use literate programming, 10% of final grade**.
 
-4. For the **Collaborative Research Project** you will pose an interesting social science question and attempt to answer it using standard academic practices including original data collection and statistical analysis. The project should be considered a ‘dry run’ for your thesis. The project has **three presentation outputs** designed to present your research to multiple audiences.  The first is a oral presentation (**10 minute maximum**) given in **Week 12**. The second is a standard academic paper (**6,000 words maximum**) that is fully reproducible and dynamically generated. The third is a website designed to present key aspects of your research in an engaging way to a general audience. The **paper and website are due in the Final Exam Week**. The presentation and website are each worth 10% of your final mark. The paper is worth 30%.
+4. For the **Collaborative Research Project** you will pose an interesting social science question and attempt to answer it using standard academic practices including original data collection and statistical analysis. The project should be considered a ‘dry run’ for your thesis. The project has **three presentation outputs** designed to present your research to multiple audiences.  The first is a oral presentation (**10 minute maximum**) given in **Week 12**. The second is a standard academic paper (**5,000 words maximum**) that is fully reproducible and dynamically generated. The third is a website designed to present key aspects of your research in an engaging way to a general audience. The **paper and website are due in the Final Exam Week**. The presentation and website are each worth 10% of your final mark. The paper is worth 30%.
 
 All of the assignments for the course will be completed in pairs. All assignments must be developed using Git and submitted on GitHub. All assignments, including the version history must be completely reproducible from the repository files. In general a single mark for the pair will be given. However, as all assignments are developed using Git, your contributor statistics will be taken into consideration. Major discrepancies between team members will result in scores reflecting individual’s contributions.
 
@@ -292,15 +300,15 @@ We will first learn how to automatically generate summary and results tables for
 
 - Ch. 9: RRRR.
 
-- Gelman, Andrew. 2011. 
-''[Tables as Graphs: the Ramanujan Principle](http://www.significancemagazine.org/details/magazine/1405003/Tables-as-graphs-the-Ramanujan-principle.html)''. 
+- Gelman, Andrew. 2011.
+''[Tables as Graphs: the Ramanujan Principle](http://www.significancemagazine.org/details/magazine/1405003/Tables-as-graphs-the-Ramanujan-principle.html)''.
 Significance 8(4): 183.
 
 - Ch. 1, 4, and 9: Tufte, Edward R. 2001. The Visual Display of Quantitative Information. Cheshire, Connecticut: Graphics Press.
 
 *Reading Extras:*
 
-- Ehrenberg, A S C. 1977. ''Rudiments of Numeracy''. Journal of the Royal Statistical Society. 
+- Ehrenberg, A S C. 1977. ''Rudiments of Numeracy''. Journal of the Royal Statistical Society.
 Series A General 140(3): 277–97.
 
 - Schenker, N., & Gentleman, J. F. 2001. ''On Judging the Significance of Difference by Examining the Overlap Between Confidence Intervals''. The American Statistician, 55(3), 182–186.
