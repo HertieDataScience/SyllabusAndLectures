@@ -197,7 +197,7 @@ This week we will focus on learning one of the simpler markup languages--[Markdo
 
 ## Part III: Data gathering, transformation, & analysis
 
-### Week 4: Introduction to Markup Languages and Literate Programming (2) + Automatic Data Gathering via Curl, API Packages + Cleaning
+### Week 4: Introduction to Markup Languages and Literate Programming (2) + Automatic Data Gathering via Curl, and API Packages
 
 We will finish up our introduction to Markup languages by venturing into two more advanced languages: HTML and LaTeX/BibTex.
 
@@ -247,6 +247,8 @@ John Wiley and Sons Ltd., Chichester.
 *Reading Extras:*
 
 - A key tool for scraping websites (and dealing with text in general) is [Regular Expressions](http://en.wikipedia.org/wiki/Regular_expression). You can think of these as patterns of text to search for. To prepare for class read the helpful [regular expressions overview by Greg Bacon](http://stackoverflow.com/a/2759417) and practice using them with the [RegexOne](http://regexone.com/) website.
+
+- Croissant, Yves and Giovanni Millo. 2008. ''[Panel Data Econometrics in R: the plm Package](http://www.jstatsoft.org/v27/i02/paper)''. Journal of Statistical Software. 27(2): 1-43.
 
 - King, Gary, Micheal Tomz, and Jason Wittenberg. 2001. [Making the Most of
 Statistical Analyses: Improving interpretation and presentation](http://gking.harvard.edu/files/gking/files/making.pdf).
