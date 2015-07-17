@@ -126,7 +126,7 @@ matrices).
 output**.
 
 **Example Docs**:
-[HertieDataScience2014/Examples/PaperWithRegressionTables](https://github.com/HertieDataScience2014/Examples/tree/master/PaperWithRegressionTables)
+[HertieDataScience/Examples/PaperWithRegressionTables](https://github.com/HertieDataScience/Examples/tree/master/PaperWithRegressionTables)
 
 ## `kable` example: predicted probabilities
 

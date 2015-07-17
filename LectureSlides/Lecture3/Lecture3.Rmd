@@ -64,7 +64,7 @@ Add the original repo as an **upstream repo**:
 ```
 # Note: should be on one line & only need to do once
 git remote add upstream
-https://github.com/HertieDataScience2014/SyllabusAndLectures.git
+https://github.com/HertieDataScience/SyllabusAndLectures.git
 ```
 
 Then **fetch** and **merge**:

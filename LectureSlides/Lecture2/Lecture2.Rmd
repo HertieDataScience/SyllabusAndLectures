@@ -500,7 +500,7 @@ git status
 - `.md` is for [Markdown](https://help.github.com/articles/markdown-basics)
 
 <i class="fa fa-star"></i> Bonus: They are **rendered on GitHub**. For example, the Syllabus on 
-[SyllabusAndLectures](https://github.com/HertieDataScience2014/SyllabusAndLectures).
+[SyllabusAndLectures](https://github.com/HertieDataScience/SyllabusAndLectures).
 
 ## <i class="fa fa-github"></i> Getting started with Git
 
@@ -765,7 +765,7 @@ If you have any data files, try to load them into R.
 - Fork a neighour's repo. 
 
 - Make a pull request to another neighour's repo (or the 
-[SyllabusAndLectures](https://github.com/HertieDataScience2014/SyllabusAndLectures)). 
+[SyllabusAndLectures](https://github.com/HertieDataScience/SyllabusAndLectures)). 
 Justify why it is an important request.
 
 - Accept (or reject) a pull request.

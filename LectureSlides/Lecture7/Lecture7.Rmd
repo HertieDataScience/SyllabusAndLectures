@@ -30,10 +30,10 @@ Overall, everyone has made a **good first start**.
 Minor: checkout these posts on GitHub:
 
 - Problems compiling PDF: 
-[SyllabusAndLectures/issues/19](https://github.com/HertieDataScience2014/SyllabusAndLectures/issues/19)
+[SyllabusAndLectures/issues/19](https://github.com/HertieDataScience/SyllabusAndLectures/issues/19)
 
 - Double spacing in R Markdown: 
-[SyllabusAndLectures/issues/20](https://github.com/HertieDataScience2014/SyllabusAndLectures/issues/20)
+[SyllabusAndLectures/issues/20](https://github.com/HertieDataScience/SyllabusAndLectures/issues/20)
 
 ## Assignment 3
 
@@ -339,7 +339,7 @@ grep('[A-Z]', base)
 <br>
 
 You can also find the cheat-sheet at: 
-[SyllabusAndLectures/Lecture7/README](https://github.com/HertieDataScience2014/SyllabusAndLectures/blob/master/LectureSlides/Lecture7/README.md)
+[SyllabusAndLectures/Lecture7/README](https://github.com/HertieDataScience/SyllabusAndLectures/blob/master/LectureSlides/Lecture7/README.md)
 
 ## String processing with stringer
 

@@ -4,7 +4,7 @@
 
 ### Fall 2015
 
-**Version: 30 June 2015**
+**Version: 17 July 2015**
 
 ### Instructor: Christopher Gandrud
 
@@ -72,7 +72,7 @@ Web Scraping.
 **Lectures**
 
 All lecture materials and their source files will be hosted in the
-[course's GitHub repository](https://github.com/HertieDataScience2014/SyllabusAndLectures).
+[course's GitHub repository](https://github.com/HertieDataScience/SyllabusAndLectures).
 
 You are **highly encouraged to suggest** changes to the lecture material with a pull request (we'll learn about how to do this in Week 2) if you think of improvements that can be made for clarity, relevance, and to fix typos.
 
@@ -80,7 +80,7 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 
 | Name                    | Percent of Final Mark | Due              |
 | ----------------------- | --------------------- | ---------------- |
-| Pair Assignment 1       | 10%                   | 5 October        |
+| Pair Assignment 1       | 10%                   | 2 October        |
 | Pair Assignment 2       | 10%                   | 23 October       |
 | Pair Assignment 3       | 10%                   | 6 November       |
 | Collaborative Research Project | 50%            | Presentation: Final Class, Paper/Website: Final Exam Week |
@@ -115,9 +115,9 @@ In this week I will first give a general overview of the course objectives and k
 
 Then, we will learn the basics of the R statistical programming language for data handling and simple descriptive statistics, as well as general computer science problem solving skills.
 
-#### [Slides (1)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture1/Lecture1.html#1)
+#### [Slides (1)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture1/Lecture1.html#1)
 
-#### [Slides (2)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture3/Lecture3.html#1)
+#### [Slides (2)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture3/Lecture3.html#1)
 
 #### Readings:
 
@@ -145,7 +145,7 @@ We will complete our introduction to the R programming language.
 
 Then we will learn about the importance and use of file structures for your research. Fundamentally, your research is a collection of files (preferably text files). Organising, manipulating, and storing files are at the heart of research practice. Well-organised and stored files are crucial for enabling collaboration and making your research reproducible. We will learn how file systems work, as well as how to organize, version control, and store research files to enable collaboration and reproducibility.
 
-#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture2/Lecture2.html#1)
+#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture2/Lecture2.html#1)
 
 #### Readings:
 
@@ -181,9 +181,9 @@ A markup language is a set of instructions that allows you to take a text file a
 
 This week we will focus on learning one of the simpler markup languages--[Markdown](http://daringfireball.net/projects/markdown/syntax) as well has how to use Markdown for literate programming with [knitr](http://yihui.name/knitr/).
 
-#### [Slides (1)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture4/Lecture4.html#1)
+#### [Slides (1)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture4/Lecture4.html#1)
 
-#### [Slides (2)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture5/Lecture5.html#1)
+#### [Slides (2)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture5/Lecture5.html#1)
 
 #### Readings
 
@@ -203,7 +203,7 @@ We will finish up our introduction to Markup languages by venturing into two mor
 
 Then we will begin to examine how to access and clean social science data. Most social science data sets are now available for download online. This week we will learn how to programmatically access this data and clean it so that it can be used for statistical analysis. We will also consider the benefits and challenges of government increasing the openness and accessibility of their data.
 
-#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture6/Lecture6.html#1)
+#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture6/Lecture6.html#1)
 
 #### Readings
 
@@ -232,9 +232,9 @@ with the [dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introducti
 
 We will learn then begin to learn how to fit and evaluate a variety of statistical models using the R language, including simple linear models and logistic regression models for categorical dependent data.
 
-#### [Slides (1)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture7/Lecture7.html#1)
+#### [Slides (1)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture7/Lecture7.html#1)
 
-#### [Slides (2)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture8/Lecture8.html#1)
+#### [Slides (2)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture8/Lecture8.html#1)
 
 #### Readings
 
@@ -262,7 +262,7 @@ We will conclude our introduction to statistical modelling in R.
 
 We will learn how to automatically generate summary and results tables for multiple markup languages using  [stargazer](http://cran.r-project.org/web/packages/stargazer/stargazer.pdf). We will then learn static descriptive and inferential data visualisation best practices including avoiding introducing optical illusions that distort data presentations and accommodating readers with visual impairments. We will also cover specific R packages for creating static visualisations, primarily [ggplot2](http://docs.ggplot2.org/current/) and [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) for mapping.
 
-#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture9/Lecture9.html#1)
+#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture9/Lecture9.html#1)
 
 #### Readings
 
@@ -296,9 +296,9 @@ The transition of publishing from static mediums such as print journals and book
 
 In addition, we will bring together all of the tools we have learned to conduct an original collaborative and reproducible research project. You will present the results from the project in multiple mediums including as a paper, a presentation to the class, and a website. The project should ideally be the starting point of your thesis. This is an opportunity for you to work on your project and ask questions/get immediate feedback from the instructor/classmates.
 
-#### [Slides (1)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture10/Lecture10.html#1)
+#### [Slides (1)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture10/Lecture10.html#1)
 
-#### [Slides (2)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience2014/SyllabusAndLectures/master/LectureSlides/Lecture11/Lecture11.html#1)
+#### [Slides (2)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture11/Lecture11.html#1)
 
 #### Resources
 

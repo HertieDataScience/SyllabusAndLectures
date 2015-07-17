@@ -93,7 +93,7 @@ in Lecture 8 (Statistical Modeling with R).
 An example of a paper + analysis + data project using many of the tools we cover
 today is available at:
 
-[HertieDataScience2014/Examples/SimplePaperWithAnalysis](https://github.com/HertieDataScience2014/Examples/tree/master/SimplePaperWithAnalysis)
+[HertieDataScience/Examples/SimplePaperWithAnalysis](https://github.com/HertieDataScience/Examples/tree/master/SimplePaperWithAnalysis)
 
 ## R Markdown Headers
 
@@ -428,7 +428,7 @@ See Ch. 6 of RRRR if you might want to do this.
 <br>
 <br>
 
-Clone the [HertieDataScience2014/Examples](https://github.com/HertieDataScience2014/Examples) repo and play around with **SimplePaperWithAnalysis**.
+Clone the [HertieDataScience/Examples](https://github.com/HertieDataScience/Examples) repo and play around with **SimplePaperWithAnalysis**.
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Begin working on your Proposal
 

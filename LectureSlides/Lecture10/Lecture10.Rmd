@@ -282,7 +282,7 @@ print(co2_map, tag = 'chart')
 <br>
 
 More examples are available at:
-<http://hertiedatascience2014.github.io/Examples/>
+<http://HertieDataScience.github.io/Examples/>
 
 ## Hosting a website on GitHub Pages
 

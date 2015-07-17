@@ -15,7 +15,7 @@ output:
 
 - Public
 
-    + <a href="https://github.com/HertieDataScience2014/SyllabusAndLectures/issues"><i class="fa fa-exclamation-circle"></i> SyllabusAndLectures/issues</a>
+    + <a href="https://github.com/HertieDataScience/SyllabusAndLectures/issues"><i class="fa fa-exclamation-circle"></i> SyllabusAndLectures/issues</a>
 
     + <a href="https://twitter.com/ChrisGandrud"><i class="fa fa-twitter"></i> @ChrisGandrud</a>
 
@@ -361,16 +361,16 @@ future classes.
 
 ## Syllabus & Lecture Slides
 
-<https://github.com/HertieDataScience2014/SyllabusAndLectures>
+<https://github.com/HertieDataScience/SyllabusAndLectures>
 
-**Syllabus** (<a href="https://github.com/HertieDataScience2014/SyllabusAndLectures/blob/master/README.md">README.md</a>)
+**Syllabus** (<a href="https://github.com/HertieDataScience/SyllabusAndLectures/blob/master/README.md">README.md</a>)
 
 - The syllabus will be **updated**. **Check regularly**.
 
     + Course **difficulty** is **monotonically decreasing** from the original
     (11 September) baseline.
 
-**Lecture Slides** (<a href="https://github.com/HertieDataScience2014/SyllabusAndLectures/tree/master/LectureSlides">LectureSlides/</a>)
+**Lecture Slides** (<a href="https://github.com/HertieDataScience/SyllabusAndLectures/tree/master/LectureSlides">LectureSlides/</a>)
 
 - Accessible as both HTML (recommended) or PDF.
 
@@ -413,8 +413,8 @@ Setup Git/GitHub for version control, collaboration, and remotely storing your f
 
 - <i class="fa fa-user"></i> Set up (free) GitHub account: <https://github.com/join>
 
-- **Give me your GitHub username** so that I can add you to the **HertieDataScience2014**
-group (<https://github.com/HertieDataScience2014>).
+- **Give me your GitHub username** so that I can add you to the **HertieDataScience**
+group (<https://github.com/HertieDataScience>).
 
 - <i class="fa fa-download"></i> Install GitHub application:
 
