@@ -1,10 +1,10 @@
 ---
 title: 'MPP-E1180 Lecture 1: Introduction to the Course'
 author: "Christopher Gandrud"
-date: "11 September 2014"
+date: "11 September 2015"
 output:
   ioslides_presentation:
-    css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
+    css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
   beamer_presentation: default
 ---
@@ -25,11 +25,11 @@ output:
 
 **Official Office Hours**:
 
-- Room: 1.52
+- Room: 1.64
 
-- Wednesday 15:00-17:00
+- Friday: 15:00-17:00
 
-## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for Today (Part 1)
 
 - Introduce the course motivation, goals, plan, and expectations/assessment
 
@@ -53,6 +53,8 @@ output:
 using **best practices** <i class="fa fa-exclamation"></i>
 
 We are going to use **ugly real-world data**, not pristine training data sets.
+
+Use **advanced computation tools** to do **data munging**. 
 
 ## <i class="fa fa-compass"></i> Motivation: Academic
 
@@ -88,8 +90,8 @@ of open data science.
 
 - Governments rely on data analysis for evidence based decision-making.
 
-    + Tools of open data analysis enable better use of data **within** and **between**
-    government actors.
+    + Tools of open data analysis enable better use of data **within** and
+    **between** government actors.
 
     + Governments can take advantage of analyses done by **third parties**.
 
@@ -110,7 +112,7 @@ businesses such as finance and management.
 
 ![R salaries](img/RSalaries.png)
 
-Source: [Revolution Analytics](http://blog.revolutionanalytics.com/2014/02/r-salary-surveys.html)
+Source: [Revolution Analytics (2014)](http://blog.revolutionanalytics.com/2014/02/r-salary-surveys.html)
 
 ## <i class="fa fa-question-circle"></i> Why Collaborative?
 
@@ -133,7 +135,7 @@ who are **not explicitly** working together often in **unexpected ways**.
 **Really reproducible** research (Peng 2011, 1226):
 
 > <i class="fa fa-quote-left"></i> the data and code used to make a finding are
-**available** and they are **sufficient** for an independent researcher to 
+**available** and they are **sufficient** for an independent researcher to
 **recreate the finding**. <i class="fa fa-quote-right"></i>
 
 - In practice reproduciblity is enhanced by **literate programming** where the data,
@@ -179,7 +181,7 @@ The original finding could just have been
 
 Reproducibility helps **avoid effort duplication**:
 
-- Others don't need to waste time:
+- Others **don't waste time**:
 
     + Gathering data that has already been gathered.
 
@@ -189,8 +191,15 @@ Reproducibility helps **avoid effort duplication**:
 
 - Reproducibility also makes it possible to **find and correct errors**.
 
-    + Recent example: translation errors in the
+- Recent examples: 
+    - Translation errors in the
     [World Values Survey](http://www.washingtonpost.com/blogs/monkey-cage/wp/2014/09/02/world-values-lost-in-translation/).
+    
+    - Data errors in research on 
+    [intestinal worm treatment and school attendance]((http://www.columbia.edu/~mh2245/w/worms.html)).
+    
+    - [L'Affaire LaCour](http://www.vox.com/2015/5/20/8630535/same-sex-marriage-study):
+    data *fabrication* discovered.
 
 - Data errors can cause spurious findings that ultimately **waste researchers time**,
 because they try to explain 'wrong' findings.
@@ -201,13 +210,13 @@ because they try to explain 'wrong' findings.
 
     + Reproducible research is likely to be more **useful for other researchers**.
     They can use your data and learn from your code and methods.
-    
+
     + More use <i class="fa fa-long-arrow-right"></i> more impact (e.g. citations)
 
 - **Better work habits**
 
-    + If you are thinking about reproducibility from the beginning your files
-    will be **better organised** and your work will be **better documented**.
+    + Thinking about reproducibility from the beginning makes your files
+    **better organised** and your work is **better documented**.
 
     + This allows you to **build on your own work** more effectively.
 
@@ -256,9 +265,9 @@ allows me to create both PDF and HTML slides.
 
 - Introduction to the Course
 
-- Files, Files Structures, Version Control, and Collaboration
-
 - Introduction to the R Programming Language
+
+- Files, Files Structures, Version Control, and Collaboration
 
 **Part II Markup Languages and Literate Programming**
 
@@ -284,7 +293,7 @@ allows me to create both PDF and HTML slides.
 
 **Part V: Collaborative Research Project**
 
-## <i class="fa fa-sort-numeric-asc"></i> Typical Class Plan
+## <i class="fa fa-sort-numeric-asc"></i> Typical Two Hour Class Plan
 
 - ~ 1 hour lecture
 
@@ -301,14 +310,53 @@ allows me to create both PDF and HTML slides.
 
         - It should be **useful** to your **future self** and **others**.
 
+## <i class="fa fa-exclamation"></i> Three Hour Classes (1)
+
+This year the course is broken into **8 classes** that are each **three hours long**.
+
+Today we will do:
+
+- 1 hour lecture on topic 1 (Course Introduction),
+
+- 1 hour seminar on topic 1,
+
+- 1 hour lecture on topic 2 (Intro to R).
+
+## <i class="fa fa-exclamation"></i> Three Hour Classes (2)
+
+Next class we will do:
+
+- 1 hour seminar on topic 2 (Intro to R),
+
+- 1 hour lecture on topic 3 (Files, File Structures, Version Control),
+
+- 1 hour seminar on topic 3.
+
+## <i class="fa fa-calendar"></i> Class dates
+
+### September
+
+11, 19, 25
+
+### October
+
+9, 16, 30
+
+### November 
+
+20
+
+### December
+
+4
+
 ## <i class="fa fa-certificate"></i> Assessment
 
-
-- 3 Pair Assignments (Weeks 3, 6, 9)
+- 3 Pair Assignments (2 Oct, 23 Oct, 6 Nov)
 
     + 10% each
 
-- Collaborative Research Project (Presentation: Week 12, Website/Paper: Exam Week)
+- Collaborative Research Project (Presentation: 4 Dec, Website/Paper: Exam Week)
 
     + 50%
 
@@ -341,7 +389,7 @@ the assignment is late.
 
 - All assignments must be **reproducible**.
 
-- **Due**: Midnight on Friday of the week it is due.
+- **Due**: Midnight on the due date.
 
 - More details will be given on the specific pair assignments/research project in
 future classes.
@@ -363,16 +411,16 @@ future classes.
 
 <https://github.com/HertieDataScience/SyllabusAndLectures>
 
-**Syllabus** (<a href="https://github.com/HertieDataScience/SyllabusAndLectures/blob/master/README.md">README.md</a>)
+**Syllabus**: <a href="https://github.com/HertieDataScience/SyllabusAndLectures/blob/master/README.md">README.md</a>
 
 - The syllabus will be **updated**. **Check regularly**.
 
-    + Course **difficulty** is **monotonically decreasing** from the original
+    + Changes to course **difficulty** is **monotonically decreasing** from the original
     (11 September) baseline.
 
-**Lecture Slides** (<a href="https://github.com/HertieDataScience/SyllabusAndLectures/tree/master/LectureSlides">LectureSlides/</a>)
+**Lecture Slides**: Links in Online Syllabus or <a href="https://github.com/HertieDataScience/SyllabusAndLectures/tree/master/LectureSlides">LectureSlides/</a>
 
-- Accessible as both HTML (recommended) or PDF.
+- Usually accessible as both HTML (recommended) or PDF.
 
 - Slides will be **optimized for the web**.
 
@@ -380,8 +428,10 @@ future classes.
 
 **Core Texts**
 
-- Gandrud, Christopher. 2013. *Reproducible Research with R and RStudio*.
+- Gandrud, Christopher. 2015. *Reproducible Research with R and RStudio*. 2nd Edition.
 Chapman & Hall/CRC Press, Oxford. (RRRR)
+
+    + 1st edition is also fine.
 
 - Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. John Wiley
 and Sons Ltd., Chichester.
@@ -405,7 +455,7 @@ available.
 
 - Make sure you have a modern web browser, e.g.:
 
-    + <i class="fa fa-google"></i> Chrome
+    + <i class="fa fa-chrome"></i> Chrome
 
 ## <i class="fa fa-github"></i> GitHub
 
@@ -416,17 +466,14 @@ Setup Git/GitHub for version control, collaboration, and remotely storing your f
 - **Give me your GitHub username** so that I can add you to the **HertieDataScience**
 group (<https://github.com/HertieDataScience>).
 
-- <i class="fa fa-download"></i> Install GitHub application:
-
-    + Mac: <https://mac.github.com/>
-
-    + Windows: <https://windows.github.com/>
+- <i class="fa fa-download"></i> Install GitHub application: 
+<https://desktop.github.com/>
 
 ## <i class="fa fa-code"></i> Statistics software
 
 - <i class="fa fa-download"></i> **Install** software:
 
-    + R (version 3.1.1): <http://cran.rstudio.com/>
+    + R (version 3.2.2): <http://cran.rstudio.com/>
 
     + RStudio (dev build): <http://www.rstudio.org/download/daily/desktop/>
 
@@ -462,13 +509,6 @@ PDF versions of your presentation documents.
     + Windows: <http://miktex.org/download>
 
 - <i class="fa fa-exclamation-triangle"></i> This is a large download, so maybe do it in your spare time.
-
-## <i class="fa fa-arrows-alt"></i> Pandoc
-
-Install Pandoc. We won't use this directly, but it is needed for creating
-presentation documents in multiple formats.
-
-- <http://johnmacfarlane.net/pandoc/installing.html>
 
 ## Post-Installation
 
