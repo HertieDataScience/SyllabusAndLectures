@@ -4,7 +4,7 @@ author: "Christopher Gandrud"
 date: "16 October 2014"
 output:
   ioslides_presentation:
-    css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
+    css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
   beamer_presentation: default
 bibliography: main.bib

@@ -1,19 +1,15 @@
 ---
 title: 'MPP-E1180 Lecture 4: Intro to Markup Lang. & Literate Programming (1)'
 author: "Christopher Gandrud"
-date: "2 October 2014"
+date: "9 October 2015"
 output:
   ioslides_presentation:
-    css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
+    css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
   beamer_presentation: default
 ---
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
-
-- Housecleaning
-
-- **Pair Assignment 2**
 
 - Review
 
@@ -37,61 +33,37 @@ output:
 
 <https://github.com/HertieDataScience/Examples>
 
-## <i class="fa fa-check"></i> Class reschedule
+## <i class="fa fa-certificate"></i> Pair Assignment 1
 
-We are rescheduling the classes on 30 October and 13 November.
+- **Due:** Midnight 2 October
 
-Please vote at:
+- Learning objectives: develop your understanding of
 
-- 30 October: <http://doodle.com/batc4xbmrdzqmhy7>
+    - **file structures**,
 
-- 13 November: <http://doodle.com/hu9ehmd55zm6bw8v>
+    - **version control**,
 
-**Voting Deadline:** 3 October
+    - **basic R data structures** and **descriptive statistics**.
 
-## Assignment 1 General Feedback
+## <i class="fa fa-certificate"></i> Pair Assignment 1
 
-- **Always test your code!** Does it at least run on your computer as you expect
-it to with no errors?
+Each pair will create a **new public GitHub repository**
 
-- **Informative** Headers!
+- Must be **fully documented**, including with a **descriptive README.md**
+    file. Your code must be **human readable** and **clearly commented**.
 
-- You are free to work across groups, just make sure to use **pull requests** and
-**fully document these contributions**.
+- Include **R source** code files that:
 
-- Think of the **flow** that you are trying to create when you link your documents
-together.
+    - Access at least **two** core R data sets
 
-- Initialise repos with R **.gitignore** files.
+    - Illustrate the datas' distributions using a variety of **relevant
+    descriptive statistics**
 
-## Assignment 2
+    - Two files must be **dynamically linked**
 
-**Proposal** for your Collaborative Research Project.
+- **Another pair** makes a **pull request**. And this is discussed/merged.
 
-**Deadline:** Week 6
-
-**Submbit:** A (max) 2,000 word proposal created with **R Markdown**. 
-
-The proposal will:
-
-- State your research question. And justify why it is interesting.
-
-- Provide a basic literature review (properly cited with BibTeX).
-
-- Identify data sources and appropriate research methodologies for answering your
-question.
-
-As always, submit the entire GitHub repo.
-
-## Assignment 2
-
-<br>
-<br>
-<br>
-
-**Definitely see me with your ideas/draft.**
-
-## <i class="fa fa-arrow-left"></i> Review
+## <i class="fa fa-arrow-left"></i> Review (1)
 
 - In R, what is the difference between a matrix and a data frame?
 
@@ -101,6 +73,16 @@ As always, submit the entire GitHub repo.
 
 - What two things do you need to describe the distribution of a continuous
 variable?
+
+## <i class="fa fa-arrow-left"></i> Review (2)
+
+With a partner: 
+
+- What is the difference between **relative** and **absolute** file paths?
+
+- What is a **commit**?
+
+- What does it mean to **pull** and **push** a repo?
 
 ## What is Literate Programming?
 
@@ -421,7 +403,7 @@ author: "Christopher Gandrud"
 date: "1 October 2014"
 output:
   ioslides_presentation:
-    css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
+    css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
   beamer_presentation: default
 ---

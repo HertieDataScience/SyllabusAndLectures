@@ -117,7 +117,7 @@ Then, we will learn the basics of the R statistical programming language for dat
 
 #### [Slides (1)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture1/Lecture1.html#1)
 
-#### [Slides (2)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture3/Lecture3.html#1)
+#### [Slides (2)](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture2/Lecture2.html#1)
 
 #### Readings:
 
@@ -145,7 +145,7 @@ We will complete our introduction to the R programming language.
 
 Then we will learn about the importance and use of file structures for your research. Fundamentally, your research is a collection of files (preferably text files). Organising, manipulating, and storing files are at the heart of research practice. Well-organised and stored files are crucial for enabling collaboration and making your research reproducible. We will learn how file systems work, as well as how to organize, version control, and store research files to enable collaboration and reproducibility.
 
-#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture2/Lecture2.html#1)
+#### [Slides](http://htmlpreview.github.io/?https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture3/Lecture3.html#1)
 
 #### Readings:
 

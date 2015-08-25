@@ -1,83 +1,33 @@
 ---
-title: 'MPP-E1180 Lecture 3: Introduction to the R Programming Language'
+title: 'MPP-E1180 Lecture 3: Files, File Structures, Version Control, & Collaboration'
 author: "Christopher Gandrud"
-date: "25 September 2014"
+date: "18 September 2015"
 output:
   ioslides_presentation:
-    css: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
+    css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
   beamer_presentation: default
 ---
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
 
-- Review
+- Introduce **Pair Assignment 1**
 
-- Sync a fork with the original
+- **Importance** of (text) files and understanding files structures for reproducible
+research
 
-- Reminder: **Pair Assignment 1**
+- Understanding **files paths** (conventions, best practices)
 
-- Basics of object-oriented programming in R
+- **Accessing** the file system from **R**
 
-- Simple R data structures
+- Introduction to Git/GitHub for **version control**
 
-- Simple descriptive statistics and plotting with Base R
+- Git/GitHub for **collaboration**
 
-## Class make up
-
-We need to reschedule the classes originally on **30 October** and **13 November**.
-
-Possibilities:
-
-- Sometime in Midterm Week
-
-- Mondays, 14-16h & 18-20h
-
-- Tuesdays, 8-10h & 18-20h
-
-- Wednesdays, 8-10h & 18-20h
-
-- Thursdays, 14-16h (double session)
-
-## <i class="fa fa-arrow-left"></i> Review
-
-With a partner: 
-
-- What is the difference between **relative** and **absolute** file paths?
-
-- What is a **commit**?
-
-- What does it mean to **pull** and **push** a repo?
-
-## <i class="fa fa-link"></i> Sync a fork with the original repo
-
-See: <https://help.github.com/articles/syncing-a-fork>.
-
-Change current working directory to the repo:
-
-```
-cd /FILE/PATH
-```
-
-Add the original repo as an **upstream repo**:
-
-```
-# Note: should be on one line & only need to do once
-git remote add upstream
-https://github.com/HertieDataScience/SyllabusAndLectures.git
-```
-
-Then **fetch** and **merge**:
-
-```
-git fetch upstream
-git checkout master
-git merge upstream/master
-```
 
 ## <i class="fa fa-certificate"></i> Pair Assignment 1
 
-- **Due:** Midnight 26 September.
+- **Due:** Midnight 2 October
 
 - Learning objectives: develop your understanding of
 
@@ -98,740 +48,738 @@ Each pair will create a **new public GitHub repository**
 
     - Access at least **two** core R data sets
 
-    - Illustrate the data's distributions using a variety of **relevant
+    - Illustrate the datas' distributions using a variety of **relevant
     descriptive statistics**
 
     - Two files must be **dynamically linked**
 
 - **Another pair** makes a **pull request**. And this is discussed/merged.
 
-## <i class="fa fa-question-circle"></i> What is R?
+## <i class="fa fa-bookmark-o"></i> Remember: Practical Tips for Reproducible Research
 
-**Open source programming language**, with a particular focus on statistical programming.
+- <i class="fa fa-pencil-square-o"></i> Document Everything!
 
-**History:** Originally (in 1993) an implementation of the S programming language (Bell Labs), by
-**R**oss Ihaka and **R**obert Gentleman (hence **R**) at University of Auckland.
+- <i class="fa fa-file-code-o"></i> Everything is a (text) file.
 
-Currently the R Foundation for Statistical Computing is based in Vienna.
+- <i class="fa fa-smile-o"></i> All files should be human readable.
 
-**RStudio**:
+- <i class="fa fa-link"></i> Explicitly tie your files together.
 
-R is to RStudio as Git is to GitHub.
+- <i class="fa fa-list-ol"></i> Have a plan to organise, store, and make your files available.
 
-## <i class="fa fa-line-chart"></i> Growing popularity
+## <i class="fa fa-bolt"></i> Importance of understanding files/file structures
 
-R can be easily expanded by **user created packages**  hosted on GitHub and/or
-[CRAN](http://cran.r-project.org/).
+- This topic may seem kind of . . . dry.
 
-[<img src="img/packagesCRAN.png" height=400 />](http://blog.revolutionanalytics.com/2013/05/how-r-grows.html)
+- Why not just click and drag files with the GUI (Graphical User Interface)?
 
+## <i class="fa fa-bolt"></i> Importance of understanding files/file structures
 
-## How to Cite R
+- **Reproducibility**: other researchers only have your files. If they are **well
+    organised** and the **links** between the files are **explicitly stated**
+    then they can better understand what you did.
 
-```{r}
-citation()
+    + Clearest way of explicitly stating links is **dynamically** using file
+    paths in your source code.
+
+- **The software tools of really reproducible research**: R, RMarkdown, LaTeX, etc.
+    all require you to explicitly state file paths.
+
+- **You**: well organised files will be easier for you to find/understand/use
+    in 6 months.
+
+## <i class="fa fa-file-code-o"></i> Why text files?
+
+(Almost) all files are ultimately text files.
+
+- E.g. a website is typically just a series of connected `.html`, `.js`,
+and `.css` files.
+
+- **These are text files!** Despite different file extensions.
+
+    + To see this explore a webpage with
+    [Chrome Developer Tools](https://developer.chrome.com/devtools)
+
+## <i class="fa fa-file-code-o"></i> Why text files?
+
+Text files are **versitile**.
+
+- Store your data (`.csv`), store your analysis code (`.R`), store your
+presentation markup (`.Rmd`, `.tex`, `.bib`).
+
+- They are **simple** and are **not dependent on particular software**.
+
+    - Any text editor can open them.
+
+- Helps **future-proof** research.
+
+- Easy to **version control**.
+
+## <i class="fa fa-file-code-o"></i> CSV Example
+
+CSV (Comma Separated Values)
+
+- All columns are separated by commas `,`.
+
+- All rows are separated by new lines.
+
+## <i class="fa fa-file-code-o"></i> CSV Example
+
+In CSV this:
+
+```
+iso2c, country, score
+US,United States,1.086
+US,United States,1.094
+US,United States,1.050
 ```
 
-## Fundamentals of the R language
+makes:
 
-R is **object-oriented**.
+![Basic CSV](img/CSVBasic.png)
 
-**Objects are R's nouns**. They include (not exhaustive):
+## <i class="fa fa-file-code-o"></i> Text files best practices
 
-- character string (e.g. words)
+Use RStudio or some **text editor** (personal current favourite: [atom.io](https://atom.io/))
+to edit text files.
 
-- number
+- RStudio can open/edit/save any text file
 
-- vector of numbers or character strings
+<i class="fa fa-exclamation-triangle"></i> Never open/edit/save using MS Word!
 
-- matrix
+- Word will add a lot of hidden background text that is likely to cause problems
+with R and other software. R/etc doesn't understand Word's instructions.
 
-- data frame
+## <i class="fa fa-file-code-o"></i> Text files best practices
 
-- list
+Document your text files, including **informative headers**.
 
-## Assignment
+Use **comment characters** (R: `#`, Markdown/HTML: `<!-- -->`)
 
-You use the **assignment operator** (`<-`) to assign character strings,
-numbers, vectors, etc. to object names
+For example:
 
-```{r}
-## Assign the number 10 to an object called number
-number <- 10
+```{r, eval=FALSE}
+#####################
+# R source to gather World Bank data
+# Christopher Gandrud
+# 18 September 2015
+# MIT License
+####################
 
-number
+2 + 2 # Inline comment
 ```
 
-```{r}
-# Assign Hello world to an object called words
-words <- "Hello World"
+## <i class="fa fa-file-code-o"></i> Text files best practices
 
-words
++ Keep line length to about **80 characters**.
+
+    + In Markdown/LaTeX paragraph breaks only exist if there are **two line
+    breaks**.
+
+    + Most text editors, including RStudio have a **margin ruler**.
+
+    + Improves version control.
+
+```{r eval=FALSE}
+This is treated as
+only one paragraph.
+
+This is treated as
+
+two paragraphs.
 ```
 
-## Assignment
+## <i class="fa fa-folder-open-o"></i> File paths
 
-You can also use `=`:
+- Files are organised **hierarchically** into (upside down) trees.
 
-```{r}
-number = 10
-
-number
+```{r eval=FALSE}
+Root
+|_
+    Parent
+    |_
+        Child1
+        Child2
 ```
 
-Note: it has a slightly different meaning.
+## <i class="fa fa-folder-open-o"></i> Root
 
-See [StackOverflow](http://stackoverflow.com/questions/1741820/assignment-operators-in-r-and)
-discussion.
+**Root** directories are the **first level of a disk**.
 
-## Special values in R
+They are the root out of which the file tree grows.
 
-- `NA`: not available, missing
+**Naming Conventions**:
 
-- `NULL`: does not exist, is undefined
+**Linux/Mac**: `/`
 
-- `TRUE`, `T`: logical true. **Logical** is also an object class.
+- e.g. `/git_repos` means that the `git_repos` directory is a child
+of the root directory.
 
-- `FALSE`, `F`: logical false
+**Windows**: the disk is partitioned, e.g. the `C` partition is denoted `C:\`.
 
-## Finding special values
+- `C:\git_repos` indicates that the `git_repos` directory is a child
+of the `C` partition.
 
-| Function  | Meaning              |
-| --------- | -------------------- |
-| `is.na`   | Is the value `NA`    |
-| `is.null` | Is the value `NULL`  |
-| `isTRUE`  | Is the value `TRUE`  |
-| `!isTRUE` | Is the value `FALSE` |
+## <i class="fa fa-folder-open-o"></i> Sub (child) directories
 
-<br>
+Sub (child) directories are denoted with a `/` in Linux/Mac and `\` in Windows, e.g.:
+
+```{r engine='sh', eval=FALSE}
+# Linux/Mac
+/git_repos/Project1
+
+# Windows
+C:\git_repos\Project1
+```
+
+<i class="fa fa-exclamation"></i> R tip:
+
+- In R for Windows you either use two backslashes `\\` (`\` is the R [escape
+character](http://en.wikipedia.org/wiki/Escape_character)).
+
+- Or `/` in **relative paths** in R for Windows, it will know
+what you mean.
+
+## <i class="fa fa-folder-open-o"></i> Working directories
+
+A **working directory** is the directory where the program looks for files/other
+directories.
+
+<i class="fa fa-exclamation"></i> **Always remember the working directory.**
+
+- Otherwise you may open/save files that you do not want to open/save.
+
+## <i class="fa fa-folder-open-o"></i> Working directories
+
+**In R:**
 
 ```{r}
-absent <- NA
-is.na(absent)
+# Find working directory
+getwd()
+
+# List all files in the working directory
+list.files()
+```
+
+```{r, eval=FALSE}
+# Set root as working directory
+setwd('/')
+```
+
+## <i class="fa fa-folder-open-o"></i> Extra: in the Terminal Shell
+
+In the **Terminal Shell**:
+
+```{r engine='sh'}
+# Find working directory
+pwd
+```
+
+```{r engine='sh', eval=FALSE}
+# Set root as working directory
+cd /
+```
+
+## <i class="fa fa-folder-open-o"></i> Relative vs. Absolute file paths
+
+Use **relative file paths** when possible.
+
+- **Absolute file path**: the entire path on a particular system,
+    + E.g. `/git_repos/Project1/Paper.Rmd`
+
+- **Relative file path**: the path relative to the working directory.
+
+    + E.g. if `/git_repos` is the working directory then the relative path for
+    `Paper.Rmd` is `Project1/Paper.Rmd`.
+
+Why?
+
+- Your scripts will run easily on **other computers**. **Enhances reproducibility**.
+Easier for your collaborators. Easier for you when you use another computer.
+
+## <i class="fa fa-folder-open-o"></i> File & directory name conventions
+
+<i class="fa fa-exclamation-triangle"></i> **Don't use spaces** in your file names.
+
+They can create problems for programs that treat spaces as an indication that the
+path has ended.
+
+Alternatives:
+
+- `CamelCase` (ex. `DataAnalysis.R`)
+
+- `file_underscore` (ex. `data_analysis.R`)
+
+## <i class="fa fa-folder-open-o"></i> Load files into R
+
+There are a number of R commands to load files, depending on the file type.
+
+- Load Data: `read.table`, `read.csv` `read.dta` `xlsx::read.xlsx`,
+`repmis::source_data`
+
+```{r, eval=FALSE}
+read.csv('data/TestData.csv')
+```
+
+- Save Data: `write.csv`, `write.dta`
+
+- Load and run R source code: `source`
+
+```{r, eval=FALSE}
+source('source/Analysis1.R')
+```
+
+## <i class="fa fa-folder-open-o"></i> URLs
+
+URLs are also file paths for files on the internet.
+
+You can use them the same way as local file paths.
+
+```{r}
+Disproportionality <- repmis::source_data("http://bit.ly/Ss6zDO")
+
+names(Disproportionality)
+```
+
+## R Input Output
+
+The new [rio](https://github.com/leeper/rio) package can import many different 
+file types (including from URLS) with the same function: `import`.
+
+```{r}
+library(rio)
+
+Disproportionality <- import('http://bit.ly/Ss6zDO', format = 'csv')
+
+names(Disproportionality)
+```
+
+
+
+## <i class="fa fa-github"></i> Version Control with Git
+
+Why version control?
+
+- Detailed log of **all changes**.
+
+- Easy to **revert back** to previous versions.
+
+- Clear **attribution of work** (who contributed what).
+
+    + <i class="fa fa-child"></i> Provides a **selective incentive**, helping to
+    overcome the collaborative collective action problem!
+
+---
+
+[<img src="img/ContribStats.png" width="800"/>](https://github.com/christophergandrud/GreenBook/graphs/contributors)
+
+
+## <i class="fa fa-github"></i> Git vs. GitHub
+
+What is [Git](http://git-scm.com/)?
+
+- Git is an **open source** command line program for version control.
+
+What is [<i class="fa fa-github"></i> GitHub](https://github.com/)?
+
+- A **company/web service** that hosts Git repositories and enables 'social coding'.
+
+- Other services are available, e.g. [BitBucket](https://bitbucket.org/)
+
+- Note: ultimately your locally stored repositories are yours separate from GitHub.
+
+## <i class="fa fa-github"></i> GUI GitHub
+
+What is GitHub for Mac/Windows?
+
+- A GUI for Git.
+
+- Makes it easier to use.
+
+- Ultimately just does command line Git.
+
+## Note: Explaining using the command line
+
+The following example uses command line Git, even though you are free to use
+GUI GitHub.
+
+Why?
+
+- **Easier to document** (not just a bunch of screen shots).
+
+- The command line Git is the '**real Git**'. GUI Git's are a facade, and more
+likely to change/be different across implementations.
+
+- Understanding command line Git will help you **understand problems and concepts
+that arise later**.
+
+## Getting started with Git
+
+Key terms (local):
+
+- **Repository** (repo): a directory where Git looks for changes
+
+- **Initialize** (init): have Git begin watching a directory
+
+- `add`: stage a file so that Git starts watching it
+
+- `commit`: record changes to the repo
+
+- `branch`: continuous history of the repository. You can have multiple branches
+
+- **master**: the main branch. By convention this should be the most stable
+version.
+
+## Getting started with Git
+
+Key terms (local):
+
+- `checkout`: revert to a previous version or a branch
+
+- `merge`: combine one branch into another
+
+- `tag`: a human readable name given to a particular commit
+
+- `blame`: atrribution of who changed what
+
+## Getting started with Git
+
+Key terms (remote):
+
+- *Collaborator*: someone with read/write permission on a repo
+
+- `clone`: copy a remotely hosted repository onto your computer
+
+- `push`: commit changes to a remotely hosted repository
+
+- `pull`: merge changes from a remotely hosted repository
+
+    + In GUI GitHub `push` and `pull` are combined into **sync**
+
+- **fork**: copy a repository that you do not own
+
+- **pull request**: after forking a repo, changes can be made and suggested to
+the original repo's owner.
+
+## <i class="fa fa-github"></i> Getting started with Git
+
+Note: using command line (Terminal Shell), but all of these things can be done
+in with the GUI file system (point and click) + GitHub GUI.
+
+First lets create a directory (`FirstRepo`) that will become our
+**Git repository** (i.e. parent directory)
+
+```{r engine='sh', eval=FALSE}
+# Make repository directory
+mkdir /git_repositories/FirstRepo
+
+# Change working directory
+cd /git_repositories/FirstRepo
+
+# Begin version control by initialising as a Git repo
+git init
+```
+
+## Getting started with Git
+
+![Git Invisible](img/InvisibleGit.png)
+
+## <i class="fa fa-github"></i> Getting started with Git
+
+Add a text file to the repo.
+
+```{r engine='sh', eval=FALSE}
+# Create a new file called README.md
+echo "# My first repo" > README.md
+
+# Check Git status
+git status
+```
+
+```
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#    README.md
+```
+
+## <i class="fa fa-github"></i> Getting started with Git
+
+**Note**: All repos should have an informative `README.md` file.
+
+- `.md` is for [Markdown](https://help.github.com/articles/markdown-basics)
+
+<i class="fa fa-star"></i> Bonus: They are **rendered on GitHub**. For example, the Syllabus on
+[SyllabusAndLectures](https://github.com/HertieDataScience/SyllabusAndLectures).
+
+## <i class="fa fa-github"></i> Getting started with Git
+
+Begin tracking changes, by **staging** the repo's files.
+
+```{r engine='sh', eval=FALSE}
+git add .
+```
+
+Make some changes to `README.md`. Save the changes.
+
+These changes will not be logged by Git until they are **committed**
+
+```{r engine='sh', eval=FALSE}
+git commit -am 'author name added to README'
+```
+
+- `a`: all changes are committed
+
+- `m`: add a Git commit message. Try to be **informative**.
+
+Also, compare to previous commits with `git diff`
+
+## <i class="fa fa-github"></i> Git Log
+
+You can view all previous commits with `git log`
+
+```{r engine='sh', eval=FALSE}
+git log
+```
+
+```
+commit 3c49e3f1d2f03513c1554bb36d034562312b5bed
+Author: christophergandrud <christopher.gandrud@gmail.co>
+Date:   Tue Sep 9 15:54:44 2014 +0200
+
+    author name added to README
+```
+
+## <i class="fa fa-github"></i> Git Checkout
+
+Each commit is given a **unique SHA-1 hash**.
+
+The hash in the previous example was: `3c49e3f1d2f03513c1554bb36d034562312b5bed`.
+
+You can switch back to any previous commit with `git checkout` and the commit
+hash.
+
+Use `--` for the last commit.
+
+```{r engine='sh', eval=FALSE}
+git checkout --
+```
+
+## <i class="fa fa-github"></i> Add to GitHub
+
+So far the repo is only on your own computer.
+
+To add it to GitHub:
+
+1. Create a new repository on GitHub. Give it the same name as you local repo (
+i.e. `FirstRepo`). Do not initialise with any files.
+
+2. Follow the instructions:
+
+---
+
+![New GitHub Repo](img/GitHubNewRepo.png)
+
+---
+
+[<img src="img/BasicRepo.png" align="center" width="800"/>](https://github.com/christophergandrud/FirstRepo)
+
+## <i class="fa fa-github"></i> Updating From Remote Repositories
+
+After you commit a change to the **local** repository you need to **push** the changes
+to GitHub:
+
+```{r engine='sh', eval=FALSE}
+git push origin master
+```
+
+- `origin`: the remote repo on GitHub
+
+- `master` is the master branch (we'll get to this in a second)
+
+## <i class="fa fa-github"></i> Updating From Remote Repositories
+
+If there are changes on the remote repo, then you will need to **pull** and **merge**
+them.
+
+```{r engine='sh', eval=FALSE}
+git pull origin master
+```
+
+```
+Unpacking objects: 100% (3/3), done.
+From https://github.com/christophergandrud/FirstRepo
+ * branch            master     -> FETCH_HEAD
+   3c49e3f..fe3cc0a  master     -> origin/master
+Updating 3c49e3f..fe3cc0a
+Fast-forward
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+```
+
+Git will tell you if there are any **merge confilcts**. You will need to sort these out.
+
+## <i class="fa fa-github"></i> Comparing Commits on GitHub
+
+View a file's `History`.
+
+[<img src="img/Compare.png" width="800"/>](https://github.com/christophergandrud/FirstRepo/commit/fe3cc0a7d758cd8f0e251ce9aaaeaa4bb57c1ab6?short_path=04c6e90#diff-04c6e90faac2675aa89e2176d2eec7d8)
+
+## <i class="fa fa-code-fork"></i> Branches
+
+You can create multiple **branches** in your repo.
+
+These allow you to:
+
+- Make changes to a project without affecting the **master** branch
+
+- A branch called **gh-pages** pushed to GitHub will become a hosted website.
+
+## <i class="fa fa-code-fork"></i> Branches Example
+
+Create a new branch called `TestBranch`
+
+```{r engine='sh', eval=FALSE}
+git checkout -B TestBranch
+```
+
+You can `add` files and `commit` changes.
+
+When you think that the changes are ready to be merged with the `master` branch:
+
+```{r engine='sh', eval=FALSE}
+git commit -am 'last changes to TestBranch, ready for master'
+
+git checkout master
+
+git merge TestBranch
+
+# Delete the branch if you want to
+git branch -D TestBranch
+```
+
+## <i class="fa fa-tag"></i> Tags
+
+You can **tag** a particular commit so that it is easy to find.
+
+<i class="fa fa-exclamation"></i> You need to tag your assignments when you turn
+them in.
+
+```{r engine='sh', eval=FALSE}
+git tag -a v0.1 -m 'First tag'
+
+git push --tags
 ```
 
 ---
 
-| Operator | Meaning                  |
-| -------- | ------------------------ |
-| `<`      | less than                |
-| `>`      | greater than             |
-| `==`     | equal to                 |
-| `<=`     | less than or equal to    |
-| `>=`     | greater than or equal to |
-| `!=`     | not equal to             |
-| `a | b`  | a or b                   |
-| `a & b`  | a and b                  |
+![Git tag example](img/GitTag.png)
 
-## Classes
+## <i class="fa fa-tag"></i> Tags and DOI
 
-Objects have distinct classes.
+You can use GitHub tags to create [Digital Object Identifiers (DOI)](http://en.wikipedia.org/wiki/Digital_object_identifier).
 
-```{r}
-# Find the class of number
-class(number)
+- Use for **citing** (particular version of) research.
 
-# Find the class of absent
-class(absent)
-```
+- For **How-To** see <https://guides.github.com/activities/citable-code/>
 
-## Naming objects
+DOI Badges in README files on GitHub:
 
-- Object names **cannot have spaces**
+![DOI Readme](img/DOIreadme.png)
 
-    + Use `CamelCase`, `name_underscore`, or `name.period`
+## <i class="fa fa-table"></i> Data on GitHub
 
-- Avoid creating an object with the same name as a function (e.g. `c` and `t`) or
-special value (`NA`, `NULL`, `TRUE`, `FALSE`).
+CSV files are rendered in the browser:
 
-- Use **descriptive object names**!
+![CSV rendered](img/CSVRendered.png)
 
-    + Not: `obj1`, `obj2`
 
-- Each object name must be **unique** in an environment.
+## <i class="fa fa-users"></i> Collaborating on GitHub: Official Collaborators
 
-    + Assigning something to an object name that is already in use will **overwrite
-    the object's previous contents**.
+You can add **official collaborators** to the repo on GitHub:
 
-## Finding objects
+Settings > Collaborators > Enter collaborator's GitHub username
 
-```{r}
-# Find objects in your workspace
-ls()
-```
+Now the will have read/write privileges (they can **push** as well as **pull**)
 
-## Style Guides
+They should **clone** the repo.
 
-As with natural language writing, it is a good idea to stick to one style guide
-with your R code:
+![Clone](img/CLoneRepo.png)
 
-- [Google's R Style Guide](https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml)
+## <i class="fa fa-exclamation-circle"></i> GitHub Issues
 
-- [Hadely Wickham's R Style Guide](http://r-pkgs.had.co.nz/style.html)
+A good way to communicate is to use GitHub Issues.
 
-## Vectors
+Creates an open and public record of thoughts/issues that anyone can contribute to.
 
-A vector is an **ordered collection** of numbers, characters, etc. of the
-**same type**.
+## <i class="fa fa-code-fork"></i> Forking/Pull Requests
 
-Vectors can be created with the `c` (**combine**) function.
+**Fork:** You can copy a repo and then build on it by <i class="fa fa-code-fork"></i>
+**forking** it.
 
-```{r}
-# Create numeric vector
-numeric_vector <- c(1, 2, 3)
+- This maintains entire version history, contributors, etc,
 
-# Create character vector
-character_vector <- c('Albania', 'Botswana', 'Cambodia')
-```
+**Pull:** Anyone (non-official contributors) can make a **pull request**.
 
-## Factor class vector
+Simplest way is to click edit (<i class="fa fa-pencil"></i>) on someone else's
+repo. Begin editing.
 
-Categorical variables are called **factors** in R.
+Note:
 
-```{r}
-# Create numeric vector
-fruits <- c(1, 1, 2)
+- Need approval from a repo owner
 
-# Create character vector for factor labels
-fruit_names <- c('apples', 'mangos')
+- Once the request is accepted, the change is **automatically merged**
+into master.
 
-# Convert to labelled factor
-fruits_factor <- factor(fruits, labels = fruit_names)
+## <i class="fa fa-github"></i> GitHub Caveats
 
-summary(fruits_factor)
-```
+**Cannot store large files** (> 50 mb).
 
-## Matrices
+Public repos are public! So **never put a password** or other sensitive information
+in them.
 
-Matrices are collections of vectors **with the same length**
+- If you want Git/GitHub to **ignore** a file in your local repo, place its file path
+ in a file called `.gitignore`.
 
-```{r}
-# Combine numeric_vector and character_vector into a matrix
-combined <- cbind(numeric_vector, character_vector)
+- For efficiency can use
+[regular expressions](http://en.wikipedia.org/wiki/Regular_expression)
 
-combined
-```
-
-Note: In addition to `cbind` you can `rbind` new rows onto a matrix.
-
-## Data frames
-
-Data frames are collections of vectors with the same length.
-
-Each column (vector) can be of a **different class**.
-
-```{r}
-# Combine numeric_vector and character_vector into a data frame
-combined_df <- data.frame(numeric_vector, character_vector,
-                          stringsAsFactors = FALSE)
-
-combined_df
-```
-
-## Lists
-
-A list is a vector containing other objects.
-
-The objects can have different lengths and classes.
-
-```{r}
-# Create a list with three objects of different lengths
-test_list <- list(countries = character_vector, not_there = c(NA, NA),
-                  more_numbers = 1:100)
-
-test_list
-```
-
-## Functions
-
-Functions do things to/with objects. Functions are like **R's verbs**.
-
-When using functions to do things to objects, they are always followed by
-parentheses `()`. The parentheses contain the **arguments**. Arguments are
-separated by commas.
-
-```{r}
-# Summarise combined_df
-summary(combined_df, digits = 2)
-```
-
-## Functions help
-
-Use `?` to find out what arguments a function can take.
+    + For example to ignore all PDF files use:
 
 ```{r, eval=FALSE}
-?summary
+*.pdf
 ```
 
-The help page will also show the function's **default argument values**.
+## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Files/File Paths
 
-## Component selection (`$`)
+Play around with the file system from R (and if you want to) the Shell
 
-The `$` is known as the component selector. It selects a component of an object.
+- Find the working directory, change the working directory, explore the files
+in the working directory.
 
-```{r}
-combined_df$character_vector
-```
+If you have any data files, try to load them into R.
 
-## Subscripts `[]`
+- If not load `Data/MainData.csv` into R from
+<https://github.com/christophergandrud/Rep-Res-ExampleProject1>.
 
-You can use subscripts `[]` to also select components.
+## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Git/GitHub
 
-For data frames they have a `[row, column]` pattern.
+- Create a new local repository and push it to GitHub.
 
-```{r}
-# Select the second row and first column of combined_df
-combined_df[2, 1]
+- Add your neighbour as a collaborator.
 
+- Push/Pull commits.
 
-# Select the first two rows
-combined_df[c(1, 2), ]
-```
+- Open and close issues.
 
-## Subscripts `[]`
+- Fork a neighour's repo.
 
-```{r}
-# Select the character_vector column
-combined_df[, 'character_vector']
-```
+- Make a pull request to another neighour's repo (or the
+[SyllabusAndLectures](https://github.com/HertieDataScience/SyllabusAndLectures)).
+Justify why it is an important request.
 
-## Assigment with elements of objects
-
-You can use assigment with parts of objects. For example:
-
-```{r}
-combined_df$character_vector[3] <- 'China'
-combined_df$character_vector
-```
-
-You can even add new variables:
-
-```{r}
-combined_df$new_var <- 1:3
-combined_df
-```
-
-## Packages
-
-You can greatly expand the number of functions available to you by installing
-and loading user created packages.
-
-```{r, eval=FALSE}
-# Install dplyr package
-install.packages('dplyr')
-
-# Load dplyr package
-library(dplyr)
-```
-
-You can also call a function directly from a specific package with the double
-colon operator (`::`).
-
-```{r, eval=FALSE}
-Grouped <- dplyr::group_by(combined_df, character_vector)
-```
-
-## <i class="fa fa-table"></i> R's build-in data sets
-
-List internal data sets:
-
-```{r eval=FALSE}
-data()
-```
-
-Load **swiss** data set:
-
-```{r}
-data(swiss)
-```
-
-Find data description:
-
-```{r, eval=FALSE}
-?swiss
-```
-
-## <i class="fa fa-table"></i> R's build-in data sets
-
-Find variable names:
-
-```{r}
-names(swiss)
-```
-
-See the first three rows and four columns
-
-```{r}
-head(swiss[1:3, 1:4])
-```
-
-## What all the cool kids are doing: piping
-
-**Pipe**: pass a value forward to a function call.
-
-Why?
-
-- Faster compilation.
-
-- Enhanced code readability.
-
-In R use `%>%` from the
-[magrittr](http://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html) package.
-
-`%>%` passes a value to the **first argument** of the next function call.
-
-## Simple piping example
-
-Not piped:
-
-```{r}
-values <- rnorm(1000, mean = 10)
-value_mean <- mean(values)
-round(value_mean, digits = 2)
-```
-
-Piped:
-
-```{r}
-library(magrittr)
-
-rnorm(1000, mean = 10) %>% mean() %>% round(digits = 2)
-
-
-```
-
-
-## <i class="fa fa-area-chart"></i> Descriptive statistics: review
-
-**Descriptive Statistics:** describe samples
-
-Stats 101: describe samples **distributions** with appropriate measure of
-
-- **central tendancy**
-
-- **variability**
-
-## <i class="fa fa-area-chart"></i> Histograms
-
-```{r}
-hist(swiss$Examination)
-```
-
-## <i class="fa fa-area-chart"></i> Histograms: styling
-
-```{r}
-hist(swiss$Examination,
-     main = 'Swiss Canton Draftee Examination Scores (1888)',
-     xlab = '% receiving highest mark on army exam')
-```
-
-## Digression: Creating functions
-
-You can create a function to find the sample mean
-($\bar{x} = \frac{\sum x}{n}$) of a vector.
-
-```{r}
-fun_mean <- function(x){
-    sum(x) / length(x)
-}
-
-## Find the mean
-fun_mean(x = swiss$Examination)
-```
-
-## Finding means
-
-(or use the mean function in base R)
-
-```{r}
-mean(swiss$Examination)
-```
-
-If you have missing values (`NA`):
-
-```{r, eval=FALSE}
-mean(swiss$Examination, na.rm = TRUE)
-```
-
-## Digression: Loops
-
-You can 'loop' through the data set to find the mean for each column
-
-```{r}
-for (i in 1:length(names(swiss))) {
-    swiss[, i] %>%
-    mean() %>%
-    round(digits = 1) %>%
-    paste(names(swiss)[i], ., '\n') %>%  # the . directs the pipe
-    cat()
-}
-```
-
-## Other functions for central tendency
-
-**Median**
-
-```{r}
-median(swiss$Examination)
-```
-
-**Mode**
-
-`mode` is not an R function to find the statistical mode.
-
-Instead use `summary` for factor nominal variables or make a bar chart.
-
-## Simple bar chart for nominal
-
-```{r, message=FALSE, cache=TRUE}
-devtools::source_url('http://bit.ly/OTWEGS')
-plot(MortalityGDP$region, xlab = 'Region')
-```
-
-## Variation
-
-**Range:**
-
-```{r}
-range(swiss$Examination)
-```
-
-**Quartiles:**
-
-```{r}
-summary(swiss$Examination)
-```
-
-## Variation
-
-**Boxplots:**
-
-```{r}
-boxplot(swiss$Examination, main = '% of Draftees with Highest Mark')
-```
-
-## Variation
-
-**Interquartile Range ($IQR = Q_{3} - Q_{1}$):**
-
-```{r}
-IQR(swiss$Examination)
-```
-
-## Variation: standard deviation
-
-**Sum of squared deviations**:
-
-$$\mathrm{Sum\:of\:Squares} = \sum(x - \bar{x})^2$$
-
-**Degrees of freedom** (number of values that are free to vary):
-
-$$\mathrm{df} = n - 1$$
-
-**Variance ($s^2$):**
-
-$$
-s^2 = \frac{\mathrm{Sum\:of\:Squares}}{\mathrm{Degrees\:of\:Freedom}} =
-\frac{\sum(x - \bar{x})^2}{n - 1}
-$$
-
-**Standard deviation ($s$)** (in terms of the mean):
-
-$$s = \sqrt{s^2}$$
-
-## Variation: Standard Error
-
-The **standard error** of the mean:
-
-If we think of the variation as around a central tendancy as a measure of
-**unreliability** then we want the measure to **decrease as the sample size goes up**.
-
-$$
-\mathrm{SE}_{\bar{x}} = \frac{s}{\sqrt{n}}
-$$
-
-## Variation: Variance and Standard Deviation
-
-**Variance:**
-
-```{r}
-var(swiss$Examination)
-```
-
-**Standard Deviation:**
-
-```{r}
-sd(swiss$Examination)
-```
-
-## Variation: Standard Error
-
-**Standard Error:**
-
-```{r}
-sd_error <- function(x) {
-    sd(x) / sqrt(length(x))
-}
-
-sd_error(swiss$Examination)
-```
-
-## Playing with distributions
-
-Simulated normally distributed data with SD of 30 and mean 50
-
-```{r}
-Normal30 <- rnorm(1e+6, mean = 50, sd = 30)
-```
-
-```{r, echo=FALSE, message=FALSE}
-# Helpful information from StackExchange discussion
-# http://stackoverflow.com/questions/3494593/shading-a-kernel-density-plot-between-two-points?lq=1
-# Load zoo package
-library(zoo)
-library(ggplot2)
-
-# Convert to data frame
-Normal30 <- data.frame(Normal30)
-
-# Find density for +/- 1 SD
-DensityLower <- density(Normal30$Normal30, from = 20, to = 50)
-DensityUpper <- density(Normal30$Normal30, from = 50, to = 80)
-
-# Extract density values (y values)
-YLower <- DensityLower$y
-YUpper <- DensityUpper$y
-
-# Extract x values
-XLower <- DensityLower$x
-XUpper <- DensityUpper$x
-
-# Merge vectors into data frames
-Lower <- data.frame(YLower, XLower)
-Upper <- data.frame(YUpper, XUpper)
-
-# Add zero variable so that the shaded area goes down to 0
-Lower$Zero <- 0
-Upper$Zero <- 0
-
-# Upper and Lower colours
-LowerC <- "#80B2CD"
-UpperC <- "#4F6F80"
-
-# Create density plot
-ggplot(Normal30, aes(x = Normal30)) +
-        geom_density() +
-        geom_ribbon(data = Lower, aes(x = XLower, ymax = YLower, ymin = Zero),
-                    fill = LowerC, alpha = 0.4) +
-        geom_ribbon(data = Upper, aes(x = XUpper, ymax = YUpper, ymin = Zero),
-                    fill = UpperC, alpha = 0.4) +
-        geom_vline(xintercept = 50, colour = "red", linetype = "longdash") +
-        annotate("text", x = 25, y = 0.015, label = "-1 SD", colour = LowerC) +
-        annotate("text", x = 75, y = 0.015, label = "+1 SD", colour = UpperC) +
-        scale_y_continuous(limits = c(0, 0.02)) +
-        scale_x_continuous(breaks = c(-90, -50, 0, 20, 50, 80, 100, 150, 185),
-                           labels = c(-90, -50, 0, 20, 50, 80, 100, 150, 185)) +
-        xlab("\n Simulated Data") + ylab("Density\n") +
-        theme_bw()
-```
-
-## Transform skewed data
-
-Highly skewed data can be transformed to have a normal distribution.
-
-
-Helps correct two violations of key assumptions: (a) non-linearity and (b) heteroskedasticity.
-
-```{r, fig.height=3}
-hist(swiss$Education, main = '')
-```
-
-## Natural log transformed skewed data
-
-```{r}
-log(swiss$Education) %>% hist()
-```
-
-## Joint distributions
-
-```{r}
-plot(log(swiss$Education), swiss$Examination)
-```
-
-## Summarise with correlation coefficients
-
-```{r}
-cor.test(log(swiss$Education), swiss$Examination)
-```
-
-## Summarise with loess
-
-```{r, message=FALSE}
-ggplot2::ggplot(swiss, aes(log(Education), Examination)) +
-    geom_point() + geom_smooth() + theme_bw()
-```
-
-## Programming Hint (1)
-
-<i class="fa fa-exclamation"></i><i class="fa fa-exclamation">
-</i><i class="fa fa-exclamation"></i> ***Always close!***
-
-In R this means closing:
-
-- `()`
-
-- `[]`
-
-- `{}`
-
-- `''`
-
-- `""`
-
-## Programming Hint (2)
-
-Make your code as **simple as possible**.
-
-- Easier to read.
-
-- Easier to write (ultimately).
-
-- Easier to find mistakes.
-
-- Often computationally more efficient.
-
-One way to do this is to **define things once**.
-
-## Programming Hint (2)
-
-**Bad**
-
-```{r}
-mean(rnorm(1000))
-
-sd(rnorm(1000))
-```
-
-## Programming Hint (2)
-
-**Good**
-
-```{r}
-rand_sample <- rnorm(1000)
-
-mean(rand_sample)
-
-sd(rand_sample)
-```
-
-
-## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Start using R!
-
-- **Access** R data sets
-
-- Explore the data and find ways to **numerically**/**graphically** describe it.
-
-- Find and use R functions that were **not covered** in the lecture for exploring
-and transforming your data.
-
-- Create **your own function** (what it does is open to you).
+- Accept (or reject) a pull request.

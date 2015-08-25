@@ -7,6 +7,7 @@ output:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
   beamer_presentation: default
+  slidy_presentation: default
 ---
 
 ## Christopher Gandrud
@@ -29,7 +30,7 @@ output:
 
 - Friday: 15:00-17:00
 
-## <i class="fa fa-arrow-circle-o-up"></i> Objectives for Today (Part 1)
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the topic
 
 - Introduce the course motivation, goals, plan, and expectations/assessment
 
@@ -442,6 +443,14 @@ and Sons Ltd., Chichester.
 
 **Other readings** generally available online (see syllabus) or I will make a copy
 available.
+
+## Issues
+
+If you have general questions, please post them to the GitHub Issue Pages:
+
+[https://github.com/HertieDataScience/SyllabusAndLectures/issues](https://github.com/HertieDataScience/SyllabusAndLectures/issues)
+
+Includes answers to questions asked last year.
 
 ## <i class="fa fa-list-ol"></i> Seminar to-do
 
