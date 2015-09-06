@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 2: Introduction to the R Programming Language'
 author: "Christopher Gandrud"
 date: "11 September 2015"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
-  beamer_presentation: default
   slidy_presentation: default
 ---
 
@@ -52,17 +52,17 @@ R is **object-oriented**.
 
 **Objects are R's nouns**. They include (not exhaustive):
 
-- character string (e.g. words)
+- character strings (e.g. words)
 
-- number
+- numbers
 
-- vector of numbers or character strings
+- vectors of numbers or character strings
 
-- matrix
+- matrices
 
-- data frame
+- data frames
 
-- list
+- lists
 
 ## Assignment
 
@@ -217,7 +217,7 @@ summary(fruits_factor)
 
 ## Matrices
 
-Matrices are collections of vectors **with the same length**
+Matrices are collections of vectors **with the same length and class**.
 
 ```{r}
 # Combine numeric_vector and character_vector into a matrix
@@ -226,7 +226,9 @@ combined <- cbind(numeric_vector, character_vector)
 combined
 ```
 
-Note: In addition to `cbind` you can `rbind` new rows onto a matrix.
+Note (1): R *coerced* `numeric_vector` into a character vector.
+
+Note (2): You can `rbind` new rows onto a matrix.
 
 ## Data frames
 
@@ -244,9 +246,7 @@ combined_df
 
 ## Lists
 
-A list is a vector containing other objects.
-
-The objects can have different lengths and classes.
+A list is an object containing other objects that can have **different** lengths and classes.
 
 ```{r}
 # Create a list with three objects of different lengths
@@ -675,7 +675,7 @@ hist(swiss$Education, main = '')
 ## Natural log transformed skewed data
 
 ```{r}
-log(swiss$Education) %>% hist()
+log(swiss$Education) %>% hist(main = "Swiss Education")
 ```
 
 ## Transformations
