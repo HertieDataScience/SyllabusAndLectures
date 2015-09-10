@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 1: Introduction to the Course'
 author: "Christopher Gandrud"
 date: "11 September 2015"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
-  beamer_presentation: default
   slidy_presentation: default
 ---
 
@@ -225,7 +225,7 @@ because they try to explain 'wrong' findings.
 
 [<img src="img/Workflow.png" alt="Reproducible Work Flow" height=450 width=700 />](img/Workflow.png)
 
-## <i class="fa fa-files-o"></i> Example of Truncated Workflow
+## <i class="fa fa-files-o"></i> Example (Truncated) Workflow
 
 This lecture is created using [RMarkdown](http://rmarkdown.rstudio.com/). It
 allows me to create both PDF and HTML slides.
