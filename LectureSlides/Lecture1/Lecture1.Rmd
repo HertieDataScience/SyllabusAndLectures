@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 1: Introduction to the Course'
 author: "Christopher Gandrud"
 date: "11 September 2015"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
   slidy_presentation: default
 ---
 
@@ -16,7 +16,7 @@ output:
 
 - Public
 
-    + <a href="https://github.com/HertieDataScience/SyllabusAndLectures/issues"><i class="fa fa-exclamation-circle"></i> SyllabusAndLectures/issues</a>
+    + <a href="https://github.com/HertieDataScience/SyllabusAndLectures/issues"><i class="fa fa-exclamation-circle"> </i>SyllabusAndLectures/issues</a>
 
     + <a href="https://twitter.com/ChrisGandrud"><i class="fa fa-twitter"></i> @ChrisGandrud</a>
 
@@ -32,11 +32,11 @@ output:
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the topic
 
-- Introduce the course motivation, goals, plan, and expectations/assessment
+- Introduce course motivation, goals, plan, and expectations/assessment
 
-- Introduce Collaborative & Reproducible Data Analysis
+- Introduce collaborative & reproducible data analysis
 
-- Set up computational research environment
+- Setup computational research environment
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the course
 
@@ -71,11 +71,11 @@ Use **advanced computation tools** to do **data munging**.
 
     + Make your research reproducible.
 
-    + Present your results in multiple forums.
+    + Present your results to multiple forums.
 
 ## <i class="fa fa-compass"></i> Motivation: Government
 
-- Government agencies are increasingly adopting the technologies and methods
+Government agencies are increasingly adopting the technologies and methods
 of open data science.
 
 [<img src="img/GithubGovUse.png" align="center" height="400"/>](https://github.com/blog/1874-government-opens-up-10k-active-government-users-on-github)
@@ -139,7 +139,7 @@ who are **not explicitly** working together often in **unexpected ways**.
 **available** and they are **sufficient** for an independent researcher to
 **recreate the finding**. <i class="fa fa-quote-right"></i>
 
-- In practice reproduciblity is enhanced by **literate programming** where the data,
+- In practice reproducibility is enhanced by **literate programming** where the data,
 analysis, and presentation of the results are 'weaved' or 'knitted' together.
 
     + Make available the research, **not just the advertising** for the findings (e.g.
@@ -151,7 +151,7 @@ analysis, and presentation of the results are 'weaved' or 'knitted' together.
 **same data** and **code** as the original researchers.
 
 **Replicability**: an independent study makes the same conclusions as the original
-using **other data, code, and even methods**,
+using **other** data, code, and even methods,
 i.e. independent verification.
 
 ## <i class="fa fa-question-circle"></i> Reproducibility vs. Replication?
@@ -294,14 +294,14 @@ allows me to create both PDF and HTML slides.
 
 **Part V: Collaborative Research Project**
 
-## <i class="fa fa-sort-numeric-asc"></i> Typical Two Hour Class Plan
+## <i class="fa fa-sort-numeric-asc"></i> Typical Two Hour Topic Plan
 
 - ~ 1 hour lecture
 
 - ~ 1 hour seminar
 
-    + **Apply** what we learned in the lecture/readings to achieve specific goals,
-    i.e. **no set pattern** to copy by rote.
+    + **Apply** what we learned in the lecture/readings to complete tasks
+    with **no set pattern** to copy by rote.
 
     + **Pair programming**: work together with others to achieve these goals.
 
@@ -520,5 +520,7 @@ PDF versions of your presentation documents.
 - <i class="fa fa-exclamation-triangle"></i> This is a large download, so maybe do it in your spare time.
 
 ## Post-Installation
+
+<i class="fa fa-search"></i> Find course materials and open lecture slides.
 
 <i class="fa fa-play"></i> Play around with the software (especially RStudio)

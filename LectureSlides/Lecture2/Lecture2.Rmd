@@ -18,6 +18,8 @@ output:
 
 - Simple descriptive statistics and plotting with Base R
 
+- (A few) programming best practices
+
 ## <i class="fa fa-question-circle"></i> What is R?
 
 **Open source programming language**, with a particular focus on statistical programming.
@@ -174,6 +176,8 @@ special value (`NA`, `NULL`, `TRUE`, `FALSE`).
 ls()
 ```
 
+Or the *Environment* tab in RStudio
+
 ## Style Guides
 
 As with natural language writing, it is a good idea to stick to one style guide
@@ -310,7 +314,7 @@ combined_df[, 'character_vector']
 
 ## Assigment with elements of objects
 
-You can use assigment with parts of objects. For example:
+You can use assignment with parts of objects. For example:
 
 ```{r}
 combined_df$character_vector[3] <- 'China'
@@ -426,8 +430,7 @@ fun_mean <- function(x){
 fun_mean(x = swiss$Examination)
 ```
 
-## Why functions?
-
+## Why create functions?
 
 Functions:
 
@@ -514,6 +517,14 @@ devtools::source_url('http://bit.ly/OTWEGS')
 plot(MortalityGDP$region, xlab = 'Region')
 ```
 
+## Variation
+
+Variation is "perhaps the **most important quantity** in statistical analysis. The 
+greater the variability in the data, the greater will be our **uncertainty** in the 
+values of the parameters estimated . . . and the **lower our ability to distinguish
+between competing hypotheses**" (Crawley 2005, 33)
+
+
 ## Variation
 
 **Range:**
@@ -530,29 +541,49 @@ summary(swiss$Examination)
 
 ## Variation
 
-**Boxplots:**
-
-```{r}
-boxplot(swiss$Examination, main = '% of Draftees with Highest Mark')
-```
-
-## Variation
-
 **Interquartile Range ($IQR = Q_{3} - Q_{1}$):**
 
 ```{r}
 IQR(swiss$Examination)
 ```
 
-## Variation: standard deviation
+But
 
-**Sum of squared deviations**:
+## Variation
+
+**Boxplots:**
+
+```{r}
+boxplot(swiss$Examination, main = '% of Draftees with Highest Mark')
+```
+
+## Variation: Sum of Squares 
+
+**Sum of squares** (summing deviations from the mean):
 
 $$\mathrm{Sum\:of\:Squares} = \sum(x - \bar{x})^2$$
 
+- But sum of squares always gets bigger with a larger sample size.
+
+    + Unless the new values exactly equal the mean.
+    
+## Variation: Degrees of Freedom
+
 **Degrees of freedom** (number of values that are free to vary):
 
+For the mean:
+
 $$\mathrm{df} = n - 1$$
+
+Why? 
+
+For a given mean and sample size, $n - 1$ values can vary, but the $n$th 
+value must always be the same.
+
+## Variation: Variance
+
+We can use degrees of freedom to create an "unbiased" measure of variability
+that is not dependent on the sample size.
 
 **Variance ($s^2$):**
 
@@ -561,7 +592,12 @@ s^2 = \frac{\mathrm{Sum\:of\:Squares}}{\mathrm{Degrees\:of\:Freedom}} =
 \frac{\sum(x - \bar{x})^2}{n - 1}
 $$
 
-**Standard deviation ($s$)** (in terms of the mean):
+But this is not in the same units as the mean, so it can be confusing to 
+interpret. 
+
+## Variation: Standard Deviation
+
+Use standard deviation to **($s$)** to ut variance in terms of the mean:
 
 $$s = \sqrt{s^2}$$
 
@@ -569,12 +605,19 @@ $$s = \sqrt{s^2}$$
 
 The **standard error** of the mean:
 
-If we think of the variation as around a central tendancy as a measure of
-**unreliability** then we want the measure to **decrease as the sample size goes up**.
+If we think of the variation around a central tendency as a measure of the
+**unreliability** of an estimate (mean) in a population,
+then we want the measure to **decrease as the sample size goes up**.
 
 $$
-\mathrm{SE}_{\bar{x}} = \frac{s}{\sqrt{n}}
+\mathrm{SE}_{\bar{x}} = \sqrt{\frac{s^{2}}{n}}
 $$
+
+Note: $\sqrt{}$ so that the dimensions of the measure of unreliability and the 
+parameter whose variability is being measured are the same.
+
+Good overview of variance, degrees of freedom, and standard errors in Crawley 
+(2005, Ch. 4).
 
 ## Variation: Variance and Standard Deviation
 
@@ -723,7 +766,9 @@ In R this means closing:
 
 ## Programming Hint (2)
 
-Make your code as **simple as possible**.
+There are usually **many ways to acheive the same goal**, but . . 
+
+make your code as **simple as possible**.
 
 - Easier to read.
 
@@ -757,7 +802,6 @@ mean(rand_sample)
 
 sd(rand_sample)
 ```
-
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Start using R!
 

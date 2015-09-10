@@ -4,7 +4,7 @@
 
 ### Fall 2015
 
-**Version: 17 July 2015**
+**Version: 10 September 2015**
 
 ### Instructor: Christopher Gandrud
 
