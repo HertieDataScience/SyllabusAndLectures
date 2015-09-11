@@ -9,7 +9,7 @@ output:
   beamer_presentation: default
 ---
 
-## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the topic
 
 - Introduce **Pair Assignment 1**
 
@@ -48,7 +48,7 @@ Each pair will create a **new public GitHub repository**
 
     - Access at least **two** core R data sets
 
-    - Illustrate the datas' distributions using a variety of **relevant
+    - Illustrate the data's distributions using a variety of **relevant
     descriptive statistics**
 
     - Two files must be **dynamically linked**
@@ -86,7 +86,7 @@ Each pair will create a **new public GitHub repository**
     all require you to explicitly state file paths.
 
 - **You**: well organised files will be easier for you to find/understand/use
-    in 6 months.
+    in the future.
 
 ## <i class="fa fa-file-code-o"></i> Why text files?
 
@@ -235,7 +235,7 @@ C:\git_repos\Project1
 <i class="fa fa-exclamation"></i> R tip:
 
 - In R for Windows you either use two backslashes `\\` (`\` is the R [escape
-character](http://en.wikipedia.org/wiki/Escape_character)).
+character](http://en.wikipedia.org/wiki/Escape_character))
 
 - Or `/` in **relative paths** in R for Windows, it will know
 what you mean.
@@ -440,7 +440,7 @@ Key terms (local):
 
 - `tag`: a human readable name given to a particular commit
 
-- `blame`: atrribution of who changed what
+- `blame`: attribution of who changed what
 
 ## Getting started with Git
 
@@ -464,7 +464,7 @@ the original repo's owner.
 ## <i class="fa fa-github"></i> Getting started with Git
 
 Note: using command line (Terminal Shell), but all of these things can be done
-in with the GUI file system (point and click) + GitHub GUI.
+with the GUI file system (point and click) + GitHub GUI.
 
 First lets create a directory (`FirstRepo`) that will become our
 **Git repository** (i.e. parent directory)
@@ -776,9 +776,9 @@ If you have any data files, try to load them into R.
 
 - Open and close issues.
 
-- Fork a neighour's repo.
+- Fork a neighbour's repo.
 
-- Make a pull request to another neighour's repo (or the
+- Make a pull request to another neighbour's repo (or the
 [SyllabusAndLectures](https://github.com/HertieDataScience/SyllabusAndLectures)).
 Justify why it is an important request.
 

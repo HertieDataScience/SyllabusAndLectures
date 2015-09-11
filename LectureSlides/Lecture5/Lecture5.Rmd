@@ -3,18 +3,16 @@ title: 'MPP-E1180 Lecture 5: Intro to Markup Lang. & Literate Programming (2)'
 author: "Christopher Gandrud"
 date: "25 September 2015"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
-  beamer_presentation: default
 bibliography:
 - RpackageCitations.bib
 - MainLit.bib
 ---
 
-## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
-
-- Housecleaning
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the topic
 
 - Review
 
@@ -28,32 +26,11 @@ bibliography:
 
     + Time consuming analyses: caching and Make files
 
-- Begin working on your Assignment 2.
-
-## <i class="fa fa-check"></i> Class reschedule
-
-Result of voting:
-
-| Original          | Reschedule                                           |
-| ------------------ | --------------------------------------------------- |
-| 30 October     | 27 October (Monday) 14:00-16:00        |
-| 13 November | 10 November (Monday) 14:00-16:00    |
-
-## Room change?
-
-<br>
-<br>
-<br>
-
-We can change to room **2.30** from next class. 
-
-Do you want to do this?
-
 ## Assignment 2
 
 **Proposal** for your Collaborative Research Project.
 
-**Deadline:** Week 6
+**Deadline:** Week 23
 
 **Submbit:** A (max) 2,000 word proposal created with **R Markdown**. The
 proposal will:
