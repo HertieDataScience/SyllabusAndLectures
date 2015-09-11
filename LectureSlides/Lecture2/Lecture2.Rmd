@@ -16,7 +16,7 @@ output:
 
 - Simple R data structures
 
-- Simple descriptive statistics and plotting with Base R
+- Simple descriptive statistics, (some) inferential statistics, and plotting with Base R
 
 - (A few) programming best practices
 
@@ -28,6 +28,7 @@ output:
 **R**oss Ihaka and **R**obert Gentleman (hence **R**) at University of Auckland.
 
 Currently the R Foundation for Statistical Computing is based in Vienna.
+Development is distributed globally.
 
 **RStudio**:
 
@@ -50,7 +51,7 @@ citation()
 
 ## Fundamentals of the R language
 
-R is **object-oriented**.
+Like many other popular programming languages, R is **object-oriented**.
 
 **Objects are R's nouns**. They include (not exhaustive):
 
@@ -166,7 +167,7 @@ special value (`NA`, `NULL`, `TRUE`, `FALSE`).
 
 - Each object name must be **unique** in an environment.
 
-    + Assigning something to an object name that is already in use will **overwrite
+    + <i class="fa fa-exclamation"></i> Assigning something to an object name that is already in use will **overwrite
     the object's previous contents**.
 
 ## Finding objects
@@ -448,7 +449,7 @@ contexts.
 
 **Descriptive Statistics:** describe samples
 
-Stats 101: describe samples **distributions** with appropriate measure of
+Stats 101: describe sample **distributions** with appropriate measure of:
 
 - **central tendancy**
 
@@ -547,8 +548,6 @@ summary(swiss$Examination)
 IQR(swiss$Examination)
 ```
 
-But
-
 ## Variation
 
 **Boxplots:**
@@ -578,7 +577,7 @@ $$\mathrm{df} = n - 1$$
 Why? 
 
 For a given mean and sample size, $n - 1$ values can vary, but the $n$th 
-value must always be the same.
+value must always be the same. See Crawley (2005, 36-37).
 
 ## Variation: Variance
 
@@ -597,7 +596,7 @@ interpret.
 
 ## Variation: Standard Deviation
 
-Use standard deviation to **($s$)** to ut variance in terms of the mean:
+Use standard deviation **($s$)** to put variance in terms of the mean:
 
 $$s = \sqrt{s^2}$$
 

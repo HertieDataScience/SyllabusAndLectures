@@ -116,7 +116,7 @@
 <ul>
 <li><p>Basics of object-oriented programming in R</p></li>
 <li><p>Simple R data structures</p></li>
-<li><p>Simple descriptive statistics and plotting with Base R</p></li>
+<li><p>Simple descriptive statistics, (some) inferential statistics, and plotting with Base R</p></li>
 <li><p>(A few) programming best practices</p></li>
 </ul>
 
@@ -126,7 +126,7 @@
 
 <p><strong>History:</strong> Originally (in 1993) an implementation of the S programming language (Bell Labs), by <strong>R</strong>oss Ihaka and <strong>R</strong>obert Gentleman (hence <strong>R</strong>) at University of Auckland.</p>
 
-<p>Currently the R Foundation for Statistical Computing is based in Vienna.</p>
+<p>Currently the R Foundation for Statistical Computing is based in Vienna. Development is distributed globally.</p>
 
 <p><strong>RStudio</strong>:</p>
 
@@ -166,7 +166,7 @@
 
 </article></slide><slide class=''><hgroup><h2>Fundamentals of the R language</h2></hgroup><article  id="fundamentals-of-the-r-language">
 
-<p>R is <strong>object-oriented</strong>.</p>
+<p>Like many other popular programming languages, R is <strong>object-oriented</strong>.</p>
 
 <p><strong>Objects are R&#39;s nouns</strong>. They include (not exhaustive):</p>
 
@@ -324,7 +324,7 @@ class(absent)</pre>
 <li><p>Each object name must be <strong>unique</strong> in an environment.</p>
 
 <ul>
-<li>Assigning something to an object name that is already in use will <strong>overwrite the object&#39;s previous contents</strong>.</li>
+<li><i class="fa fa-exclamation"></i> Assigning something to an object name that is already in use will <strong>overwrite the object&#39;s previous contents</strong>.</li>
 </ul></li>
 </ul>
 
@@ -575,7 +575,7 @@ library(dplyr)</pre>
 value_mean &lt;- mean(values)
 round(value_mean, digits = 2)</pre>
 
-<pre >## [1] 9.97</pre>
+<pre >## [1] 10.09</pre>
 
 <p>Piped:</p>
 
@@ -583,7 +583,7 @@ round(value_mean, digits = 2)</pre>
 
 rnorm(1000, mean = 10) %&gt;% mean() %&gt;% round(digits = 2)</pre>
 
-<pre >## [1] 9.99</pre>
+<pre >## [1] 10.04</pre>
 
 </article></slide><slide class=''><hgroup><h2>Creating Functions</h2></hgroup><article  id="creating-functions">
 
@@ -613,7 +613,7 @@ fun_mean(x = swiss$Examination)</pre>
 
 <p><strong>Descriptive Statistics:</strong> describe samples</p>
 
-<p>Stats 101: describe samples <strong>distributions</strong> with appropriate measure of</p>
+<p>Stats 101: describe sample <strong>distributions</strong> with appropriate measure of:</p>
 
 <ul>
 <li><p><strong>central tendancy</strong></p></li>
@@ -713,8 +713,6 @@ plot(MortalityGDP$region, xlab = &#39;Region&#39;)</pre>
 
 <pre >## [1] 10</pre>
 
-<p>But</p>
-
 </article></slide><slide class=''><hgroup><h2>Variation</h2></hgroup><article  id="variation-3">
 
 <p><strong>Boxplots:</strong></p>
@@ -747,7 +745,7 @@ plot(MortalityGDP$region, xlab = &#39;Region&#39;)</pre>
 
 <p>Why?</p>
 
-<p>For a given mean and sample size, \(n - 1\) values can vary, but the \(n\)th value must always be the same.</p>
+<p>For a given mean and sample size, \(n - 1\) values can vary, but the \(n\)th value must always be the same. See Crawley (2005, 36-37).</p>
 
 </article></slide><slide class=''><hgroup><h2> Variation: Variance</h2></hgroup><article  id="variation-variance">
 
@@ -764,7 +762,7 @@ s^2 = \frac{\mathrm{Sum\:of\:Squares}}{\mathrm{Degrees\:of\:Freedom}} =
 
 </article></slide><slide class=''><hgroup><h2> Variation: Standard Deviation</h2></hgroup><article  id="variation-standard-deviation">
 
-<p>Use standard deviation to <strong>(\(s\))</strong> to ut variance in terms of the mean:</p>
+<p>Use standard deviation <strong>(\(s\))</strong> to put variance in terms of the mean:</p>
 
 <p>\[s = \sqrt{s^2}\]</p>
 

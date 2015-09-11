@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 1: Introduction to the Course'
 author: "Christopher Gandrud"
 date: "11 September 2015"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
-  beamer_presentation: default
   slidy_presentation: default
 ---
 
@@ -16,7 +16,7 @@ output:
 
 - Public
 
-    + <a href="https://github.com/HertieDataScience/SyllabusAndLectures/issues"><i class="fa fa-exclamation-circle"> </i>SyllabusAndLectures/issues</a>
+    + <a href="https://github.com/HertieDataScience/SyllabusAndLectures/issues"><i class="fa fa-exclamation-circle"></i> SyllabusAndLectures/issues</a>
 
     + <a href="https://twitter.com/ChrisGandrud"><i class="fa fa-twitter"></i> @ChrisGandrud</a>
 
@@ -42,11 +42,11 @@ output:
 
 **Collaboratively** and **reproducibly**:
 
-1. Gather/clean social data
+1. Gather and clean social data
 
 2. Analyse it to draw informed descriptions/inferences
 
-3. Present results (in a variety of mediums)
+3. Present results in a variety of mediums
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the course
 
@@ -55,7 +55,7 @@ using **best practices** <i class="fa fa-exclamation"></i>
 
 We are going to use **ugly real-world data**, not pristine training data sets.
 
-Use **advanced computation tools** to do **data munging**. 
+Use **advanced computational tools** to do **data munging**. 
 
 ## <i class="fa fa-compass"></i> Motivation: Academic
 
@@ -105,10 +105,18 @@ development costs** and **improving applications**.
 
     + San Francisco laws are now [<i class="fa fa-code-fork"></i>](https://help.github.com/articles/fork-a-repo)
     [forkable](https://github.com/SFMOCI/openlaw).
+    
+## <i class="fa fa-compass"></i> Motivation: NGO
+
+NGO's are becoming increasingly data-oriented and need people with **skills** to 
+**handle and analyse** this data.
+
+Ex. Former MPP-E1180 student Arndt Leininger recently co-founded 
+[CorrelAid](http://correlaid.org/) to assist NGOs with data analysis.
 
 ## <i class="fa fa-compass"></i> Motivation: Business
 
-- Data analysis and R programming skills in particular are **highly valued** in
+Data analysis and R programming skills in particular are **highly valued** in
 businesses such as finance and management.
 
 ![R salaries](img/RSalaries.png)
@@ -456,27 +464,24 @@ Includes answers to questions asked last year.
 
 - <i class="fa fa-users"></i> Meet each other, get idea of background.
 
+- <i class="fa fa-search"></i> Find course materials and open lecture slides.
+
 - <i class="fa fa-download"></i> Setup software (all software is free).
 
     + **Highly recommended**: use your own <i class="fa fa-laptop"></i> laptop
 
 ## <i class="fa fa-globe"></i> Modern Web browser
 
-- Make sure you have a modern web browser, e.g.:
-
-    + <i class="fa fa-chrome"></i> Chrome
+Make sure you have a modern web browser, e.g. <i class="fa fa-chrome"></i> Chrome.
 
 ## <i class="fa fa-github"></i> GitHub
 
 Setup Git/GitHub for version control, collaboration, and remotely storing your files.
 
-- <i class="fa fa-user"></i> Set up (free) GitHub account: <https://github.com/join>
-
-- **Give me your GitHub username** so that I can add you to the **HertieDataScience**
-group (<https://github.com/HertieDataScience>).
+- <i class="fa fa-user"></i> Set up (free) GitHub account: <https://github.com/join>.
 
 - <i class="fa fa-download"></i> Install GitHub application: 
-<https://desktop.github.com/>
+<https://desktop.github.com/>.
 
 ## <i class="fa fa-code"></i> Statistics software
 
@@ -520,7 +525,5 @@ PDF versions of your presentation documents.
 - <i class="fa fa-exclamation-triangle"></i> This is a large download, so maybe do it in your spare time.
 
 ## Post-Installation
-
-<i class="fa fa-search"></i> Find course materials and open lecture slides.
 
 <i class="fa fa-play"></i> Play around with the software (especially RStudio)
