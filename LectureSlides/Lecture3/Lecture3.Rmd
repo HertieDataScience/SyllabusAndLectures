@@ -310,7 +310,7 @@ Alternatives:
 
 - `file_underscore` (ex. `data_analysis.R`)
 
-## <i class="fa fa-folder-open-o"></i> Load files into R
+## <i class="fa fa-folder-open-o"></i> Load files into R--Dynamically Link
 
 There are a number of R commands to load files, depending on the file type.
 
@@ -343,7 +343,7 @@ names(Disproportionality)
 
 ## R Input Output
 
-The new [rio](https://github.com/leeper/rio) package can import many different 
+The new [rio](https://github.com/leeper/rio) package can import many different
 file types (including from URLS) with the same function: `import`.
 
 ```{r}
