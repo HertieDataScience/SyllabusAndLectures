@@ -812,3 +812,5 @@ sd(rand_sample)
 and transforming your data.
 
 - Create **your own function** (what it does is open to you).
+
+- **Save your work** as a *.R* source file. You will need it for the next seminar.

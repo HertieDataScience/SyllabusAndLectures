@@ -315,7 +315,7 @@ Alternatives:
 There are a number of R commands to load files, depending on the file type.
 
 - Load Data: `read.table`, `read.csv` `read.dta` `xlsx::read.xlsx`,
-`repmis::source_data`
+`rio::import`
 
 ```{r, eval=FALSE}
 read.csv('data/TestData.csv')
@@ -328,20 +328,11 @@ read.csv('data/TestData.csv')
 ```{r, eval=FALSE}
 source('source/Analysis1.R')
 ```
-
-## <i class="fa fa-folder-open-o"></i> URLs
+## R Input Output, including from URLs
 
 URLs are also file paths for files on the internet.
 
 You can use them the same way as local file paths.
-
-```{r}
-Disproportionality <- repmis::source_data("http://bit.ly/Ss6zDO")
-
-names(Disproportionality)
-```
-
-## R Input Output
 
 The new [rio](https://github.com/leeper/rio) package can import many different
 file types (including from URLS) with the same function: `import`.
@@ -353,8 +344,6 @@ Disproportionality <- import('http://bit.ly/Ss6zDO', format = 'csv')
 
 names(Disproportionality)
 ```
-
-
 
 ## <i class="fa fa-github"></i> Version Control with Git
 
@@ -768,11 +757,14 @@ If you have any data files, try to load them into R.
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Git/GitHub
 
-- Create a new local repository and push it to GitHub.
+- Create a new **remote repository** on GitHub and **clone** it to your computer.
 
-- Add your neighbour as a collaborator.
+- Add and commit you your *.R* file from the previous seminar and a README.md 
+file.
 
-- Push/Pull commits.
+- Add your neighbour as a **collaborator** to the repo.
+
+- Make, push, and pull commits from each other.
 
 - Open and close issues.
 

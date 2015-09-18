@@ -410,7 +410,7 @@ cd /</pre>
 <p>There are a number of R commands to load files, depending on the file type.</p>
 
 <ul>
-<li>Load Data: <code>read.table</code>, <code>read.csv</code> <code>read.dta</code> <code>xlsx::read.xlsx</code>, <code>repmis::source_data</code></li>
+<li>Load Data: <code>read.table</code>, <code>read.csv</code> <code>read.dta</code> <code>xlsx::read.xlsx</code>, <code>rio::import</code></li>
 </ul>
 
 <pre class = 'prettyprint lang-r'>read.csv(&#39;data/TestData.csv&#39;)</pre>
@@ -422,25 +422,11 @@ cd /</pre>
 
 <pre class = 'prettyprint lang-r'>source(&#39;source/Analysis1.R&#39;)</pre>
 
-</article></slide><slide class=''><hgroup><h2><i class="fa fa-folder-open-o"></i> URLs</h2></hgroup><article  id="urls">
+</article></slide><slide class=''><hgroup><h2> R Input Output, including from URLs</h2></hgroup><article  id="r-input-output-including-from-urls">
 
 <p>URLs are also file paths for files on the internet.</p>
 
 <p>You can use them the same way as local file paths.</p>
-
-<pre class = 'prettyprint lang-r'>Disproportionality &lt;- repmis::source_data(&quot;http://bit.ly/Ss6zDO&quot;)</pre>
-
-<pre >## Downloading data from: http://bit.ly/Ss6zDO 
-## 
-## SHA-1 hash of the downloaded data file is:
-## 20a0b022bbcf947917878680df85f7b4dcaaf44a</pre>
-
-<pre class = 'prettyprint lang-r'>names(Disproportionality)</pre>
-
-<pre >## [1] &quot;country&quot;            &quot;iso2c&quot;              &quot;year&quot;              
-## [4] &quot;disproportionality&quot;</pre>
-
-</article></slide><slide class=''><hgroup><h2> R Input Output</h2></hgroup><article  id="r-input-output">
 
 <p>The new <a href='https://github.com/leeper/rio' title=''>rio</a> package can import many different file types (including from URLS) with the same function: <code>import</code>.</p>
 
@@ -828,9 +814,10 @@ git push --tags</pre>
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Seminar: Git/GitHub</h2></hgroup><article  id="seminar-gitgithub">
 
 <ul>
-<li><p>Create a new local repository and push it to GitHub.</p></li>
-<li><p>Add your neighbour as a collaborator.</p></li>
-<li><p>Push/Pull commits.</p></li>
+<li><p>Create a new <strong>remote repository</strong> on GitHub and <strong>clone</strong> it to your computer.</p></li>
+<li><p>Add and commit you your <em>.R</em> file from the previous seminar and a README.md file.</p></li>
+<li><p>Add your neighbour as a <strong>collaborator</strong> to the repo.</p></li>
+<li><p>Make, push, and pull commits from each other.</p></li>
 <li><p>Open and close issues.</p></li>
 <li><p>Fork a neighbour&#39;s repo.</p></li>
 <li><p>Make a pull request to another neighbour&#39;s repo (or the <a href='https://github.com/HertieDataScience/SyllabusAndLectures' title=''>SyllabusAndLectures</a>). Justify why it is an important request.</p></li>
