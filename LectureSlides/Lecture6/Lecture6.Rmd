@@ -1,7 +1,7 @@
 ---
 title: 'MPP-E1180 Lecture 6: Automatic Data Gathering + Cleaning'
 author: "Christopher Gandrud"
-date: "16 October 2014"
+date: "9 October 2015"
 output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
@@ -12,8 +12,6 @@ bibliography: main.bib
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
 
-- Housecleaning
-
 - Review
 
 - Benefits and challenges of open public data
@@ -22,22 +20,13 @@ bibliography: main.bib
 
 - Tidying, Cleaning, and Merging data
 
-## <i class="fa fa-check"></i> Class reschedule
-
-Result of voting:
-
-| Original          | Reschedule                                           |
-| ------------------ | --------------------------------------------------- |
-| 30 October     | 27 October (Monday) 14:00-16:00        |
-| 13 November | 10 November (Monday) 14:00-16:00    |
-
 ## Assignment 2
 
 **Proposal** for your Collaborative Research Project.
 
-**Deadline:** Reading Week
+**Deadline:** 23 October
 
-**Submbit:** A (max) 2,000 word proposal created with **R Markdown**. The
+**Submit:** A (max) 2,000 word proposal created with **R Markdown**. The
 proposal will:
 
 - Be written in R Markdown.
@@ -53,14 +42,17 @@ As always, submit the entire GitHub repo.
 
 ## Review
 
-<br>
-<br>
+- Why is literate programming useful for reproducible research?
 
-What is BibTeX?
+- What is a markup language?
 
-How is it an example of working hard so you can be lazy?
+- What is a code chunk?
 
-What is caching?
+- What is BibTeX?
+
+- How is it an example of working hard so you can be lazy?
+
+- What is caching?
 
 ## What is open public data?
 
@@ -222,12 +214,23 @@ main <- repmis::source_data(URL,
                 sha1 = '01cff579b689cea9ef9c98e433ce3122745cc5cb')
 ```
 
+## Can also use rio
+
+You can also use the rio package (but no sha1 hashing):
+
+```{r}
+URL <- 'https://raw.githubusercontent.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceDescriptives.csv'
+main <- rio::import(URL)
+```
+
 ## Excel Files
 
 The `source_XlsxData` function in repmis does the same thing as `source_data`, but
 for Excel files. 
 
-Builds on `read.xlsx` for loading locally stored Excel files.
+Builds on `read.xlsx` for loading locally stored Excel files. 
+
+Can also use `import` from rio.
 
 Note: Excel data often needs **a lot of cleaning** before it is useful
 for statistical/graphical analyses.
@@ -481,7 +484,7 @@ used to create latitude/longitudes for other geographic units:
 places <- c('Bavaria', 'Seoul', '6 Parisier Platz, Berlin', 
             'Hertie School of Governance')
 
-ggmap::geocode(places)
+ggmap::geocode(places, source = 'google')
 ```
 
 ## Creating IDs: Time 

@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 5: Intro to Markup Lang. & Literate Programming (2)'
 author: "Christopher Gandrud"
 date: "25 September 2015"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
 bibliography:
 - RpackageCitations.bib
 - MainLit.bib
@@ -30,7 +30,7 @@ bibliography:
 
 **Proposal** for your Collaborative Research Project.
 
-**Deadline:** Week 23
+**Deadline:** 23 October
 
 **Submbit:** A (max) 2,000 word proposal created with **R Markdown**. The
 proposal will:
@@ -52,18 +52,8 @@ As always, submit the entire GitHub repo.
 
 **Definitely see me with your ideas/draft.**
 
-Start thinking about **types of models** that you want to use. I can include these
-in Lecture 8 (Statistical Modeling with R).
-
-## <i class="fa fa-arrow-left"></i> Review
-
-- Why is literate programming useful for reproducible research?
-
-- What is a markup language?
-
-- What is a code chunk?
-
-- What is the difference between Weave, Sweave, knitr, and R Markdown? (kind of a trick question)
+Start thinking about **types of statistical models** that you want to use. 
+I can include these in Lecture 8 (Statistical Modeling with R).
 
 ## Example Paper
 
@@ -97,7 +87,7 @@ Hierarchy is maintained with tabs.
 ---
 title: 'MPP-E1180 Lecture 5'
 author: "Christopher Gandrud"
-date: "9 October 2014"
+date: "25 September 2015"
 output:
   ioslides_presentation:
     css: css/font-awesome.min.css
@@ -386,7 +376,7 @@ R code into code chunks can sometimes be **problematic**:
 time/computationally intensive work: `cache=TRUE` code chunk option: only runs
 the chunk when the **chunk code changes**.
 
-## Make files
+## Advanced: Make files
 
 Make files are the ultimate solution to these problems.
 
