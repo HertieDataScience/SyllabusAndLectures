@@ -14,8 +14,6 @@ bibliography:
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the topic
 
-- Review
-
 - Advanced topics in markup languages and literate programming.
 
     + R Markdown Headers
@@ -106,7 +104,7 @@ YAML is a recursive acronym: ''YAML Ain't Markup Language''.
 
 ## Different Presentation Styles
 
-By defualt, R Markdown uses the [isoslides](http://rmarkdown.rstudio.com/ioslides_presentation_format.html)
+By defualt, R Markdown uses the [ioslides](http://rmarkdown.rstudio.com/ioslides_presentation_format.html)
 HTML presentation slides style.
 
 You can also use [reveal.js](http://lab.hakim.se/reveal-js/).
@@ -125,7 +123,7 @@ output: revealjs::revealjs_presentation
 
 For further styling see <https://github.com/jjallaire/revealjs>
 
-## Table of contents & Numbered Sections
+## Table of Contents & Numbered Sections
 
 You can add a table of contents and numbered sections to your PDF output:
 
@@ -360,11 +358,11 @@ So `@R-dplyr` and `@CiteR` create the citations:
 Knitting your analysis and presentation documents together by placing all of your
 R code into code chunks can sometimes be **problematic**:
 
-- When they are **time consuming** (requires a lot of computational time).
+- When they are **time consuming**: requires a lot of computational time.
 
-- When they **access files over the internet** (bad practice to make many repeated
+- When they **access files over the internet**: bad practice to make many repeated
     calls to the same URL, can crash the site. This is equivalent to a 
-    [denial-of-service attack](http://en.wikipedia.org/wiki/Denial-of-service_attack)).
+    [denial-of-service attack](http://en.wikipedia.org/wiki/Denial-of-service_attack).
 
 - When they are **many lines long**.
 

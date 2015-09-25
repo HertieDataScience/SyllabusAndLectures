@@ -34,6 +34,7 @@ that will be clear later.
 
 <https://github.com/HertieDataScience/Examples>
 
+
 ## <i class="fa fa-certificate"></i> Pair Assignment 1
 
 - **Due:** Midnight 2 October
@@ -63,6 +64,13 @@ Each pair will create a **new public GitHub repository**
     - Two files must be **dynamically linked**
 
 - **Another pair** makes a **pull request**. And this is discussed/merged.
+
+## Assignment 1 To-Do
+
+- "Dynamic linking"
+
+- `Watch` the [SyllabusAndLectures](https://github.com/HertieDataScience/SyllabusAndLectures) 
+repo. This way you can **find each other**.
 
 ## <i class="fa fa-arrow-left"></i> Review (1)
 
