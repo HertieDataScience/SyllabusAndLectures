@@ -270,7 +270,7 @@ details**, but are **usually not the best way** to show your results.
 
 Show the data, not other things like silly graphics or unnecessary words.
 
-Have a high **data ink** ratio.
+Have a high **data ink** ratio:
 
 $$
 \mathrm{Data\:Ink\:Ratio} = \mathrm{\frac{data - ink}{total\:ink}}

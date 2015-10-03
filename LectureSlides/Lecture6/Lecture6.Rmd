@@ -12,6 +12,8 @@ bibliography: main.bib
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
 
+- Assignment info
+
 - Review
 
 - Benefits and challenges of open public data
@@ -19,6 +21,45 @@ bibliography: main.bib
 - Automatic Data Gathering
 
 - Tidying, Cleaning, and Merging data
+
+## Assignment 1 General Feedback
+
+- Avoid including `?FUNCTION`, `search`, `View` and similar in your source files.
+
+- Avoid straight `install.packages` calls.
+
+- Remember to set the working directory!
+
+- "dofile.R" is redundant. Use file names to indicate contents/position within file hierarchy.
+
+- Use human read-able labels on your plots.
+
+## Working directory tip
+
+You can have R automatically switch the working directory using `set_valid_wd`
+from the *repmis* package.
+
+```{r eval=FALSE}
+# Create list of commonly used working directories
+possible_dir <- c('/git_repos/Assignment1', 'C:\class\Assignment1')
+
+# Set to first valid directory in the possible_dir vector
+repmis::set_valid_wd(possible_dir)
+```
+
+## Splitting tip
+
+You can split a vector by values of another variable using `split`.
+
+```{r message=FALSE}
+library(dplyr)
+split(sleep$extra, sleep$group) %>% boxplot()
+```
+
+## Serving HTML file tip
+
+Serve an HTML file hosted on GitHub by putting its *raw* version through 
+[https://rawgit.com/](https://rawgit.com/).
 
 ## Assignment 2
 
@@ -196,7 +237,8 @@ Use `source_data` from the repmis package.
 Data on GitHub is stored at secure URLs. Select the **RAW** URL:
 
 ```{r}
-URL <- 'https://raw.githubusercontent.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceDescriptives.csv'
+URL <- paste0('https://raw.githubusercontent.com/christophergandrud/',
+        'LegislativeViolence/master/Data/LegViolenceDescriptives.csv')
 main <- repmis::source_data(URL)
 ```
 
@@ -219,7 +261,6 @@ main <- repmis::source_data(URL,
 You can also use the rio package (but no sha1 hashing):
 
 ```{r}
-URL <- 'https://raw.githubusercontent.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceDescriptives.csv'
 main <- rio::import(URL)
 ```
 
@@ -237,9 +278,11 @@ for statistical/graphical analyses.
 
 ## Caching
 
-`source_data` also allows you to **cache** data with `cache = TRUE`.
+`source_data` allows you to **cache** data with `cache = TRUE`.
 
 This is useful if you are downloading a large data set.
+
+You can also cache data with you *knit* your R Markdown files.
 
 ## Data APIs
 
@@ -271,7 +314,7 @@ library(WDI)
 AltEnergy <- WDI(indicator = 'EG.USE.COMM.CL.ZS')
 ```
 
-Note: The indicator ID is at the end of the indicator's URL on the World Bank site..
+Note: The indicator ID is at the end of the indicator's URL on the World Bank site.
 
 ## Financial Data with quantmod
 
