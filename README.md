@@ -96,7 +96,7 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 
 All of the assignments for the course will be completed in pairs. All assignments must be developed using Git and submitted on GitHub. All assignments, including the version history must be completely reproducible from the repository files. In general a single mark for the pair will be given. However, as all assignments are developed using Git, your contributor statistics will be taken into consideration. Major discrepancies between team members will result in scores reflecting individual’s contributions.
 
-Assignments are due by **midnight** on the due date. When you have completed the assignment, email me the GitHub tag URL for the final version of your assignment.
+Assignments are due by **midnight** on the due date (for example, the first pair assignment is due at 11:59 pm on 2 October). When you have completed the assignment, email me the GitHub tag URL for the final version of your assignment.
 
 **Examination Requirement**: Weighted average grade of all course assignment must be 50% or higher on numerical scale.
 
