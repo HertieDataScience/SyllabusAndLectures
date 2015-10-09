@@ -3,14 +3,14 @@ title: 'MPP-E1180 Lecture 6: Automatic Data Gathering + Cleaning'
 author: "Christopher Gandrud"
 date: "9 October 2015"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
 bibliography: main.bib
 ---
 
-## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the lesson
 
 - Assignment info
 
@@ -32,7 +32,7 @@ bibliography: main.bib
 
 - "dofile.R" is redundant. Use file names to indicate contents/position within file hierarchy.
 
-- Use human read-able labels on your plots.
+- Use human readable labels on your plots.
 
 ## Working directory tip
 
@@ -99,9 +99,9 @@ As always, submit the entire GitHub repo.
 
 @Janssen2012 [258]:
 
-<i class="fa fa-quote-left"></i> Non-privacy-restricted and non-confidential
+"Non-privacy-restricted and non-confidential
 data which is produced with public money and is made available without any
-restrictions on its usage or distribution. <i class="fa fa-quote-right"></i>
+restrictions on its usage or distribution."
 
 ## Some benefits of open public data
 
@@ -203,11 +203,11 @@ read.table('http://SOMEDATA.csv')
 
 ## Loading compressed plain-text data
 
-You can download and load data files in stored in compressed formats.
+You can download and load data files stored in compressed formats.
 
 1. Download the compressed file into a **temporary file**.
 
-2. Uncompress the file and pass it to `read.table`.
+2. Uncompress the file and pass it to `read.table`, `import`, etc.
 
 ## Loading compressed plain-text data
 
@@ -296,7 +296,7 @@ Data API = a documented way to access data from one program stored with another.
 R can interact with most data APIs using the [httr](https://github.com/hadley/httr)
 package.
 
-Even easier: users have written API specific packages to interact with 
+Even easier: users have written API-specific packages to interact with 
 particular data APIs.
 
 ## World Bank Development Indications with WDI
@@ -304,7 +304,7 @@ particular data APIs.
 Access the [World Bank's Development Indicators](http://data.worldbank.org/indicator)
 with the WDI package.
 
-Alternative Energy Use Example:
+Alternative Energy Use example:
 
 ```{r, cache=TRUE, message=FALSE}
 # Load WDI package
@@ -342,9 +342,9 @@ For a good beginner list see:
 
 | Format      | R packages                                                     |
 | ----------- | -------------------------------------------------------------- |
-| Excel       | Try to save as CSV, otherwise [xlsx](https://code.google.com/p/rexcel/) |
-| Stata, SPSS, SAS | foreign                                                   |
-| [JSON](http://en.wikipedia.org/wiki/JSON) | [rjson](http://cran.r-project.org/web/packages/rjson/index.html) |
+| Excel       | Try to save as CSV, otherwise [xlsx](https://code.google.com/p/rexcel/), rio |
+| Stata, SPSS, SAS | foreign, rio                                              |
+| [JSON](http://en.wikipedia.org/wiki/JSON) | [jsonlite](https://cran.r-project.org/web/packages/jsonlite/index.html) |
 | [MySQL](http://en.wikipedia.org/wiki/MySQL) | [RMySQL](http://biostat.mc.vanderbilt.edu/wiki/Main/RMySQL), [more info](http://www.jason-french.com/blog/2014/07/03/using-r-with-mysql-databases/) |
 | [couchDB](http://couchdb.apache.org/) | [sofa](https://github.com/sckott/sofa) |
 
@@ -444,7 +444,7 @@ messy
 ```{r}
 library(tidyr)
 
-# Gather the data into long format
+# Gather the data into tidy long format
 tidy <- gather(messy, treatement, result, a:b)
 
 tidy
@@ -575,8 +575,6 @@ By default, only observations in both data sets are kept. Use `all`, `all.x`, or
 <br>
 <br>
 
-<i class="fa fa-exclamation"></i><i class="fa fa-exclamation"></i><i class="fa fa-exclamation"></i>
-<i class="fa fa-exclamation"></i><i class="fa fa-exclamation"></i>
 Always **check your data** after a merge to see if you did what you wanted to do!
 
 ## Clean up
@@ -589,12 +587,16 @@ names(Combined) <- c('iso2c', 'year', 'country',
                      'alt_energy_use',  'uds_median')
 ```
 
-And reorder variables
+or
 
 ```{r}
-Combined <- DataCombine::MoveFront(Combined, 'country')
+Combined <- dplyr::rename(Combined, new_year = year)
+```
 
-names(Combined)
+And reorder variables
+
+```{r, eval=FALSE}
+Combined <- DataCombine::MoveFront(Combined, 'country')
 ```
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Access web-based data

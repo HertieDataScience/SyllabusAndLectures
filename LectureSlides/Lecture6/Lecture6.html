@@ -110,7 +110,7 @@
           </hgroup>
   </slide>
 
-<slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Objectives for the week</h2></hgroup><article  id="objectives-for-the-week">
+<slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Objectives for the lesson</h2></hgroup><article  id="objectives-for-the-lesson">
 
 <ul>
 <li><p>Assignment info</p></li>
@@ -127,7 +127,7 @@
 <li><p>Avoid straight <code>install.packages</code> calls.</p></li>
 <li><p>Remember to set the working directory!</p></li>
 <li><p>&quot;dofile.R&quot; is redundant. Use file names to indicate contents/position within file hierarchy.</p></li>
-<li><p>Use human read-able labels on your plots.</p></li>
+<li><p>Use human readable labels on your plots.</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Working directory tip</h2></hgroup><article  id="working-directory-tip">
@@ -185,7 +185,7 @@ split(sleep$extra, sleep$group) %&gt;% boxplot()</pre>
 
 <p><span class="cite">Janssen, Charalabidis, and Zuiderwijk (2012, 258)</span>:</p>
 
-<p><i class="fa fa-quote-left"></i> Non-privacy-restricted and non-confidential data which is produced with public money and is made available without any restrictions on its usage or distribution. <i class="fa fa-quote-right"></i></p>
+<p>&quot;Non-privacy-restricted and non-confidential data which is produced with public money and is made available without any restrictions on its usage or distribution.&quot;</p>
 
 </article></slide><slide class=''><hgroup><h2>Some benefits of open public data</h2></hgroup><article  id="some-benefits-of-open-public-data">
 
@@ -270,11 +270,11 @@ split(sleep$extra, sleep$group) %&gt;% boxplot()</pre>
 
 </article></slide><slide class=''><hgroup><h2>Loading compressed plain-text data</h2></hgroup><article  id="loading-compressed-plain-text-data">
 
-<p>You can download and load data files in stored in compressed formats.</p>
+<p>You can download and load data files stored in compressed formats.</p>
 
 <ol>
 <li><p>Download the compressed file into a <strong>temporary file</strong>.</p></li>
-<li><p>Uncompress the file and pass it to <code>read.table</code>.</p></li>
+<li><p>Uncompress the file and pass it to <code>read.table</code>, <code>import</code>, etc.</p></li>
 </ol>
 
 </article></slide><slide class=''><hgroup><h2>Loading compressed plain-text data</h2></hgroup><article  id="loading-compressed-plain-text-data-1">
@@ -344,9 +344,11 @@ main &lt;- repmis::source_data(URL)</pre>
 
 </article></slide><slide class=''><hgroup><h2>Caching</h2></hgroup><article  id="caching">
 
-<p><code>source_data</code> also allows you to <strong>cache</strong> data with <code>cache = TRUE</code>.</p>
+<p><code>source_data</code> allows you to <strong>cache</strong> data with <code>cache = TRUE</code>.</p>
 
 <p>This is useful if you are downloading a large data set.</p>
+
+<p>You can also cache data with you <em>knit</em> your R Markdown files.</p>
 
 </article></slide><slide class=''><hgroup><h2>Data APIs</h2></hgroup><article  id="data-apis">
 
@@ -358,13 +360,13 @@ main &lt;- repmis::source_data(URL)</pre>
 
 <p>R can interact with most data APIs using the <a href='https://github.com/hadley/httr' title=''>httr</a> package.</p>
 
-<p>Even easier: users have written API specific packages to interact with particular data APIs.</p>
+<p>Even easier: users have written API-specific packages to interact with particular data APIs.</p>
 
 </article></slide><slide class=''><hgroup><h2>World Bank Development Indications with WDI</h2></hgroup><article  id="world-bank-development-indications-with-wdi">
 
 <p>Access the <a href='http://data.worldbank.org/indicator' title=''>World Bank&#39;s Development Indicators</a> with the WDI package.</p>
 
-<p>Alternative Energy Use Example:</p>
+<p>Alternative Energy Use example:</p>
 
 <pre class = 'prettyprint lang-r'># Load WDI package
 library(WDI)
@@ -372,7 +374,7 @@ library(WDI)
 # Per country alternative energy use as % of total energy use
 AltEnergy &lt;- WDI(indicator = &#39;EG.USE.COMM.CL.ZS&#39;)</pre>
 
-<p>Note: The indicator ID is at the end of the indicator&#39;s URL on the World Bank site..</p>
+<p>Note: The indicator ID is at the end of the indicator&#39;s URL on the World Bank site.</p>
 
 </article></slide><slide class=''><hgroup><h2>Financial Data with quantmod</h2></hgroup><article  id="financial-data-with-quantmod">
 
@@ -399,15 +401,15 @@ YenDollar &lt;- getSymbols(Symbols = &#39;DEXJPUS&#39;,
 </tr>
 <tr class="odd">
 <td align="left">Excel</td>
-<td align="left">Try to save as CSV, otherwise <a href='https://code.google.com/p/rexcel/' title=''>xlsx</a></td>
+<td align="left">Try to save as CSV, otherwise <a href='https://code.google.com/p/rexcel/' title=''>xlsx</a>, rio</td>
 </tr>
 <tr class="even">
 <td align="left">Stata, SPSS, SAS</td>
-<td align="left">foreign</td>
+<td align="left">foreign, rio</td>
 </tr>
 <tr class="odd">
 <td align="left"><a href='http://en.wikipedia.org/wiki/JSON' title=''>JSON</a></td>
-<td align="left"><a href='http://cran.r-project.org/web/packages/rjson/index.html' title=''>rjson</a></td>
+<td align="left"><a href='https://cran.r-project.org/web/packages/jsonlite/index.html' title=''>jsonlite</a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href='http://en.wikipedia.org/wiki/MySQL' title=''>MySQL</a></td>
@@ -580,7 +582,7 @@ messy</pre>
 
 <pre class = 'prettyprint lang-r'>library(tidyr)
 
-# Gather the data into long format
+# Gather the data into tidy long format
 tidy &lt;- gather(messy, treatement, result, a:b)
 
 tidy</pre>
@@ -726,7 +728,7 @@ head(Combined, n = 3)</pre>
 
 <p><br> <br></p>
 
-<p><i class="fa fa-exclamation"></i><i class="fa fa-exclamation"></i><i class="fa fa-exclamation"></i> <i class="fa fa-exclamation"></i><i class="fa fa-exclamation"></i> Always <strong>check your data</strong> after a merge to see if you did what you wanted to do!</p>
+<p>Always <strong>check your data</strong> after a merge to see if you did what you wanted to do!</p>
 
 </article></slide><slide class=''><hgroup><h2>Clean up</h2></hgroup><article  id="clean-up">
 
@@ -735,14 +737,13 @@ head(Combined, n = 3)</pre>
 <pre class = 'prettyprint lang-r'>names(Combined) &lt;- c(&#39;iso2c&#39;, &#39;year&#39;, &#39;country&#39;,
                      &#39;alt_energy_use&#39;,  &#39;uds_median&#39;)</pre>
 
+<p>or</p>
+
+<pre class = 'prettyprint lang-r'>Combined &lt;- dplyr::rename(Combined, new_year = year)</pre>
+
 <p>And reorder variables</p>
 
-<pre class = 'prettyprint lang-r'>Combined &lt;- DataCombine::MoveFront(Combined, &#39;country&#39;)
-
-names(Combined)</pre>
-
-<pre >## [1] &quot;country&quot;        &quot;iso2c&quot;          &quot;year&quot;           &quot;alt_energy_use&quot;
-## [5] &quot;uds_median&quot;</pre>
+<pre class = 'prettyprint lang-r'>Combined &lt;- DataCombine::MoveFront(Combined, &#39;country&#39;)</pre>
 
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Seminar: Access web-based data</h2></hgroup><article  id="seminar-access-web-based-data">
 
