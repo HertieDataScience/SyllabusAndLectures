@@ -203,7 +203,7 @@ We will finish up our introduction to Markup languages by venturing into two mor
 
 Then we will begin to examine how to access and clean social science data. Most social science data sets are now available for download online. This week we will learn how to programmatically access this data and clean it so that it can be used for statistical analysis. We will also consider the benefits and challenges of government increasing the openness and accessibility of their data.
 
-#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture6/Lecture6.html#1)
+#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/09c6e3c364c5fb82a380240e44f9fc8f42ad8841/LectureSlides/Lecture6/Lecture6.html)
 
 #### Readings
 
@@ -232,9 +232,9 @@ with the [dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introducti
 
 We will learn then begin to learn how to fit and evaluate a variety of statistical models using the R language, including simple linear models and logistic regression models for categorical dependent data.
 
-#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture7/Lecture7.html#1)
+#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/f7b9e358c70ddabf37f099187b79cf65cb5541a3/LectureSlides/Lecture7/Lecture7.html)
 
-#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture8/Lecture8.html#1)
+#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/f7b9e358c70ddabf37f099187b79cf65cb5541a3/LectureSlides/Lecture8/Lecture8.html)
 
 #### Readings
 
