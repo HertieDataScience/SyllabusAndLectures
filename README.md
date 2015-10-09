@@ -4,7 +4,7 @@
 
 ### Fall 2015
 
-**Version: 30 September 2015**
+**Version: 9 October 2015**
 
 ### Instructor: Christopher Gandrud
 
@@ -82,7 +82,7 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 | ----------------------- | --------------------- | ---------------- |
 | Pair Assignment 1       | 10%                   | 2 October        |
 | Pair Assignment 2       | 10%                   | 23 October       |
-| Pair Assignment 3       | 10%                   | 6 November       |
+| Pair Assignment 3       | 10%                   | 13 November       |
 | Collaborative Research Project | 50%            | Presentation: Final Class, Paper/Website: Final Exam Week |
 | Attendance/active Participation | 20%           | -                |
 
@@ -90,7 +90,7 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 
 2. The **second pair assignment** is a proposal for your Collaborative Research Project. It is an opportunity for you to layout your collaborative research paper question, justify why it is interesting, provide basic literature review (properly cited using BibTeX), and identify data sources/methodologies that you can access to help answer your question. You will also demonstrate your understanding of literate programming technologies.  **Deadline 23 October, 2,000 words maximum, 10% of final grade**.
 
-3. In the **third pair assignment** you will gather web based data from at least two sources, merge the data sets, conduct basic descriptive and inferential statistics on the data to address a relevant research question and briefly describe the results including with dynamically generated tables and figures. Students are encouraged to access data and perform statistical analyses with an eye to answering questions relevant for their Collaborative Research Project. **Deadline 6 November, the write up should be 1,500 words maximum and use literate programming, 10% of final grade**.
+3. In the **third pair assignment** you will gather web based data from at least two sources, merge the data sets, conduct basic descriptive and inferential statistics on the data to address a relevant research question and briefly describe the results including with dynamically generated tables and figures. Students are encouraged to access data and perform statistical analyses with an eye to answering questions relevant for their Collaborative Research Project. **Deadline 13 November, the write up should be 1,500 words maximum and use literate programming, 10% of final grade**.
 
 4. For the **Collaborative Research Project** you will pose an interesting social science question and attempt to answer it using standard academic practices including original data collection and statistical analysis. The project should be considered a ‘dry run’ for your thesis. The project has **three presentation outputs** designed to present your research to multiple audiences.  The first is a oral presentation (**10 minute maximum**) given in the **final class**. The second is a standard academic paper (**5,000 words maximum**) that is fully reproducible and dynamically generated. The third is a website designed to present key aspects of your research in an engaging way to a general audience. The **paper and website are due in the Final Exam Week**. The presentation and website are each worth 10% of your final mark. The paper is worth 30%.
 
