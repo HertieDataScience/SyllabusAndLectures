@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 6: Automatic Data Gathering + Cleaning'
 author: "Christopher Gandrud"
 date: "9 October 2015"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
 bibliography: main.bib
 ---
 

@@ -1,12 +1,12 @@
 ---
 title: 'MPP-E1180 Lecture 8: Statistical Modeling with R'
 author: "Christopher Gandrud"
-date: "6 November 2014"
+date: "16 October 2015"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
 ---
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
@@ -23,19 +23,13 @@ output:
 
     + Logistic regression
     
-## Week 9
-
-<br>
-<br>
-<br>
-
-Class for Week 9 is on **10 November (Monday) from 14:00-16:00**.
+    + Panel data
 
 ## Assignment 3
 
 **Purpose**: Gather, clean, and analyse data
 
-**Deadline**: 14 November 2014
+**Deadline**: 13 November 2015
 
 You will submit a GitHub repo that:
 
@@ -50,20 +44,6 @@ figures.
 
 - Has a write up of 1,500 words maximum that describes the data gathering and
 analysis and uses literate programming.
-
-## Assignment 3
-
-<br>
-<br>
-<br>
-
-<i class="fa fa-exclamation"></i><i class="fa fa-exclamation"></i><i class="fa fa-exclamation"></i>
-**Note**: I will be traveling/at a conference/not able to check my email much
-on the **13th** and **14th**. 
-
-So try to ask all of your **questions by the 12th (Wednesday)**.
-
-I will have **normal office hours** on Wednesday.
 
 ## Review
 
@@ -212,6 +192,10 @@ and with homoskedastic variance.
 
 - `glm`: allows the fitting of many Generalised Linear Models. Lets you specify
 the `family` and the `link` function.
+
+- `plm` (package and function): panel data Linear Models 
+
+- `pglm` (package and function): panel data Generalised Linear Models
 
 ## Example of `lm`
 
@@ -449,7 +433,7 @@ fitted
 
 ## More interpretation
 
-Next week we will explore other methods of interpreting results from regression
+Next class we will explore other methods of interpreting results from regression
 models.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, cache=TRUE}

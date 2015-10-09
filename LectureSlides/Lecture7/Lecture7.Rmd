@@ -23,23 +23,29 @@ output:
 
 ## Assignment 2
 
-I have marked Assignment 2 and aim to email you the feedback later this week.
+**Proposal** for your Collaborative Research Project.
 
-Overall, everyone has made a **good first start**.
+**Deadline:** 23 October
 
-Minor: checkout these posts on GitHub:
+**Submit:** A (max) 2,000 word proposal created with **R Markdown**. The
+proposal will:
 
-- Problems compiling PDF: 
-[SyllabusAndLectures/issues/19](https://github.com/HertieDataScience/SyllabusAndLectures/issues/19)
+- Be written in R Markdown.
 
-- Double spacing in R Markdown: 
-[SyllabusAndLectures/issues/20](https://github.com/HertieDataScience/SyllabusAndLectures/issues/20)
+- State your research question. And justify why it is interesting.
+
+- Provide a basic literature review (properly cited with BibTeX).
+
+- Identify data sources and appropriate research methodologies for answering your
+question.
+
+As always, submit the entire GitHub repo.
 
 ## Assignment 3
 
 **Purpose**: Gather, clean, and analyse data
 
-**Deadline**: 14 November 2015
+**Deadline**: 13 November 2015
 
 You will submit a GitHub repo that:
 
