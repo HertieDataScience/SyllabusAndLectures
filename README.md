@@ -232,9 +232,9 @@ with the [dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introducti
 
 We will learn then begin to learn how to fit and evaluate a variety of statistical models using the R language, including simple linear models and logistic regression models for categorical dependent data.
 
-#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/f7b9e358c70ddabf37f099187b79cf65cb5541a3/LectureSlides/Lecture7/Lecture7.html)
+#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/cd857308ab8abdfc9a85de1c31a8955dd74f826a/LectureSlides/Lecture7/Lecture7.html)
 
-#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/f7b9e358c70ddabf37f099187b79cf65cb5541a3/LectureSlides/Lecture8/Lecture8.html)
+#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/cd857308ab8abdfc9a85de1c31a8955dd74f826a/LectureSlides/Lecture8/Lecture8.html)
 
 #### Readings
 
