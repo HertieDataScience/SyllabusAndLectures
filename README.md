@@ -271,6 +271,7 @@ We will learn how to automatically generate summary and results tables for multi
 - Gelman, Andrew. 2011.
 ''[Tables as Graphs: the Ramanujan Principle](http://www.significancemagazine.org/details/magazine/1405003/Tables-as-graphs-the-Ramanujan-principle.html)''.
 *Significance* 8(4): 183.
+--> *the link actually doesn't work, through some quick web search I found this link: ''http://www.statslife.org.uk/search-significance?searchword=Tables%20as%20graphs%20Ramanujan%20principle&ordering=newest&searchphrase=all'' but it also doesn't direct to the actual article unfortunately* 
 
 - Ch. 1, 4, and 9: Tufte, Edward R. 2001. The Visual Display of Quantitative Information. Cheshire, Connecticut: Graphics Press.
 
