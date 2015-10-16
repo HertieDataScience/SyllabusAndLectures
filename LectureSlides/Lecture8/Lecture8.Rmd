@@ -9,7 +9,7 @@ output:
   beamer_presentation: default
 ---
 
-## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the class
 
 - Assignment 3
 
@@ -76,11 +76,12 @@ and logistic regressions.
 
 ## The basic model
 
-Most statistical models you will estimate are from a general class that
+Most statistical models you will estimate are from a general class (**Generalised Linear Model**) that
 has **two parts**:
 
-**Stocastic Component** that assumes the dependent variable $Y_{i}$ is generated 
-from as a random draw from the probability density function:
+**Stocastic Component** (e.g. randomly determined) assumes 
+the dependent variable $Y_{i}$ is generated from as a random draw from the 
+probability density function:
 
 $$
 Y_{i} \sim f(\theta_{i},\: \alpha)
@@ -127,6 +128,8 @@ For continuous dependent variables assume that $Y_{i}$ is from the
 Set the main parameter vector $\theta_{i}$ to the **scalar mean** of:
 $\theta_{i} = E(y_{i})= \mu_{i}$.
 
+- **Scalar**: a real number (in R-language: a vector of length 1)
+
 Assume the ancillary parameter matrix is the scalar homoskedastic variance:
 $\alpha = V(Y_{i}) = \sigma^2$.
 
@@ -162,7 +165,7 @@ $$
 Y_{i} \sim \mathrm{Bernoulli}(\pi_{i}), \:\:\: \pi_{i} = \frac{1}{1 + e^{-X_{i}\beta}}
 $$
 
-## Error structure family and link function
+## Example error structure families and link functions
 
 | Error Family | Canonical link |
 | ------------ | -------------- |
@@ -180,6 +183,12 @@ response variable ~ explanatory variable(s)
 ```
 
 Where '`~`' reads 'is modelled as a function of'.
+
+In the Generalised Linear Model context, either explicitly or implicitly:
+
+```{r, eval=FALSE}
+response variable ~ explanatory variable(s), family = error family
+```
 
 ## Model functions
 
@@ -203,7 +212,7 @@ Example data *Prestige* (example based on
 <http://www.princeton.edu/~otorres/Regression101R.pdf>).
 
 The observations are **occupations** and the dependent variable is a score of
-each occupations' **prestige**.
+each occupation's **prestige**.
 
 ```{r}
 library(car)
@@ -219,7 +228,7 @@ car::scatterplotMatrix(Prestige)
 
 ## Example of `lm`
 
-Estimate simple model:
+Estimate simple model (education is in years):
 
 ```{r}
 M1 <- lm(prestige ~ education, data = Prestige)
