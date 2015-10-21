@@ -535,13 +535,13 @@ data &lt;- data.frame(people, year, income = income$value)</pre>
 
 <pre class = 'prettyprint lang-r'>head(data)</pre>
 
-<pre >##              people year   income
-## 1 Abastta, Shenique 2010     0.00
-## 2 Abastta, Shenique 2011 31577.28
-## 3 Abastta, Shenique 2012 90623.35
-## 4 Abastta, Shenique 2013 23622.05
-## 5    Abdella, Vince 2010 29019.99
-## 6    Abdella, Vince 2011 31717.75</pre>
+<pre >##                      people year    income
+## 1               Ablan, Ryan 2010 26846.751
+## 2               Ablan, Ryan 2011 27530.154
+## 3               Ablan, Ryan 2012 26577.201
+## 4               Ablan, Ryan 2013 52070.168
+## 5 Acosta-Martinez, Angelina 2010  8731.226
+## 6 Acosta-Martinez, Angelina 2011 72291.381</pre>
 
 </article></slide><slide class=''><hgroup><h2>Simple dplyr</h2></hgroup><article  id="simple-dplyr">
 
@@ -551,13 +551,13 @@ data &lt;- data.frame(people, year, income = income$value)</pre>
 
 head(higher_income)</pre>
 
-<pre >##              people year   income
-## 1 Abastta, Shenique 2012 90623.35
-## 2   Achziger, Grant 2012 88947.39
-## 3   Achziger, Grant 2013 69768.27
-## 4    Adams, Timothy 2012 76421.76
-## 5      Adkins, Asha 2013 69254.91
-## 6    Agrawal, Lorne 2013 74282.24</pre>
+<pre >##                      people year   income
+## 1 Acosta-Martinez, Angelina 2011 72291.38
+## 2           Aguilar, Kendra 2012 60824.21
+## 3           Aguilar, Kendra 2013 73447.84
+## 4            Algien, Hye In 2012 72361.34
+## 5           Allen, Cheyenne 2011 76042.84
+## 6         Andolino, Alexsia 2012 74997.01</pre>
 
 </article></slide><slide class=''><hgroup><h2>Simple dplyr</h2></hgroup><article  id="simple-dplyr-1">
 
@@ -571,13 +571,13 @@ people_income &lt;- select(data, -year)
 
 head(people_income)</pre>
 
-<pre >##              people   income
-## 1 Abastta, Shenique     0.00
-## 2 Abastta, Shenique 31577.28
-## 3 Abastta, Shenique 90623.35
-## 4 Abastta, Shenique 23622.05
-## 5    Abdella, Vince 29019.99
-## 6    Abdella, Vince 31717.75</pre>
+<pre >##                      people    income
+## 1               Ablan, Ryan 26846.751
+## 2               Ablan, Ryan 27530.154
+## 3               Ablan, Ryan 26577.201
+## 4               Ablan, Ryan 52070.168
+## 5 Acosta-Martinez, Angelina  8731.226
+## 6 Acosta-Martinez, Angelina 72291.381</pre>
 
 </article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data">
 
@@ -589,13 +589,13 @@ head(group_data)[1:5, ]</pre>
 <pre >## Source: local data frame [5 x 3]
 ## Groups: people [2]
 ## 
-##              people  year   income
-##              (fctr) (int)    (dbl)
-## 1 Abastta, Shenique  2010     0.00
-## 2 Abastta, Shenique  2011 31577.28
-## 3 Abastta, Shenique  2012 90623.35
-## 4 Abastta, Shenique  2013 23622.05
-## 5    Abdella, Vince  2010 29019.99</pre>
+##                      people  year    income
+##                      (fctr) (int)     (dbl)
+## 1               Ablan, Ryan  2010 26846.751
+## 2               Ablan, Ryan  2011 27530.154
+## 3               Ablan, Ryan  2012 26577.201
+## 4               Ablan, Ryan  2013 52070.168
+## 5 Acosta-Martinez, Angelina  2010  8731.226</pre>
 
 <p>Note: the following functions work on <strong>non-grouped data</strong> as well.</p>
 
@@ -612,11 +612,11 @@ head(min_max_income)[1:3, ]</pre>
 
 <pre >## Source: local data frame [3 x 3]
 ## 
-##              people min_income max_income
-##              (fctr)      (dbl)      (dbl)
-## 1 Abastta, Shenique      0.000   90623.35
-## 2    Abdella, Vince  14377.565   38444.78
-## 3   Abrego, Vanessa   3289.616   49202.10</pre>
+##                      people min_income max_income
+##                      (fctr)      (dbl)      (dbl)
+## 1               Ablan, Ryan    26577.2   52070.17
+## 2 Acosta-Martinez, Angelina     1134.4   72291.38
+## 3               Adams, Gena        0.0   27967.32</pre>
 
 </article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data-2">
 
@@ -628,11 +628,11 @@ head(ascending)[1:3, ]</pre>
 
 <pre >## Source: local data frame [3 x 3]
 ## 
-##                    people min_income max_income
-##                    (fctr)      (dbl)      (dbl)
-## 1 Schneeberger, Gabrielle   2592.038   12531.61
-## 2        Solarin, Katiery   2596.987   16622.67
-## 3    Kellenberger, Destin   8350.077   16827.18</pre>
+##              people min_income max_income
+##              (fctr)      (dbl)      (dbl)
+## 1 Hernandez, Mariah   2399.049   4420.685
+## 2  Enriquez, Sierra      0.000  12472.827
+## 3     Thompson, Sky      0.000  17286.069</pre>
 
 </article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data-3">
 
@@ -643,11 +643,11 @@ head(descending)[1:3, ]</pre>
 
 <pre >## Source: local data frame [3 x 3]
 ## 
-##            people  min_income max_income
-##            (fctr)       (dbl)      (dbl)
-## 1 Ambaye, Brandon  6040.89577  104822.55
-## 2    Reddy, Bruno    67.78868   98055.28
-## 3    Bryant, Anna 45377.06137   97155.70</pre>
+##             people min_income max_income
+##             (fctr)      (dbl)      (dbl)
+## 1    Hrelja, David    6445.92   111446.0
+## 2     Chung, Oscar   35940.36   107473.9
+## 3 Fernandez, Maria       0.00   101798.8</pre>
 
 </article></slide><slide class=''><hgroup><h2>dplyr with grouped data</h2></hgroup><article  id="dplyr-with-grouped-data-4">
 
@@ -663,11 +663,11 @@ head(data)[1:3, ]</pre>
 <pre >## Source: local data frame [3 x 5]
 ## Groups: people [1]
 ## 
-##              people  year   income min_income max_income
-##              (fctr) (int)    (dbl)      (dbl)      (dbl)
-## 1 Abastta, Shenique  2010     0.00          0   90623.35
-## 2 Abastta, Shenique  2011 31577.28          0   90623.35
-## 3 Abastta, Shenique  2012 90623.35          0   90623.35</pre>
+##        people  year   income min_income max_income
+##        (fctr) (int)    (dbl)      (dbl)      (dbl)
+## 1 Ablan, Ryan  2010 26846.75    26577.2   52070.17
+## 2 Ablan, Ryan  2011 27530.15    26577.2   52070.17
+## 3 Ablan, Ryan  2012 26577.20    26577.2   52070.17</pre>
 
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Seminar: Web scraping and data transformations</h2></hgroup><article  id="seminar-web-scraping-and-data-transformations">
 
