@@ -4,7 +4,7 @@
 
 ### Fall 2015
 
-**Version: 9 October 2015**
+**Version: 17 October 2015**
 
 ### Instructor: Christopher Gandrud
 
@@ -269,7 +269,7 @@ We will learn how to automatically generate summary and results tables for multi
 - Ch. 9: RRRR.
 
 - Gelman, Andrew. 2011.
-''[Tables as Graphs: the Ramanujan Principle](http://www.significancemagazine.org/details/magazine/1405003/Tables-as-graphs-the-Ramanujan-principle.html)''.
+''[Tables as Graphs: the Ramanujan Principle](http://www.stat.columbia.edu/~gelman/research/published/ramanujan.pdf)''.
 *Significance* 8(4): 183.
 
 - Ch. 1, 4, and 9: Tufte, Edward R. 2001. The Visual Display of Quantitative Information. Cheshire, Connecticut: Graphics Press.
