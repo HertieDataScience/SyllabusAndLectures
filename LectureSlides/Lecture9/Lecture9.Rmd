@@ -12,6 +12,8 @@ bibliography: main.bib
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
 
+- Assignment 2 general feedback
+
 - Assignment 3
 
 - Review
@@ -26,6 +28,49 @@ bibliography: main.bib
 
     + Zelig simulations for showing results
 
+## Assignment 2 General Feedback (1)
+
+- Please see me in my office hours to help refine operationalisation, research question, etc.
+
+- Proofread your work!
+
+    + Finish your sentences!
+
+    + Check output document to see if it has rendered correctly.
+
+- A catchy and descriptive title is good to have!
+
+- If you use HTML make sure you provide a link to a hosted and rendered version, e.g. on [rawgit](https://rawgit.com/).
+
+## Assignment 2 Feedback (2)
+
+- Numbered section headings, in YAML header:
+
+```
+number_sections: true
+```
+
+## Assignment 2 Feedback (3)
+
+- Figure captions, in YAML header include: 
+
+```
+fig_caption: true
+```
+
+In knitr head include option:
+
+```
+fig.cap = "A Caption Example"
+```
+
+In imported images:
+
+```
+![A Caption Example \label{LaTeXref}](some_image.png)
+```
+
+Can reference in knitr LaTeX with `\ref{LaTeXRef}`.
 
 ## Assignment 3
 
@@ -302,11 +347,7 @@ The circles are on a scale of 0-100, so what are their values?
 
 ---
 
-Order the circles from smallest to largest.
-
-The circles are on a scale of 0-100, so what are their values?
-
-<img src="img/GraphCirclesComp.png" height=400 width=500/>
+<img src="img/credit_bar.png" height=400 width=500/>
 
 ## Ebbinghause Illusion
 
