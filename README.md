@@ -4,7 +4,7 @@
 
 ### Fall 2015
 
-**Version: 17 October 2015**
+**Version: 30 October 2015**
 
 ### Instructor: Christopher Gandrud
 
@@ -262,7 +262,7 @@ We will conclude our introduction to statistical modelling in R.
 
 We will learn how to automatically generate summary and results tables for multiple markup languages using  [stargazer](http://cran.r-project.org/web/packages/stargazer/stargazer.pdf). We will then learn static descriptive and inferential data visualisation best practices including avoiding introducing optical illusions that distort data presentations and accommodating readers with visual impairments. We will also cover specific R packages for creating static visualisations, primarily [ggplot2](http://docs.ggplot2.org/current/) and [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) for mapping.
 
-#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/b97d87c7c9d17fc597432b4ec056cb577eb79227/LectureSlides/Lecture9/Lecture9.html#1)
+#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/fbff8c9cc893c04bd93ceeeb956d98c82f6372b5/LectureSlides/Lecture9/Lecture9.html)
 
 #### Readings
 
@@ -296,9 +296,9 @@ The transition of publishing from static mediums such as print journals and book
 
 In addition, we will bring together all of the tools we have learned to conduct an original collaborative and reproducible research project. You will present the results from the project in multiple mediums including as a paper, a presentation to the class, and a website. The project should ideally be the starting point of your thesis. This is an opportunity for you to work on your project and ask questions/get immediate feedback from the instructor/classmates.
 
-#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture10/Lecture10.html#1)
+#### [Slides (1)](https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/fbff8c9cc893c04bd93ceeeb956d98c82f6372b5/LectureSlides/Lecture10/Lecture10.html)
 
-#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture11/Lecture11.html#1)
+#### [Slides (2)](https://raw.githubusercontent.com/HertieDataScience/SyllabusAndLectures/fbff8c9cc893c04bd93ceeeb956d98c82f6372b5/LectureSlides/Lecture11/Lecture11.html)
 
 #### Resources
 
