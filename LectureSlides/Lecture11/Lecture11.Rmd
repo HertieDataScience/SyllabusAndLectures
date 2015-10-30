@@ -1,8 +1,9 @@
 ---
 title: 'MPP-E1180 Lecture 11: Prepare Final Project'
 author: "Christopher Gandrud"
-date: "27 November 2014"
+date: "20 November 2015"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
@@ -10,7 +11,7 @@ output:
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
 
-- Collaborative Research Project (expations)
+- Collaborative Research Project
 
 - Peer discussion/feedback
 
@@ -36,11 +37,12 @@ results to a **variety of audiences** in a **variety of formats**.
 
 - Presentation: In-class Thursday 4 December
 
-- Website/Paper: 12 December
+- Website/Paper: 11 December
 
 ## Collaborative Research Project (2)
 
-The project is a 'dry run' for your thesis with multiple presentation outputs.
+The project can be thought of as a 'dry run' for your thesis with multiple 
+presentation outputs.
 
 Presentation: 10 minutes **maximum**. **Engagingly** present your research
 question and key findings to a general academic audience (fellow students).
@@ -54,11 +56,18 @@ audience**.
 ## Collaborative Research Project (3)
 
 As always, you should **submit one GitHub repository** with all of the
-materials needed to completely reproduce your data gathering, analysis, and
+materials needed to **completely reproduce** your data gathering, analysis, and
 presentation documents.
 
 **Note**: Because you've had two assignments already to work on parts of the
 project, I expect **high quality work**.
+
+## Collaborative Research Project (3)
+
+Find one other group to be a **discussant** for your presentation.
+
+The discussants will provide a quick (max 2 minute) critique of your 
+presentation--ideas for things you can improve on your paper.
 
 ## Peer discussion/feedback
 

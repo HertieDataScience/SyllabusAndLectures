@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 9: Automatic Tables and Static Visualisation'
 author: "Christopher Gandrud"
 date: "30 October 2015"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
-  beamer_presentation: default
 bibliography: main.bib
 ---
 
@@ -14,7 +14,7 @@ bibliography: main.bib
 
 - Assignment 2 general feedback
 
-- Assignment 3
+- Assignment 3/Final Project
 
 - Review
 
@@ -40,7 +40,8 @@ bibliography: main.bib
 
 - A catchy and descriptive title is good to have!
 
-- If you use HTML make sure you provide a link to a hosted and rendered version, e.g. on [rawgit](https://rawgit.com/).
+- If you use HTML make sure you provide a link to a hosted and rendered version, 
+e.g. on [rawgit](https://rawgit.com/).
 
 ## Assignment 2 Feedback (2)
 
@@ -52,19 +53,19 @@ number_sections: true
 
 ## Assignment 2 Feedback (3)
 
-- Figure captions, in YAML header include: 
+Figure captions, in YAML header include: 
 
 ```
 fig_caption: true
 ```
 
-In knitr head include option:
+Then, in knitr head include option:
 
 ```
 fig.cap = "A Caption Example"
 ```
 
-In imported images:
+or in imported images:
 
 ```
 ![A Caption Example \label{LaTeXref}](some_image.png)
@@ -91,6 +92,56 @@ figures.
 
 - Has a write up of 1,500 words maximum that describes the data gathering and
 analysis and uses literate programming.
+
+## Collaborative Research Project (1)
+
+**Purposes**: Pose an interesting research question and try to answer it using
+data analysis and standard academic practices. Effectively communicate your
+results to a **variety of audiences** in a **variety of formats**.
+
+**Deadline**:
+
+- Presentation: In-class Thursday 4 December
+
+- Website/Paper: 11 December
+
+## Collaborative Research Project (2)
+
+The project can be thought of as a 'dry run' for your thesis with multiple 
+presentation outputs.
+
+Presentation: 10 minutes **maximum**. **Engagingly** present your research
+question and key findings to a general academic audience (fellow students).
+
+Paper: 6,000 words maximum. **Standard academic paper**, properly cited laying out
+your research question, literature review, data, methods, and findings.
+
+Website: An engaging website designed to convey your research to **a general
+audience**.
+
+## Collaborative Research Project (3)
+
+As always, you should **submit one GitHub repository** with all of the
+materials needed to **completely reproduce** your data gathering, analysis, and
+presentation documents.
+
+**Note**: Because you've had two assignments already to work on parts of the
+project, I expect **high quality work**.
+
+## Collaborative Research Project (3)
+
+Find one other group to be a **discussant** for your presentation.
+
+The discussants will provide a quick (max 2 minute) critique of your 
+presentation--ideas for things you can improve on your paper.
+
+## Office hours
+
+I will have normal office hours (Friday 15:00-17:00, room 1.64) every week for the 
+rest of the term, **except** 13 November.
+
+Please take advantages of this opportunity to **improve your final project**.
+
 
 ## Review
 
@@ -669,6 +720,6 @@ Create **tables** and **visualisations** of **descriptive** and **inferential**
 for your Assignment 3 using the techniques covered in class today.
 
 If you don't have your data set fully cleaned yet, use one of the built-in
-R data sets.
+R data sets for practice.
 
 ## References
