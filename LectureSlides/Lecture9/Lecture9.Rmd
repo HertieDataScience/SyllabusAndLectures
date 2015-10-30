@@ -285,9 +285,9 @@ When you are creating a table for an HTML doc with stargazer use:
 
 ```{r, eval=FALSE}
 # Create cleaner covariate labels
-labels <- c('(Intercept)', 'GRE Score', 'GPA Score',
+labels <- c('GRE Score', 'GPA Score',
             '2nd Ranked School', '3rd Ranked School',
-            '4th Ranked School')
+            '4th Ranked School', '(Intercept)')
 
 stargazer::stargazer(L1, L2, L3, covariate.labels = labels,
     title = 'Logistic Regression Estimates of Grad School Acceptance',
@@ -308,9 +308,9 @@ stargazer::stargazer(L1, L2, L3, covariate.labels = labels,
 
 ```{r, eval=FALSE}
 # Create cleaner covariate labels
-labels <- c('(Intercept)', 'GRE Score', 'GPA Score',
+labels <- c('GRE Score', 'GPA Score',
             '2nd Ranked School', '3rd Ranked School',
-            '4th Ranked School')
+            '4th Ranked School', '(Intercept)')
 
 stargazer::stargazer(L1, L2, L3, covariate.labels = labels,
     title = 'Logistic Regression Estimates of Grad School Acceptance',
