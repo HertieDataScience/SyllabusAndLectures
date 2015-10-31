@@ -262,7 +262,7 @@ We will conclude our introduction to statistical modelling in R.
 
 We will learn how to automatically generate summary and results tables for multiple markup languages using  [stargazer](http://cran.r-project.org/web/packages/stargazer/stargazer.pdf). We will then learn static descriptive and inferential data visualisation best practices including avoiding introducing optical illusions that distort data presentations and accommodating readers with visual impairments. We will also cover specific R packages for creating static visualisations, primarily [ggplot2](http://docs.ggplot2.org/current/) and [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) for mapping.
 
-#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/fbff8c9cc893c04bd93ceeeb956d98c82f6372b5/LectureSlides/Lecture9/Lecture9.html)
+#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/b9f58b3e4dfde2543fb490f46349ce7afec4c18b/LectureSlides/Lecture9/Lecture9.html)
 
 #### Readings
 
