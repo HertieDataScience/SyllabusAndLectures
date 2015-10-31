@@ -36,7 +36,7 @@ bibliography: main.bib
 
     + Finish your sentences!
 
-    + Check output document to see if it has rendered correctly.
+    + **Check output document** to see if it has rendered correctly.
 
 - A catchy and descriptive title is good to have!
 
