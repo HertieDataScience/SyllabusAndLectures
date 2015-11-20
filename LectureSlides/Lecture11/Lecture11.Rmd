@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 11: Prepare Final Project'
 author: "Christopher Gandrud"
 date: "20 November 2015"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
 ---
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
@@ -35,7 +35,7 @@ results to a **variety of audiences** in a **variety of formats**.
 
 **Deadline**:
 
-- Presentation: In-class Thursday 4 December
+- Presentation: In-class 4 December
 
 - Website/Paper: 11 December
 
