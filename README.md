@@ -4,7 +4,7 @@
 
 ### Spring 2016
 
-**Version: 21 December 2015**
+**Version: 15 January 2016**
 
 ### Instructor: Christopher Gandrud
 
@@ -133,7 +133,7 @@ Then, we will learn the basics of the R statistical programming language for dat
 
 - Donoho, Donald. 2010. [''An Invitation to Reproducible Computational Research''](http://biostatistics.oxfordjournals.org/content/11/3/385.short). *Biostatistics*. 11(3): 385-388.
 
-- Herndon, Thomas, Michael Ash, and Robert Pollin. Forthcoming. [''Does High Public Debt Consistently Stifle Economic Growth? A critique of Reinhart and Rogoff''](http://cje.oxfordjournals.org/content/early/2013/12/17/cje.bet075.short). *The Cambridge Journal of Economics*.
+- Herndon, Thomas, Michael Ash, and Robert Pollin. 2014. [''Does High Public Debt Consistently Stifle Economic Growth? A critique of Reinhart and Rogoff''](http://cje.oxfordjournals.org/content/38/2/257). *The Cambridge Journal of Economics*. 38(2): 257-279.
 
 - Lazer, David. Ryan Kennedy, Gary King, and Alessandro Vespignani. 2014. ''[The Parable of Google Flu: Traps in Big Data Analysis](http://www.sciencemag.org/content/343/6176/1203.summary)''. *Science*. 343(6176): 1203-1205.
 
