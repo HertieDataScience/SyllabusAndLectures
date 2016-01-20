@@ -513,7 +513,7 @@ Instead use `summary` for factor nominal variables or make a bar chart.
 
 ## Simple bar chart for nominal
 
-```{r, message=FALSE, cache=TRUE}
+```{r, message=FALSE, warning=FALSE, cache=TRUE}
 devtools::source_url('http://bit.ly/OTWEGS')
 plot(MortalityGDP$region, xlab = 'Region')
 ```
