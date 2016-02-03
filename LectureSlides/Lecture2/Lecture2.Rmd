@@ -1,7 +1,7 @@
 ---
 title: 'MPP-E1180 Lecture 2: Introduction to the R Programming Language'
 author: "Christopher Gandrud"
-date: "11 September 2015"
+date: "8 February 2016"
 output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
@@ -35,13 +35,33 @@ Development is distributed globally.
 RStudio is an Integrated Developer Environment (IDE) that makes using R 
 and other reproducible research tools easier.
 
+## <i class="fa fa-line-chart"></i> Comparative Google Search Interest
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(rio)
+library(tidyr)
+library(lubridate)
+library(ggplot2)
+
+searches <- import('data/google_trends_results.csv')
+searches$Week <- ymd(searches$Week)
+
+searches <- gather(searches, Program, interest, 2:5)
+
+ggplot(searches, aes(Week, interest, group = Program, colour = Program)) +
+    geom_line(alpha = 0.3) +
+    geom_smooth(se = F) +
+    xlab('') + ylab('Interest\n') +
+    theme_bw()
+
+```
+
 ## <i class="fa fa-line-chart"></i> Growing popularity
 
 R can be easily expanded by **user created packages**  hosted on GitHub and/or
 [CRAN](http://cran.r-project.org/).
 
 [<img src="img/packagesCRAN.png" height=400 />](http://www.r-bloggers.com/analyzing-package-dependencies-and-download-logs-from-rstudio-and-a-start-towards-building-an-r-recommendation-engine/)
-
 
 ## How to Cite R
 
@@ -67,6 +87,18 @@ Like many other popular programming languages, R is **object-oriented**.
 
 - lists
 
+## R is a Calculator
+
+```{r}
+2 + 3
+
+2 - 3
+
+2 * 3
+
+2 / 3
+```
+
 ## Assignment
 
 You use the **assignment operator** (`<-`) to assign character strings,
@@ -84,6 +116,16 @@ number
 words <- "Hello World"
 
 words
+```
+
+## Assignment
+
+You can assign almost anything to an object. For example, the output of a maths operation:
+
+```{r}
+divided <- 2 / 3
+
+divided
 ```
 
 ## Assignment

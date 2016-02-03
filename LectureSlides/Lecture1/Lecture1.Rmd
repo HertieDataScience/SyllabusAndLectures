@@ -1,7 +1,7 @@
 ---
 title: 'MPP-E1180 Lecture 1: Introduction to the Course'
 author: "Christopher Gandrud"
-date: "11 September 2015"
+date: "8 February 2016"
 output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
@@ -28,7 +28,7 @@ output:
 
 - Room: 1.64
 
-- Friday: 15:00-17:00
+- Monday: 15:00-17:00
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the topic
 
@@ -55,7 +55,7 @@ using **best practices** <i class="fa fa-exclamation"></i>
 
 We are going to use **ugly real-world data**, not pristine training data sets.
 
-Use **advanced computational tools** to do **data munging**. 
+Use **advanced computational tools** to do **data munging**.
 
 ## <i class="fa fa-compass"></i> Motivation: Academic
 
@@ -105,13 +105,13 @@ development costs** and **improving applications**.
 
     + San Francisco laws are now [<i class="fa fa-code-fork"></i>](https://help.github.com/articles/fork-a-repo)
     [forkable](https://github.com/SFMOCI/openlaw).
-    
+
 ## <i class="fa fa-compass"></i> Motivation: NGO
 
-NGO's are becoming increasingly data-oriented and need people with **skills** to 
+NGO's are becoming increasingly data-oriented and need people with **skills** to
 **handle and analyse** this data.
 
-Ex. Former MPP-E1180 student Arndt Leininger recently co-founded 
+Ex. Former MPP-E1180 student Arndt Leininger recently co-founded
 [CorrelAid](http://correlaid.org/) to assist NGOs with data analysis.
 
 ## <i class="fa fa-compass"></i> Motivation: Business
@@ -200,13 +200,13 @@ Reproducibility helps **avoid effort duplication**:
 
 - Reproducibility also makes it possible to **find and correct errors**.
 
-- Recent examples: 
+- Recent examples:
     - Translation errors in the
     [World Values Survey](http://www.washingtonpost.com/blogs/monkey-cage/wp/2014/09/02/world-values-lost-in-translation/).
-    
-    - Data errors in research on 
+
+    - Data errors in research on
     [intestinal worm treatment and school attendance]((http://www.columbia.edu/~mh2245/w/worms.html)).
-    
+
     - [L'Affaire LaCour](http://www.vox.com/2015/5/20/8630535/same-sex-marriage-study):
     data *fabrication* discovered.
 
@@ -343,29 +343,29 @@ Next class we will do:
 
 ## <i class="fa fa-calendar"></i> Class dates
 
-### September
+### February
 
-11, 18, 25
+8, 15, 22, 29 
 
-### October
+### March
 
-9, 16, 30
+14, 21
 
-### November 
+### April
 
-20
+18
 
-### December
+### May 
 
-4
+2
 
 ## <i class="fa fa-certificate"></i> Assessment
 
-- 3 Pair Assignments (2 Oct, 23 Oct, 6 Nov)
+- 3 Pair Assignments (4 March, 25 March, 8 April)
 
     + 10% each
 
-- Collaborative Research Project (Presentation: 4 Dec, Website/Paper: Exam Week)
+- Collaborative Research Project (Presentation: 2 May, Website/Paper: Exam Week)
 
     + 50%
 
@@ -425,7 +425,7 @@ future classes.
 - The syllabus will be **updated**. **Check regularly**.
 
     + Changes to course **difficulty** is **monotonically decreasing** from the original
-    (11 September) baseline.
+    (8 February) baseline.
 
 **Lecture Slides**: Links in Online Syllabus or <a href="https://github.com/HertieDataScience/SyllabusAndLectures/tree/master/LectureSlides">LectureSlides/</a>
 
@@ -458,7 +458,7 @@ If you have general questions, please post them to the GitHub Issue Pages:
 
 [https://github.com/HertieDataScience/SyllabusAndLectures/issues](https://github.com/HertieDataScience/SyllabusAndLectures/issues)
 
-Includes answers to questions asked last year.
+Includes answers to questions asked in previous semesters.
 
 ## <i class="fa fa-list-ol"></i> Seminar to-do
 
@@ -480,7 +480,7 @@ Setup Git/GitHub for version control, collaboration, and remotely storing your f
 
 - <i class="fa fa-user"></i> Set up (free) GitHub account: <https://github.com/join>.
 
-- <i class="fa fa-download"></i> Install GitHub application: 
+- <i class="fa fa-download"></i> Install GitHub application:
 <https://desktop.github.com/>.
 
 ## <i class="fa fa-code"></i> Statistics software
