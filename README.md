@@ -115,9 +115,9 @@ In this week I will first give a general overview of the course objectives and k
 
 Then, we will learn the basics of the R statistical programming language for data handling and simple descriptive statistics, as well as general computer science problem solving skills.
 
-#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture1/Lecture1.html#1)
+#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/90fc4ef1e43d50503844e696fd26774a7060e606/LectureSlides/Lecture1/Lecture1.html)
 
-#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture2/Lecture2.html)
+#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/90fc4ef1e43d50503844e696fd26774a7060e606/LectureSlides/Lecture2/Lecture2.html)
 
 #### Readings:
 
