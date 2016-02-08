@@ -117,7 +117,7 @@ Then, we will learn the basics of the R statistical programming language for dat
 
 #### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/90fc4ef1e43d50503844e696fd26774a7060e606/LectureSlides/Lecture1/Lecture1.html)
 
-#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/90fc4ef1e43d50503844e696fd26774a7060e606/LectureSlides/Lecture2/Lecture2.html)
+#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/46cfd4e633cdf4c55771eaf25a4905dde93af577/LectureSlides/Lecture2/Lecture2.html)
 
 #### Readings:
 
