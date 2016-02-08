@@ -594,7 +594,7 @@ library(dplyr)</pre>
 <li><p>Enhanced code readability.</p></li>
 </ul>
 
-<p>In R use <code>%&gt;%</code> from the <a href='http://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html' title=''>magrittr</a> (or <a href='https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html' title=''>dplyr</a>) package.</p>
+<p>In R use <code>%&gt;%</code> from the <a href='https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html' title=''>dplyr</a> package.</p>
 
 <p><code>%&gt;%</code> passes a value to the <strong>first argument</strong> of the next function call.</p>
 
@@ -606,22 +606,15 @@ library(dplyr)</pre>
 value_mean &lt;- mean(values)
 round(value_mean, digits = 2)</pre>
 
-<pre >## [1] 10.06</pre>
+<pre >## [1] 9.98</pre>
 
 <p>Piped:</p>
 
-<pre class = 'prettyprint lang-r'>library(magrittr)</pre>
+<pre class = 'prettyprint lang-r'>library(dplyr)
 
-<pre >## 
-## Attaching package: &#39;magrittr&#39;</pre>
+rnorm(1000, mean = 10) %&gt;% mean() %&gt;% round(digits = 2)</pre>
 
-<pre >## The following object is masked from &#39;package:tidyr&#39;:
-## 
-##     extract</pre>
-
-<pre class = 'prettyprint lang-r'>rnorm(1000, mean = 10) %&gt;% mean() %&gt;% round(digits = 2)</pre>
-
-<pre >## [1] 10.07</pre>
+<pre >## [1] 10.04</pre>
 
 </article></slide><slide class=''><hgroup><h2>Creating Functions</h2></hgroup><article  id="creating-functions">
 

@@ -435,9 +435,7 @@ Why?
 
 - Enhanced code readability.
 
-In R use `%>%` from the
-[magrittr](http://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html) 
-(or [dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)) package.
+In R use `%>%` from the [dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) package.
 
 `%>%` passes a value to the **first argument** of the next function call.
 
@@ -453,8 +451,8 @@ round(value_mean, digits = 2)
 
 Piped:
 
-```{r}
-library(magrittr)
+```{r, message=FALSE}
+library(dplyr)
 
 rnorm(1000, mean = 10) %>% mean() %>% round(digits = 2)
 ```
