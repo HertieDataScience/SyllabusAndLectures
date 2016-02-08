@@ -487,7 +487,7 @@ Setup Git/GitHub for version control, collaboration, and remotely storing your f
 
 - <i class="fa fa-download"></i> **Install** software:
 
-    + R (version 3.2.2): <http://cran.rstudio.com/>
+    + R (version 3.2.3): <http://cran.rstudio.com/>
 
     + RStudio (dev build): <http://www.rstudio.org/download/daily/desktop/>
 
