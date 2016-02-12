@@ -1,7 +1,7 @@
 ---
 title: 'MPP-E1180 Lecture 3: Files, File Structures, Version Control, & Collaboration'
 author: "Christopher Gandrud"
-date: "18 September 2015"
+date: "15 February 2016"
 output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
@@ -27,7 +27,7 @@ research
 
 ## <i class="fa fa-certificate"></i> Pair Assignment 1
 
-- **Due:** Midnight 2 October
+- **Due:** Friday 4 March
 
 - Learning objectives: develop your understanding of
 
@@ -752,7 +752,7 @@ in the working directory.
 
 If you have any data files, try to load them into R.
 
-- If not load `Data/MainData.csv` into R from
+- If not load `Analysis/Data/MainData.csv` into R from
 <https://github.com/christophergandrud/Rep-Res-ExampleProject1>.
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Git/GitHub
