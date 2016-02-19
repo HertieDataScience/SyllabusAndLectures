@@ -1,7 +1,7 @@
 ---
 title: 'MPP-E1180 Lecture 5: Intro to Markup Lang. & Literate Programming (2)'
 author: "Christopher Gandrud"
-date: "25 September 2015"
+date: "22 February 2016"
 output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
@@ -28,7 +28,7 @@ bibliography:
 
 **Proposal** for your Collaborative Research Project.
 
-**Deadline:** 23 October
+**Deadline:** 25 March
 
 **Submbit:** A (max) 2,000 word proposal created with **R Markdown**. The
 proposal will:
@@ -85,7 +85,7 @@ Hierarchy is maintained with tabs.
 ---
 title: 'MPP-E1180 Lecture 5'
 author: "Christopher Gandrud"
-date: "25 September 2015"
+date: "22 February 2016"
 output:
   ioslides_presentation:
     css: css/font-awesome.min.css

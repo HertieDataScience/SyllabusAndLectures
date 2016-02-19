@@ -1,7 +1,7 @@
 ---
 title: 'MPP-E1180 Lecture 4: Intro to Markup Lang. & Literate Programming (1)'
 author: "Christopher Gandrud"
-date: "25 September 2015"
+date: "22 February 2016"
 output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
@@ -37,7 +37,7 @@ that will be clear later.
 
 ## <i class="fa fa-certificate"></i> Pair Assignment 1
 
-- **Due:** Midnight 2 October
+- **Due:** Midnight 4 March
 
 - Learning objectives: develop your understanding of
 
@@ -95,8 +95,7 @@ With a partner:
 
 ## What is Literate Programming?
 
-[Donald Knuth (1992)](http://en.wikipedia.org/wiki/Literate_programming)
-: explanation of a program using **natural language** interspersed
+[Donald Knuth (1992)](http://en.wikipedia.org/wiki/Literate_programming): explanation of a program using **natural language** interspersed
 with **code snippets** that are compilable by a computer.
 
 This produces **two representations** of the program:
@@ -419,7 +418,7 @@ This presentation's head is:
 ---
 title: 'MPP-E1180 Lecture 4: Intro to Markup Lang. & Literate Programming (1)'
 author: "Christopher Gandrud"
-date: "25 September 2015"
+date: "22 February 2016"
 output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css

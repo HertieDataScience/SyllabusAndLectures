@@ -328,7 +328,7 @@ read.csv('data/TestData.csv')
 ```{r, eval=FALSE}
 source('source/Analysis1.R')
 ```
-## R Input Output, including from URLs
+## R Input/Output, including from URLs
 
 URLs are also file paths for files on the internet.
 
