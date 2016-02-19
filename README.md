@@ -181,9 +181,9 @@ A markup language is a set of instructions that allows you to take a text file a
 
 This week we will focus on learning one of the simpler markup languages--[Markdown](http://daringfireball.net/projects/markdown/syntax) as well has how to use Markdown for literate programming with [knitr](http://yihui.name/knitr/).
 
-#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture4/Lecture4.html#1)
+#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/0d748d737e51d02a139e2c6a0cb7af761bc3054e/LectureSlides/Lecture4/Lecture4.html#1)
 
-#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/master/LectureSlides/Lecture5/Lecture5.html#1)
+#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/0d748d737e51d02a139e2c6a0cb7af761bc3054e/LectureSlides/Lecture5/Lecture5.html#1)
 
 #### Readings
 
