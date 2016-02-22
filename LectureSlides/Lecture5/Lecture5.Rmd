@@ -65,7 +65,7 @@ today is available at:
 An R Markdown file is **just a text file** with markup instructions that **RStudio**
 understands.
 
-The key to formatting is the **header**.
+The key to document-consistent formatting is the **header**.
 
 It is at the start of a file and comes between `---`.
 
@@ -132,6 +132,7 @@ output:
   pdf_document:
     toc: true
     number_sections: true
+    fig_captions: true
 ```
 
 To do the same for **HTML** also include the information under `html_document`.
@@ -291,7 +292,7 @@ of the presentation document.
 A reference list with the full bibliographic details of all cited documents
 will be **automatically created** at the end of your document.
 
-Tip: Put a `# References` at the very end of your R Markdown document to
+Tip: Put `# References` at the very end of your R Markdown document to
 have a section heading before the reference list.
 
 ## Citing R and R Packages

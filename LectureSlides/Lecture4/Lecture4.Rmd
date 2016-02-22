@@ -27,9 +27,6 @@ output:
 
 ## <i class="fa fa-exclamation-triangle"></i> Note
 
-<i class="fa fa-frown-o"></i> There is no PDF version of the slides for reasons 
-that will be clear later.
-
 <i class="fa fa-smile-o"></i> Example files are at:
 
 <https://github.com/HertieDataScience/Examples>
@@ -65,22 +62,15 @@ Each pair will create a **new public GitHub repository**
 
 - **Another pair** makes a **pull request**. And this is discussed/merged.
 
-## Assignment 1 To-Do
-
-- "Dynamic linking"
-
-- `Watch` the [SyllabusAndLectures](https://github.com/HertieDataScience/SyllabusAndLectures) 
-repo. This way you can **find each other**.
-
 ## <i class="fa fa-arrow-left"></i> Review (1)
 
-- In R, what is the difference between a matrix and a data frame?
+- In R, what is the difference between a **matrix** and a **data frame**?
 
-- What is the assignment operator?
+- What is the **assignment operator**?
 
-- What is the component selector?
+- What is the **component selector**?
 
-- What two things do you need to describe the distribution of a continuous
+- What **two things** do you need to describe the distribution of a continuous
 variable?
 
 ## <i class="fa fa-arrow-left"></i> Review (2)
@@ -172,9 +162,9 @@ Two parts:
 
 ![knit process](img/knitr_process.png)
 
-## <i class="fa fa-language"></i> Recently
+## <i class="fa fa-language"></i> More recently
 
-Most of the new focus is on [RStudio's R Markdown](http://rmarkdown.rstudio.com/).
+Most of the focus is on [RStudio's R Markdown](http://rmarkdown.rstudio.com/).
 
 - Directly builds on knitr (Yihui works at RStudio now).
 
@@ -321,9 +311,11 @@ $$s^2 = \frac{\sum(x - \bar{x})^2}{n - 1}$$
 
 ## Expansion
 
-Note that you can include **any** HTML syntax in a Markdown document.
+You can include **any** HTML syntax in a Markdown document. You can also change the formatting by adding a **custom CSS** file (just like a website).
 
-You can also change the formatting by adding a **custom CSS** file (just like a website).
+However, this will **only render in HTML output.**
+
+If you are using $\LaTeX$ (other than math syntax), you can also include $\LaTeX$ syntax in your RMarkdown document for rendering as a PDF.
 
 ## Code chunks Inline
 
@@ -429,9 +421,13 @@ output:
 
 We'll look at headers more next lecture
 
+## More reference
+
+For a really good RMarkdown cheatsheet see: <https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf>.
+
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Create R Markdown Documents
 
-Convert your Pair Assignment 1 to R Markdown and output to multiple formats.
+Convert what work you have done on your Pair Assignment 1 to R Markdown and output to multiple formats.
 
 - Add relevant equations.
 
