@@ -203,7 +203,7 @@ We will finish up our introduction to Markup languages by venturing into two mor
 
 Then we will begin to examine how to access and clean social science data. Most social science data sets are now available for download online. This week we will learn how to programmatically access this data and clean it so that it can be used for statistical analysis. We will also consider the benefits and challenges of government increasing the openness and accessibility of their data.
 
-#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/09c6e3c364c5fb82a380240e44f9fc8f42ad8841/LectureSlides/Lecture6/Lecture6.html)
+#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/e7152050c573692c8ba32bf19950bca92872d09c/LectureSlides/Lecture6/Lecture6.html)
 
 #### Readings
 
