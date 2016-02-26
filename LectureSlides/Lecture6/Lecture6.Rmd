@@ -1,7 +1,7 @@
 ---
 title: 'MPP-E1180 Lecture 6: Automatic Data Gathering + Cleaning'
 author: "Christopher Gandrud"
-date: "9 October 2015"
+date: "29 February 2016"
 output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
@@ -22,7 +22,7 @@ bibliography: main.bib
 
 - Tidying, Cleaning, and Merging data
 
-## Assignment 1 General Feedback
+## Assignment 1 General Times for Source Code Files
 
 - Avoid including `?FUNCTION`, `search`, `View` and similar in your source files.
 
@@ -65,7 +65,7 @@ Serve an HTML file hosted on GitHub by putting its *raw* version through
 
 **Proposal** for your Collaborative Research Project.
 
-**Deadline:** 23 October
+**Deadline:** 25 March
 
 **Submit:** A (max) 2,000 word proposal created with **R Markdown**. The
 proposal will:
@@ -117,10 +117,10 @@ See @Janssen2012 [261] for more.
 
 ## Mending separation between public and users
 
-- Assumes that government considers outside views and information (including opposing)
-views as constructive.
+- **Assumes** that government **considers outside** views and information (including opposing)
+views as **constructive**.
 
-- Results in government giving up (some) control and more actively interacting
+- Results in government **giving up** (some) control and more **actively interacting**
 with its environment.
 
 ## An ideal for open public data
@@ -346,7 +346,7 @@ For a good beginner list see:
 | Stata, SPSS, SAS | foreign, rio                                              |
 | [JSON](http://en.wikipedia.org/wiki/JSON) | [jsonlite](https://cran.r-project.org/web/packages/jsonlite/index.html) |
 | [MySQL](http://en.wikipedia.org/wiki/MySQL) | [RMySQL](http://biostat.mc.vanderbilt.edu/wiki/Main/RMySQL), [more info](http://www.jason-french.com/blog/2014/07/03/using-r-with-mysql-databases/) |
-| [couchDB](http://couchdb.apache.org/) | [sofa](https://github.com/sckott/sofa) |
+| [couchDB](http://couchdb.apache.org/) | [R4CouchDB](https://github.com/wactbprot/R4CouchDB) |
 
 ## <i class="fa fa-paint-brush"></i> Data Cleaning
 
@@ -524,8 +524,7 @@ For example, `geocode` from
 used to create latitude/longitudes for other geographic units:
 
 ```{r, message=FALSE}
-places <- c('Bavaria', 'Seoul', '6 Parisier Platz, Berlin', 
-            'Hertie School of Governance')
+places <- c('Bavaria', 'Seoul', '6 Parisier Platz, Berlin')
 
 ggmap::geocode(places, source = 'google')
 ```
@@ -570,7 +569,7 @@ head(Combined, n = 3)
 ## Some merge details
 
 By default, only observations in both data sets are kept. Use `all`, `all.x`, or
-`all.y` to keep non merged observations.
+`all.y` to keep non-merged observations.
 
 <br>
 <br>
