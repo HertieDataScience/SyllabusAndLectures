@@ -1,7 +1,7 @@
 ---
 title: 'MPP-E1180 Lecture 7: Web Scraping + Transforms'
 author: "Christopher Gandrud"
-date: "16 October 2015"
+date: "14 March 2016"
 output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
@@ -25,7 +25,7 @@ output:
 
 **Proposal** for your Collaborative Research Project.
 
-**Deadline:** 23 October
+**Deadline:** 25 March
 
 **Submit:** A (max) 2,000 word proposal created with **R Markdown**. The
 proposal will:
@@ -45,7 +45,7 @@ As always, submit the entire GitHub repo.
 
 **Purpose**: Gather, clean, and analyse data
 
-**Deadline**: 13 November 2015
+**Deadline**: TBD
 
 You will submit a GitHub repo that:
 
@@ -112,18 +112,16 @@ To really master web scraping you need a good knowledge of HTML.
 
 The most basic tools for web scraping in R:
 
-- [httr](https://github.com/hadley/httr): gather data + simple parsing
-
-- [XML](http://cran.r-project.org/web/packages/XML/index.html): more advanced
-parsing
+- [rvest](https://github.com/hadley/rvest) scraping + parsing
 
     + [Parsing](http://en.wikipedia.org/wiki/Parsing): the analysis of HTML
     (and other) markup so that each element is syntactically related in a
     **parse tree**.
 
-Also take a look at [rvest](https://github.com/hadley/rvest). It is a new package
-that aims to implement features from Python's popular
-[Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/).
+- [httr](https://github.com/hadley/httr): gather data from APIs + simple parsing
+
+- Also, [XML](http://cran.r-project.org/web/packages/XML/index.html).
+parsing
 
 
 ## Key steps:
@@ -131,14 +129,13 @@ that aims to implement features from Python's popular
 1. **Look at** the HTML for the webpage you want to scrape (e.g. use Inspect 
 Element in Chrome).
 
-2. **Request** a URL with `GET`.
+2. **Request** a URL with `read_html` (rvest) or `GET` (httr).
 
-3. **Extract** the content from the request with `content`.
+3. **Extract** the specific content nodes from the request with `html_nodes`.
 
-    + You can extract either the raw text with `as = 'text'` or parse the content
-    with `as = 'parsed'`.
+4. **Convert** the nodes to your desired R object type.
 
-4. **Clean** content (there are many tools for this suited to a variety of
+5. **Clean** content (there are many tools for this suited to a variety of
 problems).
 
 ## Web scraping example
@@ -147,9 +144,10 @@ Scrape [BBC's MP's Expenses table](http://news.bbc.co.uk/2/hi/uk_news/politics/8
 
 HTML markup marks tables using `<table>` tags.
 
-We can use these to extract tabular information and convert them into data frames.
+We can use these to extract tabular information and convert it into data frames.
 
-In particular, we want the table tag with the id `expenses_table`.
+In particular, we want the table tag with the **id** `expenses_table`. This
+will be the *node* that we want to extract.
 
 ## Viewing the web pages source
 
@@ -157,32 +155,28 @@ In particular, we want the table tag with the id `expenses_table`.
 
 ## Web scraping example
 
-```{r, message=FALSE}
-library(httr)
+```{r, message=FALSE, cache=TRUE}
+library(rvest)
 library(dplyr)
-library(XML)
 
 URL <- 'http://news.bbc.co.uk/2/hi/uk_news/politics/8044207.stm'
 
-# Get and parse all tables on the webpage
-tables <- URL %>% GET() %>%
-            content(as = 'parsed') %>%
-            readHTMLTable()
-
-names(tables)
+# Get and parse expenses_table from the webpage
+ExpensesTable <- URL %>% read_html() %>%
+                    html_nodes('#expenses_table') %>%
+                    html_table() %>% 
+                    as.data.frame
 ```
 
 ## Web scraping example
 
-Now we just need to subset the *tables* list for the `expenses_table` data frame.
+Now we need to clean the `ExpensesTable` data frame.
 
 ```{r}
-ExpensesTable <- tables[[5]]
-
 head(ExpensesTable)[, 1:3]
 ```
 
-## More than GET
+## Background on GET from httr
 
 `GET` is probably the most common *RESTful* API **verb** you will use when webscraping.
 
@@ -406,7 +400,7 @@ countries, households.
 
 Set up for examples
 
-```{r}
+```{r message=FALSE}
 # Create fake grouped data
 library(randomNames)
 library(dplyr)
