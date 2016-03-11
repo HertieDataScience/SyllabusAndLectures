@@ -1,12 +1,12 @@
 ---
 title: 'MPP-E1180 Lecture 8: Statistical Modeling with R'
 author: "Christopher Gandrud"
-date: "16 October 2015"
+date: "14 March 2016"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
-  beamer_presentation: default
 ---
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the class
@@ -29,8 +29,7 @@ output:
 
 **Purpose**: Gather, clean, and analyse data
 
-**Deadline**: 13 November 2015
-
+**Deadline**: TBD
 You will submit a GitHub repo that:
 
 - Gathers web-based data from at least **two sources**. Cleans and merges the
@@ -379,11 +378,25 @@ car::scatterplotMatrix(Admission)
 ## Contingency table for school rank and admission
 
 ```{r}
-xtabs(~admit + rank, data = Admission)
+admit_table <- xtabs(~admit + rank, data = Admission)
+admit_table
 ```
 
+## Row and column proportions
+
 ```{r}
-summary(xtabs(~admit + rank, data = Admission))
+# Row proportions
+prop.table(admit_table, margin = 1)
+
+# Column proportions
+prop.table(admit_table, margin = 2)
+```
+
+
+## Summary of contingency table for school rank and admission
+
+```{r}
+summary(admit_table)
 ```
 
 ## Example of logistic regression with `glm`
