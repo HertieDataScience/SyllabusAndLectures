@@ -1,7 +1,7 @@
 ---
 title: 'MPP-E1180 Lecture 9: Automatic Tables and Static Visualisation'
 author: "Christopher Gandrud"
-date: "30 October 2015"
+date: "21 March 2016"
 output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
@@ -11,8 +11,6 @@ bibliography: main.bib
 ---
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
-
-- Assignment 2 general feedback
 
 - Assignment 3/Final Project
 
@@ -28,56 +26,11 @@ bibliography: main.bib
 
     + Zelig simulations for showing results
 
-## Assignment 2 General Feedback (1)
-
-- Please see me in my office hours to help refine operationalisation, research question, etc.
-
-- Proofread your work!
-
-    + Finish your sentences!
-
-    + **Check output document** to see if it has rendered correctly.
-
-- A catchy and descriptive title is good to have!
-
-- If you use HTML make sure you provide a link to a hosted and rendered version, 
-e.g. on [rawgit](https://rawgit.com/).
-
-## Assignment 2 Feedback (2)
-
-- Numbered section headings, in YAML header:
-
-```
-number_sections: true
-```
-
-## Assignment 2 Feedback (3)
-
-Figure captions, in YAML header include: 
-
-```
-fig_caption: true
-```
-
-Then, in knitr head include option:
-
-```
-fig.cap = "A Caption Example"
-```
-
-or in imported images:
-
-```
-![A Caption Example \label{LaTeXref}](some_image.png)
-```
-
-Can reference in knitr LaTeX with `\ref{LaTeXRef}`.
-
 ## Assignment 3
 
 **Purpose**: Gather, clean, and analyse data
 
-**Deadline**: 13 November 2015
+**Deadline**: 15 April 2016 (note change!)
 
 You will submit a GitHub repo that:
 
@@ -101,9 +54,9 @@ results to a **variety of audiences** in a **variety of formats**.
 
 **Deadline**:
 
-- Presentation: In-class Thursday 4 December
+- Presentation: In-class Monday 2 May
 
-- Website/Paper: 11 December
+- Website/Paper: 13 May 2016
 
 ## Collaborative Research Project (2)
 
@@ -137,8 +90,8 @@ presentation--ideas for things you can improve on your paper.
 
 ## Office hours
 
-I will have normal office hours (Friday 15:00-17:00, room 1.64) every week for the 
-rest of the term, **except** 13 November.
+I will have normal office hours every week for the rest of the term 
+**except 4 April**.
 
 Please take advantages of this opportunity to **improve your final project**.
 
@@ -194,6 +147,10 @@ package
 
 - [stargazer](http://cran.r-project.org/web/packages/stargazer/stargazer.pdf)
 package
+
+```{r include=FALSE}
+library(stargazer)
+```
 
 ## Today
 
@@ -320,6 +277,15 @@ stargazer::stargazer(L1, L2, L3, covariate.labels = labels,
 ## `stargazer` output in PDF
 
 <img src="img/PDFStargazer.png" height=450 width=450 />
+
+## `stargazer` plain text output 
+
+You may want to compare multiple models at once in your R console, use `stargazer`
+with `type = 'text'`:
+
+```{r eval=FALSE}
+stargazer(L1, L2, L3, type = 'text')
+```
 
 ## Showing Results with Figures
 
@@ -493,7 +459,7 @@ lines, points, density plots, bars, and text.
 
 ## ggplot2 examples setup
 
-```{r, message=FALSE}
+```{r, message=FALSE, warning=FALSE}
 library(devtools)
 library(ggplot2)
 
@@ -661,10 +627,107 @@ model with `coef`.
 
 You can find the co-variance matrix with `vcov`.
 
-Then draw the values from the multivariate normal distribution with `mvrnorm`.
+Then draw point estimates from the multivariate normal distribution with `mvrnorm`.
 
 Finally, calculate the quantity of interest with the draws + fitted values using
 and plot the results.
+
+## Simulations: estimate model
+
+First estimate your model as normal and create fitted values:
+
+```{r}
+library(car) # Contains data
+M_prest <- lm(prestige ~ education + type, 
+         data = Prestige)
+
+# Find a range of education values
+range(Prestige$education)
+
+edu_range <- 6:16
+```
+
+## Simulations: extract estimates
+
+Extract point estimates (coefficients) and co-variance matrix:
+
+```{r}
+mp_coef <- matrix(coef(M_prest))
+mp_vcov <- vcov(M_prest)
+```
+
+Now draw 1,000 simulations of your point estimates:
+
+```{r message=FALSE}
+library(MASS) # contains the mvrnorm function
+drawn <- mvrnorm(n = 1000, mu = mp_coef, Sigma = mp_vcov) %>% 
+            data.frame
+head(drawn)[1:3, ]
+```
+
+## Simulations: merge in fitted values
+
+Now we can add in our fitted values to the simulation data frame:
+
+```{r}
+drawn_sim <- merge(drawn, edu_range)
+
+# Rename the fitted value variable
+drawn_sim <- dplyr::rename(drawn_sim, fitted_edu = y)
+
+nrow(drawn)
+nrow(drawn_sim)
+```
+
+
+## Simulations: calculate quantity of interest
+
+Using the normal linear regression formula ($\hat{y_{i}} = \hat{\alpha} + X_{i1}\hat{\beta_{1}} + \ldots$) 
+we can find the quantity of interest for white collar workers:
+
+```{r}
+names(drawn_sim)
+drawn_sim$sim_wc <- drawn_sim[, 1] + drawn_sim[, 2] * drawn_sim[, 5] + 
+                        drawn[, 3]
+```
+
+
+## Simulations: plot points
+
+```{r}
+ggplot(drawn_sim, aes(fitted_edu, sim_wc)) + 
+        geom_point(alpha = 0.2) + stat_smooth(se = FALSE) +
+        theme_bw()
+
+```
+
+## Simulations: find 95% central interval ribbons
+
+```{r}
+# Find 95% central interval and mean at each fitted value of edu
+central <- drawn_sim %>% group_by(fitted_edu) %>%
+            summarise(mean_sim = mean(sim_wc),
+                      lower_95 = quantile(sim_wc, probs = 0.025),
+                      upper_95 = quantile(sim_wc, probs = 0.975)
+            )
+```
+
+## Simulations: plot 95% central interval
+
+```{r}
+ggplot(central, aes(fitted_edu, mean_sim)) +
+    geom_ribbon(aes(ymin = lower_95, ymax = upper_95), alpha = 0.3) +
+    geom_line() + theme_bw()
+```
+
+## Predictions from logistic regression
+
+Use the same steps for simulating predicted outcomes from logistic regression models.
+The only difference is that the equation for the quantity of interest is:
+
+$$
+P(y_{i} = 1) = \frac{\mathrm{exp}(\hat{\alpha} + X_{i1}\hat{\beta_{1}} + \ldots)}{1 - \mathrm{exp}(\hat{\alpha} + X_{i1}\hat{\beta_{1}} + \ldots)}
+$$
 
 ## Easier Implementation
 
@@ -707,7 +770,7 @@ simZ1 <- sim(Z1, x = setZ1)
 Plot:
 
 ```{r}
-plot(simZ1)
+ci.plot(simZ1)
 ```
 
 ## Seminar

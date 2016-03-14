@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 8: Statistical Modeling with R'
 author: "Christopher Gandrud"
 date: "14 March 2016"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
-  beamer_presentation: default
 ---
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the class
@@ -136,7 +136,7 @@ $\alpha = V(Y_{i}) = \sigma^2$.
 The standard deviation of the error terms is constant across values of $x$.
 
 Set the systematic component to the linear form:
-$g(X_{i},\: \beta) = X_{i}\beta =  \beta_{0} + X_{i1}\beta_{1} + \ldots$.
+$g(X_{i},\: \beta) = X_{i}\beta = \beta_{0} + X_{i1}\beta_{1} + \ldots$.
 
 ## Linear-normal regression
 
@@ -469,7 +469,7 @@ setZ1 <- setx(Z1, gre = seq(220, 800, by = 1))
 
 simZ1 <- sim(Z1, x = setZ1)
 
-plot(simZ1)
+ci.plot(simZ1)
 ```
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: modeling
