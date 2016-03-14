@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 8: Statistical Modeling with R'
 author: "Christopher Gandrud"
 date: "14 March 2016"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
 ---
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the class
@@ -199,7 +199,7 @@ Basic model functions include:
 and with homoskedastic variance.
 
 - `glm`: allows the fitting of many Generalised Linear Models. Lets you specify
-the `family` and the `link` function.
+the error `family`.
 
 - `plm` (package and function): panel data Linear Models 
 

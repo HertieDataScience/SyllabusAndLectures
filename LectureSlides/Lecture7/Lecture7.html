@@ -337,6 +337,14 @@ pets[grep(&#39;cats&#39;, pets)]</pre>
 
 <pre >## [1] &quot;cats&quot;</pre>
 
+</article></slide><slide class=''><hgroup><h2><code>agrep</code></h2></hgroup><article  id="agrep">
+
+<p>You can do approximate (fuzzy) string matching with <code>agrep</code>.</p>
+
+<pre class = 'prettyprint lang-r'>agrep(pattern = &quot;lasy&quot;, x = &quot;1 lazy 2&quot;)</pre>
+
+<pre >## [1] 1</pre>
+
 </article></slide><slide class=''><hgroup><h2>Manipulation</h2></hgroup><article  id="manipulation">
 
 <p>Use <code>gsub</code> to substitute strings.</p>

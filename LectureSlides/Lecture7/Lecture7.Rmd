@@ -261,6 +261,14 @@ grepl(pattern = 'cat', pets)
 pets[grep('cats', pets)]
 ```
 
+## `agrep`
+
+You can do approximate (fuzzy) string matching with `agrep`.
+
+```{r}
+agrep(pattern = "lasy", x = "1 lazy 2")
+```
+
 ## Manipulation
 
 Use `gsub` to substitute strings.
