@@ -24,7 +24,7 @@ bibliography: main.bib
 
     + ggplot2 for general graphing
 
-    + Zelig simulations for showing results
+    + Simulations for showing results
 
 ## Assignment 3
 
@@ -595,7 +595,7 @@ ggplot(InfantNoMiss, aes(factor(DumMort),
 <br>
 <br>
 
-@King2001 argue that **post estimation simulations** can be used to
+@King2001 argue that **post-estimation simulations** can be used to
 effectively communicate **results from regression models**.
 
 ## Steps
@@ -622,14 +622,13 @@ drawn**.
 
 ## Implementation
 
-It is relatively easy to find the coefficient estimates from an estimated
-model with `coef`.
+1. Find the coefficient estimates from an estimated model with `coef`.
 
-You can find the co-variance matrix with `vcov`.
+2. Find the co-variance matrix with `vcov`.
 
-Then draw point estimates from the multivariate normal distribution with `mvrnorm`.
+3. Draw point estimates from the multivariate normal distribution with `mvrnorm`.
 
-Finally, calculate the quantity of interest with the draws + fitted values using
+4. Calculate the quantity of interest with the draws + fitted values using
 and plot the results.
 
 ## Simulations: estimate model
@@ -688,7 +687,7 @@ we can find the quantity of interest for white collar workers:
 ```{r}
 names(drawn_sim)
 drawn_sim$sim_wc <- drawn_sim[, 1] + drawn_sim[, 2] * drawn_sim[, 5] + 
-                        drawn[, 3]
+                        drawn_sim[, 3]
 ```
 
 
@@ -704,9 +703,9 @@ ggplot(drawn_sim, aes(fitted_edu, sim_wc)) +
 ## Simulations: find 95% central interval ribbons
 
 ```{r}
-# Find 95% central interval and mean at each fitted value of edu
+# Find 95% central interval and median at each fitted value of edu
 central <- drawn_sim %>% group_by(fitted_edu) %>%
-            summarise(mean_sim = mean(sim_wc),
+            summarise(median_sim = median(sim_wc),
                       lower_95 = quantile(sim_wc, probs = 0.025),
                       upper_95 = quantile(sim_wc, probs = 0.975)
             )
@@ -715,7 +714,7 @@ central <- drawn_sim %>% group_by(fitted_edu) %>%
 ## Simulations: plot 95% central interval
 
 ```{r}
-ggplot(central, aes(fitted_edu, mean_sim)) +
+ggplot(central, aes(fitted_edu, median_sim)) +
     geom_ribbon(aes(ymin = lower_95, ymax = upper_95), alpha = 0.3) +
     geom_line() + theme_bw()
 ```
@@ -729,13 +728,40 @@ $$
 P(y_{i} = 1) = \frac{\mathrm{exp}(\hat{\alpha} + X_{i1}\hat{\beta_{1}} + \ldots)}{1 - \mathrm{exp}(\hat{\alpha} + X_{i1}\hat{\beta_{1}} + \ldots)}
 $$
 
-## Easier Implementation
+## Easier Implementation (1)
 
 <br>
 <br>
 <br>
 
-The [Zelig](http://gking.harvard.edu/zelig) package streamlines this process.
+Last week I started working on the [simGLM](https://github.com/christophergandrud/simGLM) package for doing this process with normal linear and logistic regression models. 
+
+## simGLM
+
+```{r, message=FALSE}
+fitted_edu <- expand.grid(education = edu_range, typeprof = 1)
+simGLM::sim_glm(M_prest, newdata = fitted_edu, x_coef = 'education')
+```
+
+## simGLM
+
+**simGLM** is in development. Comments, bug reports welcome!
+
+It can be downloaded with:
+
+```{r eval=FALSE}
+ghit::install_github('christophergandrud/simGLM')
+```
+
+For more examples see: <http://bit.ly/22oSUHW>
+
+## Easier Implementation (2)
+
+<br>
+<br>
+<br>
+
+The [Zelig](http://gking.harvard.edu/zelig) package also streamlines the simulation process.
 
 ## Zelig (1)
 
