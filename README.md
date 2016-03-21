@@ -143,9 +143,9 @@ Then, we will learn the basics of the R statistical programming language for dat
 
 We will complete our introduction to the R programming language.
 
-Then we will learn about the importance and use of file structures for your research. Fundamentally, your research is a collection of files (preferably text files). Organising, manipulating, and storing files are at the heart of research practice. Well organised and stored files are crucial for enabling collaboration and making your research reproducible. We will learn how file systems work, as well as how to organize, version control, and store research files to enable collaboration and reproducibility.
+Then we will learn about the importance and use of file structures for your research. Fundamentally, your research is a collection of files (preferably text files). Organising, manipulating, and storing files are at the heart of research practice. Well-organised and stored files are crucial for enabling collaboration and making your research reproducible. We will learn how file systems work, as well as how to organize, version control, and store research files to enable collaboration and reproducibility.
 
-#### [Slides](https://rawgit.com/HertieDataScience/SyllabusAndLectures/760b763384b4461902aedd0b27f75fb442ff425e/LectureSlides/Lecture9/Lecture9.html)
+#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/e1c76ae4a3c07b4af50ea23d54ebe45497f926f3/LectureSlides/Lecture3/Lecture3.html)
 
 #### Readings:
 
@@ -262,7 +262,7 @@ We will conclude our introduction to statistical modelling in R.
 
 We will learn how to automatically generate summary and results tables for multiple markup languages using  [stargazer](http://cran.r-project.org/web/packages/stargazer/stargazer.pdf). We will then learn static descriptive and inferential data visualisation best practices including avoiding introducing optical illusions that distort data presentations and accommodating readers with visual impairments. We will also cover specific R packages for creating static visualisations, primarily [ggplot2](http://docs.ggplot2.org/current/) and [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) for mapping.
 
-#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/b9f58b3e4dfde2543fb490f46349ce7afec4c18b/LectureSlides/Lecture9/Lecture9.html)
+#### [Slides](https://rawgit.com/HertieDataScience/SyllabusAndLectures/760b763384b4461902aedd0b27f75fb442ff425e/LectureSlides/Lecture9/Lecture9.html#1)
 
 #### Readings
 
