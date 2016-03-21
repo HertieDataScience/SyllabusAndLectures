@@ -806,9 +806,14 @@ ci.plot(simZ1)
 <br>
 
 Create **tables** and **visualisations** of **descriptive** and **inferential** 
-for your Assignment 3 using the techniques covered in class today.
+for your Assignment 3 in an R Markdown document using the techniques covered in 
+class today.
 
 If you don't have your data set fully cleaned yet, use one of the built-in
 R data sets for practice.
+
+**Bonus** help develop [simGLM](https://github.com/christophergandrud/simGLM). 
+Test out the examples on the README, suggest other model types to simulate 
+quantities of interest for, and more.
 
 ## References

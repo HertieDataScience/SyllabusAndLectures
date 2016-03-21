@@ -482,9 +482,5 @@ Begin working on the statistical models for **your project**.
 and/or
 
 **Out of Lecture Challenge**: Estimate a normal regression model and **plot 
-predicted values** with uncertainty across a range of fitted values.
-
-Functions you might find useful:
-
-- `coef` and `confint`
-
+predicted values** across a range of fitted values. Bonus: do so with a measure
+of uncertainty.
