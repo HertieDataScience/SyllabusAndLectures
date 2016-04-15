@@ -1,7 +1,7 @@
 ---
 title: 'MPP-E1180 Lecture 10: Dynamic Visualisation'
 author: "Christopher Gandrud"
-date: "20 November 2015"
+date: "18 April 2016"
 output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
@@ -31,13 +31,13 @@ results to a **variety of audiences** in a **variety of formats**.
 
 **Deadline**:
 
-- Presentation: In-class 4 December
+- Presentation: In-class Monday 2 May
 
-- Website/Paper: 11 December
+- Website/Paper: 13 May 2016
 
 ## Collaborative Research Project (2)
 
-The project can be thought of as a 'dry run' for your thesis with multiple 
+The project can be thought of as a 'dry run' for your thesis with multiple
 presentation outputs.
 
 Presentation: 10 minutes **maximum**. **Engagingly** present your research
@@ -72,12 +72,12 @@ project, I expect **high quality work**.
 
 Find one other group to be a **discussant** for your presentation.
 
-The discussants will provide a quick (max 2 minute) critique of your 
+The discussants will provide a quick (max 2 minute) critique of your
 presentation--ideas for things you can improve on your paper--pose questions.
 
 ## Office hours
 
-I will have normal office hours (Friday 15:00-17:00, room 1.64) every week for the 
+I will have normal office hours every week for the
 rest of the term.
 
 Please take advantages of this opportunity to **improve your final project**.
@@ -147,8 +147,8 @@ violent_crimes$offense <- factor(violent_crimes$offense,
 
 # restrict to downtown
 violent_crimes <- subset(violent_crimes,
-    -95.39681 <= lon & lon <= -95.34188 &
-    29.73631 <= lat & lat <= 29.78400)
+                    -95.39681 <= lon & lon <= -95.34188 &
+                    29.73631 <= lat & lat <= 29.78400)
 ```
 
 ## Plot crime data
@@ -163,9 +163,9 @@ FinalMap <- HoustonMap +
                 geom_point(aes(x = lon, y = lat, colour = offense),
                 data = violent_crimes) +
                 xlab('') + ylab('') +
-                theme(axis.ticks = element_blank(), 
+                theme(axis.ticks = element_blank(),
                       axis.text.x = element_blank(),
-                      axis.text.y = element_blank()) + 
+                      axis.text.y = element_blank()) +
                 guides(size = guide_legend(title = 'Offense'),
                        colour = guide_legend(title = 'Offense'))
 ```
@@ -215,17 +215,17 @@ to host.
 
 You already know how to create HTML documents with **R Markdown**.
 
-Set your code chunk to `results='asis'`.
+Set your code chunk to `results='asis'` (not needed for some packages).
 
-There is a growing set of tools for interactive plotting:
+There is a growing set of tools for interactive plotting, e.g.:
+
+- [plotly](https://plot.ly/r/)
 
 - [googleVis](https://code.google.com/p/google-motion-charts-with-r/)
 
 - [dygraphs](http://rstudio.github.io/dygraphs/)
 
 - [rcharts](http://rcharts.io/)
-
-- [ggvis](http://ggvis.rstudio.com/)
 
 - [networkD3](http://christophergandrud.github.io/networkD3/)
 
@@ -241,6 +241,79 @@ Debugging often requires some knowledge of JavaScript and the
 
 In sum: usually simple, but can be mysteriously difficult without a good
 knowledge of JavaScript/HTML.
+
+## ggplot2 and plotly
+
+The [plotly](https://plot.ly/r/) package allows you to convert (most) ggplot2 plots to JavaScript.
+
+Simply create your ggplot2 object, then pass it to `ggplotly`.
+
+Using an example from last class:
+
+```{r include=FALSE}
+library(devtools)
+library(ggplot2)
+
+source_url("http://bit.ly/OTWEGS")
+
+# Create data with no missing values of infant mortality
+InfantNoMiss <- subset(MortalityGDP,
+                           !is.na(InfantMortality))
+
+# Create High/Low Income Variable
+InfantNoMiss$DumMort[InfantNoMiss$InfantMortality
+                     >= 15] <- "high"
+InfantNoMiss$DumMort[InfantNoMiss$InfantMortality
+                     < 15] <- "low"
+```
+
+```{r}
+mort_plot <- ggplot(data = MortalityGDP, aes(x = InfantMortality,
+        y = GDPperCapita)) + geom_point()
+```
+
+Then . . .
+
+---
+
+```{r results='asis', message=FALSE}
+library(plotly)
+ggplotly(mort_plot)
+```
+
+## Or use only plotly
+
+```{r}
+plot_ly(MortalityGDP, x = InfantMortality, y = GDPperCapita,
+        mode = 'markers')
+```
+
+## `ggplotly` works with simGLM
+
+```{r include=FALSE}
+library(simGLM) # if not installed use devtools::github_install('christophergandrud/simGLM')
+
+# Download data
+URL <- 'http://www.ats.ucla.edu/stat/data/binary.csv'
+Admission <- read.csv(URL)
+Admission$rank <- as.factor(Admission$rank)
+
+# Estimate model
+m2 <- glm(admit ~ gre + gpa + rank, data = Admission, family = 'binomial')
+
+# Create fitted values
+fitted_admit <- expand.grid(gre = seq(220, 800, by = 10), gpa = c(1, 4), 
+                            rank4 = 1)
+
+# Simulate and plot
+sim_gpa <- sim_glm(obj = m2, newdata = fitted_admit, model = 'logit', x_coef = 'gre', 
+                   group_coef = 'gpa') + theme_bw(base_size = 9)
+```
+
+```{r, warning=FALSE}
+# sim_gpa created with http://hertiedatascience.github.io/Examples/
+ggplotly(sim_gpa)
+```
 
 ## Google Plots with googleVis
 
@@ -353,6 +426,50 @@ Note branches in git repositories can have totally different files in them.
 
 Example: [networkD3](https://christophergandrud.github.io/networkD3/)
 
+## Interactive dashboards with flexdashboard
+
+You can create interactive 'dashboards' for displaying an information overview using the [flexdashboard](http://rstudio.github.io/flexdashboard/index.html) package.
+
+The package is not on CRAN yet, so install with:
+
+```{r, eval=FALSE}
+devtools::install_github("rstudio/flexdashboard")
+```
+
+## flexdashboard syntax
+
+flexdashboard works on R Markdown. 
+
+To set a `.Rmd` file as a flexdasboard, in the header use:
+
+```{sh, eval=FALSE}
+output: flexdashboard::flex_dashboard
+```
+
+Each element of the dashboard is delimited with the Markdown third level header: `###`.
+
+You can create different columns and rows with:
+
+```{sh, eval=FALSE}
+Column
+-------------------------------------
+```
+
+```{sh, eval=FALSE}
+Row
+-------------------------------------
+```
+
+## flexdashboard example 
+
+A minimal code example is available at: <https://raw.githubusercontent.com/HertieDataScience/flexdashboard_example/gh-pages/index.Rmd>
+
+The output is at: <http://hertiedatascience.github.io/flexdashboard_example/>
+
+You can host these on Github pages as before. 
+
+Then can also be [integrated with shiny](http://rstudio.github.io/flexdashboard/shiny.html).
+
 ## Seminar
 
 Begin to **create a website** for your project with RMarkdown and
@@ -364,9 +481,9 @@ If relevant include:
 
 - A googleVis map
 
-- A bar or line chart with googleVis or other package
+- A bar or line chart with plotly or other package
 
-- A simulation plot created with Zelig showing key results from your regression
+- A simulation plot created with simGLM showing key results from your regression
 analysis.
 
 Push to the gh-pages branch.

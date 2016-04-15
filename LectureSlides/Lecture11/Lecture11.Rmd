@@ -1,12 +1,12 @@
 ---
 title: 'MPP-E1180 Lecture 11: Prepare Final Project'
 author: "Christopher Gandrud"
-date: "20 November 2015"
+date: "18 April 2016"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
-  beamer_presentation: default
 ---
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
@@ -17,16 +17,6 @@ output:
 
 - Further work on Collaborative Research Project
 
-## EU public data source
-
-<br>
-<br>
-<br>
-
-Publicdata.eu might be a useful source of data for future projects:
-
-<http://publicdata.eu/>
-
 ## Collaborative Research Project (1)
 
 **Purposes**: Pose an interesting research question and try to answer it using
@@ -35,13 +25,13 @@ results to a **variety of audiences** in a **variety of formats**.
 
 **Deadline**:
 
-- Presentation: In-class 4 December
+- Presentation: In-class Monday 2 May
 
-- Website/Paper: 11 December
+- Website/Paper: 13 May 2016
 
 ## Collaborative Research Project (2)
 
-The project can be thought of as a 'dry run' for your thesis with multiple 
+The project can be thought of as a 'dry run' for your thesis with multiple
 presentation outputs.
 
 Presentation: 10 minutes **maximum**. **Engagingly** present your research
@@ -55,6 +45,16 @@ audience**.
 
 ## Collaborative Research Project (3)
 
+Project total: 50% of your final mark.
+
+- 10% presentation
+
+- 10% website
+
+- 30% paper
+
+## Collaborative Research Project (4)
+
 As always, you should **submit one GitHub repository** with all of the
 materials needed to **completely reproduce** your data gathering, analysis, and
 presentation documents.
@@ -62,12 +62,21 @@ presentation documents.
 **Note**: Because you've had two assignments already to work on parts of the
 project, I expect **high quality work**.
 
-## Collaborative Research Project (3)
+## Collaborative Research Project (5)
 
 Find one other group to be a **discussant** for your presentation.
 
-The discussants will provide a quick (max 2 minute) critique of your 
-presentation--ideas for things you can improve on your paper.
+The discussants will provide a quick (max 2 minute) critique of your
+presentation--ideas for things you can improve on your paper--pose questions.
+
+## Office hours
+
+I will have normal office hours every week for the
+rest of the term.
+
+Please take advantages of this opportunity to **improve your final project**.
+
+**Be prepared.**
 
 ## Peer discussion/feedback
 

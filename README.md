@@ -4,7 +4,7 @@
 
 ### Spring 2016
 
-**Version: 15 January 2016**
+**Version: 15 April 2016**
 
 ### Instructor: Christopher Gandrud
 
@@ -302,13 +302,17 @@ In addition, we will bring together all of the tools we have learned to conduct 
 
 #### Resources
 
-- [htmlwidgets](http://www.htmlwidgets.org/)
-
 - [googleVis](https://code.google.com/p/google-motion-charts-with-r/)
+
+- [flexdashboard](http://rstudio.github.io/flexdashboard/index.html)
+
+- [ploty](https://plot.ly/r/)
 
 *Reading Extras:*
 
 - [Shiny Server](http://shiny.rstudio.com/)
+
+- [htmlwidgets](http://www.htmlwidgets.org/)
 
 - Sigal, Mathew. 2011. [Make it Pretty: An Graphical Post-Processing with Adobe Illustrator](https://4aeb9508-a-62cb3a1a-s-sites.googlegroups.com/site/matthewsigal/teaching/Sigal-2011-Post-Processing-Handouts.pdf?attachauth=ANoY7cofvfsNzK3PAtJVKM04n5w_eMlJoFb4x2vANV6tPyiFXmb9TSCK4fKy6aKXmZPoj4hkblLr6Sdr50eliXtuN8VtIsqr5P0R4kkrZfXDzAn9nZlRdroAaIT8XVqNRuaR0Kbl90_F1HvJLuID2QkxbZv6Ft4UpkbOD1ahe94iHjSKmcKlD1hM-hjL90Nybj9WVS5DGdM-tVReWYDoI-_PtxjgYdS9lZJ3Jz5uf1CWptYE5YSzRRU1XLmPwCkD-PwzYvWtDDTT&attredirects=0). Presentation to York University Department of Psychology Quantitative Methods Brownbag.
 
