@@ -21,6 +21,17 @@ output:
 - Dynamic results presentation
 
     + Static website hosting with gh-pages
+    
+## Class today
+
+<br>
+<br>
+<br>
+<br>
+
+First two hours as usual.
+
+Then 14:00-15:00.
 
 
 ## Collaborative Research Project (1)
@@ -215,7 +226,7 @@ to host.
 
 You already know how to create HTML documents with **R Markdown**.
 
-Set your code chunk to `results='asis'` (not needed for some packages).
+`results='asis'` in code chunk head (not needed for some packages).
 
 There is a growing set of tools for interactive plotting, e.g.:
 
@@ -319,16 +330,17 @@ ggplotly(sim_gpa)
 
 The googleVis package can create Google plots from R.
 
-Example modified from
-[googleVis Vignettes](http://cran.r-project.org/web/packages/googleVis/vignettes/googleVis_examples.html).
-
 ```{r}
 # Create fake data
 fake_compare <- data.frame(
-                country = c("2010", "2011", "2012"),
+                country = c('2010', '2011', '2012'),
                 US = c(10,13,14),
                 GB = c(23,12,32))
 ```
+
+(Example modified from
+[googleVis Vignettes](http://cran.r-project.org/web/packages/googleVis/vignettes/googleVis_examples.html).)
+
 
 ## googleVis simple example
 
@@ -379,8 +391,8 @@ More examples are available at:
 
 ## Hosting a website on GitHub Pages
 
-Any file called *index.html* in a GitHub **repository branch** called
-*gh-pages* will be a hosted website.
+Any HTML file called *index.html* in a GitHub **repository branch** called
+*gh-pages* will become a hosted website.
 
 The URL will be:
 
@@ -393,7 +405,7 @@ Note: you can use a custom URL if you own one. See
 
 First **create a new branch** in your repository called `gh-pages`:
 
-![Create Branch](img/CreateBranch.png)
+![](img/CreateBranch.png)
 
 ## Set Up GitHub Pages
 
@@ -407,9 +419,9 @@ Finally **switch** to the gh-pages branch.
 
 ## GitHub Pages and R Markdown
 
-You can use R Markdown to create the index.html page.
+You can use R Markdown to create the `*index.html* page.
 
-Simply place a new .Rmd file in the repository called `index.Rmd` and
+Simply place a new .Rmd file in the repository called *index.Rmd* and
 knit it to HTML. Then sync it.
 
 Your website will now be live.
@@ -422,9 +434,9 @@ Every time you *push* to the gh-pages branch, the website will be **updated**.
 <br>
 <br>
 
-Note branches in git repositories can have totally different files in them.
+Note branches in git repositories can have totally different files from one another.
 
-Example: [networkD3](https://christophergandrud.github.io/networkD3/)
+Example: [networkD3](https://github.com/christophergandrud/networkD3)
 
 ## Interactive dashboards with flexdashboard
 
@@ -438,7 +450,7 @@ devtools::install_github("rstudio/flexdashboard")
 
 ## flexdashboard syntax
 
-flexdashboard works on R Markdown. 
+flexdashboard builds on R Markdown. 
 
 To set a `.Rmd` file as a flexdasboard, in the header use:
 
@@ -483,7 +495,7 @@ If relevant include:
 
 - A bar or line chart with plotly or other package
 
-- A simulation plot created with simGLM showing key results from your regression
-analysis.
+- A simulation plot created with Zelig, simGLM or other tool showing key 
+results from your analysis.
 
 Push to the gh-pages branch.
