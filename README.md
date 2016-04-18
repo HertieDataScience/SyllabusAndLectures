@@ -296,7 +296,7 @@ The transition of publishing from static mediums such as print journals and book
 
 In addition, we will bring together all of the tools we have learned to conduct an original collaborative and reproducible research project. You will present the results from the project in multiple mediums including as a paper, a presentation to the class, and a website. The project should ideally be the starting point of your thesis. This is an opportunity for you to work on your project and ask questions/get immediate feedback from the instructor/classmates.
 
-#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/6f532a08de7e34b06b221731a2b1cdd855f2e247/LectureSlides/Lecture10/Lecture10.html)
+#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/c42582ec203e547d7c84c89fff4013baf0e31ef3/LectureSlides/Lecture10/Lecture10.html)
 
 #### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/6f532a08de7e34b06b221731a2b1cdd855f2e247/LectureSlides/Lecture11/Lecture11.html)
 
