@@ -2,9 +2,9 @@
 
 # MPP-E1180: Introduction to Collaborative Social Science Data Analysis
 
-### Spring 2016
+### Autumn 2016
 
-**Version: 15 April 2016**
+**Version: 29 June 2016**
 
 ### Instructor: Christopher Gandrud
 
@@ -74,7 +74,7 @@ Web Scraping.
 All lecture materials and their source files will be hosted in the
 [course's GitHub repository](https://github.com/HertieDataScience/SyllabusAndLectures).
 
-You are **highly encouraged to suggest** changes to the lecture material with a pull request (we'll learn about how to do this in Week 2) if you think of improvements that can be made for clarity, relevance, and to fix typos.
+You are **highly encouraged to suggest** changes to the lecture material with a pull request (we'll learn about how to do this in the second lecture) if you think of improvements that can be made for clarity, relevance, and to fix typos.
 
 #### Assessment:
 
@@ -86,7 +86,7 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 | Collaborative Research Project | 50%            | Presentation: Final Class, Paper/Website: Final Exam Week |
 | Attendance/active Participation | 20%           | -                |
 
-1. The **first pair assignment** is designed to develop your understanding of file structures, version control, and basic R data structures and descriptive statistics. Each pair will create a new public GitHub repository. The  repository should be fully documented, including with a descriptive README.md file. The repository will include R source code files that access at least two core R data sets, perform basic transformations on the data, and illustrate the datas' distributions using a variety relevant of descriptive statistics. At least one file must dynamically link to another in a substantively meaningful way. Finally, another pair must make a pull request and it should be discussed and merged.  **Deadline 4 March, 10% of final grade**.
+1. The **first pair assignment** is designed to develop your understanding of file structures, version control, and basic R data structures and descriptive statistics. Each pair will create a new public GitHub repository. The repository should be fully documented, including with a descriptive README.md file. The repository will include R source code files that access at least two data sets from [fivethirtyeight](https://github.com/fivethirtyeight/data), perform basic transformations on the data, and illustrate the datas' distributions using a variety relevant of descriptive statistics. At least one file must dynamically link to another in a substantively meaningful way. Finally, another pair must make a pull request and it should be discussed and merged.  **Deadline 4 March, 10% of final grade**.
 
 2. The **second pair assignment** is a proposal for your Collaborative Research Project. It is an opportunity for you to layout your collaborative research paper question, justify why it is interesting, provide basic literature review (properly cited using BibTeX), and identify data sources/methodologies that you can access to help answer your question. You will also demonstrate your understanding of literate programming technologies.  **Deadline 25 March, 2,000 words maximum, 10% of final grade**.
 
@@ -96,7 +96,7 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 
 All of the assignments for the course will be completed in pairs. All assignments must be developed using Git and submitted on GitHub. All assignments, including the version history must be completely reproducible from the repository files. In general a single mark for the pair will be given. However, as all assignments are developed using Git, your contributor statistics will be taken into consideration. Major discrepancies between team members will result in scores reflecting individual’s contributions.
 
-Assignments are due by **midnight** on the due date (for example, the first pair assignment is due at 11:59 pm on 2 October). When you have completed the assignment, email me the GitHub tag URL for the final version of your assignment.
+Assignments are due by **midnight** on the due date. When you have completed the assignment, email me the GitHub tag URL for the final version of your assignment.
 
 **Examination Requirement**: Weighted average grade of all course assignment must be 50% or higher on numerical scale.
 
