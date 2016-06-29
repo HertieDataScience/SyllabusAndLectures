@@ -80,9 +80,9 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 
 | Name                    | Percent of Final Mark | Due              |
 | ----------------------- | --------------------- | ---------------- |
-| Pair Assignment 1       | 10%                   | 4 March        |
-| Pair Assignment 2       | 10%                   | 25 March       |
-| Pair Assignment 3       | 10%                   | 15 April       |
+| Pair Assignment 1       | 10%                   | 7 October        |
+| Pair Assignment 2       | 10%                   | 28 October       |
+| Pair Assignment 3       | 10%                   | 11 November      |
 | Collaborative Research Project | 50%            | Presentation: Final Class, Paper/Website: Final Exam Week |
 | Attendance/active Participation | 20%           | -                |
 
