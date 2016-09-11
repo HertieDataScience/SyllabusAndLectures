@@ -1,7 +1,7 @@
 ---
 title: 'MPP-E1180 Lecture 2: Introduction to the R Programming Language'
 author: "Christopher Gandrud"
-date: "8 February 2016"
+date: "16 September 2016"
 output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
