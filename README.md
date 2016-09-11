@@ -4,7 +4,7 @@
 
 ### Autumn 2016
 
-**Version: 29 June 2016**
+**Version: 11 September 2016**
 
 ### Instructor: Christopher Gandrud
 
@@ -115,9 +115,9 @@ In this week I will first give a general overview of the course objectives and k
 
 Then, we will learn the basics of the R statistical programming language for data handling and simple descriptive statistics, as well as general computer science problem solving skills.
 
-#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/90fc4ef1e43d50503844e696fd26774a7060e606/LectureSlides/Lecture1/Lecture1.html)
+#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/7e93ff519aae9c553235e462e90a24b42c0e2404/LectureSlides/Lecture1/Lecture1.html)
 
-#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/46cfd4e633cdf4c55771eaf25a4905dde93af577/LectureSlides/Lecture2/Lecture2.html)
+#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/ce72192c10c85cfebeacc3127c7e92403d8314f3/LectureSlides/Lecture2/Lecture2.html)
 
 #### Readings:
 
