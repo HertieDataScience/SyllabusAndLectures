@@ -119,9 +119,7 @@ Ex. Former MPP-E1180 student Arndt Leininger recently co-founded
 Data analysis and R programming skills in particular are **highly valued** in
 businesses such as finance and management.
 
-![R salaries](img/RSalaries.png)
-
-Source: [Revolution Analytics (2014)](http://blog.revolutionanalytics.com/2014/02/r-salary-surveys.html)
+![[O'Reilly (2016)](http://www.oreilly.com/data/free/files/2016-data-science-salary-survey.pdf?utm_campaign=Revue%20newsletter&utm_medium=Newsletter&utm_source=revue)](img/RSalaries.png)
 
 ## <i class="fa fa-question-circle"></i> Why Collaborative?
 
