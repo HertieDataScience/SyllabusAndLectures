@@ -115,9 +115,9 @@ In this week I will first give a general overview of the course objectives and k
 
 Then, we will learn the basics of the R statistical programming language for data handling and simple descriptive statistics, as well as general computer science problem solving skills.
 
-#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/7e93ff519aae9c553235e462e90a24b42c0e2404/LectureSlides/Lecture1/Lecture1.html)
+#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/af770b7d561cf35af856bfb6934fcb9581057467/LectureSlides/Lecture1/Lecture1.html)
 
-#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/ce72192c10c85cfebeacc3127c7e92403d8314f3/LectureSlides/Lecture2/Lecture2.html)
+#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/af770b7d561cf35af856bfb6934fcb9581057467/LectureSlides/Lecture2/Lecture2.html)
 
 #### Readings:
 
@@ -145,7 +145,7 @@ We will complete our introduction to the R programming language.
 
 Then we will learn about the importance and use of file structures for your research. Fundamentally, your research is a collection of files (preferably text files). Organising, manipulating, and storing files are at the heart of research practice. Well-organised and stored files are crucial for enabling collaboration and making your research reproducible. We will learn how file systems work, as well as how to organize, version control, and store research files to enable collaboration and reproducibility.
 
-#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/e1c76ae4a3c07b4af50ea23d54ebe45497f926f3/LectureSlides/Lecture3/Lecture3.html)
+#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/af770b7d561cf35af856bfb6934fcb9581057467/LectureSlides/Lecture3/Lecture3.html)
 
 #### Readings:
 
