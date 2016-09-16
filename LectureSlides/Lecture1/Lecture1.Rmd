@@ -101,10 +101,9 @@ of open data science.
 - They are also **sharing** and **collaboratively** developing code; **reducing
 development costs** and **improving applications**.
 
-- Version control to **increase engagement with the legislative process**.
+- Example: version control to **increase engagement with the legislative process**.
 
-    + San Francisco laws are now [<i class="fa fa-code-fork"></i>](https://help.github.com/articles/fork-a-repo)
-    [forkable](https://github.com/SFMOCI/openlaw).
+    + [Forkable](https://github.com/SFMOCI/openlaw) [<i class="fa fa-code-fork"></i>](https://help.github.com/articles/fork-a-repo) San Francisco laws.
 
 ## <i class="fa fa-compass"></i> Motivation: NGO
 
@@ -203,7 +202,7 @@ Reproducibility helps **avoid effort duplication**:
     [World Values Survey](http://www.washingtonpost.com/blogs/monkey-cage/wp/2014/09/02/world-values-lost-in-translation/).
 
     - Data errors in research on
-    [intestinal worm treatment and school attendance]((http://www.columbia.edu/~mh2245/w/worms.html)).
+    [intestinal worm treatment and school attendance](http://www.columbia.edu/~mh2245/w/worms.html).
 
     - [L'Affaire LaCour](http://www.vox.com/2015/5/20/8630535/same-sex-marriage-study):
     data *fabrication* discovered.
@@ -423,7 +422,7 @@ future classes.
 - The syllabus will be **updated**. **Check regularly**.
 
     + Changes to course **difficulty** is **monotonically decreasing** from the original
-    (8 February) baseline.
+    (11 September) baseline.
 
 **Lecture Slides**: Links in Online Syllabus or <a href="https://github.com/HertieDataScience/SyllabusAndLectures/tree/master/LectureSlides">LectureSlides/</a>
 

@@ -226,7 +226,7 @@ Or the *Environment* tab in RStudio
 As with natural language writing, it is a good idea to stick to one style guide
 with your R code:
 
-- [Google's R Style Guide](https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml)
+- [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml)
 
 - [Hadely Wickham's R Style Guide](http://r-pkgs.had.co.nz/style.html)
 
@@ -551,7 +551,7 @@ median(swiss$Examination)
 
 Instead use `summary` for factor nominal variables or make a bar chart.
 
-## Simple bar chart for nominal
+## Simple bar chart for nominal variable
 
 ```{r, message=FALSE, warning=FALSE, cache=TRUE}
 devtools::source_url('http://bit.ly/OTWEGS')
@@ -748,7 +748,7 @@ ggplot(Normal30, aes(x = Normal30)) +
 Highly skewed data can be transformed to have a normal distribution.
 
 
-Helps correct two violations of key assumptions: (a) non-linearity and (b) heteroskedasticity.
+Helps correct two violations of key assumptions in linear regression (see later in the course): (a) non-linearity and (b) heteroskedasticity.
 
 ```{r, fig.height=3}
 hist(swiss$Education, main = '')

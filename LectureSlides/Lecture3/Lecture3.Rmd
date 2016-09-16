@@ -1,7 +1,7 @@
 ---
 title: 'MPP-E1180 Lecture 3: Files, File Structures, Version Control, & Collaboration'
 author: "Christopher Gandrud"
-date: "15 February 2016"
+date: "23 September 2016"
 output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
@@ -27,7 +27,7 @@ research
 
 ## <i class="fa fa-certificate"></i> Pair Assignment 1
 
-- **Due:** Friday 4 March
+- **Due:** Friday 7 October
 
 - Learning objectives: develop your understanding of
 
@@ -136,7 +136,7 @@ US,United States,1.050
 
 makes:
 
-![Basic CSV](img/CSVBasic.png)
+![](img/CSVBasic.png)
 
 ## <i class="fa fa-file-code-o"></i> Text files best practices
 
@@ -162,7 +162,7 @@ For example:
 #####################
 # R source to gather World Bank data
 # Christopher Gandrud
-# 18 September 2015
+# 18 September 2018
 # MIT License
 ####################
 

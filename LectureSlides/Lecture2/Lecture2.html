@@ -373,7 +373,7 @@ ls()</pre>
 <p>As with natural language writing, it is a good idea to stick to one style guide with your R code:</p>
 
 <ul>
-<li><p><a href='https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml' title=''>Google&#39;s R Style Guide</a></p></li>
+<li><p><a href='https://google.github.io/styleguide/Rguide.xml' title=''>Google&#39;s R Style Guide</a></p></li>
 <li><p><a href='http://r-pkgs.had.co.nz/style.html' title=''>Hadely Wickham&#39;s R Style Guide</a></p></li>
 </ul>
 
@@ -606,7 +606,7 @@ library(dplyr)</pre>
 value_mean &lt;- mean(values)
 round(value_mean, digits = 2)</pre>
 
-<pre >## [1] 9.99</pre>
+<pre >## [1] 9.95</pre>
 
 <p>Piped:</p>
 
@@ -614,7 +614,7 @@ round(value_mean, digits = 2)</pre>
 
 rnorm(1000, mean = 10) %&gt;% mean() %&gt;% round(digits = 2)</pre>
 
-<pre >## [1] 9.99</pre>
+<pre >## [1] 10.04</pre>
 
 </article></slide><slide class=''><hgroup><h2>Creating Functions</h2></hgroup><article  id="creating-functions">
 
@@ -710,7 +710,7 @@ fun_mean(x = swiss$Examination)</pre>
 
 <p>Instead use <code>summary</code> for factor nominal variables or make a bar chart.</p>
 
-</article></slide><slide class=''><hgroup><h2>Simple bar chart for nominal</h2></hgroup><article  id="simple-bar-chart-for-nominal">
+</article></slide><slide class=''><hgroup><h2>Simple bar chart for nominal variable</h2></hgroup><article  id="simple-bar-chart-for-nominal-variable">
 
 <pre class = 'prettyprint lang-r'>devtools::source_url(&#39;http://bit.ly/OTWEGS&#39;)
 plot(MortalityGDP$region, xlab = &#39;Region&#39;)</pre>
@@ -849,7 +849,7 @@ sd_error(swiss$Examination)</pre>
 
 <p>Highly skewed data can be transformed to have a normal distribution.</p>
 
-<p>Helps correct two violations of key assumptions: (a) non-linearity and (b) heteroskedasticity.</p>
+<p>Helps correct two violations of key assumptions in linear regression (see later in the course): (a) non-linearity and (b) heteroskedasticity.</p>
 
 <pre class = 'prettyprint lang-r'>hist(swiss$Education, main = &#39;&#39;)</pre>
 
