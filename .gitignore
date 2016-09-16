@@ -13,3 +13,6 @@
 
 # Other
 LectureSlides/Lecture10/ggmapTemp.png
+
+# Mac invisible files
+*.DS_Store
