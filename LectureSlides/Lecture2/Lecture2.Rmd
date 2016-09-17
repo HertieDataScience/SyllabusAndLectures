@@ -844,7 +844,7 @@ sd(rand_sample)
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Start using R!
 
-- **Access** R data sets
+- **Access** R data sets.
 
 - Explore the data and find ways to **numerically**/**graphically** describe it.
 
