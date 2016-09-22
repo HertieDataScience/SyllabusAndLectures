@@ -171,7 +171,7 @@ If you additionally want to get really good at command line file management (pre
 
 - Wickham, Hadley. 2014. [Style Guide](http://adv-r.had.co.nz/Style.html). Advanced R Programming.
 
-- [Google's R Style Guide](https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml)
+- [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml)
 
 ## Part II: Markup languages and literate programming
 
