@@ -860,6 +860,11 @@ Test your code early and often. Do the results meet your expectations?
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Seminar: Start using R!
 
+- **Save your work** in a new *.R* source file. You will need it for the next seminar.
+
+- **Create a data frame with four columns**. The data set should have one of each:
+character strings, numeric, logical, and factor variables.
+
 - **Access** R data sets.
 
 - Explore the data and find ways to **numerically**/**graphically** describe it.
@@ -868,5 +873,3 @@ Test your code early and often. Do the results meet your expectations?
 and transforming your data.
 
 - Create **your own function** (what it does is open to you).
-
-- **Save your work** as a *.R* source file. You will need it for the next seminar.
