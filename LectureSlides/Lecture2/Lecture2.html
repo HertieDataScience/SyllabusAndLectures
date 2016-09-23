@@ -583,6 +583,12 @@ library(dplyr)</pre>
 ## Delemont          83.1        45.1           6         9
 ## Franches-Mnt      92.5        39.7           5         5</pre>
 
+</article></slide><slide class=''><hgroup><h2><i class="fa fa-table"></i> R&#39;s build-in data sets</h2></hgroup><article  id="rs-build-in-data-sets-2">
+
+<p>Note: not all of R&#39;s built-in data sets are data frames.</p>
+
+<p>For Assignment 1, try to focus on data sets that are either data frames or matrices.</p>
+
 </article></slide><slide class=''><hgroup><h2>What all the cool kids are doing: piping</h2></hgroup><article  id="what-all-the-cool-kids-are-doing-piping">
 
 <p><strong>Pipe</strong>: pass a value forward to a function call.</p>
@@ -606,7 +612,7 @@ library(dplyr)</pre>
 value_mean &lt;- mean(values)
 round(value_mean, digits = 2)</pre>
 
-<pre >## [1] 9.95</pre>
+<pre >## [1] 10.03</pre>
 
 <p>Piped:</p>
 
@@ -614,7 +620,7 @@ round(value_mean, digits = 2)</pre>
 
 rnorm(1000, mean = 10) %&gt;% mean() %&gt;% round(digits = 2)</pre>
 
-<pre >## [1] 10.04</pre>
+<pre >## [1] 10.03</pre>
 
 </article></slide><slide class=''><hgroup><h2>Creating Functions</h2></hgroup><article  id="creating-functions">
 
@@ -951,10 +957,19 @@ mean(rand_sample)</pre>
 
 <pre >## [1] 0.9768</pre>
 
+</article></slide><slide class=''><hgroup><h2>Programming Hint (3)</h2></hgroup><article  id="programming-hint-3">
+
+<p>Test your code early and often. Do the results meet your expectations?</p>
+
+<ul>
+<li><p>Easier to find errors.</p></li>
+<li><p>For an advanced discussion see <a href='http://r-pkgs.had.co.nz/tests.html' title=''>Wickham, <em>Testing R Packages</em></a>.</p></li>
+</ul>
+
 </article></slide><slide class=''><hgroup><h2><i class="fa fa-arrow-circle-o-up"></i> Seminar: Start using R!</h2></hgroup><article  id="seminar-start-using-r">
 
 <ul>
-<li><p><strong>Access</strong> R data sets</p></li>
+<li><p><strong>Access</strong> R data sets.</p></li>
 <li><p>Explore the data and find ways to <strong>numerically</strong>/<strong>graphically</strong> describe it.</p></li>
 <li><p>Find and use R functions that were <strong>not covered</strong> in the lecture for exploring and transforming your data.</p></li>
 <li><p>Create <strong>your own function</strong> (what it does is open to you).</p></li>
