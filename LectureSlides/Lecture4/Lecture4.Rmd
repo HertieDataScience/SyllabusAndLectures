@@ -1,7 +1,7 @@
 ---
 title: 'MPP-E1180 Lecture 4: Intro to Markup Lang. & Literate Programming (1)'
 author: "Christopher Gandrud"
-date: "22 February 2016"
+date: "30 September 2016"
 output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
@@ -25,16 +25,17 @@ output:
 
     + Presentations
 
-## <i class="fa fa-exclamation-triangle"></i> Note
+## <i class="fa fa-bolt"></i> Class change!
 
-<i class="fa fa-smile-o"></i> Example files are at:
+**4 November class -> 18 November**
 
-<https://github.com/HertieDataScience/Examples>
+Reversed order of Automatic Table/Plot Generation and Statistical Modelling 
+Topics.
 
 
 ## <i class="fa fa-certificate"></i> Pair Assignment 1
 
-- **Due:** Midnight 4 March
+- **Due:** Friday 7 October
 
 - Learning objectives: develop your understanding of
 
@@ -83,9 +84,16 @@ With a partner:
 
 - What does it mean to **pull** and **push** a repo?
 
+## <i class="fa fa-exclamation-triangle"></i> Note
+
+<i class="fa fa-smile-o"></i> Example files are at:
+
+<https://github.com/HertieDataScience/Examples>
+
 ## What is Literate Programming?
 
-[Donald Knuth (1992)](http://en.wikipedia.org/wiki/Literate_programming): explanation of a program using **natural language** interspersed
+[Donald Knuth (1992)](http://en.wikipedia.org/wiki/Literate_programming): 
+explanation of a program using **natural language** interspersed
 with **code snippets** that are compilable by a computer.
 
 This produces **two representations** of the program:

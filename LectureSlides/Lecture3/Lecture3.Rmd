@@ -11,6 +11,8 @@ output:
 
 ## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the topic
 
+- Class date change
+
 - Introduce **Pair Assignment 1**
 
 - **Importance** of (text) files and understanding files structures for reproducible
@@ -23,6 +25,13 @@ research
 - Introduction to Git/GitHub for **version control**
 
 - Git/GitHub for **collaboration**
+
+## <i class="fa fa-bolt"></i> Class change!
+
+**4 November class -> 18 November**
+
+Reversed order of Automatic Table/Plot Generation and Statistical Modelling 
+Topics.
 
 
 ## <i class="fa fa-certificate"></i> Pair Assignment 1
