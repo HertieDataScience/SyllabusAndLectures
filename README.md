@@ -4,7 +4,7 @@
 
 ### Autumn 2016
 
-**Version: 11 September 2016**
+**Version: 23 September 2016**
 
 ### Instructor: Christopher Gandrud
 
@@ -90,7 +90,7 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 
 2. The **second pair assignment** is a proposal for your Collaborative Research Project. It is an opportunity for you to layout your collaborative research paper question, justify why it is interesting, provide basic literature review (properly cited using BibTeX), and identify data sources/methodologies that you can access to help answer your question. You will also demonstrate your understanding of literate programming technologies.  **Deadline 28 October, 2,000 words maximum, 10% of final grade**.
 
-3. In the **third pair assignment** you will gather web based data from at least two sources, merge the data sets, conduct basic descriptive and inferential statistics on the data to address a relevant research question and briefly describe the results including with dynamically generated tables and figures. Students are encouraged to access data and perform statistical analyses with an eye to answering questions relevant for their Collaborative Research Project. **Deadline 11 November, the write up should be 1,500 words maximum and use literate programming, 10% of final grade**.
+3. In the **third pair assignment** you will gather web based data from at least two sources, merge the data sets, conduct basic descriptive and (some) inferential statistics on the data to address a relevant research question and briefly describe the results including with dynamically generated tables and figures. Students are encouraged to access data and perform statistical analyses with an eye to answering questions relevant for their Collaborative Research Project. **Deadline 11 November, the write up should be 1,500 words maximum and use literate programming, 10% of final grade**.
 
 4. For the **Collaborative Research Project** you will pose an interesting social science question and attempt to answer it using standard academic practices including original data collection and statistical analysis. The project should be considered a ‘dry run’ for your thesis. The project has **three presentation outputs** designed to present your research to multiple audiences.  The first is a oral presentation (**10 minute maximum**) given in the **final class**. The second is a standard academic paper (**5,000 words maximum**) that is fully reproducible and dynamically generated. The third is a website designed to present key aspects of your research in an engaging way to a general audience. The **paper and website are due in the Final Exam Week**. The presentation and website are each worth 10% of your final mark. The paper is worth 30%.
 
@@ -225,12 +225,12 @@ Then we will begin to examine how to access and clean social science data. Most 
 
 - [rOpenGov](http://ropengov.github.io/projects/)
 
-### Week 5: Automatic Data Gathering Via Web Scraping + Statistical Modeling with R (1)
+### Week 5: Automatic Data Gathering Via Web Scraping + Automatic table and static visualisation
 
 A considerable amount of social science data is not stored in traditional data table type formats. Instead it is embedded in webpages. To access this data we will learn the basics of web scraping. We will also be examining in more detail ways to transform data, particularly
 with the [dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) package.
 
-We will learn then begin to learn how to fit and evaluate a variety of statistical models using the R language, including simple linear models and logistic regression models for categorical dependent data.
+We will then learn how to automatically generate summary and results tables for multiple markup languages using  [stargazer](http://cran.r-project.org/web/packages/stargazer/stargazer.pdf). We will then learn static descriptive and inferential data visualisation best practices including avoiding introducing optical illusions that distort data presentations and accommodating readers with visual impairments. We will also cover specific R packages for creating static visualisations, primarily [ggplot2](http://docs.ggplot2.org/current/) and [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) for mapping.
 
 #### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/6e71ce6019c3dab49f6161b941d497e162cd2359/LectureSlides/Lecture7/Lecture7.html)
 
@@ -241,31 +241,6 @@ We will learn then begin to learn how to fit and evaluate a variety of statistic
 - Wickham, Hadley. 2010. ''[stringr: modern, consistent string processing](http://journal.r-project.org/archive/2010-2/RJournal_2010-2_Wickham.pdf)''.
 *The R Journal*. 2(2): 38-40.
 
-- Ch. 7-8, 11: Crawley, Michael J. 2005. Statistics: An Introduction Using R.
-John Wiley and Sons Ltd., Chichester.
-
-*Reading Extras:*
-
-- A key tool for scraping websites (and dealing with text in general) is [Regular Expressions](http://en.wikipedia.org/wiki/Regular_expression). You can think of these as patterns of text to search for. To prepare for class read the helpful [regular expressions overview by Greg Bacon](http://stackoverflow.com/a/2759417) and practice using them with the [RegexOne](http://regexone.com/) website.
-
-- Croissant, Yves and Giovanni Millo. 2008. ''[Panel Data Econometrics in R: the plm Package](http://www.jstatsoft.org/v27/i02/paper)''. Journal of Statistical Software. 27(2): 1-43.
-
-- King, Gary, Micheal Tomz, and Jason Wittenberg. 2001. [Making the Most of
-Statistical Analyses: Improving interpretation and presentation](http://gking.harvard.edu/files/gking/files/making.pdf).
-*American Journal of Political Science*. 22(4): 341–355.
-
-## Part IV: Communicating results from statistical analyses
-
-### Week 6: Statistical Modeling with R (2) + Automatic Table Generation and Static Visualisation
-
-We will conclude our introduction to statistical modelling in R.
-
-We will learn how to automatically generate summary and results tables for multiple markup languages using  [stargazer](http://cran.r-project.org/web/packages/stargazer/stargazer.pdf). We will then learn static descriptive and inferential data visualisation best practices including avoiding introducing optical illusions that distort data presentations and accommodating readers with visual impairments. We will also cover specific R packages for creating static visualisations, primarily [ggplot2](http://docs.ggplot2.org/current/) and [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) for mapping.
-
-#### [Slides](https://rawgit.com/HertieDataScience/SyllabusAndLectures/760b763384b4461902aedd0b27f75fb442ff425e/LectureSlides/Lecture9/Lecture9.html#1)
-
-#### Readings
-
 - Ch. 9: RRRR.
 
 - Gelman, Andrew. 2011.
@@ -275,6 +250,8 @@ We will learn how to automatically generate summary and results tables for multi
 - Ch. 1, 4, and 9: Tufte, Edward R. 2001. The Visual Display of Quantitative Information. Cheshire, Connecticut: Graphics Press.
 
 *Reading Extras:*
+
+- A key tool for scraping websites (and dealing with text in general) is [Regular Expressions](http://en.wikipedia.org/wiki/Regular_expression). You can think of these as patterns of text to search for. To prepare for class read the helpful [regular expressions overview by Greg Bacon](http://stackoverflow.com/a/2759417) and practice using them with the [RegexOne](http://regexone.com/) website.
 
 - Ehrenberg, A S C. 1977. ''Rudiments of Numeracy''. Journal of the Royal Statistical Society.
 Series A General 140(3): 277–97.
@@ -288,6 +265,31 @@ Series A General 140(3): 277–97.
 - Fruehwald, Josef. 2012. [AVML 2012: ggplot2](http://www.ling.upenn.edu/~joseff/avml2012/).
 
 - Donahue, Rafe M. J. 2011. [Fundamental Statistical Concepts in Presenting Data: Principles for Constructing Better Graphics](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf). Version 2.11.
+
+## Part IV: Communicating results from statistical analyses
+
+### Week 6: Statistical Modeling with R
+
+We will conclude our discussion of table and static figure generation in R.
+
+We will then learn how to fit and evaluate a variety of statistical models using the R language, including simple linear models and logistic regression models for categorical dependent data.
+
+#### [Slides](https://rawgit.com/HertieDataScience/SyllabusAndLectures/760b763384b4461902aedd0b27f75fb442ff425e/LectureSlides/Lecture9/Lecture9.html#1)
+
+#### Readings
+
+- Ch. 7-8, 11: Crawley, Michael J. 2005. Statistics: An Introduction Using R.
+John Wiley and Sons Ltd., Chichester.
+
+*Reading Extras*
+
+- Croissant, Yves and Giovanni Millo. 2008. ''[Panel Data Econometrics in R: the plm Package](http://www.jstatsoft.org/v27/i02/paper)''. Journal of Statistical Software. 27(2): 1-43.
+
+- King, Gary, Micheal Tomz, and Jason Wittenberg. 2001. [Making the Most of
+Statistical Analyses: Improving interpretation and presentation](http://gking.harvard.edu/files/gking/files/making.pdf).
+*American Journal of Political Science*. 22(4): 341–355.
+
+
 
 
 ### Week 7: Dynamic visualisation + Prepare Collaborative Research Project

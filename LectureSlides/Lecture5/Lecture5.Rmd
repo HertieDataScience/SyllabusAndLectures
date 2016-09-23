@@ -1,12 +1,12 @@
 ---
 title: 'MPP-E1180 Lecture 5: Intro to Markup Lang. & Literate Programming (2)'
 author: "Christopher Gandrud"
-date: "22 February 2016"
+date: "30 September 2016"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
 bibliography:
 - RpackageCitations.bib
 - MainLit.bib
@@ -28,7 +28,7 @@ bibliography:
 
 **Proposal** for your Collaborative Research Project.
 
-**Deadline:** 25 March
+**Deadline:** 28 October
 
 **Submbit:** A (max) 2,000 word proposal created with **R Markdown**. The
 proposal will:
