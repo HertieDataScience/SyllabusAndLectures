@@ -98,7 +98,7 @@ and `.css` files.
 - **These are text files!** Despite different file extensions.
 
     + To see this explore a webpage with
-    [Chrome Developer Tools](https://developer.chrome.com/devtools)
+    [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools/)
 
 ## <i class="fa fa-file-code-o"></i> Why text files?
 
