@@ -30,7 +30,7 @@ research
 
 **4 November class -> 18 November**
 
-Reversed order of Automatic Table/Plot Generation and Statistical Modelling 
+Reversed order of Automatic Table/Plot Generation and Statistical Modelling
 Topics.
 
 
@@ -55,7 +55,7 @@ Each pair will create a **new public GitHub repository**
 
 - Include **R source** code files that:
 
-    - Access at least **two** core R data sets
+    - Access at least **two** data sets from the R core data sets and/or [fivethirtyeight](https://github.com/fivethirtyeight/data) 
 
     - Illustrate the data's distributions using a variety of **relevant
     descriptive statistics**
@@ -768,7 +768,7 @@ If you have any data files, try to load them into R.
 
 - Create a new **remote repository** on GitHub and **clone** it to your computer.
 
-- Add and commit you your *.R* file from the previous seminar and a README.md 
+- Add and commit you your *.R* file from the previous seminar and a README.md
 file.
 
 - Add your neighbour as a **collaborator** to the repo.

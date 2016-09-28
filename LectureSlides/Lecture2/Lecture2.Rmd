@@ -427,7 +427,7 @@ head(swiss[1:3, 1:4])
 
 ## <i class="fa fa-table"></i> R's build-in data sets
 
-Note: not all of R's built-in data sets are data frames. 
+Note: **not all of R's built-in data sets are data frames**. 
 
 For Assignment 1, try to focus on data sets that are either data frames or 
 matrices.

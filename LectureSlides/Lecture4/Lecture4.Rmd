@@ -29,7 +29,7 @@ output:
 
 **4 November class -> 18 November**
 
-Reversed order of Automatic Table/Plot Generation and Statistical Modelling 
+Reversed order of Automatic Table/Plot Generation and Statistical Modelling
 Topics.
 
 
@@ -54,7 +54,7 @@ Each pair will create a **new public GitHub repository**
 
 - Include **R source** code files that:
 
-    - Access at least **two** core R data sets
+    - Access at least **two** data sets from the R core data sets and/or [fivethirtyeight](https://github.com/fivethirtyeight/data) 
 
     - Illustrate the datas' distributions using a variety of **relevant
     descriptive statistics**
@@ -92,7 +92,7 @@ With a partner:
 
 ## What is Literate Programming?
 
-[Donald Knuth (1992)](http://en.wikipedia.org/wiki/Literate_programming): 
+[Donald Knuth (1992)](http://en.wikipedia.org/wiki/Literate_programming):
 explanation of a program using **natural language** interspersed
 with **code snippets** that are compilable by a computer.
 
@@ -186,7 +186,7 @@ Most of the focus is on [RStudio's R Markdown](http://rmarkdown.rstudio.com/).
 
 Originally created by John Gruber to be an easy way to:
 
-- write HTML files 
+- write HTML files
 
 - that are **human readable as text files**.
 
@@ -299,7 +299,7 @@ Ordered Lists:
 ## Math
 
 R Markdown from RStudio supports [MathJax](http://www.mathjax.org/). So, you can
-write any [$\LaTeX$ math](http://en.wikibooks.org/wiki/LaTeX/Mathematics) with 
+write any [$\LaTeX$ math](http://en.wikibooks.org/wiki/LaTeX/Mathematics) with
 R Markdown.
 
 ```

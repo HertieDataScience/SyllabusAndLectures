@@ -4,7 +4,7 @@
 
 ### Autumn 2016
 
-**Version: 23 September 2016**
+**Version: 28 September 2016**
 
 ### Instructor: Christopher Gandrud
 
@@ -86,7 +86,7 @@ You are **highly encouraged to suggest** changes to the lecture material with a 
 | Collaborative Research Project | 50%            | Presentation: Final Class, Paper/Website: Final Exam Week |
 | Attendance/active Participation | 20%           | -                |
 
-1. The **first pair assignment** is designed to develop your understanding of file structures, version control, and basic R data structures and descriptive statistics. Each pair will create a new public GitHub repository. The repository should be fully documented, including with a descriptive README.md file. The repository will include R source code files that access at least two data sets from [fivethirtyeight](https://github.com/fivethirtyeight/data), perform basic transformations on the data, and illustrate the datas' distributions using a variety relevant of descriptive statistics. At least one file must dynamically link to another in a substantively meaningful way. Finally, another pair must make a pull request and it should be discussed and merged.  **Deadline 7 October, 10% of final grade**.
+1. The **first pair assignment** is designed to develop your understanding of file structures, version control, and basic R data structures and descriptive statistics. Each pair will create a new public GitHub repository. The repository should be fully documented, including with a descriptive README.md file. The repository will include R source code files that access at least two data sets from the R core data sets and/or [fivethirtyeight](https://github.com/fivethirtyeight/data), perform basic transformations on the data, and illustrate the datas' distributions using a variety relevant of descriptive statistics. At least one file must dynamically link to another in a substantively meaningful way. Finally, another pair must make a pull request and it should be discussed and merged.  **Deadline 7 October, 10% of final grade**.
 
 2. The **second pair assignment** is a proposal for your Collaborative Research Project. It is an opportunity for you to layout your collaborative research paper question, justify why it is interesting, provide basic literature review (properly cited using BibTeX), and identify data sources/methodologies that you can access to help answer your question. You will also demonstrate your understanding of literate programming technologies.  **Deadline 28 October, 2,000 words maximum, 10% of final grade**.
 
@@ -117,7 +117,7 @@ Then, we will learn the basics of the R statistical programming language for dat
 
 #### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/b6dcedf9bae651ff9823b79f62dae3281fe964b3/LectureSlides/Lecture1/Lecture1.html)
 
-#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/af770b7d561cf35af856bfb6934fcb9581057467/LectureSlides/Lecture2/Lecture2.html)
+#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/d2f347182d1dcb56524620aeb583e975b9e0ec03/LectureSlides/Lecture2/Lecture2.html)
 
 #### Readings:
 
