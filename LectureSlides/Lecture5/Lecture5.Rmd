@@ -51,7 +51,6 @@ As always, submit the entire GitHub repo.
 **Definitely see me with your ideas/draft.**
 
 Start thinking about **types of statistical models** that you want to use. 
-I can include these in Lecture 8 (Statistical Modeling with R).
 
 ## Example Paper
 
@@ -85,7 +84,7 @@ Hierarchy is maintained with tabs.
 ---
 title: 'MPP-E1180 Lecture 5'
 author: "Christopher Gandrud"
-date: "22 February 2016"
+date: "30 September 2016"
 output:
   ioslides_presentation:
     css: css/font-awesome.min.css

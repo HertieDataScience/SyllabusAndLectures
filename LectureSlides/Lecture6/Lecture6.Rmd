@@ -1,12 +1,12 @@
 ---
 title: 'MPP-E1180 Lecture 6: Automatic Data Gathering + Cleaning'
 author: "Christopher Gandrud"
-date: "29 February 2016"
+date: "7 October 2016"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
-  beamer_presentation: default
 bibliography: main.bib
 ---
 
@@ -65,7 +65,7 @@ Serve an HTML file hosted on GitHub by putting its *raw* version through
 
 **Proposal** for your Collaborative Research Project.
 
-**Deadline:** 25 March
+**Deadline:** 28 October
 
 **Submit:** A (max) 2,000 word proposal created with **R Markdown**. The
 proposal will:
@@ -144,6 +144,10 @@ to use and understand the data.
 - Balancing individual **privacy** concerns.
 
 See @Janssen2012 [262-263] for more.
+
+## Recommended podcast
+
+Max Ogden on the Request for Commits podcast discussing working for the City of Boston with Code for America. <https://changelog.com/rfc-6/> 
 
 ## Accessing data
 

@@ -6,6 +6,7 @@ output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+    fig.caption: false
   beamer_presentation: default
 ---
 
@@ -159,7 +160,9 @@ Two parts:
 
 ## Latex Example
 
-![knitr example](img/simpleKnitrExampleOut.png)
+![](img/simpleKnitrExampleOut.png)
+
+Note that in a knitr-$\LaTeX$ document (also known as R Sweave and has the file extension *.Rnw*) code chunks are delimited with `<< >>=` and `@`.
 
 ## PDF Output
 
@@ -168,7 +171,7 @@ Two parts:
 
 ## The knitr process
 
-![knit process](img/knitr_process.png)
+![](img/knitr_process.png)
 
 ## <i class="fa fa-language"></i> More recently
 
