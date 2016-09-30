@@ -145,7 +145,7 @@ We will complete our introduction to the R programming language.
 
 Then we will learn about the importance and use of file structures for your research. Fundamentally, your research is a collection of files (preferably text files). Organising, manipulating, and storing files are at the heart of research practice. Well-organised and stored files are crucial for enabling collaboration and making your research reproducible. We will learn how file systems work, as well as how to organize, version control, and store research files to enable collaboration and reproducibility.
 
-#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/b6dcedf9bae651ff9823b79f62dae3281fe964b3/LectureSlides/Lecture3/Lecture3.html)
+#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/8392513e7e826f5d7842bd437d9a415b808ef745/LectureSlides/Lecture3/Lecture3.html)
 
 #### Readings:
 
@@ -181,9 +181,9 @@ A markup language is a set of instructions that allows you to take a text file a
 
 This week we will focus on learning one of the simpler markup languages--[Markdown](http://daringfireball.net/projects/markdown/syntax) as well has how to use Markdown for literate programming with [knitr](http://yihui.name/knitr/).
 
-#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/b6dcedf9bae651ff9823b79f62dae3281fe964b3/LectureSlides/Lecture4/Lecture4.html)
+#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/8392513e7e826f5d7842bd437d9a415b808ef745/LectureSlides/Lecture4/Lecture4.html)
 
-#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/b6dcedf9bae651ff9823b79f62dae3281fe964b3/LectureSlides/Lecture5/Lecture5.html)
+#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/8392513e7e826f5d7842bd437d9a415b808ef745/LectureSlides/Lecture5/Lecture5.html)
 
 #### Readings
 
@@ -203,7 +203,7 @@ We will finish up our introduction to Markup languages by venturing into two mor
 
 Then we will begin to examine how to access and clean social science data. Most social science data sets are now available for download online. This week we will learn how to programmatically access this data and clean it so that it can be used for statistical analysis. We will also consider the benefits and challenges of government increasing the openness and accessibility of their data.
 
-#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/e7152050c573692c8ba32bf19950bca92872d09c/LectureSlides/Lecture6/Lecture6.html)
+#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/8392513e7e826f5d7842bd437d9a415b808ef745/LectureSlides/Lecture6/Lecture6.html)
 
 #### Readings
 
