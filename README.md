@@ -232,9 +232,9 @@ with the [dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introducti
 
 We will then learn how to automatically generate summary and results tables for multiple markup languages using  [stargazer](http://cran.r-project.org/web/packages/stargazer/stargazer.pdf). We will then learn static descriptive and inferential data visualisation best practices including avoiding introducing optical illusions that distort data presentations and accommodating readers with visual impairments. We will also cover specific R packages for creating static visualisations, primarily [ggplot2](http://docs.ggplot2.org/current/) and [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) for mapping.
 
-#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/6e71ce6019c3dab49f6161b941d497e162cd2359/LectureSlides/Lecture7/Lecture7.html)
+#### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/20fc5c78e395ea31854f1e4c661cb283add50d1f/LectureSlides/Lecture7/Lecture7.html)
 
-#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/076af53b52df89f13f9f4fb0a2bce0b4c726cebd/LectureSlides/Lecture8/Lecture8.html)
+#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/20fc5c78e395ea31854f1e4c661cb283add50d1f/LectureSlides/Lecture8/Lecture8.html)
 
 #### Readings
 

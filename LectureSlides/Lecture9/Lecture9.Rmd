@@ -1,5 +1,5 @@
 ---
-title: 'MPP-E1180 Lecture 8: Statistical Modeling with R'
+title: 'MPP-E1180 Lecture 9: Statistical Modeling with R'
 author: "Christopher Gandrud"
 date: "18 November 2016"
 output:

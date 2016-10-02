@@ -1,5 +1,5 @@
 ---
-title: 'MPP-E1180 Lecture 9: Automatic Tables and Static Visualisation'
+title: 'MPP-E1180 Lecture 8: Automatic Tables and Static Visualisation'
 author: "Christopher Gandrud"
 date: "21 October 2016"
 output:
