@@ -1,7 +1,7 @@
 ---
 title: 'MPP-E1180 Lecture 10: Dynamic Visualisation'
 author: "Christopher Gandrud"
-date: "18 April 2016"
+date: "25 November 2016"
 output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
@@ -21,17 +21,6 @@ output:
 - Dynamic results presentation
 
     + Static website hosting with gh-pages
-    
-## Class today
-
-<br>
-<br>
-<br>
-<br>
-
-First two hours as usual.
-
-Then 14:00-15:00.
 
 
 ## Collaborative Research Project (1)
@@ -42,9 +31,9 @@ results to a **variety of audiences** in a **variety of formats**.
 
 **Deadline**:
 
-- Presentation: In-class Monday 2 May
+- Presentation: In-class 2 December
 
-- Website/Paper: 13 May 2016
+- Website/Paper: 16 December 2016
 
 ## Collaborative Research Project (2)
 
@@ -106,9 +95,21 @@ continuous variables?
 
 - How many decimal places should you report in a table and why?
 
+## Review
+
+- What is the basic R syntax for a regression model?
+
+- What is a model function? What two parts do GLM model functions have?
+
+- How do you find a 95% confidence interval for a parameter point estimate (both
+    mathematically and in R)?
+
+- What is one good way to interpret and present results from a logistic
+regression to both a statistical and general audience?
+
 ## ggmap
 
-Last class we didn't have time to cover mapping with ggmap.
+Earlier we didn't have time to cover mapping with ggmap.
 
 We've already seen how ggmap can be used to find latitude and longitude.
 

@@ -1,7 +1,7 @@
 ---
-title: 'MPP-E1180 Lecture 9: Automatic Tables and Static Visualisation'
+title: 'MPP-E1180 Lecture 8: Statistical Modeling with R'
 author: "Christopher Gandrud"
-date: "21 March 2016"
+date: "18 November 2016"
 output:
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
@@ -10,41 +10,21 @@ output:
 bibliography: main.bib
 ---
 
-## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the week
+## <i class="fa fa-arrow-circle-o-up"></i> Objectives for the class
 
-- Assignment 3/Final Project
+- Assignment 3
 
 - Review
 
-- Static results presentation
+- Intro to the general syntax for statistical modelling in R.
 
-    + Automatic table creation
+- Specific examples using:
 
-    + Plotting best practices
+    + Normal linear regression
 
-    + ggplot2 for general graphing
-
-    + Simulations for showing results
-
-## Assignment 3
-
-**Purpose**: Gather, clean, and analyse data
-
-**Deadline**: 15 April 2016 (note change!)
-
-You will submit a GitHub repo that:
-
-- Gathers web-based data from at least **two sources**. Cleans and merges the
-data so that it is ready for statistical analyses.
-
-- Conducts basic descriptive and inferential statistics with the data to address
-a relevant research question.
-
-- Briefly describes the results including with dynamically generated tables and
-figures.
-
-- Has a write up of 1,500 words maximum that describes the data gathering and
-analysis and uses literate programming.
+    + Logistic regression
+    
+    + Panel data
 
 ## Collaborative Research Project (1)
 
@@ -54,9 +34,9 @@ results to a **variety of audiences** in a **variety of formats**.
 
 **Deadline**:
 
-- Presentation: In-class Monday 2 May
+- Presentation: In-class 2 December
 
-- Website/Paper: 13 May 2016
+- Website/Paper: 16 December 2016
 
 ## Collaborative Research Project (2)
 
@@ -81,7 +61,7 @@ presentation documents.
 **Note**: Because you've had two assignments already to work on parts of the
 project, I expect **high quality work**.
 
-## Collaborative Research Project (3)
+## Collaborative Research Project (4)
 
 Find one other group to be a **discussant** for your presentation.
 
@@ -91,505 +71,422 @@ presentation--ideas for things you can improve on your paper.
 ## Office hours
 
 I will have normal office hours every week for the rest of the term 
-**except 4 April**.
+**except 9 December**.
 
 Please take advantages of this opportunity to **improve your final project**.
 
-
 ## Review
 
-- What is the basic R syntax for a regression model?
+- What is **web scraping**? What are some of tools R has for web scraping?
 
-- What is a model function? What two parts do GLM model functions have?
+- What are **regular expressions** (give at least two examples)? Why are they
+useful?
 
-- How do you find a 95% confidence interval for a parameter point estimate (both
-    mathematically and in R)?
+- What dplyr function can you use to create a **new variable** in a data frame by
+running a command on values from groups in that data frame?
 
-- What is one good way to interpret and present results from a logistic
-regression to both a statistical and general audience?
+## Statistical Modelling in R
 
-## Motivation
+**Caveat**: We are **definitely not** going to cover anywhere near R's full
+capabilities for statistical modeling.
 
-Today we will learn how to **communicate your research findings** with
-automatically generated tables and static plots.
+We are also **not going to cover** all of the **modeling concerns/diagnostics** 
+you need to consider when using a given model.
 
-Why automatically generate?
+You will need to **rely on your other stats courses** and **texts**.
 
-- **Saves time**: don't have to re-enter numbers by hand into a table or
-restyle a graph each time you change the data/analysis.
+## <i class="fa fa-question"></i> What are we going to do?
 
-- Easier to **find and correct errors**: all source code that created
-all tables and figures  is linked and output updated when corrections are made.
+- Discuss the basic syntax and capabilities in R for estimating normal linear
+and logistic regressions.
 
-- **More reproducible**: everything is clearly linked together.
+- Basic model checking in R.
 
-## General process
+- Discuss basic ways of interpreting results (we'll do more on this next week).
 
-In general include the functions to create the tables/figures in a code chunk.
+## The basic model
 
-Include in the **code chunk head** `echo=FALSE, warning=FALSE, error=FALSE,
-message=FALSE`.
+Most statistical models you will estimate are from a general class (**Generalised Linear Model**) that
+has **two parts**:
 
-You may need to also include `results='asis'` for some table functions.
+**Stocastic Component** (e.g. randomly determined) assumes 
+the dependent variable $Y_{i}$ is generated from as a random draw from the 
+probability density function:
 
-See previous weeks 4 and 5 for figure code chunk options.
+$$
+Y_{i} \sim f(\theta_{i},\: \alpha)
+$$
 
-## Automatic table generation
+- $\theta_{i}$: parameter vector of the part of the function that **varies between
+observations**.
 
-There are a number of tools for automatically generating tables in R/R Markdown.
+- $\alpha$: matrix of **non-varying parameters**.
 
-- `kable` in the knitr package
+Sometimes referred to as the '**error structure**'.
 
-- [xtable](http://cran.r-project.org/web/packages/xtable/vignettes/xtableGallery.pdf)
-package
+## The basic model
 
-- [texreg](http://www.jstatsoft.org/v55/i08/paper) package
+The **Systematic Component** indicating how $\theta_{i}$ varies across
+observations depending on values of the explanatory variables and (often)
+some constant:
 
-- [stargazer](http://cran.r-project.org/web/packages/stargazer/stargazer.pdf)
-package
+$$
+\theta_{i} = g(X_{i},\: \beta)
+$$
 
-```{r include=FALSE}
-library(stargazer)
-```
+- $X_{i}$: a $1\: \mathrm{x}\: k$ vector of **explanatory variables**.
+
+- $\beta$: a $1\: \mathrm{x}\: k$ vector of **parameters**
+(i.e. coefficients).
+
+- $g(.,.)$: the **link function**, specifying how the explanatory
+variables and parameters are translated into $\theta_{i}$.
 
 ## Today
 
-We will focus on `kable` and `stargazer`.
+Today we will cover two variations of this general model:
 
-- `kable` is a good, **simple** tool for creating tables from **data frames** (or
-matrices).
+- linear-normal regression (i.e. ordinary least squares)
 
-- `stargazer` is useful for creating more complex tables of **regression model
-output**.
+- logit model
 
-**Example Docs**:
-[HertieDataScience/Examples/PaperWithRegressionTables](https://github.com/HertieDataScience/Examples/tree/master/PaperWithRegressionTables)
+## Linear-normal regression
 
-## `kable` example: predicted probabilities
+For continuous dependent variables assume that $Y_{i}$ is from the
+ **normal distribution** ($N(.,.)$).
 
-Set up from Lecture 8:
+Set the main parameter vector $\theta_{i}$ to the **scalar mean** of:
+$\theta_{i} = E(y_{i})= \mu_{i}$.
+
+- **Scalar**: a real number (in R-language: a vector of length 1)
+
+Assume the ancillary parameter matrix is the scalar homoskedastic variance:
+$\alpha = V(Y_{i}) = \sigma^2$.
+
+- **Homoskedastic variance**: variance does not depend on the value of $x$.
+The standard deviation of the error terms is constant across values of $x$.
+
+Set the systematic component to the linear form:
+$g(X_{i},\: \beta) = X_{i}\beta = \beta_{0} + X_{i1}\beta_{1} + \ldots$.
+
+## Linear-normal regression
+
+<br>
+
+So:
+
+$$
+Y_{i} \sim N(\mu_{i},\: \sigma^2), \:\:\: \mu_{i} = X_{i}\beta
+$$
+
+## Logit regression
+
+For binary data (e.g. 0, 1) we can assume that the stochastic component has a
+Bernoulli distribution.
+
+The main parameter is $\pi_{i} = \mathrm{Pr}(Y_{i} = 1)$.
+
+The systematic component is set to a logistic form:
+$\pi_{i} = \frac{1}{1 + e^{-X_{i}\beta}}$.
+
+So:
+
+$$
+Y_{i} \sim \mathrm{Bernoulli}(\pi_{i}), \:\:\: \pi_{i} = \frac{1}{1 + e^{-X_{i}\beta}}
+$$
+
+## Example error structure families and link functions
+
+| Error Family | Canonical link |
+| ------------ | -------------- |
+| Normal       | identity       |
+| binomial     | logit          |
+| poisson      | log            |
+
+## R syntax
+
+The general syntax for estimating statistical models in R is:
+
+
+```{r, eval=FALSE}
+response variable ~ explanatory variable(s)
+```
+
+Where '`~`' reads 'is modelled as a function of'.
+
+In the Generalised Linear Model context, either explicitly or implicitly:
+
+```{r, eval=FALSE}
+response variable ~ explanatory variable(s), family = error family
+```
+
+## Model functions
+
+We use model functions to specify the model structure.
+
+Basic model functions include:
+
+- `lm`: fits a linear model where $Y$ is assumed to be normally distributed
+and with homoskedastic variance.
+
+- `glm`: allows the fitting of many Generalised Linear Models. Lets you specify
+the error `family`.
+
+- `plm` (package and function): panel data Linear Models 
+
+- `pglm` (package and function): panel data Generalised Linear Models
+
+## Example of `lm`
+
+Example data *Prestige* (example based on
+<http://www.princeton.edu/~otorres/Regression101R.pdf>).
+
+The observations are **occupations** and the dependent variable is a score of
+each occupation's **prestige**.
+
+```{r}
+library(car)
+data(Prestige)
+```
+
+## Examine correlation matrix
+
+```{r}
+car::scatterplotMatrix(Prestige)
+```
+
+
+## Example of `lm`
+
+Estimate simple model (education is in years):
+
+```{r}
+M1 <- lm(prestige ~ education, data = Prestige)
+```
+
+---
+
+```{r}
+summary(M1)
+```
+
+## Confidence intervals of parameter point estimates
+
+Note: **Always prefer estimation intervals** over point estimates.
+
+Deal with your **uncertainty**!
+
+About **95%** of the time the population parameter will be within **about 2 
+standard errors** of the point estimate. 
+
+Using **Central Limit Theorem** (at least about 50 observations and the data is not
+extremely skewed):
+
+$$
+CI\_95 = \mathrm{point\: estimate} \pm 1.96 * SE
+$$
+
+## Confidence intervals of parameter point estimates
+
+```{r}
+confint(M1)
+```
+
+## Example of `lm`
+
+Estimate model with categorical (factor) variable:
+
+```{r}
+M2 <- lm(prestige ~ education + type, 
+         data = Prestige)
+```
+
+---
+
+```{r}
+summary(M2)
+```
+
+## Create categorical variable from continuous variable
+
+Use the `cut` function to create a categorical (factor) variable from a
+continuous variable.
+
+```{r}
+Prestige$income_cat <- cut(Prestige$income,
+                breaks = c(0, 4999, 9999, 14999, 30000),
+                labels = c('< 5,000', '< 10,000', '< 15,000',
+                            '>= 15,000'))
+summary(Prestige$income_cat)
+```
+
+Note: `cut` excludes the left value and includes the right value, e.g.
+$(0,\: 4999]$.
+
+## Example of `lm`
+
+```{r}
+M3 <- lm(prestige ~ education + income_cat, 
+         data = Prestige)
+confint(M3)
+```
+
+## Example of `lm`
+
+Estimate models with polynomial transformations:
+
+```{r}
+# Cubic polynomial transformation
+M4  <- lm(prestige ~ education + poly(income, 2), 
+          data = Prestige)
+confint(M4)
+```
+
+## Example of `lm`
+
+Estimate models with (natural) logarithmic transformations:
+
+```{r}
+# Cubic polynomial transformation
+M5  <- lm(prestige ~ education + log(income), 
+          data = Prestige)
+```
+
+---
+```{r}
+summary(M5)
+```
+
+## Example of `lm`
+
+Estimate model with interactions:
+
+```{r}
+M6 <- lm(prestige ~ education * type, 
+         data = Prestige)
+```
+
+---
+
+```{r}
+summary(M6)
+```
+
+## Diagnose heteroscedasticity
+
+Use `plot` on a model object to run visual diagnostics.
+
+```{r}
+plot(M2, which = 1)
+```
+
+## Diagnose non-normality of errors
+
+`plot` to see if a model's errors are normally distributed.
+
+```{r}
+plot(M2, which = 2)
+```
+
+## Example of logistic regression with `glm`
+
+Example from [UCLA IDRE](http://www.ats.ucla.edu/stat/r/dae/logit.htm).
+
+Simulated data of admission to grad school.
 
 ```{r}
 # Load data
 URL <- 'http://www.ats.ucla.edu/stat/data/binary.csv'
 Admission <- read.csv(URL)
+```
 
-# Estimate model
+## Example of logistic regression with `glm`
+
+```{r, warning=FALSE, message=FALSE}
+car::scatterplotMatrix(Admission)
+```
+
+## Contingency table for school rank and admission
+
+```{r}
+admit_table <- xtabs(~admit + rank, data = Admission)
+admit_table
+```
+
+## Row and column proportions
+
+```{r}
+# Row proportions
+prop.table(admit_table, margin = 1)
+
+# Column proportions
+prop.table(admit_table, margin = 2)
+```
+
+
+## Summary of contingency table for school rank and admission
+
+```{r}
+summary(admit_table)
+```
+
+## Example of logistic regression with `glm`
+
+```{r}
 Logit1 <- glm(admit ~ gre + gpa + as.factor(rank),
               data = Admission, family = 'binomial')
+```
 
-# Create fitted data
-fitted <- with(Admission,
-               data.frame(gre = mean(gre),
+Note: Link function is assumed to be logit if `family = 'binomial'`.
+
+## Example of logistic regression with `glm`
+
+```{r, message=FALSE}
+confint(Logit1)
+```
+
+## Interpreting logistic regression results
+
+$\beta$'s in logistic regression are interpretable as **log odds**. These are
+weird.
+
+If we exponentiate log odds we get **odds ratios**.
+
+```{r, message=FALSE}
+exp(cbind(OddsRatio = coef(Logit1), confint(Logit1)))
+```
+
+These are **also weird**.
+
+## Interpreting logistic regression results
+
+What we really want are **predicted probabilities**
+
+**First** create a data frame of fitted values:
+
+```{r}
+fitted <- with(Admission, 
+               data.frame(gre = mean(gre), 
                           gpa = mean(gpa),
                           rank = factor(1:4)))
+fitted
 ```
 
-## `kable` example: predicted probabilities
+## Interpreting logistic regression results
+
+**Second** predict probability point estimates for each fitted value.
 
 ```{r}
-library(knitr)
 fitted$predicted <- predict(Logit1, newdata = fitted,
                             type = 'response')
-kable(fitted)
+
+fitted
 ```
 
-## `kable` example: predicted probabilities
 
-You can stylise the table.
 
-```{r}
-kable(fitted, align = 'c', digits = 2,
-      caption = 'Predicted Probabilities for Fitted Values')
-```
 
-## Note
-
-**Don't** showing more digits to the right of the decimal than are statistically
-and substantively meaningful.
-
-**A rule of thumb**: more than one or two digits are rarely meaningful.
-
-See also: <http://andrewgelman.com/2012/07/02/moving-beyond-hopeless-graphics/>
-
-## Show regression output with `stargazer`
-
-`kable` is limited if we want to create regression output tables, especially for
-multiple models.
-
-`stargazer` is good for this.
-
-## `stargazer` example
-
-Estimate models
-
-```{r}
-L1 <- glm(admit ~ gre,
-              data = Admission, family = 'binomial')
-
-L2 <- glm(admit ~ gre + gpa,
-              data = Admission, family = 'binomial')
-
-L3 <- glm(admit ~ gre + gpa + as.factor(rank),
-              data = Admission, family = 'binomial')
-```
-
-## `stargazer` example HTML
-
-When you are creating a table for an HTML doc with stargazer use:
-
-- `type = 'html'`
-
-```{r, eval=FALSE}
-# Create cleaner covariate labels
-labels <- c('GRE Score', 'GPA Score',
-            '2nd Ranked School', '3rd Ranked School',
-            '4th Ranked School', '(Intercept)')
-
-stargazer::stargazer(L1, L2, L3, covariate.labels = labels,
-    title = 'Logistic Regression Estimates of Grad School Acceptance',
-    digits = 2, type = 'html')
-```
-
-## `stargazer` example HTML
-
-<img src="img/HTMLStargazer.png" height=450 width=400 />
-
-## `stargazer` example PDF
-
-**When you are creating a PDF** use the arguments:
-
-- `type = 'latex'`
-
-- `header = FALSE`
-
-```{r, eval=FALSE}
-# Create cleaner covariate labels
-labels <- c('GRE Score', 'GPA Score',
-            '2nd Ranked School', '3rd Ranked School',
-            '4th Ranked School', '(Intercept)')
-
-stargazer::stargazer(L1, L2, L3, covariate.labels = labels,
-    title = 'Logistic Regression Estimates of Grad School Acceptance',
-    digits = 2, type = 'latex', header = FALSE)
-```
-
-## `stargazer` output in PDF
-
-<img src="img/PDFStargazer.png" height=450 width=450 />
-
-## `stargazer` plain text output 
-
-You may want to compare multiple models at once in your R console, use `stargazer`
-with `type = 'text'`:
-
-```{r eval=FALSE}
-stargazer(L1, L2, L3, type = 'text')
-```
-
-## Showing Results with Figures
-
-<br>
-<br>
-
-Tables **are important** to include so that readers can **explore
-details**, but are **usually not the best way** to show your results.
-
-**Figures** are often more effective.
-
-## General principles
-
-(A Selection of) Tufte's Principles for Excellent Statistical Graphics
-[-@Tufte2001, 13]:
-
-- Show the data
-
-- Encourage the eye to compare **differences** in the data
-
-- Serve a clear purpose
-
-- Avoid distorting the data
-
-- Be closely integrated with the text
-
-## Show the data
-
-Show the data, not other things like silly graphics or unnecessary words.
-
-Have a high **data ink** ratio:
-
-$$
-\mathrm{Data\:Ink\:Ratio} = \mathrm{\frac{data - ink}{total\:ink}}
-$$
-
-## Encourage the eye to compare differences
-
-How did the budgets change? (Orange is 2013, Blue is 2012)
-
-<img src="img/SpendingChange.png" />
-
-## A little better
-
-<img src="img/SpendingGraph.png" height=500 width=600/>
-
-## Even better
-
-<img src="img/SpendPerChange.png" height=500 width=600/>
-
-## Avoid distorting the data: special case circles
-
-In general: Avoid using the **size** of a circle to mean something!
-
-So, avoid:
-
-- bubble charts
-
-- pie charts
-
-## Why avoid circles?
-
-Circles can distort data.
-
-- It is difficult to compare their size.
-
-- The Ebbinghause Illusion!
-
----
-
-Order the circles from smallest to largest.
-
-The circles are on a scale of 0-100, so what are their values?
-
-<img src="img/CirclesCompare.png"/>
-
----
-
-<img src="img/credit_bar.png" height=400 width=500/>
-
-## Ebbinghause Illusion
-
-Which circle is bigger?
-
-<img src="img/Ebbinghause.png"/>
-
-
-## Colours and Data Distortions
-
-Which square is darkest?
-
-<img src="img/ColourContext.png"/>
-
-
-## Colour Principles
-
-<br>
-<br>
-<br>
-
-**Only** give graphical features (e.g. bars in a bar chart) different
-colours if it **means something** in the data.
-
-
-## Colour Principles
-
-Colours should be used to:
-
-- highlight particular data,
-
-- group items,
-
-- encode quantitative values
-
-    + Values of continuous variables should be represented using **increasing
-    hues of the same colour**.
-
-    + Categorical variables should be represented with **different colours**.
-    (rule of thumb: avoid using more than about 7 colours in a plot)
-
-## Bad
-
-<img src="img/BadColourBar.png"/>
-
-
-## Good
-
-<img src="img/GoodColourBar.png"/>
-
-## Colours and accessibility
-
-**Color Blindness**
-
-People who are colour blind can have difficulty distinguishing between
-**red-green** and **blue-yellow**.
-
-About 5-8% of men are colour blind.
-
-We need to choose colour schemes for our graphics that are **colour
-blind friendly**.
-
-For more information see <http://www.usability.gov/get-involved/blog/2010/02/color-blindness.html>.
-
-## Selecting colors
-
-<br>
-<br>
-
-Color Brewer is a great resource for selecting colours:
-<http://colorbrewer2.org/>.
-
-## A more systematic introduction to ggplot2
-
-<br>
-<br>
-<br>
-
-"gg" means "Grammar of Graphics".
-
-"2" just means that it is the second one.
-
-## ggplot2 syntax
-
-Each plot is made of **layers**. Layers include the coordinate system (x-y), points,
-labels, etc.
-
-Each layer has **aesthetics** (`aes`) including the x & y, size, shape, and colour.
-
-The **main layer types** are called **geometrics** (`geom`). These include
-lines, points, density plots, bars, and text.
-
-## ggplot2 examples setup
-
-```{r, message=FALSE, warning=FALSE}
-library(devtools)
-library(ggplot2)
-
-source_url("http://bit.ly/OTWEGS")
-
-# Create data with no missing values of infant mortality
-InfantNoMiss <- subset(MortalityGDP,
-                           !is.na(InfantMortality))
-
-# Create High/Low Income Variable
-InfantNoMiss$DumMort[InfantNoMiss$InfantMortality
-                     >= 15] <- "high"
-InfantNoMiss$DumMort[InfantNoMiss$InfantMortality
-                     < 15] <- "low"
-```
-
-## Simple example
-
-```{r, warning=FALSE}
-ggplot(data = MortalityGDP, aes(x = InfantMortality,
-        y = GDPperCapita)) + geom_point()
-```
-
-## Simple example with BW theme
-
-```{r warning=FALSE}
-ggplot(data = MortalityGDP, aes(x = InfantMortality,
-        y = GDPperCapita)) + geom_point() + theme_bw(base_size = 13)
-```
-
-## Colours
-
-<br>
-<br>
-
-There are a number of ways to specify colours in ggplot2.
-
-The simplest way is to let ggplot choose the colours for you.
-
----
-
-```{r warning=FALSE}
-ggplot(data = InfantNoMiss, aes(log(InfantMortality),
-                                log(GDPperCapita))) +
-      geom_point(aes(colour = income)) +
-      theme_bw()
-```
-
-## Selecting colours
-
-There are many ways to pick specific colors.
-
-In this class we will mainly use **hexadecimal** colours.
-
-This is probably the most commonly used system for choosing
-colours on the web.
-
-Every colour is given six digits.
-
-A good website for getting hexadecimal colour schemes is:
-<http://colorbrewer2.org/>.
-
----
-
-```{r eval=FALSE}
-# Create colour vector
-Colours <- c("#1B9E77", "#D95F02", "#7570B3",
-             "#E7298A", "#66A61E", "#E6AB02")
-
-# Create graph
-ggplot(data = InfantNoMiss,
-                    aes(log(InfantMortality),
-                        log(GDPperCapita))) +
-        geom_point(aes(colour = income)) +
-        scale_color_manual(values = Colours) +
-        xlab("\nLog Infant Mortality") +
-        ylab("Log GDP/Capita\n") +
-        ggtitle("Log Transformed Data\n") +
-        theme_bw()
-```
-
----
-
-```{r message=FALSE, echo=FALSE, warning=FALSE}
-# Create colour vector
-Colours <- c("#1B9E77", "#D95F02", "#7570B3",
-             "#E7298A", "#66A61E", "#E6AB02")
-# Create graph
-ggplot(data = InfantNoMiss,
-                    aes(log(InfantMortality),
-                        log(GDPperCapita))) +
-        geom_point(aes(colour = income)) +
-        scale_color_manual(values = Colours) +
-        xlab("\nLog Infant Mortality") +
-        ylab("Log GDP/Capita\n") +
-        ggtitle("Log Transformed Data\n") +
-        theme_bw()
-```
-
-## ggplot2 is very flexible
-
-```{r eval=FALSE}
-# Create a violin Plot
-ggplot(InfantNoMiss, aes(factor(DumMort),
-                        log(GDPperCapita))) +
-          geom_violin(fill = "#E7298A",
-                      colour = "#E7298A",
-                      alpha = I(0.5)) +
-          geom_jitter(color = "#7570B3") +
-          xlab("\n Infant Mortality") +
-          ylab("Log GDP Per Capital\n") +
-          theme_bw(base_size = 16)
-```
-
----
-
-```{r message=FALSE, echo=FALSE, warning=FALSE}
-# Create a violin Plot
-ggplot(InfantNoMiss, aes(factor(DumMort),
-                        log(GDPperCapita))) +
-          geom_violin(fill = "#E7298A",
-                      colour = "#E7298A",
-                      alpha = I(0.5)) +
-          geom_jitter(color = "#7570B3") +
-          xlab("\n Infant Mortality") +
-          ylab("Log GDP Per Capital\n") +
-          theme_bw(base_size = 16)
-```
-
-## Showing results from regression models
+## Showing results from regression models with simulations
 
 <br>
 <br>
@@ -635,8 +532,9 @@ and plot the results.
 
 First estimate your model as normal and create fitted values:
 
-```{r}
+```{r, message=FALSE}
 library(car) # Contains data
+library(dplyr) # Piping function
 M_prest <- lm(prestige ~ education + type, 
          data = Prestige)
 
@@ -693,6 +591,10 @@ drawn_sim$sim_wc <- drawn_sim[, 1] + drawn_sim[, 2] * drawn_sim[, 5] +
 
 ## Simulations: plot points
 
+```{r include=FALSE}
+library(ggplot2) # for page formatting
+```
+
 ```{r}
 ggplot(drawn_sim, aes(fitted_edu, sim_wc)) + 
         geom_point(alpha = 0.2) + stat_smooth(se = FALSE) +
@@ -728,40 +630,14 @@ $$
 P(y_{i} = 1) = \frac{\mathrm{exp}(\hat{\alpha} + X_{i1}\hat{\beta_{1}} + \ldots)}{1 - \mathrm{exp}(\hat{\alpha} + X_{i1}\hat{\beta_{1}} + \ldots)}
 $$
 
-## Easier Implementation (1)
+
+## Easier Implementation
 
 <br>
 <br>
 <br>
 
-Last week I started working on the [simGLM](https://github.com/christophergandrud/simGLM) package for doing this process with normal linear and logistic regression models. 
-
-## simGLM
-
-```{r, message=FALSE}
-fitted_edu <- expand.grid(education = edu_range, typeprof = 1)
-simGLM::sim_glm(M_prest, newdata = fitted_edu, x_coef = 'education')
-```
-
-## simGLM
-
-**simGLM** is in development. Comments, bug reports welcome!
-
-It can be downloaded with:
-
-```{r eval=FALSE}
-ghit::install_github('christophergandrud/simGLM')
-```
-
-For more examples see: <http://bit.ly/22oSUHW>
-
-## Easier Implementation (2)
-
-<br>
-<br>
-<br>
-
-The [Zelig](http://gking.harvard.edu/zelig) package also streamlines the simulation process.
+The [Zelig](http://gking.harvard.edu/zelig) package streamlines the simulation process.
 
 ## Zelig (1)
 
@@ -799,21 +675,18 @@ Plot:
 ci.plot(simZ1)
 ```
 
-## Seminar
+
+## <i class="fa fa-arrow-circle-o-up"></i> Seminar: modeling
 
 <br>
 <br>
-<br>
 
-Create **tables** and **visualisations** of **descriptive** and **inferential** 
-for your Assignment 3 in an R Markdown document using the techniques covered in 
-class today.
+Begin working on the statistical models for **your project**.
 
-If you don't have your data set fully cleaned yet, use one of the built-in
-R data sets for practice.
+and/or
 
-**Bonus** help develop [simGLM](https://github.com/christophergandrud/simGLM). 
-Test out the examples on the README, suggest other model types to simulate 
-quantities of interest for, and more.
+**Out of Lecture Challenge**: Estimate a normal regression model and **plot 
+predicted values** across a range of fitted values. Bonus: do so with a measure
+of uncertainty.
 
 ## References
