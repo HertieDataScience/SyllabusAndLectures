@@ -203,7 +203,7 @@ We will finish up our introduction to Markup languages by venturing into two mor
 
 Then we will begin to examine how to access and clean social science data. Most social science data sets are now available for download online. This week we will learn how to programmatically access this data and clean it so that it can be used for statistical analysis. We will also consider the benefits and challenges of government increasing the openness and accessibility of their data.
 
-#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/8392513e7e826f5d7842bd437d9a415b808ef745/LectureSlides/Lecture6/Lecture6.html)
+#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/3d51096602cebb1866abaa87115b66a0fc9c2517/LectureSlides/Lecture6/Lecture6.html)
 
 #### Readings
 
@@ -234,7 +234,7 @@ We will then learn how to automatically generate summary and results tables for 
 
 #### [Slides (1)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/20fc5c78e395ea31854f1e4c661cb283add50d1f/LectureSlides/Lecture7/Lecture7.html)
 
-#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/20fc5c78e395ea31854f1e4c661cb283add50d1f/LectureSlides/Lecture8/Lecture8.html)
+#### [Slides (2)](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/3c1970565018b9c5bcbde71aef3e8f0db1e10c12/LectureSlides/Lecture8/Lecture8.html)
 
 #### Readings
 
@@ -274,7 +274,7 @@ We will conclude our discussion of table and static figure generation in R.
 
 We will then learn how to fit and evaluate a variety of statistical models using the R language, including simple linear models and logistic regression models for categorical dependent data.
 
-#### [Slides](https://rawgit.com/HertieDataScience/SyllabusAndLectures/760b763384b4461902aedd0b27f75fb442ff425e/LectureSlides/Lecture9/Lecture9.html#1)
+#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/3c1970565018b9c5bcbde71aef3e8f0db1e10c12/LectureSlides/Lecture9/Lecture9.html#1)
 
 #### Readings
 
@@ -288,9 +288,6 @@ John Wiley and Sons Ltd., Chichester.
 - King, Gary, Micheal Tomz, and Jason Wittenberg. 2001. [Making the Most of
 Statistical Analyses: Improving interpretation and presentation](http://gking.harvard.edu/files/gking/files/making.pdf).
 *American Journal of Political Science*. 22(4): 341–355.
-
-
-
 
 ### Week 7: Dynamic visualisation + Prepare Collaborative Research Project
 
