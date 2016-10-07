@@ -223,7 +223,7 @@ split(sleep$extra, sleep$group) %&gt;% boxplot()</pre>
 
 </article></slide><slide class=''><hgroup><h2> Recommended podcast</h2></hgroup><article  id="recommended-podcast">
 
-<p>Max Ogden on the Request for Commits podcast discussing working for the City of Boston with Code for America. <a href='https://changelog.com/rfc-6/' title=''>https://changelog.com/rfc-6/</a></p>
+<p>Max Ogden on the Request for Commits podcast discussing challenges faced working for the City of Boston with Code for America (<a href='https://changelog.com/rfc-6/' title=''>https://changelog.com/rfc-6/</a>).</p>
 
 </article></slide><slide class=''><hgroup><h2>Accessing data</h2></hgroup><article  id="accessing-data">
 
@@ -349,9 +349,13 @@ main &lt;- repmis::source_data(URL)</pre>
 
 <p><code>source_data</code> allows you to <strong>cache</strong> data with <code>cache = TRUE</code>.</p>
 
-<p>This is useful if you are downloading a large data set.</p>
+<p>This is useful if you are downloading a large data set/to speed up knitting.</p>
 
-<p>You can also cache data with you <em>knit</em> your R Markdown files.</p>
+<p>Creates a locally stored version of the data set which is useful for reproducibility.</p>
+
+<p>You can also cache data when you <em>knit</em> your R Markdown files.</p>
+
+<p>Note: if you are caching a &quot;large&quot; data set in GitHub terms (&gt;50 mb) consider ignoring it in a <em>.gitignore</em> file. Advanced users can store it using <a href='https://git-lfs.github.com/' title=''>Git Large File Storage</a>.</p>
 
 </article></slide><slide class=''><hgroup><h2>Data APIs</h2></hgroup><article  id="data-apis">
 
@@ -386,8 +390,7 @@ AltEnergy &lt;- WDI(indicator = &#39;EG.USE.COMM.CL.ZS&#39;)</pre>
 <pre class = 'prettyprint lang-r'>library(quantmod)
 
 # Download Yen/USD exchange rate
-YenDollar &lt;- getSymbols(Symbols = &#39;DEXJPUS&#39;,
-                        src = &#39;FRED&#39;)</pre>
+YenDollar &lt;- getSymbols(Symbols = &#39;DEXJPUS&#39;, src = &#39;FRED&#39;)</pre>
 
 </article></slide><slide class=''><hgroup><h2>Other API-R packages</h2></hgroup><article  id="other-api-r-packages">
 
@@ -395,7 +398,7 @@ YenDollar &lt;- getSymbols(Symbols = &#39;DEXJPUS&#39;,
 
 <p>For a good beginner list see: <a href='http://cran.r-project.org/web/views/WebTechnologies.html' title=''>http://cran.r-project.org/web/views/WebTechnologies.html</a></p>
 
-</article></slide><slide class=''><hgroup><h2>Loading non-table data</h2></hgroup><article  id="loading-non-table-data">
+</article></slide><slide class=''><hgroup><h2>Working with non-table data</h2></hgroup><article  id="working-with-non-table-data">
 
 <table class = 'rmdtable'>
 <tr class="header">
@@ -403,22 +406,18 @@ YenDollar &lt;- getSymbols(Symbols = &#39;DEXJPUS&#39;,
 <th align="left">R packages</th>
 </tr>
 <tr class="odd">
-<td align="left">Excel</td>
-<td align="left">Try to save as CSV, otherwise <a href='https://code.google.com/p/rexcel/' title=''>xlsx</a>, rio</td>
+<td align="left">Excel, Stata, SPSS, SAS</td>
+<td align="left">rio</td>
 </tr>
 <tr class="even">
-<td align="left">Stata, SPSS, SAS</td>
-<td align="left">foreign, rio</td>
-</tr>
-<tr class="odd">
 <td align="left"><a href='http://en.wikipedia.org/wiki/JSON' title=''>JSON</a></td>
 <td align="left"><a href='https://cran.r-project.org/web/packages/jsonlite/index.html' title=''>jsonlite</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href='http://en.wikipedia.org/wiki/MySQL' title=''>MySQL</a></td>
 <td align="left"><a href='http://biostat.mc.vanderbilt.edu/wiki/Main/RMySQL' title=''>RMySQL</a>, <a href='http://www.jason-french.com/blog/2014/07/03/using-r-with-mysql-databases/' title=''>more info</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href='http://couchdb.apache.org/' title=''>couchDB</a></td>
 <td align="left"><a href='https://github.com/wactbprot/R4CouchDB' title=''>R4CouchDB</a></td>
 </tr>
@@ -624,7 +623,7 @@ messyAgain</pre>
 <li><p>Distributions are what you expect them to be.</p></li>
 </ul>
 
-<p><a href='https://github.com/ropensci/testdat' title=''>testdat</a> can be useful for this.</p>
+<p><a href='https://github.com/ropensci/testdat' title=''>testdat</a> can be useful for this, though not actively maintained.</p>
 
 </article></slide><slide class=''><hgroup><h2>Merging data</h2></hgroup><article  id="merging-data">
 
@@ -693,23 +692,16 @@ ggmap::geocode(places, source = &#39;google&#39;)</pre>
 
 </article></slide><slide class=''><hgroup><h2>Creating IDs: Time</h2></hgroup><article  id="creating-ids-time-1">
 
-<pre class = 'prettyprint lang-r'>library(lubridate)</pre>
+<pre class = 'prettyprint lang-r'>library(lubridate)
 
-<pre >## 
-## Attaching package: &#39;lubridate&#39;</pre>
-
-<pre >## The following object is masked from &#39;package:base&#39;:
-## 
-##     date</pre>
-
-<pre class = 'prettyprint lang-r'># Create time data
+# Create time data
 times &lt;- c(&#39;Sep. 17 1980&#39;, &#39;March 23 2000&#39;, &#39;Nov. 3 2003&#39;)
 
 mdy(times)</pre>
 
 <pre >## [1] &quot;1980-09-17&quot; &quot;2000-03-23&quot; &quot;2003-11-03&quot;</pre>
 
-<p>Note: Times should always go from <strong>longest to shortest</strong> unit. Makes dates <strong>sortable</strong>.</p>
+<p>Note: Times should always go from <strong>longest to shortest</strong> unit (e.g. YEAR-MONTH-DAY). Makes dates <strong>sortable</strong>.</p>
 
 </article></slide><slide class=''><hgroup><h2>Merge data</h2></hgroup><article  id="merge-data">
 

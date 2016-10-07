@@ -147,7 +147,8 @@ See @Janssen2012 [262-263] for more.
 
 ## Recommended podcast
 
-Max Ogden on the Request for Commits podcast discussing working for the City of Boston with Code for America. <https://changelog.com/rfc-6/> 
+Max Ogden on the Request for Commits podcast discussing challenges faced working 
+for the City of Boston with Code for America (<https://changelog.com/rfc-6/>).
 
 ## Accessing data
 
@@ -284,9 +285,16 @@ for statistical/graphical analyses.
 
 `source_data` allows you to **cache** data with `cache = TRUE`.
 
-This is useful if you are downloading a large data set.
+This is useful if you are downloading a large data set/to speed up knitting.
 
-You can also cache data with you *knit* your R Markdown files.
+Creates a locally stored version of the data set which is useful for 
+reproducibility.
+
+You can also cache data when you *knit* your R Markdown files.
+
+Note: if you are caching a "large" data set in GitHub terms (>50 mb) consider 
+ignoring it in a *.gitignore* file. Advanced users can store it using 
+[Git Large File Storage](https://git-lfs.github.com/).
 
 ## Data APIs
 
@@ -331,8 +339,7 @@ data from a variety of sources (e.g. [Yahoo Finance](http://finance.yahoo.com/),
 library(quantmod)
 
 # Download Yen/USD exchange rate
-YenDollar <- getSymbols(Symbols = 'DEXJPUS',
-                        src = 'FRED')
+YenDollar <- getSymbols(Symbols = 'DEXJPUS', src = 'FRED')
 ```
 
 ## Other API-R packages
@@ -342,12 +349,11 @@ There are many more R packages that interact with web data APIs.
 For a good beginner list see:
 <http://cran.r-project.org/web/views/WebTechnologies.html>
 
-## Loading non-table data
+## Working with non-table data
 
 | Format      | R packages                                                     |
 | ----------- | -------------------------------------------------------------- |
-| Excel       | Try to save as CSV, otherwise [xlsx](https://code.google.com/p/rexcel/), rio |
-| Stata, SPSS, SAS | foreign, rio                                              |
+| Excel, Stata, SPSS, SAS       | rio |
 | [JSON](http://en.wikipedia.org/wiki/JSON) | [jsonlite](https://cran.r-project.org/web/packages/jsonlite/index.html) |
 | [MySQL](http://en.wikipedia.org/wiki/MySQL) | [RMySQL](http://biostat.mc.vanderbilt.edu/wiki/Main/RMySQL), [more info](http://www.jason-french.com/blog/2014/07/03/using-r-with-mysql-databases/) |
 | [couchDB](http://couchdb.apache.org/) | [R4CouchDB](https://github.com/wactbprot/R4CouchDB) |
@@ -477,7 +483,8 @@ For example, see if:
 
 - Distributions are what you expect them to be.
 
-[testdat](https://github.com/ropensci/testdat) can be useful for this.
+[testdat](https://github.com/ropensci/testdat) can be useful for this, though 
+not actively maintained.
 
 ## Merging data
 
@@ -542,7 +549,7 @@ package to standardise dates.
 
 ## Creating IDs: Time
 
-```{r}
+```{r, message=FALSE}
 library(lubridate)
 
 # Create time data
@@ -551,7 +558,7 @@ times <- c('Sep. 17 1980', 'March 23 2000', 'Nov. 3 2003')
 mdy(times)
 ```
 
-Note: Times should always go from **longest to shortest** unit. 
+Note: Times should always go from **longest to shortest** unit (e.g. YEAR-MONTH-DAY). 
 Makes dates **sortable**.
 
 ## Merge data
