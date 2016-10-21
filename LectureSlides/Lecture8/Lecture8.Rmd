@@ -81,7 +81,7 @@ output**.
 
 ## `kable` example: predicted probabilities
 
-Set up from Lecture 8:
+Set up (from Lecture 9):
 
 ```{r}
 # Load data
@@ -119,7 +119,7 @@ kable(fitted, align = 'c', digits = 2,
 
 ## Note
 
-**Don't** showing more digits to the right of the decimal than are statistically
+**Don't** show more digits to the right of the decimal than are statistically
 and substantively meaningful.
 
 **A rule of thumb**: more than one or two digits are rarely meaningful.
@@ -510,11 +510,11 @@ ggplot(InfantNoMiss, aes(factor(DumMort),
 <br>
 <br>
 
-Create **tables** and **visualisations** of **descriptive** statustucs
-for your Assignment 3 in an R Markdown document using the techniques covered in 
-class today.
+Create **tables** and **visualisations** of **descriptive** statistics
+for your final project in an R Markdown document using the techniques covered in 
+class.
 
-If you don't have your data set fully cleaned yet, use one of the built-in
-R data sets for practice.
+<!--If you don't have your data set fully cleaned yet, use one of the built-in
+R data sets for practice.-->
 
 ## References

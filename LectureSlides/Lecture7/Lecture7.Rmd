@@ -112,7 +112,7 @@ To really master web scraping you need a good knowledge of HTML.
 
 The most basic tools for web scraping in R:
 
-- [rvest](https://github.com/hadley/rvest) scraping + parsing
+- [rvest](https://github.com/hadley/rvest): scraping + parsing
 
     + [Parsing](http://en.wikipedia.org/wiki/Parsing): the analysis of HTML
     (and other) markup so that each element is syntactically related in a
@@ -120,7 +120,7 @@ The most basic tools for web scraping in R:
 
 - [httr](https://github.com/hadley/httr): gather data from APIs + simple parsing
 
-- Also, [XML](http://cran.r-project.org/web/packages/XML/index.html).
+- Also, [XML](http://cran.r-project.org/web/packages/XML/index.html):
 parsing
 
 
@@ -178,7 +178,7 @@ head(ExpensesTable)[, 1:3]
 
 ## Background on GET from httr
 
-`GET` is probably the most common *RESTful* API **verb** you will use when webscraping.
+`GET` is probably the most common *RESTful* API **verb** you will use when webscraping (it is called by `read_html`).
 
 - **RESTful API** ([Representational State Transfer](https://en.wikipedia.org/wiki/Representational_state_transfer)) 
 an approach to creating APIs

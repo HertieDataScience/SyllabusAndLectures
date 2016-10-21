@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 6: Automatic Data Gathering + Cleaning'
 author: "Christopher Gandrud"
 date: "7 October 2016"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
 bibliography: main.bib
 ---
 
@@ -55,6 +55,16 @@ You can split a vector by values of another variable using `split`.
 library(dplyr)
 split(sleep$extra, sleep$group) %>% boxplot()
 ```
+
+## .gitignore tip
+
+You can have Git ignore any file by including its file path (relative to the 
+repo) in a file called *.gitignore*.
+
+This is useful for files such as *.Rhistory* that you don't want to version 
+control and which create pointless merge conflicts.
+
+It's also useful for very large files that you can't store on GitHub.
 
 ## Serving HTML file tip
 

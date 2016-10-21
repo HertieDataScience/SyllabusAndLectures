@@ -199,13 +199,13 @@
 <p>The most basic tools for web scraping in R:</p>
 
 <ul>
-<li><p><a href='https://github.com/hadley/rvest' title=''>rvest</a> scraping + parsing</p>
+<li><p><a href='https://github.com/hadley/rvest' title=''>rvest</a>: scraping + parsing</p>
 
 <ul>
 <li><a href='http://en.wikipedia.org/wiki/Parsing' title=''>Parsing</a>: the analysis of HTML (and other) markup so that each element is syntactically related in a <strong>parse tree</strong>.</li>
 </ul></li>
 <li><p><a href='https://github.com/hadley/httr' title=''>httr</a>: gather data from APIs + simple parsing</p></li>
-<li><p>Also, <a href='http://cran.r-project.org/web/packages/XML/index.html' title=''>XML</a>. parsing</p></li>
+<li><p>Also, <a href='http://cran.r-project.org/web/packages/XML/index.html' title=''>XML</a>: parsing</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Key steps:</h2></hgroup><article  id="key-steps">
@@ -261,7 +261,7 @@ ExpensesTable &lt;- URL %&gt;% read_html() %&gt;%
 
 </article></slide><slide class=''><hgroup><h2> Background on GET from httr</h2></hgroup><article  id="background-on-get-from-httr">
 
-<p><code>GET</code> is probably the most common <em>RESTful</em> API <strong>verb</strong> you will use when webscraping.</p>
+<p><code>GET</code> is probably the most common <em>RESTful</em> API <strong>verb</strong> you will use when webscraping (it is called by <code>read_html</code>).</p>
 
 <ul>
 <li><strong>RESTful API</strong> (<a href='https://en.wikipedia.org/wiki/Representational_state_transfer' title=''>Representational State Transfer</a>) an approach to creating APIs where resources are referenced (usually via URLs) and representations (documents in HTML, JSON, CSV, etc) are transfered.</li>
