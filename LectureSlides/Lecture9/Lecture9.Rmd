@@ -595,7 +595,7 @@ drawn_sim$sim_wc <- drawn_sim[, 1] + drawn_sim[, 2] * drawn_sim[, 5] +
 library(ggplot2) # for page formatting
 ```
 
-```{r}
+```{r, message=FALSE}
 ggplot(drawn_sim, aes(fitted_edu, sim_wc)) + 
         geom_point(alpha = 0.2) + stat_smooth(se = FALSE) +
         theme_bw()
