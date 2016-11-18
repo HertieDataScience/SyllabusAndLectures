@@ -3,10 +3,10 @@ title: 'MPP-E1180 Lecture 9: Statistical Modeling with R'
 author: "Christopher Gandrud"
 date: "18 November 2016"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
-  beamer_presentation: default
 bibliography: main.bib
 ---
 
@@ -113,7 +113,7 @@ and logistic regressions.
 
 - Basic model checking in R.
 
-- Discuss basic ways of interpreting results (we'll do more on this next week).
+- Discuss basic ways of interpreting and presenting results.
 
 ## The basic model
 
