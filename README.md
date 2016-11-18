@@ -274,7 +274,7 @@ We will conclude our discussion of table and static figure generation in R.
 
 We will then learn how to fit and evaluate a variety of statistical models using the R language, including simple linear models and logistic regression models for categorical dependent data.
 
-#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/3c1970565018b9c5bcbde71aef3e8f0db1e10c12/LectureSlides/Lecture9/Lecture9.html#1)
+#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/ab2bb95b3116b65d8301d53b9fb88db4e95366c5/LectureSlides/Lecture9/Lecture9.html)
 
 #### Readings
 
