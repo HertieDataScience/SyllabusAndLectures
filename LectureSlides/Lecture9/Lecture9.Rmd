@@ -85,6 +85,17 @@ useful?
 - What dplyr function can you use to create a **new variable** in a data frame by
 running a command on values from groups in that data frame?
 
+## Review
+
+- What is the data-ink ratio? Why is it important for effective plotting.
+
+- Why should you avoid using the **size** of circles to have meaning about
+continuous variables?
+
+- Why not use red-green colour contrasts to indicate contrasting data?
+
+- How many decimal places should you report in a table and why?
+
 ## Statistical Modelling in R
 
 **Caveat**: We are **definitely not** going to cover anywhere near R's full

@@ -86,17 +86,6 @@ Please take advantages of this opportunity to **improve your final project**.
 
 ## Review
 
-- What is the data-ink ratio? Why is it important for effective plotting.
-
-- Why should you avoid using the **size** of circles to have meaning about
-continuous variables?
-
-- Why not use red-green colour contrasts to indicate contrasting data?
-
-- How many decimal places should you report in a table and why?
-
-## Review
-
 - What is the basic R syntax for a regression model?
 
 - What is a model function? What two parts do GLM model functions have?
@@ -123,7 +112,7 @@ geocode(places)
 
 ## ggmap: get the map
 
-```{r, message=FALSE}
+```{r, message=FALSE, warning=FALSE}
 qmap(location = 'Berlin', zoom = 15)
 ```
 
@@ -140,7 +129,7 @@ names(crime)
 
 ## Clean data
 
-```{r message=FALSE}
+```{r message=FALSE, warning=FALSE}
 # find a reasonable spatial extent
 qmap('houston', zoom = 13) # gglocator(2) see in RStudio
 ```
@@ -165,7 +154,7 @@ violent_crimes <- subset(violent_crimes,
 
 ## Plot crime data
 
-```{r, message=FALSE}
+```{r, message=FALSE, warning=FALSE}
 # Set up base map
 HoustonMap <- qmap("houston", zoom = 14,  
                    source = "stamen", maptype = "toner")
@@ -193,7 +182,8 @@ print(FinalMap)
 When your output documents are in **HTML**, you can create interactive
 visualisations.
 
-Potentially more engaging and could let users explore data on their own.
+Potentially--though not always--more engaging and could let users explore data 
+on their own.
 
 ## Interactive visualisations
 
@@ -233,11 +223,9 @@ There is a growing set of tools for interactive plotting, e.g.:
 
 - [plotly](https://plot.ly/r/)
 
-- [googleVis](https://code.google.com/p/google-motion-charts-with-r/)
+- [googleVis](https://github.com/mages/googleVis#googlevis)
 
 - [dygraphs](http://rstudio.github.io/dygraphs/)
-
-- [rcharts](http://rcharts.io/)
 
 - [networkD3](http://christophergandrud.github.io/networkD3/)
 
@@ -295,37 +283,11 @@ ggplotly(mort_plot)
 
 ## Or use only plotly
 
-```{r}
-plot_ly(MortalityGDP, x = InfantMortality, y = GDPperCapita,
+```{r, message=FALSE, warning=FALSE}
+plot_ly(MortalityGDP, x = ~InfantMortality, y = ~GDPperCapita,
         mode = 'markers')
 ```
 
-## `ggplotly` works with simGLM
-
-```{r include=FALSE}
-library(simGLM) # if not installed use devtools::github_install('christophergandrud/simGLM')
-
-# Download data
-URL <- 'http://www.ats.ucla.edu/stat/data/binary.csv'
-Admission <- read.csv(URL)
-Admission$rank <- as.factor(Admission$rank)
-
-# Estimate model
-m2 <- glm(admit ~ gre + gpa + rank, data = Admission, family = 'binomial')
-
-# Create fitted values
-fitted_admit <- expand.grid(gre = seq(220, 800, by = 10), gpa = c(1, 4), 
-                            rank4 = 1)
-
-# Simulate and plot
-sim_gpa <- sim_glm(obj = m2, newdata = fitted_admit, model = 'logit', x_coef = 'gre', 
-                   group_coef = 'gpa') + theme_bw(base_size = 9)
-```
-
-```{r, warning=FALSE}
-# sim_gpa created with http://hertiedatascience.github.io/Examples/
-ggplotly(sim_gpa)
-```
 
 ## Google Plots with googleVis
 
@@ -496,7 +458,7 @@ If relevant include:
 
 - A bar or line chart with plotly or other package
 
-- A simulation plot created with Zelig, simGLM or other tool showing key 
+- A simulation plot created with Zelig or other tool showing key 
 results from your analysis.
 
 Push to the gh-pages branch.
