@@ -262,7 +262,7 @@ data(Prestige)
 
 ## Examine correlation matrix
 
-```{r}
+```{r, warning=FALSE}
 car::scatterplotMatrix(Prestige)
 ```
 
@@ -648,7 +648,15 @@ $$
 <br>
 <br>
 
-The [Zelig](http://gking.harvard.edu/zelig) package streamlines the simulation process.
+The [Zelig](http://gking.harvard.edu/zelig) package streamlines the simulation 
+process.
+
+Note: There appears to be a bug in Zelig version 5.0-13 when dealing with 
+factor-level explanatory variables. So, use version 5.0-11:
+
+```{r, eval=FALSE}
+devtools::install_version('Zelig', version = '5.0-11')
+```
 
 ## Zelig (1)
 
