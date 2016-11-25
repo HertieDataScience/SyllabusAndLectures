@@ -77,8 +77,7 @@ presentation--ideas for things you can improve on your paper--pose questions.
 
 ## Office hours
 
-I will have normal office hours every week for the
-rest of the term.
+I will have normal office hours this week and next week.
 
 Please take advantages of this opportunity to **improve your final project**.
 
@@ -93,8 +92,8 @@ Please take advantages of this opportunity to **improve your final project**.
 - How do you find a 95% confidence interval for a parameter point estimate (both
     mathematically and in R)?
 
-- What is one good way to interpret and present results from a logistic
-regression to both a statistical and general audience?
+- What are some more effective ways to present results from a logistic
+regression to both statistical and general audiences?
 
 ## ggmap
 
@@ -404,12 +403,6 @@ Example: [networkD3](https://github.com/christophergandrud/networkD3)
 ## Interactive dashboards with flexdashboard
 
 You can create interactive 'dashboards' for displaying an information overview using the [flexdashboard](http://rstudio.github.io/flexdashboard/index.html) package.
-
-The package is not on CRAN yet, so install with:
-
-```{r, eval=FALSE}
-devtools::install_github("rstudio/flexdashboard")
-```
 
 ## flexdashboard syntax
 
