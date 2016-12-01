@@ -262,6 +262,8 @@ Series A General 140(3): 277–97.
 
 - Gelman, Andrew, and Phillip N Price. 1999. ''[All Maps of Parameter Estimates Are Misleading](http://www.stat.columbia.edu/~gelman/research/published/allmaps.pdf).'' Statistics in Medicine 18: 3221–34.
 
+- Raftery, Adrian. 2016. "[Use and Communication of Probabilistic Forecasts](http://onlinelibrary.wiley.com/doi/10.1002/sam.11302/abstract)." Statistical Analysis and Data Mining: The ASA Data Science Journal. 9(6): 397-410.
+
 - Fruehwald, Josef. 2012. [AVML 2012: ggplot2](http://www.ling.upenn.edu/~joseff/avml2012/).
 
 - Donahue, Rafe M. J. 2011. [Fundamental Statistical Concepts in Presenting Data: Principles for Constructing Better Graphics](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf). Version 2.11.
