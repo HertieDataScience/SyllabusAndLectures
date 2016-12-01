@@ -4,7 +4,7 @@
 
 ### Autumn 2016
 
-**Version: 28 September 2016**
+**Version: 1 December 2016**
 
 ### Instructor: Christopher Gandrud
 
