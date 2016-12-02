@@ -1,10 +1,11 @@
 ---
 title: 'MPP-E1180 Lecture 12: Presentations and a Few Final Notes'
 author: "Christopher Gandrud"
-date: "4 December 2014"
+date: "2 December 2016"
 output:
   ioslides_presentation:
     logo: https://raw.githubusercontent.com/christophergandrud/Hertie_Collab_Data_Science/master/img/HertieCollaborativeDataLogo_v1.png
+  beamer_presentation: default
 ---
 
 ## Course wrap-up
@@ -46,37 +47,46 @@ important skills for doing research.
 
 These are qualities that can be **improved with practice**.
 
-## Final Project
+## Collaborative Research Project (1)
 
-The final project is worth **50%** of your final mark for the course.
+**Purposes**: Pose an interesting research question and try to answer it using
+data analysis and standard academic practices. Effectively communicate your
+results to a **variety of audiences** in a **variety of formats**.
 
-- Presentation: 10%
+**Deadline**:
 
-- Website: 10%
+- Presentation: In-class 2 December
 
-- Paper: 30%
+- Website/Paper: 16 December 2016
 
-<br>
-<br>
+## Collaborative Research Project (2)
 
-(Sorry, I should have announced this earlier.)
+The project can be thought of as a 'dry run' for your thesis with multiple
+presentation outputs.
 
-## Paper/Website
+Presentation: 10 minutes **maximum**. **Engagingly** present your research
+question and key findings to a general academic audience (fellow students).
 
-**Deadline:** Website/Paper: 12 December
-
-Paper: 5,000 words maximum. **Standard academic paper**, properly cited laying out
-your research question, literature review, data, methods, and findings.
+Paper: 5,000 words maximum. **Standard academic paper**, properly cited laying out your research question, literature review, data, methods, and findings.
 
 Website: An engaging website designed to convey your research to **a general
 audience**.
 
-## Presentations
+## Collaborative Research Project (3)
 
-**Remember:** 
+Project total: 50% of your final mark.
 
-- 10 minutes **maximum** (less can even be better).
+- 10% presentation
 
-- **Engagingly** present your research question and key findings.
+- 10% website
 
-- **1 question** from the audience (2 minutes max).
+- 30% paper
+
+## Collaborative Research Project (4)
+
+As always, you should **submit one GitHub repository** with all of the
+materials needed to **completely reproduce** your data gathering, analysis, and
+presentation documents.
+
+**Note**: Because you've had two assignments already to work on parts of the
+project, I expect **high quality work**.
