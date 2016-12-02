@@ -319,6 +319,8 @@ In addition, we will bring together all of the tools we have learned to conduct 
 
 ### Week 8: Present Results
 
+#### [Slides](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/36bb6dcd7e2c3706c55dc2ee443d769b515e757e/LectureSlides/Lecture12/Lecture12.html)
+
 ---
 
 [<img src="img/HertieLogoBasic.png" align="left" height="75" width ="150"/>](http://www.hertie-school.org/)
